@@ -3,7 +3,7 @@
 	<form accept-charset="UTF-8" action="/home/lookup" data-remote="true" method="post">
 		<div>
 			<div class="input-append">
-                <input class="span2" id="appendedInput" size="16" type="text"><span class="add-on">@psu.edu</span>
+                <input class="span2" id="appendedInput" size="18" type="text"><span class="add-on">@psu.edu</span>
             </div>
 			<input class="btn btn-large btn-primary" id="submit" name="commit" type="submit" value="Find My Info!">
 		</div>
