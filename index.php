@@ -1,8 +1,9 @@
 <?
-include_once "php/header.php";
+include "php/header.php";
 
-include_once "php/hero.php";
-include_once "php/marketing.php";
+include "php/nav.php";
+include "php/hero.php";
+include "php/marketing.php";
 
-include_once "php/footer.php";
+include "php/footer.php";
 ?>
