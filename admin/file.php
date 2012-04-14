@@ -18,7 +18,7 @@ $dl = "http://bitlet.simply.io/dl?f=$fid";
 ?>
 <div class="container">
 <div class="row mid">
-<h1>Set the Price!<h1>
+<h1>Set the Price!</h1>
 <form class="form-inline" id="price" action="set_price.php" method="post" enctype="multipart/form-data">
 	<div class="input-prepend">
 		<span class="add-on" id="icona">$</span>
@@ -28,8 +28,9 @@ $dl = "http://bitlet.simply.io/dl?f=$fid";
 	<button type="submit" class="btn btn-success">Set Price</button>
 </form>
 
-<p>The download link is:</p>
-<a href="<? echo $dl ?>"><? echo $dl ?></a>
+<h3>The download link is:</h3>
+<p><a href="<? echo $dl ?>"><? echo $dl ?></a>
+</p>
 </div>
 </div>
 </body>
