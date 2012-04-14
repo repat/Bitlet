@@ -47,7 +47,7 @@
 	
 	<script>
 	var domains = ['hotmail.com', 'gmail.com', 'aol.com', 'yahoo.com'];
-	$('#email').on('blur', function() {
+	$('#email.input-medium').on('blur', function() {
 		  $(this).mailcheck({
 			    domains: domains,   
 				suggested: function(element, suggestion) {
