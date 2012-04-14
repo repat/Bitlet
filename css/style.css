@@ -160,6 +160,7 @@ footer[role="contentinfo"]{
 .hero-circle{
 	background: url(/img/grey_circle.png) no-repeat;
 	height: 108px;
+	width: 100px;
 }
 
 #circle-1{
