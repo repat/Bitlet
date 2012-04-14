@@ -1,13 +1,20 @@
 <?
-echo <html>
-include "/php/header.php";
-
-echo <body>
-include "/php/nav.php";
-include "/php/hero.php";
-include "/php/marketing.php";
-echo </body>
-
-include "/php/footer.php";
-echo </html>
+$path = $_SERVER['DOCUMENT_ROOT'];
 ?>
+
+<html>
+<? include "$path/php/header.php"; ?>
+
+<body>
+
+<?
+include "$path/php/nav.php";
+include "$path/php/hero.php";
+include "$path/php/marketing.php";
+?>
+
+</body>
+
+<? include "$path/php/footer.php"; ?>
+
+</html>

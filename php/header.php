@@ -1,11 +1,11 @@
 <?
-
-	require '/fb/facebook.php';
+	$path = $_SERVER['DOCUMENT_ROOT'];
+	require $path.'/php/fb/facebook.php';
 
 	$facebook = new Facebook(array(
   		'appId'  => '204353349642023',
   		'secret' => '5f1f4d30d20fd1eeaedd89f6dbe3bb43',
-		));
+	));
 
 	// See if there is a user from a cookie
 	$user = $facebook->getUser();
