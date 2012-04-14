@@ -138,5 +138,5 @@ footer[role="contentinfo"]{
 }
 
 .typekit-badge{
-	display:none;
+	display:none !important;
 }
