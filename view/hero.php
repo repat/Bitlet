@@ -29,7 +29,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="span2 hero-circle circle-1">huh</div>
+		<div class="span2 hero-circle" id="circle-1" onClick="changeBg('/img/sch.jpg/')">huh</div>
 		<div class="span2 hero-circle" id="circle-2">heh</div>
 		<div class="span2 hero-circle" id="circle-3"></div>
 		<div class="span2 hero-circle" id="circle-4"></div>

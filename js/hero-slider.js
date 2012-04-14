@@ -1,5 +1,3 @@
-$(function() {
-	$('.circle-1').click(function() {
-			$('#tagline-image').attr('background', 'url(/img/sch.jpg)'); 
-	});
-});
+function changeBg(bg){
+	document.getElementById("tagline-image").style.background = bg;
+}
