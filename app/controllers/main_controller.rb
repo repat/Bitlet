@@ -2,6 +2,6 @@ class MainController < ApplicationController
   def index
   end
 
-  def download
+  def upload
   end
 end

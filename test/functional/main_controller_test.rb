@@ -6,8 +6,8 @@ class MainControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get download" do
-    get :download
+  test "should get upload" do
+    get :upload
     assert_response :success
   end
 
