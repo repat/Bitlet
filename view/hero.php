@@ -1,15 +1,5 @@
-<div class="slider-wrapper">	 
-	<div id="slider" class="nivoSlider">
-		<img src="img/bg.jpg" alt="">
-		<img src="img/bg.jpg" alt="">
-		<img src="img/bg.jpg" alt="">
-		<img src="img/bg.jpg" alt="">
-	</div>
-</div>
-<!--
 <div class="tagline-image">
 </div>
--->
 <div class="container tagline">
 	<div class="row tagline-descr">
 		<div class="span6">
@@ -33,26 +23,3 @@
 	</div>
 </div>
 
-<!-- 'nav' circles -->
-<div class="container">
-	<div class="row">
-		<div class="span2">
-				
-		</div>
-		<div class="span2">
-		
-		</div>
-		<div class="span2">
-		
-		</div>
-		<div class="span2">
-		
-		</div>
-		<div class="span2">
-
-		</div>
-		<div class="span2">
-		
-		</div>
-	</div>
-</div>
