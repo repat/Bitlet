@@ -111,3 +111,15 @@ hr.soften {
 	border: 0;
 }
 
+footer[role="contentinfo"]{
+	background:#EDEDED;
+	padding-bottom:40px;
+	border-top: 2px solid #DDD;
+}
+#footer-box{
+	height:50px;
+}
+.attribution{
+	font-size: 16px;
+	padding-top:20px;
+}
