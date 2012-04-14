@@ -3,7 +3,7 @@
 	$path = $_SERVER['DOCUMENT_ROOT'];
 
 	$uploadroot = 'data/';
-	$email = 'dzz0615@gmail.com';
+	$email = 'dzz5017@psu.edu';
 
 	// check size
 	if ($_FILES["file"]["size"] > 10000000) {	// limit is 10 MB
@@ -22,8 +22,8 @@
 
 	// setup database
 	include "$path/php/db_upload.php";
-	$db = connect();
-	$uid = GetUID($db, $email, 0);
+	$db = Connect();
+	$uid = GetUID($email, 0);
 
 	$uploaddir = $uploadroot.$uid;
 	$uploadname = $uploaddir.'/'.$name;
@@ -39,7 +39,8 @@
 	}
 
 	// insert file into db
-	NewFile($db, $uid, $uploadname);
+	NewFile($uid, $uploadname);
+	Disconnect($db);
 ?>
 
 <!DOCTYPE html>
