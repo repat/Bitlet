@@ -15,10 +15,6 @@ include "$path/php/model.php";
 
 $file = $_GET['f'];
 
-$db = Connect();
-$name = GetFileFromId($file);
-Disconnect($db);
-
 ?>
 
 <form action="" method="POST" id="payment-form">
@@ -40,6 +36,11 @@ Disconnect($db);
 	</div>
 
 	<button type="submit" class="submit-button">Submit Payment</button>
+</form>
+
+<form action="download.php" method="POST" id="go-download">
+	<input type="text" name="fid" value="<? echo $file ?>" style="display:none">
+	<button type="submit" name="download" style="display:none"></button>
 </form>
 
 </body>
