@@ -158,7 +158,7 @@ footer[role="contentinfo"]{
 
 /* Circle Slider Stylings */
 .hero-circle{
-	background: url(/img/grey_circ.png) no-repeat;
+	background: url(/img/grey_circle.png) no-repeat;
 }
 
 #circle-1{
@@ -168,4 +168,3 @@ footer[role="contentinfo"]{
 #circle-3{}
 #circle-4{}
 #circle-5{}
-#circle-6{}
