@@ -12,7 +12,7 @@
 					        <span class="add-on"><i class="icon-envelope"></i></span>
 							<input class="input-medium" id="inputIcon" type="text" name="email" onkeypress="return event.keyCode!=13">
 						</div>
-						<button type="button" class="btn btn-success btn-large">
+						<button type="button" class="btn btn-success">
 							<div class="file-div">
 							<input type="file" name="file" id="button" class="file-button"
 								 onchange="load(''); fade('loading'); upload.submit()"/>
