@@ -12,30 +12,19 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
-$uid = $_GET['u'];
-$db = Connect();
-
-$credits = GetCredits($uid);
-echo $credits;
-
-$files = GetFids($uid);
-
-// iterate through files and display info for each file
-foreach($files as $file) {
-	$finfo = GetFileInfo($file);
-
-	$name = $finfo['name'];
-	$price = $finfo['price'];
-	$downloads = $finfo['downloads'];
-
-	echo $name;
-	echo $price;
-	echo $downloads;
-}
-
-Disconnect($db);
+$fid = $_GET['f'];
 
 ?>
+
+<form class="form-inline" id="price" action="set_price.php" method="post" enctype="multipart/form-data">
+	<div class="input-prepend">
+		<span class="add-on" id="icona">$</span>
+		<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">
+		<input class="input-medium" id="price" type="text" name="price" placeholder="Price" onkeypress="return event.keyCode!=13">
+	</div>
+	<button type="submit" class="btn btn-success">Set Price</button>
+</form>
+
 
 </body>
 
