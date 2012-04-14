@@ -1,6 +1,6 @@
 <?
 
-	$uploadroot = '../uploads/';
+	$uploadroot = 'data/';
 	$userid = '0';
 
 	// check size
@@ -18,7 +18,8 @@
 	$tmp_name = $_FILES["file"]["tmp_name"];
 	$name = $_FILES["file"]["name"];
 
-	$uploadname = $uploadroot.$userid.'/'.$name;
+	$uploaddir = $uploadroot.$userid;
+	$uploadname = $uploaddir.'/'.$name;
 	$sh = "mkdir $uploaddir";
 	`$sh`;
 
@@ -31,7 +32,15 @@
 		exit();
 	}
 
-	// if it gets to this point, the file is successfully uploaded and stored
-	echo "Upload done. Running image script";
-
+	// display page
+	$path = $_SERVER['DOCUMENT_ROOT'];
 ?>
+
+<!DOCTYPE html>
+<html>
+<? include "$path/view/header.php"; ?>
+<body>
+<? include "$path/view/upload.php"; ?>
+</body>
+</html>
+
