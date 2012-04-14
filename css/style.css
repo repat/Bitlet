@@ -192,4 +192,5 @@ footer[role="contentinfo"]{
 }
 .email-suggestion-wrap{
 	height:25px;
+	margin-top:-5px;
 }
