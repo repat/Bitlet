@@ -1,7 +1,7 @@
 Bitlet::Application.routes.draw do
   get "download/index"
 
-  get "main/upload"
+  post "main/upload"
   get "main/index"
 
   match "upload/" => 'main#upload'
