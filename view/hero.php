@@ -5,7 +5,7 @@
 	<div class="row tagline-descr">
 		<div class="span7">
 			<div class="quote-background">
-				<h1>Simply share & sell your digital content with the world</h1>
+				<h1>Share & Sell your digital content.</h1>
 				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
 				<div class="container">
 					
