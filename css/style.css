@@ -174,8 +174,10 @@ footer[role="contentinfo"]{
 }
 
 /* email suggestion fixer */
-.email_suggestion{
+.email-suggestion{
 	color: white;
-	height: 25px;
 	text-align:left;
+}
+.email-suggestion-wrap{
+	height:25px;
 }
