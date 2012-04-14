@@ -5,7 +5,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 <html>
 <? include "$path/view/header.php"; ?>
 
-<body>
+<body style="paddint-top: 40px">
 <? include "$path/view/nav.php"; ?>
 
 <form class="form" id="upload" action=<?echo "$path/upload.php"?> method="post" enctype="multipart/form-data">
