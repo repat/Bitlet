@@ -38,7 +38,6 @@ Disconnect($db);
 ?>
 
 </body>
-
 <? include "$path/view/footer.php"; ?>
 </html>
 
