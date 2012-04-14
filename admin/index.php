@@ -17,7 +17,7 @@ include "$path/php/model.php";
 <div class="container">
 	<h2>Admin Panel </h2>
 	<div class="row">
-	<p>Credits: 
+	<h3 style="float:left;">Credits: 
 <?
 $uid = $_GET['u'];
 $db = Connect();
@@ -25,7 +25,7 @@ $db = Connect();
 $credits = GetCredits($uid);
 echo $credits;
 ?>
-</p>
+</h3>
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>
