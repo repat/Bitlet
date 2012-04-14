@@ -3,18 +3,18 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 ?>
 
 <html>
-<? include "$path/php/header.php"; ?>
+<? include "$path/view/header.php"; ?>
 
 <body>
 
 <?
-include "$path/php/nav.php";
-include "$path/php/hero.php";
-include "$path/php/marketing.php";
+include "$path/view/nav.php";
+include "$path/view/hero.php";
+include "$path/view/marketing.php";
 ?>
 
 </body>
 
-<? include "$path/php/footer.php"; ?>
+<? include "$path/view/footer.php"; ?>
 
 </html>
