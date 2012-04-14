@@ -32,37 +32,5 @@
 	<link href="/css/loading.css" rel="stylesheet" type="text/css">
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
 
-	<!-- Font stuff -->
-	<script type="text/javascript" src="http://use.typekit.com/hkc7cgw.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-	<!-- style and formatting -->
-	<script type="text/javascript" src="/js/loading.js"></script>
-	<script type="text/javascript" src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/js/bootstrap.js"></script>
-
-	<!-- special stuff -->
-	<script type="text/javascript" src="/js/hero-slider.js"></script>
-	<script type="text/javascript" src="/js/jquery.mailcheck.min.js"></script>
-	
-	<script>
-	var domains = ['hotmail.com', 'gmail.com', 'aol.com', 'yahoo.com'];
-	$('#email.input-medium').on('blur', function() {
-		  $(this).mailcheck({
-			    domains: domains,   
-				suggested: function(element, suggestion) {
-					$('.email_suggestion').html('Did you mean '+suggestion.address+'@'+'<strong>'+suggestion.domain+'</strong>?').show();
-				 },
-				 empty: function(element) {
-					$('.email_suggestion').html('').hide();  
-				 }
-		  });
-	});
-	</script>
-
-	<!-- Backend processing -->
-	<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-	<script type="text/javascript" src="/js/stripe.js"></script>
-
 </head>
 
