@@ -30,10 +30,8 @@ $dl = "http://bitlet.simply.io/dl?f=$fid";
 
 <div class="controls">
 	<span class="input-xlarge uneditable-input"><? echo $dl ?></span>
-</div>
-
 <button class="btn btn-success" href="<? echo $dl ?>">Go</button>
-
+</div>
 </div>
 </div>
 </body>
