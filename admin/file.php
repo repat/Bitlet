@@ -28,9 +28,12 @@ $dl = "http://bitlet.simply.io/dl?f=$fid";
 	<button type="submit" class="btn btn-success">Set Price</button>
 </form>
 
-<h3>The download link is:</h3>
-<p><a href="<? echo $dl ?>"><? echo $dl ?></a>
-</p>
+<div class="controls">
+	<span class="input-xlarge uneditable-input"><? echo $dl ?></span>
+</div>
+
+<button class="btn btn-success" href="<? echo $dl ?>">Go</button>
+
 </div>
 </div>
 </body>
