@@ -9,6 +9,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 <? include "$path/view/nav.php"; ?>
 
 <form class="form" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
+	<input type="text" name="email" onkeypress="return event.keyCode!=13">
 	<input type="file" name="file" id="file" onchange="load(''); fade('loading'); upload.submit()"/>
 </form>
 
