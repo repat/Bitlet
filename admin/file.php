@@ -13,7 +13,15 @@ include "$path/view/nav.php";
 include "$path/php/model.php";
 
 $fid = $_GET['f'];
+
+$db = Connect();
+$finfo = GetFileInfo($fid);
+$uid = $finfo['uid'];
+
 $dl = "http://bitlet.simply.io/dl?f=$fid";
+$admin = "http://bitlet.simply.io/admin?u=$uid";
+
+Disconnect();
 
 ?>
 <div class="container">
@@ -28,8 +36,11 @@ $dl = "http://bitlet.simply.io/dl?f=$fid";
 	<button type="submit" class="btn btn-success">Set Price</button>
 </form>
 
-<h3>Your Download link:</h3>
+<h3>Your Download Link:</h3>
 <p><a href="<? echo $dl ?>"><? echo $dl ?></a></p>
+
+<h3>Your Admin Link:</h3>
+<p><a href="<? echo $admin ?>"><? echo $admin ?></a></p>
 
 </div>
 </div>

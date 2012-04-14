@@ -23,7 +23,7 @@ Disconnect($db);
 ?>
 
 <div class="container mid">
-	<button class="btn btn-large btn-primary" href="download.php?n=<? echo $name;?>">download!</button>
+	<a class="btn btn-large btn-primary" href="download.php?n=<? echo $name;?>"><i class="icon-download icon-white"></i> Download <? echo basename($name); ?></a>
 </div>
 
 </body>

@@ -44,13 +44,13 @@ echo $credits;
 foreach($files as $file) {
 	$finfo = GetFileInfo($file);
 
-	$name = $finfo['name'];
+	$name = basename($finfo['name']);
 	$price = $finfo['price'];
 	$downloads = $finfo['downloads'];
 ?>
 	<tr>		
 		<td>
-		<?echo basename($name);?>
+		<?echo $name;?>
 		</td>
 		<td>
 <?		echo $price; ?>

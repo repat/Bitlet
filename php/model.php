@@ -54,6 +54,13 @@
 		return mysql_result($result, 0);
 	}
 
+	// get user from 
+	function GetUserInfo($uid)
+	{
+		$result = mysql_query("SELECT * FROM user WHERE id='$uid'") or die();
+		return mysql_fetch_assoc($result);
+	}
+
 	// returns an array of fid from user
 	function GetFids($uid)
 	{
