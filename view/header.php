@@ -31,12 +31,19 @@
 	<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="/css/loading.css" rel="stylesheet" type="text/css">
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
-	/* Font stuff */
+
+	<!-- Font stuff -->
 	<script type="text/javascript" src="http://use.typekit.com/hkc7cgw.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	/* end font stuff */
+
+	<!-- style and formatting -->
 	<script type="text/javascript" src="/js/loading.js"></script>
 	<script type="text/javascript" src="/js/jquery.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
+
+	<!-- Backend processing -->
+	<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+	<script type="text/javascript" src="/js/stripe.js"></script>
+
 </head>
 
