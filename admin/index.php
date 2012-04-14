@@ -15,9 +15,10 @@ include "$path/php/model.php";
 ?>
 
 <div class="container">
-	<h2>Admin Panel </h2>
+	<h1>Admin Panel</h1>
 	<div class="row">
-	<h3 style="float:left;">Credits: 
+	<div class="span10 offset1">
+	<h3 style="text-align:left;">Credits: 
 <?
 $uid = $_GET['u'];
 $db = Connect();
@@ -66,6 +67,7 @@ Disconnect($db);
 ?>
 		</tbody>
 		</table>
+		</div>
 		</div>
 	</div>
 </body>
