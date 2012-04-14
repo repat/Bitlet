@@ -1,13 +1,13 @@
 <?
-<html>
+echo <html>
 include "/php/header.php";
 
-<body>
+echo <body>
 include "/php/nav.php";
 include "/php/hero.php";
 include "/php/marketing.php";
-</body>
+echo </body>
 
 include "/php/footer.php";
-</html>
+echo </html>
 ?>
