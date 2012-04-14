@@ -6,6 +6,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 <? include "$path/view/header.php"; ?>
 
 <body>
+<? include "$path/view/nav.php"; ?>
 
 <form class="form" id="upload" action=<?echo "$path/upload.php"?> method="post">
 	<input id="email_bar" type="text" size="62" maxlength="200" name="email_url">
