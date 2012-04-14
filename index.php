@@ -1,16 +1,20 @@
+<?
+$path = $_SERVER['DOCUMENT_ROOT'];
+?>
+
 <html>
-<? include "/php/header.php"; ?>
+<? include "$path/php/header.php"; ?>
 
 <body>
 
 <?
-include "/php/nav.php";
-include "/php/hero.php";
-include "/php/marketing.php";
+include "$path/php/nav.php";
+include "$path/php/hero.php";
+include "$path/php/marketing.php";
 ?>
 
 </body>
 
-<? include "/php/footer.php"; ?>
+<? include "$path/php/footer.php"; ?>
 
 </html>

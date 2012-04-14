@@ -1,11 +1,19 @@
 <?
+$path = $_SERVER['DOCUMENT_ROOT'];
+?>
+
 <html>
-include "/php/header.php";
+<? include "$path/php/header.php"; ?>
 
 <body>
-include "/php/nav.php";
+<? include "$path/php/nav.php"; ?>
+
+<?
+$file = $_GET['f'];
+echo $file
+?>
 </body>
 
-include "/php/footer.php";
+<? include "$path/php/footer.php"; ?>
 </html>
-?>
+

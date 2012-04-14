@@ -1,5 +1,6 @@
 <?
-	require '/fb/facebook.php';
+	$path = $_SERVER['DOCUMENT_ROOT'];
+	require $path.'/php/fb/facebook.php';
 
 	$facebook = new Facebook(array(
   		'appId'  => '204353349642023',
