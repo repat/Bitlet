@@ -2,6 +2,7 @@
 $path = $_SERVER['DOCUMENT_ROOT'];
 ?>
 
+<!DOCTYPE html>
 <html>
 <? include "$path/view/header.php"; ?>
 
