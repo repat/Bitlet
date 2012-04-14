@@ -15,7 +15,7 @@ include "$path/php/model.php";
 ?>
 
 <div class="container">
-	<h2>Page Title </h2>
+	<h2>Admin Panel </h2>
 	<div class="row">
 	<p>Credits: 
 <?
@@ -64,7 +64,10 @@ foreach($files as $file) {
 Disconnect($db);
 
 ?>
-
+		</tbody>
+		</table>
+		</div>
+	</div>
 </body>
 <? include "$path/view/footer.php"; ?>
 </html>
