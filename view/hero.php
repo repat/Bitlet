@@ -9,7 +9,7 @@
 				<div>
 					<form class="form-inline" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
 						<div class="input-prepend">
-					        <span class="add-on" id="emaila"><i class="icon-envelope"></i></span>
+					        <span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope"></i></span>
 							<input class="input-medium" id="email" type="text" name="email" placeholder="Email" onkeypress="return event.keyCode!=13">
 						</div>
 						<button type="button" class="btn btn-large btn-success">
