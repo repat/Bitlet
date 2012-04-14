@@ -38,7 +38,7 @@ $file = $_GET['f'];
 	<button type="submit" class="submit-button">Submit Payment</button>
 </form>
 
-<form action="download.php" method="POST" id="go-download">
+<form action="go.php" method="POST" id="go-download">
 	<input type="text" name="fid" value="<? echo $file ?>" style="display:none">
 	<button type="submit" name="download" style="display:none"></button>
 </form>
