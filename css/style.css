@@ -3,6 +3,10 @@ body {
 	padding-top: 54px;
 }
 
+.mid {
+	text-align:center;	
+}
+
 /* Beginning tagline */
 .tagline {
 	margin-bottom: 40px;

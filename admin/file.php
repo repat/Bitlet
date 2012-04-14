@@ -25,7 +25,6 @@ $fid = $_GET['f'];
 	<button type="submit" class="btn btn-success">Set Price</button>
 </form>
 
-
 </body>
 
 <? include "$path/view/footer.php"; ?>

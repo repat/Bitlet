@@ -39,15 +39,11 @@
 	}
 
 	// insert file into db
-	NewFile($uid, $uploadname);
+	$fid = NewFile($uid, $uploadname);
 	Disconnect($db);
-?>
 
-<!DOCTYPE html>
-<html>
-<? include "$path/view/header.php"; ?>
-<body>
-<? include "$path/view/upload.php"; ?>
-</body>
-</html>
+	// go to admin page
+	header('Location: admin/file.php?f='.$fid);
+
+?>
 
