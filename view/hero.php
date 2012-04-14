@@ -8,7 +8,7 @@
 				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
 				<div>
 					<form class="form" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
-						<input type="text" name="email" onkeypress="return event.keyCode!=13">
+						<input type="text" class="input" name="email" onkeypress="return event.keyCode!=13">
 						<button type="button" class="btn btn-success btn-large">
 							<div class="file-div">
 							<input type="file" name="file" id="button" class="file-button"
