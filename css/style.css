@@ -44,7 +44,9 @@ body {
 /* Inputs */
 .input-medium#email {
 	height: 26px;
-	width: 180px;
+	width: 200px;
+	font-size: 18px;
+	color: #111;
 }
 .add-on#emaila {
 	height: 26px;
