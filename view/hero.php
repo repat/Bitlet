@@ -20,7 +20,7 @@
 							Upload File
 						</button>
 					</form>
-					<div class="email_suggestion></div>
+					<div class="email_suggestion"></div>
 				</div>
 			</div>
 		</div>
