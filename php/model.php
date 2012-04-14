@@ -40,8 +40,9 @@
 		mysql_query("UPDATE file SET downloads = downloads + 1 WHERE id='$fid'") or die();
 		// get price
 		$result = mysql_query("SELECT price, uid FROM file WHERE id='$fid'") or die();
-		$price = mysql_result($result, 0);
-		$uid = mysql_result($result, 1);
+		$row = mysql_fetch_row($result);
+		$price = $row[0];
+		$uid = $row[1];
 		// add price to user id credits
 		mysql_query("UPDATE user SET credits = credits + '$price' WHERE id='$uid'") or die();
 	}
