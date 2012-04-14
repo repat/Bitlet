@@ -20,7 +20,7 @@
 							Upload File
 						</button>
 					</form>
-					<div class="email-suggestion-wrap"
+					<div class="email-suggestion-wrap">
 						<div class="email_suggestion" style="disply:inline;"></div>
 					</div>
 				</div>
