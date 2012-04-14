@@ -3,11 +3,31 @@
 
 <div class="container tagline">
 	<div class="row tagline-descr">
-	<div class="span9">
-		<div class="quote-background">
-		<h2>If you are using the wired internet connections in a Penn State dorm, 
-		your personal information might be available to any website.<p></p>
-		</h2></div>
+		<div class="span9">
+			<div class="quote-background">
+				<div class="container mid">
+					<h3>PSU user ID:</h3>
+					<form class="well form-inline">
+						<input type="text" class="input-small" placeholder="Email">
+						<input type="password" class="input-small" placeholder="Password">
+						<label class="checkbox">
+						<input type="checkbox"> Remember me </label>
+						<button type="submit" class="btn">Sign in</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
+
+<!-- 'nav' circles -->
+<div class="container">
+	<div class="row">
+		<div class="span2"></div>
+		<div class="span2"></div>
+		<div class="span2"></div>
+		<div class="span2"></div>
+		<div class="span2"></div>
+		<div class="span2"></div>
 	</div>
 </div>
