@@ -10,7 +10,7 @@
 				<div>
 					<form class="form" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
 						<input type="text" name="email" onkeypress="return event.keyCode!=13">
-						<input type="file" name="file" id="file" class="btn btn-success" onchange="load(''); fade('loading'); upload.submit()"/>
+						<input type="file" name="file" id="file" class="btn btn-success icon-upload icon-white" onchange="load(''); fade('loading'); upload.submit()"/>
 					</form>
 				</div>
 			</div>
