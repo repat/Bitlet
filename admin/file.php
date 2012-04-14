@@ -28,8 +28,8 @@ $dl = "http://bitlet.simply.io/dl?f=$fid";
 	<button type="submit" class="btn btn-success">Set Price</button>
 </form>
 
-<div class="controls">
-	<span class="input-xlarge uneditable-input"><? echo $dl ?></span>
+<div class="">
+	<label class="input-xlarge uneditable-input"><? echo $dl ?></label>
 <button class="btn btn-success" href="<? echo $dl ?>">Go</button>
 </div>
 </div>
