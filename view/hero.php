@@ -10,7 +10,7 @@
 					<form class="form-inline" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
 						<div class="input-prepend">
 					        <span class="add-on"><i class="icon-envelope"></i></span>
-							<input class="input-medium" id="inputIcon" type="text" name="email" onkeypress="return event.keyCode!=13">
+							<input class="input-medium" id="inputIcon email" type="text" name="email" onkeypress="return event.keyCode!=13">
 						</div>
 						<button type="button" class="btn btn-success">
 							<div class="file-div">
@@ -20,6 +20,7 @@
 							Upload File
 						</button>
 					</form>
+					<div class="email_suggestion></div>
 				</div>
 			</div>
 		</div>
@@ -28,11 +29,11 @@
 
 <div class="container">
 	<div class="row">
-		<div class="span2 hero-circle" id="circle-1" ">huh</div>
-		<div class="span2 hero-circle" id="circle-2" ">heh</div>
-		<div class="span2 hero-circle" id="circle-3" "></div>
-		<div class="span2 hero-circle" id="circle-4" "></div>
-		<div class="span2 hero-circle" id="circle-5" "></div>
-		<div class="span2 hero-circle" id="circle-6" "></div>
+		<div class="span2 hero-circle" id="circle-1">huh</div>
+		<div class="span2 hero-circle" id="circle-2">heh</div>
+		<div class="span2 hero-circle" id="circle-3"></div>
+		<div class="span2 hero-circle" id="circle-4"></div>
+		<div class="span2 hero-circle" id="circle-5"></div>
+		<div class="span2 hero-circle" id="circle-6"></div>
 	</div>	
 </div>

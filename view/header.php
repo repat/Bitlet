@@ -41,8 +41,24 @@
 	<script type="text/javascript" src="/js/jquery.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
 
-	<!-- special effects -->
+	<!-- special stuff -->
 	<script type="text/javascript" src="/js/hero-slider.js"></script>
+	<script src="jquery.mailcheck.min.js"></script>
+	
+	<script>
+	var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
+	$('#email').on('blur', function() {
+		  $(this).mailcheck({
+			    domains: domains,   
+				suggested: function(element, suggestion) {
+					$('.email_suggestion').html('Did you mean '+suggestion.address+'@'+'<strong>'+suggestion.domain+'</strong>?').show();
+				 },
+				 empty: function(element) {
+					$('.email_suggestion').html('').hide();  
+				 }
+		  });
+	});
+	</script>
 
 	<!-- Backend processing -->
 	<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
