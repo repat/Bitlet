@@ -7,11 +7,10 @@
 			<div class="quote-background">
 				<h1>Share & Sell your digital content with the World.</h1>
 				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
-				<div class="container">
-					
+				<div>
 					<form class="form" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
 						<input type="text" name="email" onkeypress="return event.keyCode!=13">
-						<input type="file" name="file" id="file" onchange="load(''); fade('loading'); upload.submit()"/>
+						<input type="file" name="file" id="file" class="btn btn-success" onchange="load(''); fade('loading'); upload.submit()"/>
 					</form>
 				</div>
 			</div>
