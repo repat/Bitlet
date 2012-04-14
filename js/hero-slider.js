@@ -12,7 +12,7 @@ $('#circle-3').click(function()
 });
 $('#circle-4').click(function()
 {
-	$('#tagline-image').css("background", "url(/img/bg/digfile.jpg)");
+	$('#tagline-image').css("background", "url(/img/bg/digfile.png)");
 });
 $('#circle-5').click(function()
 {
