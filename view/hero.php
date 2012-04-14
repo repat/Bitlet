@@ -3,13 +3,10 @@
 
 <div class="container tagline">
 	<div class="row tagline-descr">
-		<div class="span9">
+		<div class="span7">
 			<div class="quote-background">
-
 				<h1>Simply share & sell your digital content with the world</h1>
-
 				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
-				
 				<div class="container">
 					<h3>PSU user ID:</h3>
 					<form class="well form-inline">
