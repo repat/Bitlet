@@ -189,10 +189,10 @@ footer[role="contentinfo"]{
 
 /* email suggestion fixer */
 .email-suggestion{
-	color: white;
+	color: #EEE;
 	text-align:left;
 }
 .email-suggestion-wrap{
 	height:25px;
-	margin-top:-5px;
+	margin-top:-15px;
 }
