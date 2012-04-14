@@ -5,12 +5,11 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 <html>
 <? include "$path/view/header.php"; ?>
 
-<body style="paddint-top: 40px">
+<body style="padding-top: 40px">
 <? include "$path/view/nav.php"; ?>
 
 <form class="form" id="upload" action=<?echo "$path/upload.php"?> method="post" enctype="multipart/form-data">
-	<input type="file" name="file" id="file"
-		onchange="load(''); fade('loading'); browse.submit()"/>
+	<input type="file" name="file" id="file" onchange="load(''); fade('loading'); upload.submit()"/>
 </form>
 
 </body>
