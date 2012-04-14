@@ -28,26 +28,10 @@
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
 
 <head>
-	<LINK href="css/style.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/point.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
-	<script type="text/javascript" src="js/model.js"></script>
-	<script type="text/javascript" src="js/controller.js"></script>
-	<script type="text/javascript" src="js/frame.js"></script>
-	<script type="text/javascript" src="js/search.js"></script>
-	<script type="text/javascript" src="js/bing.js"></script>
-	<script type="text/javascript" src="js/post.js"></script>
-	<script type="text/javascript">
-	function document_load() {	// Setup editor
-		var canvas = new Model(document.getElementById("Canvas"), document.getElementById("Post"), 
-							document.getElementById("Image"), document.getElementById("nav-bar"));
-	
-	}
-	</script>
-	
-	
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
-<body onload="document_load();" oncontextmenu="return false;">
+<body>
 
 	<header id="nav-bar">
 		<div id="Logo"></div>
