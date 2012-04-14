@@ -147,7 +147,7 @@ a:hover {
   text-decoration: underline;
 }
 .row {
-  margin-left: -20px;
+  /*margin-left: -20px; don't fucking do shit like this..love Zach */
   *zoom: 1;
 }
 .row:before,
