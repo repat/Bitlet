@@ -8,7 +8,7 @@
 
 				<h1>Simply share & sell your digital content with the world</h1>
 
-				<h3>The easiest way to share your stuff online and make a profit. Join the revolution.</h3>
+				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
 				
 				<div class="container">
 					<h3>PSU user ID:</h3>
