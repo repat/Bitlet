@@ -114,8 +114,9 @@ hr.soften {
 
 footer[role="contentinfo"]{
 	background:#EDEDED;
-	padding-bottom:40px;
+	padding-bottom:20px;
 	border-top: 2px solid #DDD;
+	margin-bottom:-50px;
 }
 #footer-box{
 	height:50px;

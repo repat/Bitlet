@@ -3,8 +3,8 @@
 		<nav class="clearfix">
 		</nav>
 		<div class="container">
-			<p class="attribution">©2012 Simply, LLC<br>
-			<a href="emailto:dev@simply.io">dev@simply.io</a></p>
+			<p class="attribution"><br>
+			<a href=""></a></p>
 		</div>
 	</div> <!-- end #inner-footer -->	
 </footer>
