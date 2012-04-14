@@ -1,6 +1,6 @@
 <?
 
-	$uploadroot = '/static.simply.io/uploads/';
+	$uploadroot = '../uploads/';
 	$userid = '0';
 
 	// check size
@@ -15,11 +15,16 @@
 		exit();
 	}
 
-	$uploaddir = $uploadroot.$userid.'/';
-	`mkdir $uploaddir`;
+	$tmp_name = $_FILES["file"]["tmp_name"];
+	$name = $_FILES["file"]["name"];
 
-	if (move_uploaded_file($_FILES["file"]["tmp_name"], $uploaddir)) {
-		$sh ="chmod 755 $uploadfile";
+	$uploadname = $uploadroot.$userid.'/'.$name;
+	$sh = "mkdir $uploaddir";
+	`$sh`;
+
+
+	if (move_uploaded_file($tmp_name, $uploadname)) {
+		$sh ="chmod 755 $uploadname";
 		`$sh`;
 	} else {
 		$error = "File storage error";
