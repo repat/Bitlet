@@ -173,13 +173,10 @@ footer[role="contentinfo"]{
 .hero-circle{
 	background: url(/img/grey_circle.png) no-repeat;
 	height: 108px;
+	.img {
+		padding:28px;
+	}
 }
-
-#circle-1{}
-#circle-2{}
-#circle-3{}
-#circle-4{}
-#circle-5{}
 
 /* bootstrap hackaround */
 .input-prepend .add-on, .input-prepend .btn {
