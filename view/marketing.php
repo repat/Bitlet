@@ -1,17 +1,17 @@
 <div class="container mid">
-	<h3>Looks like you're not in a dorm, so you should be safe. If you're still curious about what information is available to the public, enter your PSU user ID:</h3>
-	<form accept-charset="UTF-8" action="/home/lookup" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="yWkPenYYHX6opjija1MBphSQOIpCL/WEIKmfr92c07Q="></div>
+	<h3>PSU user ID:</h3>
+	<form accept-charset="UTF-8" action="/home/lookup" data-remote="true" method="post">
 		<div>
 			<div class="input-append">
                 <input class="span2" id="appendedInput" size="16" type="text"><span class="add-on">@psu.edu</span>
             </div>
 			<input class="btn btn-large btn-primary" id="submit" name="commit" type="submit" value="Find My Info!">
 		</div>
-</form>	<div id="list" class="list"></div>
+	</form>	
 </div>
 
 
-<hr class="soften">
+<hr class="soften" />
 
 <div class="container marketing">
 	<h1> Frequently Asked Questions</h1>
