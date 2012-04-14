@@ -8,12 +8,10 @@
 				<h1>Simply share & sell your digital content with the world</h1>
 				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
 				<div class="container">
-					<form class="form-inline">
-						<input type="text" class="input-small" placeholder="Email">
-						<input type="password" class="input-small" placeholder="Password">
-						<label class="checkbox">
-						<input type="checkbox"> Remember me </label>
-						<button type="submit" class="">Sign in</button>
+					
+					<form class="form" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
+						<input type="text" name="email" onkeypress="return event.keyCode!=13">
+						<input type="file" name="file" id="file" onchange="load(''); fade('loading'); upload.submit()"/>
 					</form>
 				</div>
 			</div>
