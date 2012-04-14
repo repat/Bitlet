@@ -43,7 +43,7 @@
 
 	<!-- special stuff -->
 	<script type="text/javascript" src="/js/hero-slider.js"></script>
-	<script src="jquery.mailcheck.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.mailcheck.min.js"></script>
 	
 	<script>
 	var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
