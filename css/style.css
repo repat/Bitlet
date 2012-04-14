@@ -158,7 +158,7 @@ footer[role="contentinfo"]{
 }
 .navbar .brand{
 	padding: 15px 20px 14px 20px !important;
-	font-size:25px !important;
+	font-size:30px !important;
 	font-weight:bold !important;
 	color: #017AFF !important;
 }
@@ -169,7 +169,11 @@ footer[role="contentinfo"]{
 
 /* Styling from the opaque box on homepage */
 .intro{
-	margin: 1em 0;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: #DDD;
+	line-height: 23px;
+	font-weight: 300;
 	font-size:20px;
 }
 

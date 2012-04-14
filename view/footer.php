@@ -23,7 +23,7 @@
 <script type="text/javascript" src="/js/hero-slider.js"></script>
 <script type="text/javascript" src="/js/jquery.mailcheck.min.js"></script>
 <script type="text/javascript" src="/js/mailcheck.js"></script>
-<script type="text/javascript" src="/js/uploader.js"></script>
+
 <!-- Backend processing -->
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 <script type="text/javascript" src="/js/stripe.js"></script>
