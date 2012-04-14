@@ -2,6 +2,8 @@ Bitlet::Application.routes.draw do
   get "main/index"
   get "main/download"
 
+  match "download/" => 'main#download'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
