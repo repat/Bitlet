@@ -7,7 +7,7 @@ $('#email').keyup(function() {
 				$('.email-suggestion').html('Did you mean '+suggestion.address+'@'+'<strong>'+suggestion.domain+'</strong>?').show();
 			 },
 			 empty: function(element) {
-				//$('.email-suggestion').html('').hide();  
+				$('.email-suggestion').html('').hide();  
 			 }
 	  });
 });
