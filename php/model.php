@@ -53,6 +53,24 @@
 		return mysql_result($result, 0);
 	}
 
+	// returns an array of fid from user
+	function GetFids($uid)
+	{
+		$result = mysql_query("SELECT id FROM file WHERE uid='$uid'") or die('cant get fids');
+		$rows = array();
+		while($row = mysql_fetch_row($result)) {
+			$rows[] = $row[0];
+		}
+		return $rows;
+	}
+
+	// returns info about the file
+	function GetFileInfo($fid)
+	{
+		$result = mysql_query("SELECT * FROM file WHERE id='$fid'") or die();
+		return mysql_fetch_assoc($result);
+	}
+
 	function GetFileFromId($fid)
 	{
 		//Query the user database and see if the user already has an account
@@ -64,3 +82,4 @@
 	}
 
 ?>
+
