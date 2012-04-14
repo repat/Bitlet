@@ -27,8 +27,8 @@ foreach($files as $file) {
 	$name = $finfo['name'];
 	$price = $finfo['price'];
 	$downloads = $finfo['downloads'];
-
-	echo '<img src="'$name'" alt=""/> ';
+?>
+	<img src="<? echo $name ?>" alt=""/><?
 	echo $price;
 	echo $downloads;
 }
