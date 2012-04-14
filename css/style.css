@@ -134,7 +134,4 @@ footer[role="contentinfo"]{
 	font-size:25px !important;
 	font-weight:bolder !important;
 	color: #017AFF !important;
-	-moz-box-shadow:    inset 0 0 10px #000000;
-	-webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow:         inset 0 0 10px #000000;
 }
