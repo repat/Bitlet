@@ -23,14 +23,14 @@ body {
 
 .tagline-descr {
 	display: inline;
-	padding-top: 100px;
+	padding-top: 50px;
 	position: absolute;
 	text-align: left;
 	color: #FFF;
 }
 
 .quote-background {
-	background: rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.5);
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-top: 10px;
