@@ -27,8 +27,8 @@ foreach($files as $file) {
 	$name = $finfo['name'];
 	$price = $finfo['price'];
 	$downloads = $finfo['downloads'];
-?>
-	<? echo basename($name);
+	
+	echo basename($name);
 	echo $price;
 	echo $downloads;
 }
