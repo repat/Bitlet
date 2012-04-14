@@ -23,3 +23,8 @@
 	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		<div class="span2 hero-circle" id="circle-1" onclick="javascript shit"></div>
+	</div>	
+</div>

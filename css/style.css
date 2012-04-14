@@ -118,7 +118,7 @@ hr.soften {
 	background-color: rgba(0,0,0,0);
 	border: 0;
 }
-
+/* Footer Styling */
 footer[role="contentinfo"]{
 	background:#EDEDED;
 	padding-bottom:20px;
@@ -132,6 +132,8 @@ footer[role="contentinfo"]{
 	font-size: 16px;
 	padding-top:20px;
 }
+
+/*navigation changes - goes against bootsrap norm */
 .navbar-inner{
 	background-image:none !important;
 	background-color:#EDEDED !important;
@@ -142,12 +144,27 @@ footer[role="contentinfo"]{
 	font-weight:bold !important;
 	color: #017AFF !important;
 }
-
+/* Hides Typekit badge */
 .typekit-badge{
 	display:none !important;
 }
 
+/* Styling from the opaque box on homepage */
 .intro{
 	margin: 1em 0;
 	font-size:20px;
 }
+
+/* Circle Slider Stylings */
+.hero-circle{
+	background: url(/img/grey_circ.png) no-repeat;
+}
+
+#circle-1{
+	
+}
+#circle-2{}
+#circle-3{}
+#circle-4{}
+#circle-5{}
+#circle-6{}
