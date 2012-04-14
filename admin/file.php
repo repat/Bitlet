@@ -13,6 +13,7 @@ include "$path/view/nav.php";
 include "$path/php/model.php";
 
 $fid = $_GET['f'];
+$dl = "http://bitlet.simply.io/dl?f=$fid";
 
 ?>
 
@@ -24,6 +25,9 @@ $fid = $_GET['f'];
 	</div>
 	<button type="submit" class="btn btn-success">Set Price</button>
 </form>
+
+<p>The download link is:</p>
+<a href="<? echo $dl ?>"><? echo $dl ?></a>
 
 </body>
 
