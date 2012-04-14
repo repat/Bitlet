@@ -41,7 +41,14 @@ body {
 	-webkit-border-radius: 4px;
 }
 
-/* button */
+/* Inputs */
+.input-medium#email {
+	height: 26px;
+}
+.add-on#emaila {
+	height: 26px;
+	width: 16px;
+}
 .file-div {
 	width: 100px;
 	margin: -9px -20px -9px -20px;

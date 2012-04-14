@@ -6,10 +6,10 @@ $('#email').keyup(function() {
 	  $(this).mailcheck({
 			domains: domains,   
 			suggested: function(element, suggestion) {
-				$('.email_suggestion').html('Did you mean '+suggestion.address+'@'+'<strong>'+suggestion.domain+'</strong>?').show();
+				$('.email-suggestion').html('Did you mean '+suggestion.address+'@'+'<strong>'+suggestion.domain+'</strong>?').show();
 			 },
 			 empty: function(element) {
-				$('.email_suggestion').html('').hide();  
+				//$('.email-suggestion').html('').hide();  
 			 }
 	  });
 });
