@@ -159,6 +159,7 @@ footer[role="contentinfo"]{
 /* Circle Slider Stylings */
 .hero-circle{
 	background: url(/img/grey_circle.png) no-repeat;
+	height: 108px;
 }
 
 #circle-1{
