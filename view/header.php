@@ -46,7 +46,7 @@
 	<script type="text/javascript" src="/js/jquery.mailcheck.min.js"></script>
 	
 	<script>
-	var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
+	var domains = ['hotmail.com', 'gmail.com', 'aol.com', 'yahoo.com'];
 	$('#email').on('blur', function() {
 		  $(this).mailcheck({
 			    domains: domains,   

@@ -174,3 +174,10 @@ footer[role="contentinfo"]{
 .input-prepend .add-on, .input-prepend .btn {
 	margin-right: -5px !important;
 }
+
+/* email suggestion fixer */
+.email_suggestion{
+	color: white;
+	height: 25px;
+	text-align:left;
+}
