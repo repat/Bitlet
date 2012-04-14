@@ -12,13 +12,31 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
+?>
+<h2>Page Title </h2>
+
+<div class="container">
+	<div class="row">
+
+<?
 $uid = $_GET['u'];
 $db = Connect();
 
 $credits = GetCredits($uid);
 echo $credits;
+?>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Class</th>
+			<th>Description</th>
+	    </tr>
+	</thead> 
+	<tbody>
 
-$files = GetFids($uid);
+
+<? $files = GetFids($uid);
 
 // iterate through files and display info for each file
 foreach($files as $file) {
@@ -27,10 +45,19 @@ foreach($files as $file) {
 	$name = $finfo['name'];
 	$price = $finfo['price'];
 	$downloads = $finfo['downloads'];
-	
-	echo basename($name);
-	echo $price;
-	echo $downloads;
+?>
+	<tr>		
+		<td>
+		<?echo basename($name);?>
+		</td>
+		<td>
+<?		echo $price; ?>
+		</td>
+		<td>
+<?		echo $downloads;?>
+		</td>
+	</tr>
+<?
 }
 
 Disconnect($db);
