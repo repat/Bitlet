@@ -3,9 +3,8 @@
 	<form accept-charset="UTF-8" action="/home/lookup" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="yWkPenYYHX6opjija1MBphSQOIpCL/WEIKmfr92c07Q="></div>
 		<div>
 			<div class="input-append">
-				<input class="span4" id="appendedInput" maxlength="9" name="uid" placeholder="PSU User ID" size="16" type="text" value="">
-				<span class="add-on" id="psu">@psu.edu</span>
-			</div>
+                <input class="span2" id="appendedInput" size="16" type="text"><span class="add-on">@psu.edu</span>
+            </div>
 			<input class="btn btn-large btn-primary" id="submit" name="commit" type="submit" value="Find My Info!">
 		</div>
 </form>	<div id="list" class="list"></div>
