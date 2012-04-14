@@ -13,11 +13,11 @@ include "$path/view/nav.php";
 include "$path/php/model.php";
 
 ?>
-<h2>Page Title </h2>
 
 <div class="container">
+	<h2>Page Title </h2>
 	<div class="row">
-
+	<p>Credits: 
 <?
 $uid = $_GET['u'];
 $db = Connect();
@@ -25,12 +25,13 @@ $db = Connect();
 $credits = GetCredits($uid);
 echo $credits;
 ?>
+</p>
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Class</th>
-			<th>Description</th>
+			<th>Price</th>
+			<th>Downloads</th>
 	    </tr>
 	</thead> 
 	<tbody>
