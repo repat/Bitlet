@@ -3,7 +3,7 @@
 	$path = $_SERVER['DOCUMENT_ROOT'];
 
 	$uploadroot = 'data/';
-	$email = 'dzz5017@psu.edu';
+	$email = $_POST['email'];
 
 	// check size
 	if ($_FILES["file"]["size"] > 10000000) {	// limit is 10 MB
