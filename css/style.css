@@ -40,14 +40,20 @@ body {
 	-webkit-border-radius: 4px;
 }
 
-/* Mid section of site */
-.mid {
-	text-align: center;
-	font-weight: 300;
+/* button */
+.file-div {
+	width: 100px;
+	margin: -9px -20px -9px -20px;
+	overflow: hidden;
 }
-
-.add-on#psu {
-	margin-left: -5px;
+input[type="file"], .file-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	position: absolute;
+	width: 106px;
+	height: 37px;
+	margin-top: -10px;
+	margin-left: 5px;
 }
 
 /* Marketing section of Overview */

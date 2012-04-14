@@ -21,7 +21,7 @@
 	$name = $_FILES["file"]["name"];
 
 	// setup database
-	include "$path/php/db_upload.php";
+	include "$path/php/model.php";
 	$db = Connect();
 	$uid = GetUID($email, 0);
 
