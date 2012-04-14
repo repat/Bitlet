@@ -169,3 +169,8 @@ footer[role="contentinfo"]{
 #circle-3{}
 #circle-4{}
 #circle-5{}
+
+/* bootstrap hackaround */
+.input-prepend .add-on, .input-prepend .btn {
+	margin-right: -5px !important;
+}
