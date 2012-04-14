@@ -3,7 +3,7 @@
 
 <div class="container tagline">
 	<div class="row tagline-descr">
-		<div class="span7">
+		<div class="span6">
 			<div class="quote-background">
 				<h1>Share & Sell your digital content with the World.</h1>
 				<p class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</p>
@@ -27,11 +27,23 @@
 <!-- 'nav' circles -->
 <div class="container">
 	<div class="row">
-		<div class="span2"></div>
-		<div class="span2"></div>
-		<div class="span2"></div>
-		<div class="span2"></div>
-		<div class="span2"></div>
-		<div class="span2"></div>
+		<div class="span2">
+				
+		</div>
+		<div class="span2">
+		
+		</div>
+		<div class="span2">
+		
+		</div>
+		<div class="span2">
+		
+		</div>
+		<div class="span2">
+
+		</div>
+		<div class="span2">
+		
+		</div>
 	</div>
 </div>
