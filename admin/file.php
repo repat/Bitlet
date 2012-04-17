@@ -6,6 +6,8 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
+$db = Connect();
+
 // we can get either the fid or the furl
 $fid = $_GET['f'];
 $furl = $_GET['n'];
@@ -17,7 +19,6 @@ if(!($fid || $furl)) {
 	$fid = GetFidFromUrl($furl);
 }
 
-$db = Connect();
 $finfo = GetFileInfo($fid);
 $uid = $finfo['uid'];
 $price = $finfo['price'];

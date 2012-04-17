@@ -6,6 +6,8 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
+$db = Connect();
+
 $fid = $_GET['f'];
 $furl = $_GET['n'];
 
@@ -16,7 +18,6 @@ if(!($fid || $furl)) {
 	$fid = GetFidFromUrl($furl);
 }
 
-$db = Connect();
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
 $price = $finfo['price'];
