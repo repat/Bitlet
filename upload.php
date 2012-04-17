@@ -43,7 +43,7 @@
 	Disconnect($db);
 
 	// go to admin page
-	header('Location: admin/file.php?f='.$fid);
+	header('Location: admin/'.$fid);
 
 ?>
 

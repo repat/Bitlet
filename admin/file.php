@@ -17,16 +17,17 @@ $fid = $_GET['f'];
 $db = Connect();
 $finfo = GetFileInfo($fid);
 $uid = $finfo['uid'];
+$price = $finfo['price'];
 
-$dl = "http://bitlet.simply.io/dl?f=$fid";
-$admin = "http://bitlet.simply.io/admin?u=$uid";
+$dl = "http://bitlet.simply.io/l/$fid";
+$admin = "http://bitlet.simply.io/user/$uid";
 
-Disconnect();
+Disconnect($db);
 
 ?>
 <div class="container">
 <div class="row mid">
-<h1>Set the Price!</h1>
+<h1>Current Price: $ <? echo $price ?></h1>
 <form class="form-inline" id="price" action="set_price.php" method="post" enctype="multipart/form-data">
 	<div class="input-prepend">
 		<span class="add-on" id="icona">$</span>
