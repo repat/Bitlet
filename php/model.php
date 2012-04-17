@@ -17,11 +17,11 @@
 	}
 
 	// add a new file under input user uid
-	function NewFile($uid, $filename)
+	function NewFile($uid, $filename, $type)
 	{
 		// Insert file into files table
-		mysql_query("INSERT INTO file (uid, name)
-			VALUES('$uid', '$filename')") or die();
+		mysql_query("INSERT INTO file (uid, name, tyle)
+			VALUES('$uid', '$filename', '$type')") or die();
 		return mysql_insert_id();
 
 	}
@@ -30,6 +30,20 @@
 	function SetPrice($fid, $price)
 	{
 		mysql_query("UPDATE file SET price='$price'
+			WHERE id='$fid'") or die();
+	}
+
+	// set price for a file
+	function SetDisplayName($fid, $name)
+	{
+		mysql_query("UPDATE file SET dname='$name'
+			WHERE id='$fid'") or die();
+	}
+
+	// set price for a file
+	function SetURL($fid, $url)
+	{
+		mysql_query("UPDATE file SET price='$url'
 			WHERE id='$fid'") or die();
 	}
 

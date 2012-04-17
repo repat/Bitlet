@@ -79,7 +79,7 @@ input[type="file"], .file-button {
 	margin-bottom: 9px;
 }
 .marketing h1 {
-	margin: 36px 0 27px;
+	margin: 30px 0 27px;
 	font-size: 40px;
 	font-weight: 300;
 	text-align: center;
@@ -133,7 +133,7 @@ footer h3 {
 /* Faded out hr */
 hr.soften {
 	height: 1px;
-	margin: 54px 0;
+	margin: 30px 0;
 	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
 	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
 	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
