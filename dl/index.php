@@ -1,22 +1,17 @@
-<?
-$path = $_SERVER['DOCUMENT_ROOT'];
-?>
-
 <!DOCTYPE html>
-<html>
-<? include "$path/view/header.php"; ?>
 
-<body>
+<?
 
-<? 
+$path = $_SERVER['DOCUMENT_ROOT'];
+
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
-$fid = $_GET['f'];
+$fid = $_GET['f'] or Die();
 
 $db = Connect();
-$finfo = GetFileInfo($fid);
 
+$finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
 $price = $finfo['price'];
 $downloads = $finfo['downloads'];
@@ -29,6 +24,11 @@ Disconnect($db);
 
 ?>
 
+<html>
+
+<? include "$path/view/header.php"; ?>
+
+<body>
 <br>
 
 <div class="container"><div class="row">
@@ -38,28 +38,34 @@ Disconnect($db);
 		<h3>Price: $ <? echo $price; ?></br></h3>
 		<br>
 
-		<div class="row"><div class="span5">
-			<label>Mail Link To:</label>
-			<input type="text" size="20" autocomplete="off" class="span4 card-email" placeholder="Email"/>
-		</div></div>
-
 		<form action="" method="POST" id="payment-form">
 			<div class="row"><div class="span5">
-				<label>Card Number</label>
+				<label id="cardnuml">Card Number</label>
 				<input type="text" size="20" autocomplete="off" class="span3 card-number" placeholder=""/>
 				<input type="text" size="4" autocomplete="off" class="span1 card-cvc" placeholder="CVC"/>
 			</div></div>
 
 			<div class="row"><div class="span5">
-				<label>Expiration Date (MM/YYYY)</label>
+				<label id="cardexl">Expiration Date (MM/YYYY)</label>
 				<input type="text" size="2" class="span1 card-expiry-month" placeholder="MM"/>
-				<span> / </span>
+				<span id="exs"> / </span>
 				<input type="text" size="4" class="span2 card-expiry-year" placeholder="YYYY"/>
 			</div></div>
 
 			<div class="row"><div class="span5">
-				<button type="submit" class="submit-button btn btn btn-success">Submit Payment</button>
+				<button type="submit" class="submit-button btn btn-success">Submit Payment</button>
 			</div></div>
+		</form>
+		<p class="payment-errors"></p>
+
+		<!-- Hidden input to POST id on submission -->
+		<div class="post-pay" style="display:none">
+			<p>Download should start automatically, Or:</p>
+			<hr>
+		</div>
+		<form action="download.php" method="POST" id="go-download">
+			<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
+			<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 		</form>
 	</div></div>
 
@@ -77,14 +83,9 @@ Disconnect($db);
 	</div></div>
 </div></div>
 
-<!-- Hidden input to POST id on submission -->
-<form action="download.php" method="POST" id="go-download">
-	<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">
-	<button type="submit" name="download" style="display:none"></button>
-</form>
-
 </body>
 
 <? include "$path/view/footer.php"; ?>
+
 </html>
 
