@@ -12,6 +12,6 @@ SetPrice($fid, $price);
 Disconnect($db);
 
 // go back to orginal file
-header('Location: file.php?f='.$fid) ;
+header('Location: admin/'.$fid);
 ?>
 
