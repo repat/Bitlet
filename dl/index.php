@@ -6,10 +6,17 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
-$fid = $_GET['f'] or Die();
+$fid = $_GET['f'];
+$furl = $_GET['n'];
+
+// if neither GET variables exists, kill yourself
+if(!($fid || $furl)) {
+	die();
+} else if($furl) {
+	$fid = GetFidFromUrl($furl);
+}
 
 $db = Connect();
-
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
 $price = $finfo['price'];
@@ -24,12 +31,10 @@ Disconnect($db);
 ?>
 
 <html>
-
 <? include "$path/view/header.php"; ?>
 
 <body>
 <br>
-
 
 <div class="container"><div class="row">
 

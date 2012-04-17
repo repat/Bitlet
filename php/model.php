@@ -20,8 +20,8 @@
 	function NewFile($uid, $filename, $type)
 	{
 		// Insert file into files table
-		mysql_query("INSERT INTO file (uid, name, tyle)
-			VALUES('$uid', '$filename', '$type')") or die();
+		mysql_query("INSERT INTO file (uid, name, type, dname)
+			VALUES('$uid', '$filename', '$type', '$filename')") or die();
 		return mysql_insert_id();
 
 	}
@@ -91,6 +91,13 @@
 	{
 		$result = mysql_query("SELECT * FROM file WHERE id='$fid'") or die();
 		return mysql_fetch_assoc($result);
+	}
+
+	// returns fid from input url
+	function GetFidFromUrl($url)
+	{
+		$result = mysql_query("SELECT id FROM file WHERE url='$url'") or die();
+		return mysql_result($result, 0);
 	}
 
 	function GetFileFromId($fid)

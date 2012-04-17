@@ -1,18 +1,21 @@
+<!DOCTYPE html>
+
 <?
 $path = $_SERVER['DOCUMENT_ROOT'];
-?>
-
-<!DOCTYPE html>
-<html>
-<? include "$path/view/header.php"; ?>
-
-<body>
-<? 
 
 include "$path/view/nav.php";
 include "$path/php/model.php";
 
+// we can get either the fid or the furl
 $fid = $_GET['f'];
+$furl = $_GET['n'];
+
+// if neither GET variables exists, kill yourself
+if(!($fid || $furl)) {
+	die();
+} else if($furl) {
+	$fid = GetFidFromUrl($furl);
+}
 
 $db = Connect();
 $finfo = GetFileInfo($fid);
@@ -25,6 +28,11 @@ $admin = "http://bitlet.simply.io/user/$uid";
 Disconnect($db);
 
 ?>
+
+<html>
+<? include "$path/view/header.php"; ?>
+
+<body>
 <div class="container">
 <div class="row mid">
 <h1>Current Price: $ <? echo $price ?></h1>
