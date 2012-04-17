@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?
 
 $path = $_SERVER['DOCUMENT_ROOT'];
@@ -30,6 +29,7 @@ Disconnect($db);
 
 <body>
 <br>
+
 
 <div class="container"><div class="row">
 
