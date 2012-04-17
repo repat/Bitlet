@@ -1,4 +1,5 @@
 
+var anim_time = 200;		// animation time in ms
 var test_key = 'pk_DUnHd0SiqSyqP0zf1Ehps7gdDjS7r';
 var live_key = 'pk_HsbDXewHwzHrCV0WHZUsnBmdidAiM';
 Stripe.setPublishableKey(test_key);
@@ -40,6 +41,21 @@ function stripeResponseHandler(status, response) {
 
 		// POST to download link
 		$("#go-download").get(0).submit();
+
+		// hide payment stuff
+		$("#cardnuml").hide(anim_time);
+		$("#cardexl").hide(anim_time);
+		$("#exs").hide(anim_time);
+		$(".payment-errors").hide(anim_time);
+		$(".card-number").hide(anim_time);
+		$(".card-cvc").hide(anim_time);
+		$(".card-expiry-month").hide(anim_time);
+		$(".card-expiry-year").hide(anim_time);
+		$(".submit-button").hide(anim_time);
+
+		// Unhide download form
+		$(".post-pay").show(anim_time);
+		$("#ddl").show(anim_time);
     }
 }
 
