@@ -1,6 +1,14 @@
 <? 
 
-$name = '../'.$_GET['n'];
+$path = $_SERVER['DOCUMENT_ROOT'];
+include "$path/php/model.php";
+
+$fid = $_POST['fid'];
+
+$db = Connect();
+$name = GetFileFromId($fid);
+IncrementDownloads($fid);
+Disconnect($db);
 
 header('Content-Description: File Transfer');
 header('Content-Type: application/octet-stream');

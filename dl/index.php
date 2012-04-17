@@ -78,7 +78,7 @@ Disconnect($db);
 </div></div>
 
 <!-- Hidden input to POST id on submission -->
-<form action="go.php" method="POST" id="go-download">
+<form action="download.php" method="POST" id="go-download">
 	<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">
 	<button type="submit" name="download" style="display:none"></button>
 </form>
