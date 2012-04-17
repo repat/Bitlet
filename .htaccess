@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+rewriterule ^file/([0-9]*)$ /admin/file.php?f=$1 [L]
+rewriterule ^user/([0-9]*)$ /admin/index.php?u=$1 [L]
+rewriterule ^l/([0-9]*)$ /dl/index.php?f=$1 [L]
+
+</IfModule>
