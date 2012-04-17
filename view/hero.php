@@ -13,7 +13,7 @@
 							<input class="input-medium" id="email" type="text" name="email" placeholder="Email" onkeypress="return event.keyCode!=13">
 						</div>
 
-						<button type="button" class="btn btn-large btn-success">
+						<button type="button" class="btn btn-large btn-primary">
 							<div class="file-div">
 							<input type="file" name="file" id="button" class="file-button"
 								 onchange="load(''); fade('loading'); upload.submit()"/>
