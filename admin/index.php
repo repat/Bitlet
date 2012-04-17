@@ -18,7 +18,7 @@ include "$path/php/model.php";
 	<h1>Admin Panel</h1>
 	<div class="row">
 	<div class="span10 offset1">
-	<h3 style="text-align:left;">Credits: 
+	<h3 style="text-align:left;">Credits: $ 
 <?
 $uid = $_GET['u'];
 $db = Connect();
