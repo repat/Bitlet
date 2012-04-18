@@ -6,23 +6,32 @@
 
 	<div class="row">
 		<div class="span4">
-			<h2>What's going on?</h2>
-			<p>Right now, because of the way Penn State configures their internet service in dorms, 
-			any website a Penn State resident visits while in their dorm can get and store their private 
-			information, including their name and address.</p>
+			<h2>Sell Instantly</h2>
+
+			<p>
+			All you have to do is fill in your email, and upload the file. That's it! We'll email you an admin
+			link for you to keep track of your purchases, and a share link to give to your customers to buy 
+			your product.
+			</p>
 		</div>
 
 		<div class="span4">
-			<h2>Who does this affect?</h2>
+			<h2>No Bank Account Required</h2>
 		
-			<p>This affects students, families, freinds, alumni, faculty and really anyone with a PSU user account</p>
+			<p>
+			Once you're ready to claim your profits, just press the "check out" button on the admin page, enter
+			your address, and we'll mail you a check. No need to enter in your bank account number. If you really
+			like the convenience of having profits instantly deposited into your bank account, we can do that too.
+			</p>
 		</div>
 
 		<div class="span4">
-			<h2>What type of information?</h2>
+			<h2>Share the Download Link With Anyone</h2>
 
-			<p>They can get your name, your address, your Penn State user ID, your phone number, and more. 
-			Visit this site in your dorm room to see a personal list of all available information.</p>
+			<p>
+			Tweet it, post it on facebook, pin it, whatever. Anyone with the link can buy your product. You can even
+			put it in a QR code and have people buy it on their mobile phone!
+			</p>
 		</div>
 	</div>
 </div>
