@@ -3,8 +3,8 @@
 		<nav class="clearfix">
 		</nav>
 		<div class="container">
-			<p class="attribution"><br>
-			<a href=""></a></p>
+			<p class="attribution">Simply LLC<br>
+			<a href="simply.io">simply.io</a></p>
 		</div>
 	</div> <!-- end #inner-footer -->	
 </footer>

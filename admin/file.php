@@ -23,8 +23,8 @@ $finfo = GetFileInfo($fid);
 $uid = $finfo['uid'];
 $price = $finfo['price'];
 
-$dl = "http://bitlet.simply.io/l/$fid";
-$admin = "http://bitlet.simply.io/user/$uid";
+$dl = "http://bitlet.co/l/$fid";
+$admin = "http://bitlet.co/user/$uid";
 
 Disconnect($db);
 
