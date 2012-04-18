@@ -26,7 +26,7 @@
 		</div>
 
 		<div class="span4">
-			<h2>Share the Download Link With Anyone</h2>
+			<h2>Share the Link With Anyone</h2>
 
 			<p>
 			Tweet it, post it on facebook, pin it, whatever. Anyone with the link can buy your product. You can even
