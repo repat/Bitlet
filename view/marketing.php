@@ -1,7 +1,6 @@
 <hr class="soften" />
-
 <div class="container marketing">
-	<h1>Oh, So U Mean Ur Not in Stealth mode?</h1>
+	<h1>How Does Bitlet Work?</h1>
 	<br>
 
 	<div class="row">
@@ -30,7 +29,7 @@
 
 			<p>
 			Tweet it, post it on facebook, pin it, whatever. Anyone with the link can buy your product. You can even
-			put it in a QR code and have people buy it on their mobile phone!
+			put it in a QR code and have people buy it on their mobile phone.
 			</p>
 		</div>
 	</div>
