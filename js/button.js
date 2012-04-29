@@ -1,13 +1,13 @@
 var Button = function(paper, image, x, y, radius, callback) {
 
 	var defaultColor = "#fff";
-	var hoverColor = "#A4BCC2";
+	var hoverColor = "#1972EA";
 	
-	var selectedColor = "#A4BCC2";
-	var selectedHoverColor = "#E8F3F8";
+	var selectedColor = "#1972EA";
+	var selectedHoverColor = "#1972EA";
 	
 	var opacityDefault = 0.5;
-	var opacityHover = 1;
+	var opacityHover = 0.6;
 	var selected = false;
 	
 	var circle2 = paper.circle(x+(0.5*2*radius), y+(0.5*2*radius), radius).attr({fill:defaultColor, opacity:opacityDefault });
