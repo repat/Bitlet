@@ -10,6 +10,8 @@
 </footer>
 
 <!-- insert javascripts last -->
+<script type="text/javascript" src="js/function.js"></script>
+
 <!-- Font stuff -->
 <script type="text/javascript" src="http://use.typekit.com/hkc7cgw.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -28,3 +30,6 @@
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 <script type="text/javascript" src="/js/stripe.js"></script>
 
+<!-- Image buttons -->
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/raphael.js"></script>
