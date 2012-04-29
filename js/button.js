@@ -10,7 +10,7 @@ var Button = function(paper, image, x, y, radius, callback) {
 	var opacityHover = 0.6;
 	var selected = false;
 	
-	var circle2 = paper.circle(x+(0.5*2*radius), y+(0.5*2*radius), radius).attr({fill:defaultColor, opacity:opacityDefault });
+	var circle2 = paper.circle(x+(0.5*2*radius), y+(0.5*2*radius), radius).attr({fill:defaultColor, opacity:opacityDefault});
 	var C = paper.image(image, x+(0.5*radius), y+(0.5*radius), radius, radius);
 	circle2.mouseover( function () {
 		if(selected) {
@@ -26,7 +26,7 @@ var Button = function(paper, image, x, y, radius, callback) {
 		}
 	}).click ( function () {
 		selected = true;
-		circle2.attr({fill:hoverColor, opacity:opacityHover });
+		circle2.attr({fill:hoverColor, opacity:opacityHover});
 		callback();
 	});
 		
@@ -54,14 +54,14 @@ window.onload = function () {
 	var R = Raphael("theButtons", 560, 60); 
 	
 	var music = new Button(R, "img/buttons/ButtonMusic.png", 10, 10, 20, 
-	function(){
+	(function(){
 		$('.carousel').carousel(0);
 		doc.selected = false;
 		photo.selected = false;
 		art.selected = false;
 		vid.selected = false;
 		generic.selected = false;
-	});
+	}).bind(this));
 	
 	var doc = new Button(R, "img/buttons/ButtonDoc.png", 100, 10, 20, 
 	function(){
