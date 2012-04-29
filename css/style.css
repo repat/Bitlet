@@ -9,6 +9,7 @@ body {
 
 /* Beginning tagline */
 .tagline {
+	margin-bottom: 40px;
 	height: 500px;
 }
 
@@ -28,30 +29,30 @@ body {
 }
 
 #headerButtons {
-	position: absolute; 		
-	z-index: 5;
-	margin-left: auto;
-	margin-right: auto;
+	position:absolute; 		
+	z-index:5;
+	margin-left:auto;
+	margin-right:auto;
 	width: 100%;
-	margin-top: 410px;
+	margin-top:410px;
 }
 
 #theButtons {
-	display: block;
-	text-align: center;
+	display:block;
+	text-align:center;
 }
 	
 .tagline-descr {
-	margin-top: 40px;
-	margin-left: 100px;
-	width: 100%;
+	display:inline;
+	text-align:left;
 	color: #FFF;
 }
 
 .quote-background {
 	background: rgba(0,0,0,0.5);
-	text-align: left;
-	width: 352px;
+	width:352px;
+	margin-top:60px;
+	margin-left:60px;
 	padding-left: 35px;
 	padding-right: 35px;
 	padding-top: 10px;
@@ -177,8 +178,6 @@ footer[role="contentinfo"]{
 .navbar-inner{
 	background-image:none !important;
 	background-color:#EDEDED !important;
-	padding-top:10px;
-	padding-bottom:10px;
 }
 .navbar .brand{
 	padding: 12px 20px 10px 20px !important;
@@ -222,4 +221,22 @@ footer[role="contentinfo"]{
 .email-suggestion-wrap{
 	height:25px;
 	margin-top:-15px;
+} 
+/*Starting FAQ section*/
+.faq h1 {
+	margin: 30px 0 27px;
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
 }
+.faq h2,
+.faq h3 {
+	font-weight: 300;
+}
+.faq h2 {
+	font-size: 22px;
+}
+.faq p {
+	margin-right: 10px;
+}
+
