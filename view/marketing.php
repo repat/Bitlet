@@ -1,4 +1,3 @@
-<hr class="soften" />
 <div class="container marketing">
 	<h1>How Does Bitlet Work?</h1>
 	<br>
