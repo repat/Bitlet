@@ -178,6 +178,8 @@ footer[role="contentinfo"]{
 .navbar-inner{
 	background-image:none !important;
 	background-color:#EDEDED !important;
+	padding-top:10px;
+	padding-bottom:10px;
 }
 .navbar .brand{
 	padding: 12px 20px 10px 20px !important;
