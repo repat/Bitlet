@@ -56,6 +56,11 @@ window.onload = function () {
 	var music = new Button(R, "img/buttons/ButtonMusic.png", 10, 10, 20, 
 	function(){
 		$('.carousel').carousel(0);
+		doc.selected = false;
+		photo.selected = false;
+		art.selected = false;
+		vid.selected = false;
+		generic.selected = false;
 	});
 	
 	var doc = new Button(R, "img/buttons/ButtonDoc.png", 100, 10, 20, 

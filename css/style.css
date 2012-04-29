@@ -29,30 +29,32 @@ body {
 }
 
 #headerButtons {
-	position:absolute; 		
-	z-index:5;
-	margin-left:auto;
-	margin-right:auto;
+	position: absolute; 		
+	z-index: 5;
+	margin-left: auto;
+	margin-right: auto;
 	width: 100%;
-	margin-top:410px;
+	margin-top: 410px;
 }
 
 #theButtons {
-	display:block;
-	text-align:center;
+	display: block;
+	text-align: center;
 }
 	
 .tagline-descr {
-	display:inline;
-	text-align:left;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 	color: #FFF;
 }
 
 .quote-background {
 	background: rgba(0,0,0,0.5);
-	width:352px;
-	margin-top:60px;
-	margin-left:60px;
+	text-align: left;
+	width: 352px;
 	padding-left: 35px;
 	padding-right: 35px;
 	padding-top: 10px;
