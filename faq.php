@@ -16,12 +16,13 @@ include "$path/view/nav.php";
 
 <div class="container faq">
 	<h1>FAQ<h1>
+	<hr>
 
 	<h2>Is Bitlet an online store?</h2>
 	<p>Yes and no, Bitlet is a service that lets you turn your Facebook, Twitter, or Blog page into an online store. We manage all of your digital content delivery and payment processing, and you just focus on selling.</p>
 
 	<h2>How much does it cost?</h2>
-	<p>Our fee is 30¢ plus 7% of the sale for each sale. Unlike many similar services, Bitlet has no initial cost.<p>
+	<p>Our fee is 30 cents plus 7% of the sale for each sale. Unlike many similar services, Bitlet has no initial cost.<p>
 
 	<h2>What are credits?</h2>
 	<p>Credits are how we keep track of your earnings. One credit is equal to $1 USD.</p>
@@ -38,12 +39,14 @@ include "$path/view/nav.php";
 	<p>All the major ones: Visa, Mastercard, American Express, Discover, JCB, and Diners Club cards.</p>
 
 	<h2>Do I need to make an account?</h2>
-	<p>No, you don’t need to make an account to buy or sell. Although we do encourage you to make an account to keep track of all your purchases and/or merchandise, as well as earn extra credits by taking advantage of our affiliate system.</p>
+	<p>No, you don't need to make an account to buy or sell. Although we do encourage you to make an account to keep track of all your purchases and/or merchandise, as well as earn extra credits by taking advantage of our affiliate system.</p>
 
 	<h2>Can I use Bitlet even if I live outside the US?</h2>
 	<p>Yes, we support all major international credit cards. </p>
 
-	<p>More questions? Email us and we’ll get back to you right away! </p>
+	<hr>
+	<h3>More questions? Email us and we'll get back to you right away! </h3>
+	<br>
 </div>
 
 <!-- DONT EDIT BEYOND THIS POINT -->
