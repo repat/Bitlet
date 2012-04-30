@@ -45,7 +45,7 @@ include "$path/view/nav.php";
 	<p>Yes, we support all major international credit cards. </p>
 
 	<hr>
-	<h3>More questions? Email us and we'll get back to you right away! </h3>
+	<h3>More questions? <a href="mailto:dev@simply.io">Email us</a> and we'll get back to you right away! </h3>
 	<br>
 </div>
 
