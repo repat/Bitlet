@@ -187,6 +187,12 @@ footer[role="contentinfo"]{
 	font-weight:bold !important;
 	color: #017AFF !important;
 }
+.navbar-text{
+	font-size: 30px;
+	font-weight: 300;
+	padding: 10px 10px 10px 10px;
+}
+
 /* Hides Typekit badge */
 .typekit-badge{
 	display:none !important;
