@@ -7,64 +7,6 @@ body {
 	text-align:center;	
 }
 
-/* Beginning tagline */
-#tagline-image {
-	margin-left: auto;
-	margin-right: auto;
-	border-bottom: 2px solid #AAA;
-	width: 100%;
-	height: 500px;
-	overflow: hidden;
-	margin-top: -10px;
-}
-
-#myCarousel {
-	z-index: -1000;
-}
-
-#headerButtons {
-	position:absolute; 		
-	z-index:-5;
-	margin-left:auto;
-	margin-right:auto;
-	width: 100%;
-	margin-top:410px;
-}
-
-#theButtons {
-	display:block;
-	text-align:center;
-}
-	
-.tagline-descr {
-	position: absolute;
-	width: 100%;
-	text-align:left;
-	color: #FFF;
-}
-
-.quote-placement {
-	z-index:-999;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 60px;
-	width: 1px;
-}
-
-.quote-background {
-	width: 350px;
-	z-index:1000;
-	background: rgba(0,0,0,0.5);
-	margin-left: -500px;;
-	padding-left: 35px;
-	padding-right: 35px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-
 /* Inputs */
 .input-medium#email {
 	height: 26px;
@@ -93,46 +35,6 @@ input[type="file"], .file-button {
 	height: 37px;
 	margin-top: -10px;
 	margin-left: 5px;
-}
-
-/* Marketing section of Overview */
-.marketing .row {
-	margin-bottom: 9px;
-}
-
-.marketing h1 {
-	margin: 30px 0 27px;
-	font-size: 40px;
-	font-weight: 300;
-	text-align: center;
-}
-
-.marketing h2,
-.marketing h3 {
-	font-weight: 300;
-}
-
-.marketing h2 {
-	font-size: 22px;
-}
-
-.marketing p {
-	margin-right: 10px;
-}
-
-.marketing-byline {
-	margin: -18px 0 27px;
-	font-size: 18px;
-	font-weight: 300;
-	line-height: 24px;
-	color: #999;
-	text-align: center;
-}
-
-.floor {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background: #1B1B1B;
 }
 
 /* Payment page styles */
@@ -238,21 +140,4 @@ footer[role="contentinfo"]{
 	height:25px;
 	margin-top:-15px;
 } 
-/*Starting FAQ section*/
-.faq h1 {
-	margin: 30px 0 27px;
-	font-size: 40px;
-	font-weight: 300;
-	text-align: center;
-}
-.faq h2,
-.faq h3 {
-	font-weight: 300;
-}
-.faq h2 {
-	font-size: 22px;
-}
-.faq p {
-	margin-right: 10px;
-}
 
