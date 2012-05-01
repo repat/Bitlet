@@ -28,12 +28,12 @@ include "$path/view/nav.php";
 	<p>Credits are how we keep track of your earnings. One credit is equal to $1 USD.</p>
 
 	<h2>How do I earn credits?</h2>
-	<p>There are two ways to earn: as a seller and as an affiliate. As a seller, you earn back all the profit in credits after we take our 30¢ + 7% cut. So if you sell something for $10.00, you earn 9.00 credits in your account balance.</p>
+	<p>There are two ways to earn: as a seller and as an affiliate. As a seller, you earn back all the profit in credits after we take our 30 cents + 7% cut. So if you sell something for $10.00, you earn 9.00 credits in your account balance.</p>
 
-	<p>As an affiliate, you earn back 20% of any sales made from the affiliate link you shared. Use credits to buy other items, or, once you reach a minimum of 10.00 credits in your account balance, you can click the cash in button, and we’ll mail you a check. Remember, credits expire after 60 days.</p>
+	<p>As an affiliate, you earn back 20% of any sales made from the affiliate link you shared. Use credits to buy other items, or, once you reach a minimum of 10.00 credits in your account balance, you can click the cash in button, and we'll mail you a check. Remember, credits expire after 60 days.</p>
 
 	<h2>How does the affiliates system work?</h2>
-	<p>After you’ve bought an item, you receive an affiliate link. Share that link anywhere you’d like. When people buy an item from your affiliate link, you get credits in return (20% of the sale).</p>
+	<p>After you've bought an item, you receive an affiliate link. Share that link anywhere you'd like. When people buy an item from your affiliate link, you get credits in return (20% of the sale).</p>
 
 	<h2>What credit cards do you support?</h2>
 	<p>All the major ones: Visa, Mastercard, American Express, Discover, JCB, and Diners Club cards.</p>
