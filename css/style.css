@@ -43,7 +43,7 @@ body {
 }
 	
 .tagline-descr {
-	display:inline;
+	width: 100%;
 	text-align:left;
 	color: #FFF;
 }
