@@ -37,7 +37,7 @@ body {
 }
 	
 .tagline-descr {
-	position: absolute;
+	width: 100%;
 	text-align:left;
 	color: #FFF;
 }
