@@ -48,11 +48,15 @@ body {
 	color: #FFF;
 }
 
+.quote-placement {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	width: 360px;
+}
+
 .quote-background {
 	background: rgba(0,0,0,0.5);
-	width:352px;
-	margin-top:60px;
-	margin-left:60px;
 	padding-left: 35px;
 	padding-right: 35px;
 	padding-top: 10px;
