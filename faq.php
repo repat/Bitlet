@@ -19,7 +19,7 @@ include "$path/view/nav.php";
 	<hr>
 
 	<h2>Is Bitlet an online store?</h2>
-	<p>Yes and no, Bitlet is a service that lets you turn your Facebook, Twitter, or Blog page into an online store. We manage all of your digital content delivery and payment processing, and you just focus on selling.</p>
+	<p>Not yet, right now Bitlet is a service that lets you turn your Facebook, Twitter, or Blog page into an online store. We manage all of your digital content delivery and payment processing, and you just focus on selling.</p>
 
 	<h2>How much does it cost?</h2>
 	<p>Our fee is 30 cents plus 7% of the sale for each sale. Unlike many similar services, Bitlet has no initial cost.<p>
