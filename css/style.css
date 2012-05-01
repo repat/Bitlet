@@ -189,8 +189,9 @@ footer[role="contentinfo"]{
 }
 .navbar-text{
 	font-size: 30px;
-	/*font-weight: 600;*/
+	font-weight: bold;
 	padding: 12px 10px 8px 10px;
+	line-height: 36px;
 }
 
 /* Hides Typekit badge */

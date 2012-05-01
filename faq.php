@@ -15,7 +15,7 @@ include "$path/view/nav.php";
 <!-- FAQ GOES HERE -->
 
 <div class="container faq">
-	<h1>FAQ<h1>
+	<h1>Frequently Asked Questions<h1>
 	<hr>
 
 	<h2>Is Bitlet an online store?</h2>
