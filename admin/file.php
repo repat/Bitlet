@@ -43,10 +43,10 @@ Disconnect($db);
 		<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">
 		<input class="input-medium" id="price" type="text" name="price" placeholder="Price" onkeypress="return event.keyCode!=13">
 	</div>
-	<button type="submit" class="btn btn-success">Set Price</button>
+	<button type="submit" class="btn btn-primary">Set Price</button>
 </form>
 
-<h3>Your Download Link:</h3>
+<h3>Share This Link:</h3>
 <p><a href="<? echo $dl ?>"><? echo $dl ?></a></p>
 
 <h3>Your Admin Link:</h3>
