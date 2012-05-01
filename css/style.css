@@ -8,11 +8,6 @@ body {
 }
 
 /* Beginning tagline */
-.tagline {
-	margin-bottom: 40px;
-	height: 500px;
-}
-
 #tagline-image {
 	margin-left: auto;
 	margin-right: auto;
@@ -20,7 +15,6 @@ body {
 	width: 100%;
 	height: 500px;
 	overflow: hidden;
-	position: absolute;
 	margin-top: -10px;
 }
 
@@ -30,7 +24,7 @@ body {
 
 #headerButtons {
 	position:absolute; 		
-	z-index:5;
+	z-index:-5;
 	margin-left:auto;
 	margin-right:auto;
 	width: 100%;
@@ -43,19 +37,21 @@ body {
 }
 	
 .tagline-descr {
-	display:inline;
+	position: absolute;
 	text-align:left;
 	color: #FFF;
 }
 
 .quote-placement {
+	z-index:-999;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 60px;
-	width: 360px;
+	width: 450px;
 }
 
 .quote-background {
+	z-index:1000;
 	background: rgba(0,0,0,0.5);
 	padding-left: 35px;
 	padding-right: 35px;
@@ -100,19 +96,23 @@ input[type="file"], .file-button {
 .marketing .row {
 	margin-bottom: 9px;
 }
+
 .marketing h1 {
 	margin: 30px 0 27px;
 	font-size: 40px;
 	font-weight: 300;
 	text-align: center;
 }
+
 .marketing h2,
 .marketing h3 {
 	font-weight: 300;
 }
+
 .marketing h2 {
 	font-size: 22px;
 }
+
 .marketing p {
 	margin-right: 10px;
 }
