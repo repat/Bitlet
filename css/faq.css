@@ -1,19 +1,23 @@
 /*Starting FAQ section*/
 .faq h1 {
 	margin: 30px 0 27px;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 300;
 	text-align: center;
 }
 .faq h2,
 .faq h3 {
-	font-weight: 100;
+	font-weight: normal;
 }
 .faq h2 {
-	font-size: 14px;
+	font-size: 16px;
 }
 .faq p {
-	margin-right: 10px;
-	font-size: 12px;
+	margin-right: 12px;
+	font-size: 12px; 
 }
 
+#FAQModal {
+	width:600px; 
+	height: 450px; 
+}
