@@ -15,9 +15,9 @@
 <div id="FAQModal" class="modal hide fade">
 
     <!-- dialog contents -->
-    <div class="modal-body faq">
-    	<h1>Frequently Asked Questions<h1>
-		<hr>
+    <div id="modalbody" class="modal-body faq">
+    	<h1>Frequently Asked Questions</h1>
+		</hr>
 		<div class="container">
     	<div class="row">
   			<div class="span4">		
@@ -50,7 +50,7 @@
 			</div>
 		</div> </div>
 		
-		<hr>
+		</hr>
 		<h3>More questions? <a href="mailto:dev@simply.io">Email us</a> and we'll get back to you right away! </h3>
 		<br>
      </div>

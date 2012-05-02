@@ -18,8 +18,12 @@
 	font-size: 12px; 
 }
 
-.modal-body .faq {
-	width:800px; 
+.container .faq {
+	width: 531;
+}
+
+#modalbody {
+	width: 800px; 
 	height: 450px; 
 }
 
