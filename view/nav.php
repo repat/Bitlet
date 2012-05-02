@@ -56,7 +56,7 @@
 </div>
  
 <script type="text/javascript"> // ensure modal is only shown on page load
-	$(function showFAQ) {
+	function showFAQ {
 	// wire up the buttons to dismiss the modal when shown
 	$("#FAQModal").bind("show", function() {
 		$("#FAQModal a.btn").click(function(e) {
@@ -67,7 +67,7 @@
 			// hide the dialog box
 			$("#FAQModal").modal('hide');
 		});
-	});
+	};
 	
 	// remove the event listeners when the dialog is hidden
 	$("#FAQModal").bind("hide", function() {
