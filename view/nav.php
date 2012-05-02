@@ -18,21 +18,22 @@
     <div class="modal-body faq">
     	<h1>Frequently Asked Questions<h1>
 		<hr>
+		<div class="container">
     	<div class="row">
   			<div class="span6">		
-			<h2>Is Bitlet an online store?</h2>
-			<p>Not yet, right now Bitlet is a service that lets you turn your Facebook, Twitter, or Blog page into an online store. We manage all of your digital content delivery and payment processing, and you just focus on selling.</p>
-			
-			<h2>How much does it cost?</h2>
-			<p>Our fee is 30 cents plus 7% of the sale for each sale. Unlike many similar services, Bitlet has no initial cost.<p>
-			
-			<h2>What are credits?</h2>
-			<p>Credits are how we keep track of your earnings. One credit is equal to $1 USD.</p>
-			
-			<h2>How do I earn credits?</h2>
-			<p>There are two ways to earn: as a seller and as an affiliate. As a seller, you earn back all the profit in credits after we take our 30 cents + 7% cut. So if you sell something for $10.00, you earn 9.00 credits in your account balance.</p>
-			
-			<p>As an affiliate, you earn back 20% of any sales made from the affiliate link you shared. Use credits to buy other items, or, once you reach a minimum of 10.00 credits in your account balance, you can click the cash in button, and we'll mail you a check. Remember, credits expire after 60 days.</p>
+				<h2>Is Bitlet an online store?</h2>
+				<p>Not yet, right now Bitlet is a service that lets you turn your Facebook, Twitter, or Blog page into an online store. We manage all of your digital content delivery and payment processing, and you just focus on selling.</p>
+				
+				<h2>How much does it cost?</h2>
+				<p>Our fee is 30 cents plus 7% of the sale for each sale. Unlike many similar services, Bitlet has no initial cost.<p>
+				
+				<h2>What are credits?</h2>
+				<p>Credits are how we keep track of your earnings. One credit is equal to $1 USD.</p>
+				
+				<h2>How do I earn credits?</h2>
+				<p>There are two ways to earn: as a seller and as an affiliate. As a seller, you earn back all the profit in credits after we take our 30 cents + 7% cut. So if you sell something for $10.00, you earn 9.00 credits in your account balance.</p>
+				
+				<p>As an affiliate, you earn back 20% of any sales made from the affiliate link you shared. Use credits to buy other items, or, once you reach a minimum of 10.00 credits in your account balance, you can click the cash in button, and we'll mail you a check. Remember, credits expire after 60 days.</p>
 			</div>
  			<div class="span6">
 				<h2>Is Bitlet an online store?</h2>
@@ -61,8 +62,7 @@
 				<h2>Can I use Bitlet even if I live outside the US?</h2>
 				<p>Yes, we support all major international credit cards. </p>
 			</div>
-			
-		</div> 
+		</div> </div>
 		
 		<hr>
 		<h3>More questions? <a href="mailto:dev@simply.io">Email us</a> and we'll get back to you right away! </h3>
