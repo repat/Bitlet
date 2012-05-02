@@ -17,7 +17,7 @@
 	font-size: 12px; 
 }
 
-#FAQModal {
+.modal-body .faq {
 	width:600px; 
 	height: 450px; 
 }
