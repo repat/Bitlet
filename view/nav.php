@@ -17,10 +17,10 @@
     <!-- dialog contents -->
     <div id="modalbody" class="modal-body faq">
     	<h1>Frequently Asked Questions</h1>
-		</hr>
+		<hr>
 		<div class="container">
     	<div class="row">
-  			<div class="span4">		
+  			<div class="span6">		
 				<h2>Is Bitlet an online store?</h2>
 				<p>Not yet, right now Bitlet is a service that lets you turn your Facebook, Twitter, or Blog page into an online store. We manage all of your digital content delivery and payment processing, and you just focus on selling.</p>
 				
@@ -35,7 +35,7 @@
 				
 				<p>As an affiliate, you earn back 20% of any sales made from the affiliate link you shared. Use credits to buy other items, or, once you reach a minimum of 10.00 credits in your account balance, you can click the cash in button, and we'll mail you a check. Remember, credits expire after 60 days.</p>
 			</div>
- 			<div class="span4">
+ 			<div class="span6">
 				<h2>How does the affiliates system work?</h2>
 				<p>After you've bought an item, you receive an affiliate link. Share that link anywhere you'd like. When people buy an item from your affiliate link, you get credits in return (20% of the sale).</p>
 				
@@ -50,7 +50,7 @@
 			</div>
 		</div> </div>
 		
-		</hr>
+		<hr>
 		<h3>More questions? <a href="mailto:dev@simply.io">Email us</a> and we'll get back to you right away! </h3>
 		<br>
      </div>
