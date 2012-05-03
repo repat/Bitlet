@@ -1,8 +1,8 @@
 <div class="container marketing">
 	<h1>How Does Bitlet Work?</h1>
-	<p>
+	<h3>
 	Bitlet allows you to sell your digital media instantly. Now you can profit simply by uploading your photos, songs, videos, and more.
-	</p>
+	</h3>
 	<br>
 
 	<div class="row">
@@ -31,7 +31,7 @@
 				</p>
 		</div>
 	</div>
-	<h3>Yeah, it’s really that easy. But if you still have a question, email us! </h3>
+	<h3>Yeah, it's really that easy. But if you still have a question, email us! </h3>
 	<br>
 	<br>
 </div>
