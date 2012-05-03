@@ -1,7 +1,7 @@
 <div class="container marketing">
 	<h1>How Does Bitlet Work?</h1>
 	<h3>
-	Bitlet allows you to sell your digital media instantly. Now you can profit simply by uploading your photos, songs, videos, and more.
+	Bitlet allows you to sell your digital media instantly. Profit simply by uploading your photos, songs, videos, and more.
 	</h3>
 	<br>
 
@@ -27,7 +27,7 @@
 
 				<p>
 				Once you're ready to collect your profits, just press the "Check Out" button on the admin page.
-			    Enter your address, and we'll mail you a check. No need to enter in your bank account number. If you really like the convenience of having profits instantly deposited into your bank account, we can do that too.
+			    Enter your address, and we'll mail you a check. No need to enter in your bank account number. If you'd like to have profits instantly deposited into your bank account, we can do that too.
 				</p>
 		</div>
 	</div>
