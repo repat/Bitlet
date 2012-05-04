@@ -18,10 +18,10 @@
 
 .marketing h2 {
 	font-size: 22px;
+	margin-left: -10px;
 }
 
 .marketing p {
-	margin-right: 10px;
 }
 
 .marketing-byline {
