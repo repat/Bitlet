@@ -31,7 +31,7 @@
 				</p>
 		</div>
 	</div>
-	<h3>Yeah, it's really that easy. But if you still have a question, email us! </h3>
+	<h3>Yeah, it's really that easy. But if you still have a question, <a href="mailto:team@simply.io">email us</a>! </h3>
 	<br>
 	<br>
 </div>
