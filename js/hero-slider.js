@@ -1,3 +1,4 @@
+
 $('#circle-1').click(function()
 {
 	$('#tagline-image').css("background", "url(/img/bg/music.jpg) no-repeat");
@@ -22,3 +23,4 @@ $('#circle-6').click(function()
 {
 	$('#tagline-image').css("background", "url(/img/bg/photos.jpg) no-repeat");
 });
+

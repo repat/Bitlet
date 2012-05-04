@@ -12,10 +12,6 @@
 <!-- insert javascripts last -->
 <script type="text/javascript" src="js/function.js"></script>
 
-<!-- Font stuff -->
-<script type="text/javascript" src="http://use.typekit.com/hkc7cgw.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 <!-- style and formatting -->
 <script type="text/javascript" src="/js/loading.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -33,3 +29,4 @@
 <!-- Image buttons -->
 <script type="text/javascript" src="js/button.js"></script>
 <script type="text/javascript" src="js/raphael.js"></script>
+
