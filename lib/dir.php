@@ -22,7 +22,7 @@
 	{
 		$files = GetDirMatch($dir, '/.*\.js/');
 		foreach($files as $f) {
-			echo '<script type="text/javascript" src="'.$dir.'/'.$f.'"></script>';
+			echo '<script type="text/javascript" src="/'.$dir.'/'.$f.'"></script>';
 		}
 	}	
 
@@ -31,7 +31,7 @@
 	{
 		$files = GetDirMatch($dir, '/.*\.css/');
 		foreach($files as $f) {
-			echo '<link href="'.$dir.'/'.$f.'" rel="stylesheet" type="text/css">';
+			echo '<link href="/'.$dir.'/'.$f.'" rel="stylesheet" type="text/css">';
 		}
 	}	
 ?>
