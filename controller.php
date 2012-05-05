@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<?php
+<?
+	include_once 'lib/dir.php';
+
     session_start();
     #$_SESSION['user_id'] = 1234;
 	$url = explode('/', $_SERVER['REQUEST_URI']);
+	error_log('url: '.$url[1]);
 
 	if(!isset($_GET['request'])) {
-        require_once("view/header.php");
 
         switch($url[1]) {
 			case '':
-                require('home.php');
+				$dir = 'view/home';
+				break;
             case 'admin':
-                require('file/admin.php');
+				$dir = 'view/admin';
                 break;
 			case 'faq':
-				require('view/faq.php');
+				$dir = 'view/faq';
+				break;
+			case 'terms':
+				$dir = 'view/terms';
+				break;
+			case 'about':
+				$dir = 'view/about';
+				break;
+			case 'buy':
+				$dir = 'view/buy';
+				break;
+			case 'sell':
+				$dir = 'view/sell';
+				break;
             default:
-                require('404.php');
+				$dir = 'view/error';
+				break;
         }
 
-        require_once("view/footer.php");
+		// Build the HTML page
+		echo '<html>';
+
+        require_once('view/templates/header.php');
+		IncludeCSSFiles($dir); 
+
+		require_once('view/templates/nav.php');
+		require_once($dir.'/index.php');
+
+		IncludeJSFiles($dir); 
+        require_once('view/templates/footer.php');
+
+		echo '</html>';
 
     } else {
         switch($url[1]) {

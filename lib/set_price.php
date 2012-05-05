@@ -1,7 +1,7 @@
 <?
 $path = $_SERVER['DOCUMENT_ROOT'];
 
-include "$path/php/model.php";
+include $path.'/lib/db.php';
 
 $fid = $_POST['fid'];
 $price = $_POST['price'];

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-
 <body>
 
 <?
-include "$path/view/nav.php";
-include "$path/view/hero.php";
-include "$path/view/marketing.php";
+include 'hero.php';
+include 'marketing.php';
 ?>
 
 </body>
@@ -22,4 +18,3 @@ include "$path/view/marketing.php";
 	</div>
 </div>
 
-</html>

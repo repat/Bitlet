@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond $1 !^(view|js|lib|img|css|robots\.txt)
+RewriteCond $1 !^(view|lib|img|robots\.txt)
 RewriteRule ^(.*)$ controller.php [L]
 </IfModule>
