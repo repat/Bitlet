@@ -4,8 +4,11 @@
 
     session_start();
     #$_SESSION['user_id'] = 1234;
+	
 	$url = explode('/', $_SERVER['REQUEST_URI']);
+	$args = $_GET['args'];
 	error_log('url: '.$url[1]);
+	error_log('args: '.$args);
 
 	if(!isset($_GET['request'])) {
 
