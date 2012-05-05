@@ -1,0 +1,57 @@
+/* Beginning tagline */
+#tagline-image {
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 2px solid #AAA;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	margin-top: -10px;
+}
+
+#myCarousel {
+	z-index: -1000;
+}
+
+#headerButtons {
+	position:absolute; 		
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	margin-top:410px;
+}
+
+#theButtons {
+	display:block;
+	text-align:center;
+}
+	
+.tagline-descr {
+	position: absolute;
+	width: 100%;
+	text-align:left;
+	color: #FFF;
+}
+
+.quote-placement {
+	z-index:-999;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	width: 1px;
+}
+
+.quote-background {
+	width: 350px;
+	z-index:1000;
+	background: rgba(0,0,0,0.5);
+	margin-left: -500px;;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+

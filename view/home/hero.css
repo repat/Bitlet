@@ -1,0 +1,71 @@
+
+/* Inputs */
+.input-medium#email {
+	height: 26px;
+	width: 200px;
+	font-size: 18px;
+	color: #111;
+}
+.add-on#emaila {
+	height: 26px;
+	width: 16px;
+}
+#email-icon {
+	margin-top: 5px;
+}
+
+.file-div {
+	width: 100px;
+	margin: -9px -20px -9px -20px;
+	overflow: hidden;
+}
+input[type="file"], .file-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	position: absolute;
+	width: 106px;
+	height: 37px;
+	margin-top: -10px;
+	margin-left: 5px;
+}
+
+/* video / image frames */
+.video-frame {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/* Styling from the opaque box on homepage */
+.intro{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: #DDD;
+	line-height: 23px;
+	font-weight: 300;
+	font-size:20px;
+}
+
+/* Circle Slider Stylings */
+.hero-circle{
+	background: url(/img/grey_circle.png) no-repeat;
+	height: 108px;
+}
+.hero-circle-padding{
+	padding:28px;
+}
+/* bootstrap hackaround */
+.input-prepend .add-on, .input-prepend .btn {
+	margin-right: -5px !important;
+}
+
+/* email suggestion fixer */
+.email-suggestion{
+	color: #EEE;
+	text-align:left;
+}
+.email-suggestion-wrap{
+	height:25px;
+	margin-top:-15px;
+} 
+
