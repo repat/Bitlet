@@ -1,12 +1,5 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
-
-rewriterule ^admin/([0-9]*)$ /admin/file.php?f=$1 [L]
-rewriterule ^admin/([a-zA-Z0-9]*)$ /admin/file.php?n=$1 [L]
-rewriterule ^user/([0-9]*)$ /admin/index.php?u=$1 [L]
-rewriterule ^l/([0-9]*)$ /dl/index.php?f=$1 [L]
-rewriterule ^l/([a-zA-Z0-9]*)$ /dl/index.php?n=$1 [L]
-rewriterule ^l/(.*)$ /dl/$1 [L]
-
+RewriteCond $1 !^(view|js|lib|img|css|robots\.txt)
+RewriteRule ^(.*)$ controller.php [L]
 </IfModule>
