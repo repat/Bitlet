@@ -8,6 +8,9 @@ RewriteRule ^sell/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^faq/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^terms/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^about/?(.*)$ controller.php?args=$1 [L]
+
+RewriteRule ^ajax/(.*)$ ajax.php [L]
+
 RewriteRule ^/?$ controller.php [L]
 
 </IfModule>
