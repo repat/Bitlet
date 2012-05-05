@@ -45,8 +45,8 @@
 		require_once('view/templates/nav.php');
 		require_once($dir.'/index.php');
 
-		IncludeJSFiles($dir); 
         require_once('view/templates/footer.php');
+		IncludeJSFiles($dir); 
 
 		echo '</html>';
 
