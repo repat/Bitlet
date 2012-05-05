@@ -1,5 +1,13 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond $1 !^(view|lib|img|robots\.txt)
-RewriteRule ^(.*)$ controller.php [L]
+
+RewriteBase /
+RewriteRule ^admin/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^buy/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^sell/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^faq/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^terms/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^about/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^/?$ controller.php [L]
+
 </IfModule>
