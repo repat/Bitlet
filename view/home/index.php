@@ -5,8 +5,6 @@ include 'hero.php';
 include 'marketing.php';
 ?>
 
-</body>
-
 <!-- for loading screen -->
 <div id="loading-bg">
 </div>
@@ -17,4 +15,6 @@ include 'marketing.php';
 		<img src="img/main-loader.gif"/>
 	</div>
 </div>
+
+</body>
 

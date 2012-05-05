@@ -1,10 +1,7 @@
-<!DOCTYPE html>
 
 <?
-$path = $_SERVER['DOCUMENT_ROOT'];
 
-include "$path/view/nav.php";
-include "$path/php/model.php";
+include 'lib/db.php';
 
 $db = Connect();
 
@@ -30,9 +27,6 @@ Disconnect($db);
 
 ?>
 
-<html>
-<? include "$path/view/header.php"; ?>
-
 <body>
 <div class="container">
 <div class="row mid">
@@ -55,7 +49,4 @@ Disconnect($db);
 </div>
 </div>
 </body>
-
-<? include "$path/view/footer.php"; ?>
-</html>
 

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
 <?
 
-$path = $_SERVER['DOCUMENT_ROOT'];
-
-include "$path/view/nav.php";
-include "$path/php/model.php";
+include 'lib/db.php';
 
 $db = Connect();
 
@@ -30,9 +26,6 @@ $user = $uinfo['email'];
 Disconnect($db);
 
 ?>
-
-<html>
-<? include "$path/view/header.php"; ?>
 
 <body>
 <br>
@@ -90,8 +83,4 @@ Disconnect($db);
 </div></div>
 
 </body>
-
-<? include "$path/view/footer.php"; ?>
-
-</html>
 
