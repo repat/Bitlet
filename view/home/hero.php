@@ -5,7 +5,7 @@
 		<div class="quote-background">
 			<h1>Share & Sell Your Digital Content With the World.</h1>
 			<h2 class="intro">The easiest way to share your stuff online and make a profit. Join the revolution.</h2>
-			<form class="form-inline" id="upload" action="upload.php" method="post" enctype="multipart/form-data">
+			<form class="form-inline" target="upload_iframe" id="upload" action="/ajax/upload" method="post" enctype="multipart/form-data">
 				<div class="input-prepend">
 					<span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope"></i></span>
 					<input class="input-medium" id="email" type="text" name="email" 
@@ -44,4 +44,8 @@
 		</div>
 	</div>
 </div>
+
+<!-- Hidden Upload iFrame for Async Uploading -->
+<iframe name="upload_iframe" class="upload-iframe">
+</iframe>
 

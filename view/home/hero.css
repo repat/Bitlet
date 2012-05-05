@@ -69,3 +69,9 @@ input[type="file"], .file-button {
 	margin-top:-15px;
 } 
 
+/* upload iframe */
+.upload-iframe {
+	display: none;
+}
+
+

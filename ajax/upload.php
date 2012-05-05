@@ -42,8 +42,6 @@
 	$fid = NewFile($uid, $uploadname);
 	Disconnect($db);
 
-	// go to admin page
-	header('Location: admin/'.$fid);
-
+	echo "DONE!";
 ?>
 
