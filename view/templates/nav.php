@@ -14,10 +14,12 @@
 <!-- set up the modal to start hidden and fade in and out -->
 <div id="FAQModal" class="modal hide fade">
 
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal">X</button>
+    	<h3>Frequently Asked Questions</h3>
+	</div>
     <!-- dialog contents -->
     <div id="modalbody" class="modal-body faq">
-    	<h1>Frequently Asked Questions</h1>
-		<hr>
 		<div class="container">
     	<div class="row">
   			<div class="span6">		

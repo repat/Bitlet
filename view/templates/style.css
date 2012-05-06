@@ -58,3 +58,7 @@ footer[role="contentinfo"]{
 	line-height: 36px;
 }
 
+.modal-body {
+	max-height: 500px;
+}
+
