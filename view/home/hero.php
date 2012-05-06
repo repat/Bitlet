@@ -12,19 +12,17 @@
 						placeholder="Email" onkeypress="return event.keyCode!=13">
 				</div>
 
-				<button type="button" class="upload-button btn btn-large btn-primary">
-					<div class="file-div">
-					<input type="file" name="file" id="button" class="file-button"
-						 onchange="
-							load(''); 
-							fade('loading'); 
-							$('.file-button').attr('disabled', 'disabled'); 
-							$('.upload-button').attr('disabled', 'disabled'); 
-							upload.submit()"
-					/>
-					</div>
+				<button type="button" class="upload-button btn btn-large btn-primary" onclick="$('.file-button').click();">
 					Upload File
 				</button>
+				<input type="file" name="file" id="button" class="file-button" style="display:hidden"
+					 onchange="
+						load(''); 
+						fade('loading'); 
+						$('.file-button').attr('disabled', 'disabled'); 
+						$('.upload-button').attr('disabled', 'disabled'); 
+						upload.submit()"
+				/>
 			</form>
 			<div class="email-suggestion-wrap">
 				<div class="email-suggestion"></div>
