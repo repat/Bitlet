@@ -12,10 +12,16 @@
 						placeholder="Email" onkeypress="return event.keyCode!=13">
 				</div>
 
-				<button type="button" class="btn btn-large btn-primary">
+				<button type="button" class="upload-button btn btn-large btn-primary">
 					<div class="file-div">
 					<input type="file" name="file" id="button" class="file-button"
-						 onchange="load(''); fade('loading'); upload.submit()"/>
+						 onchange="
+							load(''); 
+							fade('loading'); 
+							$('.file-button').attr('disabled', 'disabled'); 
+							$('.upload-button').attr('disabled', 'disabled'); 
+							upload.submit()"
+					/>
 					</div>
 					Upload File
 				</button>
