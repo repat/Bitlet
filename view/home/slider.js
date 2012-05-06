@@ -34,7 +34,7 @@ window.onload = function () {
 	
 	// we do want to auto spin
 	$('.carousel').carousel({
-		interval: 3000,
+		interval: 6000,
 		pause: 'hover'
 	})
 

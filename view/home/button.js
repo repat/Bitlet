@@ -1,13 +1,14 @@
 var Button = function(paper, image, x, y, radius, callback) 
 {
-	this.defaultColor = "#fff";
-	this.hoverColor = "#1972EA";
+	this.defaultColor = "#FFF";
+	this.hoverColor = "#AAAAFF";
 	
-	this.selectedColor = "#1972EA";
-	this.selectedHoverColor = "#1972EA";
+	this.selectedColor = "#FFF";
+	this.selectedHoverColor = "#AAAAFF";
 	
 	this.opacityDefault = 0.5;
-	this.opacityHover = 0.6;
+	this.opacitySelected = 0.9;
+	this.opacityHover = 0.9;
 	this.selected = false;
 	this.radius = radius;
 
@@ -39,7 +40,7 @@ Button.prototype.MouseOut = function()
 {
 	if(this.selected) {
 		this.circle2.stop()
-			.animate({fill:this.selectedHoverColor, r:this.radius, opacity:this.opacityDefault}, 300); 
+			.animate({fill:this.selectedColor, r:this.radius, opacity:this.opacitySelected}, 300); 
 	} else {
 		this.circle2.stop()
 			.animate({fill:this.defaultColor, r:this.radius, opacity:this.opacityDefault}, 300); 
@@ -49,13 +50,14 @@ Button.prototype.MouseOut = function()
 Button.prototype.Select = function()
 {
 	this.selected = true;
-	this.circle2.stop().attr({fill:this.hoverColor, opacity:this.opacityDefault});
+	this.circle2.stop().attr({fill:this.selectedColor, opacity:this.opacitySelected});
 };
 
 Button.prototype.Click = function()
 {
 	this.callback();
-	this.Select();
+	this.selected = true;
+	this.circle2.stop().attr({fill:this.selectedHoverColor, opacity:this.opacitySelected});
 };
 
 Button.prototype.Unselect = function()
