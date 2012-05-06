@@ -46,11 +46,16 @@ Button.prototype.MouseOut = function()
 	} 
 };
 
+Button.prototype.Select = function()
+{
+	this.selected = true;
+	this.circle2.stop().attr({fill:this.hoverColor, opacity:this.opacityDefault});
+};
+
 Button.prototype.Click = function()
 {
 	this.callback();
-	this.selected = true;
-	this.circle2.attr({fill:this.hoverColor, opacity:this.opacityDefault});
+	this.Select();
 };
 
 Button.prototype.Unselect = function()
