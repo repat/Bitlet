@@ -1,4 +1,14 @@
 <?
+	// send results
+	function SendResult($result)
+	{
+		echo '
+		<script language="javascript" type="text/javascript">
+			   window.top.window.UploadDone('.$result.');
+		</script>';
+		exit();
+	}
+
 	// get root path
 	$path = $_SERVER['DOCUMENT_ROOT'];
 
@@ -8,13 +18,13 @@
 	// check size
 	if ($_FILES["file"]["size"] > 10000000) {	// limit is 10 MB
 		$error = 'File too large, maximum size is 10 MB';
-		exit();
+		SendResult(0);
 	}
 
 	// check for errors
 	if ($_FILES["file"]["error"] > 0) {
 		$error = 'File upload error, return code:'.$_FILES["file"]["error"];
-		exit();
+		SendResult(0);
 	}
 
 	$tmp_name = $_FILES["file"]["tmp_name"];
@@ -35,7 +45,7 @@
 		`$sh`;
 	} else {
 		$error = "File storage error";
-		exit();
+		SendResult(0);
 	}
 
 	// insert file into db
@@ -43,6 +53,6 @@
 	$fid = NewFile($uid, $uploadname, 'generic');
 	Disconnect($db);
 
-	echo "DONE!";
+	SendResult(1);
 ?>
 
