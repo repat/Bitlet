@@ -49,13 +49,3 @@
 <iframe name="upload_iframe" class="upload-iframe">
 </iframe>
 
-<script language="javascript" type="text/javascript">
-	var UploadDone = function(result) {
-		if(result) {
-			console.log("upload done!");
-		} else {
-			console.error("upload error!");
-		}
-	}
-</script>   
-
