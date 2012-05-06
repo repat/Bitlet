@@ -17,6 +17,7 @@
 	}
 
 	// add a new file under input user uid
+	// file type: enum('generic','photo','music','digiart','document','video')
 	function NewFile($uid, $filename, $type)
 	{
 		// Insert file into files table

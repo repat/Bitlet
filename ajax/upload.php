@@ -39,7 +39,8 @@
 	}
 
 	// insert file into db
-	$fid = NewFile($uid, $uploadname);
+	// file type: enum('generic','photo','music','digiart','document','video')
+	$fid = NewFile($uid, $uploadname, 'generic');
 	Disconnect($db);
 
 	echo "DONE!";

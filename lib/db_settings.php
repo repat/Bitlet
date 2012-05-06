@@ -4,7 +4,7 @@
 
 	function Connect()
 	{
-		if($localhost) {
+		if(CheckLocal()) {
 			$db_host = "localhost";
 			$db_dbname = "bitlet";
 			$db_username ="root";
