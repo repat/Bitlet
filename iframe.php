@@ -9,10 +9,10 @@
 
 	switch($url[2]) {
 		case 'file':
-			$dir = 'iframe/file';
+			$dir = 'view/file';
 			break;
 		default:
-			$dir = 'iframe/error';
+			$dir = 'view/ierror';
 			break;
 	}
 
