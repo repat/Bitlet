@@ -32,11 +32,11 @@ input[type="file"], .file-button {
 
 /* Styling from the opaque box on homepage */
 
-.intro, h1{
+.intro h1{
 	color:#FFF;
 }
 	
-.intro, h2{
+.intro h2{
 	margin-top: 10px;
 	margin-right: 30px;
 	margin-bottom: 10px;

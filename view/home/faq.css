@@ -1,9 +1,10 @@
 /*Starting FAQ section*/
-.faq h1 {
+.modal-header h3 {
 	margin: 0px 0 0 px;
 	font-size:30px;
 	font-weight: 300;
 	text-align: center;
+	color:#000;
 }
 .faq h2,
 .faq h3 {
