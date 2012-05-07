@@ -20,13 +20,13 @@
 
 		// check size
 		if ($_FILES['file']['size'] > 10000000) {	// limit is 10 MB
-			$error = 'File too large, maximum size is 10 MB';
+			error_log('File too large, maximum size is 10 MB');
 			SendResult(0);
 		}
 
 		// check for errors
 		if ($_FILES['file']['error'] > 0) {
-			$error = 'File upload error, return code:'.$_FILES['file']['error'];
+			error_log('File upload error, return code:'.$_FILES['file']['error']);
 			SendResult(0);
 		}
 
@@ -47,7 +47,7 @@
 			$sh ="chmod 755 $uploadname";
 			`$sh`;
 		} else {
-			$error = 'File storage error';
+			error_log('File storage error');
 			SendResult(0);
 		}
 
