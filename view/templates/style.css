@@ -44,6 +44,7 @@ footer[role="contentinfo"]{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
 .navbar .brand{
 	padding: 0px 0px 0px 0px !important;
 	font-size:30px !important;
@@ -51,12 +52,19 @@ footer[role="contentinfo"]{
 	color: #017AFF !important;
 	margin-left:0px !important;
 }
-.navbar-text{
-	font-size: 30px;
-	font-weight: 300;
-	padding: 12px 10px 8px 10px;
-	line-height: 36px;
+
+.pull-right {
+	padding-top: 25px;
 }
+
+.navbar .navbar-text{
+	font-size: 20px;
+	font-weight: 300;
+	padding: 20px 10px 8px 10px;
+	line-height: 0px;
+	color: #005580;
+}
+
 .modal-body {
 	max-height: 500px;
 }
@@ -67,7 +75,8 @@ footer[role="contentinfo"]{
 	padding-top: 10px; 
 	color: #5C5C5C; 
 }
+
 .copyright-text {
 	 color: #7A7A7A
-	}
+}
 

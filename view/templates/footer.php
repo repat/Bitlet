@@ -7,9 +7,9 @@
 		<div style="text-align:center" class="container">
 			<a href="#" class="footer-text">Terms</a>
 			<a href="#" class="footer-text">Privacy</a>
-			<a href="#" class="footer-text">Affiliates</a>
-			<a href="#" class="footer-text">Security</a></p>
-			<p class="copyright-text"> Copyright 2012, All Rights Reserved </p>
+			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
+			<a href="#" class="footer-text">Security</a>
+			<p class="copyright-text"><br /> Copyright 2012, All Rights Reserved </p>
 			
 		</div>
 	</div> <!-- end #inner-footer -->	

@@ -4,8 +4,8 @@
 			<a class="brand" href="http://bitlet.co"><img src="/img/logoSmall.png"></a>
 
 			<div class="nav pull-right">
-				<a class="navbar-text" onclick="showFAQ();"href="#">FAQ</a>
-				<a class="navbar-text" href="http://simply.io">About</a>
+				<a class="navbar-text" href="http://affiliates.bitlet.co">Affiliates</a>
+				<a class="navbar-text" onclick="showFAQ();"href="#">Help</a>
 			</div>
 		</div>
 	</div>
