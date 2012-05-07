@@ -19,7 +19,7 @@
     	<h3>Frequently Asked Questions</h3>
 	</div>
     <!-- dialog contents -->
-    <div id="modalbody" class="modal-body faq">
+    <div class="modal-body faq">
 		<div class="container">
     	<div class="row">
   			<div class="span6">		
@@ -49,7 +49,8 @@
 				
 				<h2>Can I use Bitlet even if I live outside the US?</h2>
 				<p>Yes, we support all major international credit cards. </p>
-			<h2>More questions? <a href="mailto:dev@simply.io">Email us</a> and we'll get back to you right away! </h2>
+			<h2>More questions? <a href="mailto:dev@simply.io">Email us</a> 
+				and we'll get back to you right away! </h2>
 			</div>
 		</div> </div>
 		<br>
