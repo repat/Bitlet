@@ -41,7 +41,7 @@ footer[role="contentinfo"]{
 /*navigation changes - goes against bootsrap norm */
 .navbar-inner{
 	background-image:none !important;
-	background-color:#EDEDED !important;
+	background-color:#FFF !important;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
