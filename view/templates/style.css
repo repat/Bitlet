@@ -49,6 +49,7 @@ footer[role="contentinfo"]{
 	font-size:30px !important;
 	font-weight:bold !important;
 	color: #017AFF !important;
+	margin-left:0px !important;
 }
 .navbar-text{
 	font-size: 30px;

@@ -17,16 +17,13 @@
 	position:absolute; 		
 	margin-left:auto;
 	margin-right:auto;
-		padding-left: 20px;
 	width: 100%;
-	margin-top:530px;
-	margin-left: -155px;
+	margin-top:605px;
 }
 
 #theButtons {
 	display:block;
 	text-align:center;
-	margin-left: -200px;
 }
 	
 .tagline-descr {
@@ -53,7 +50,7 @@
 	width: 680px;
 	z-index:1000;
 	background: rgba(0,0,0,0.5);
-	margin-left: -600px;
+	margin-left: -470px;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 10px;
