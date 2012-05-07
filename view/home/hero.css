@@ -14,14 +14,13 @@
 	margin-top: 5px;
 }
 
+/* we want to hide the actual upload button off screen */
 input[type="file"], .file-button {
 	opacity: 0;
 	-moz-opacity: 0;
 	position: absolute;
-	width: 106px;
-	height: 37px;
-	margin-top: -10px;
-	margin-left: 5px;
+	top: -100px;
+	left: -100px;
 }
 
 /* video / image frames */
