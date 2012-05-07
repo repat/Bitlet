@@ -82,6 +82,7 @@ input[type="file"], .file-button {
 .email-suggestion{
 	color: #EEE;
 	text-align:left;
+	margin-left: 150px;
 }
 .email-suggestion-wrap{
 	height:25px;

@@ -26,7 +26,7 @@
 			</tr>
 			</table>
 			<hr class="index bar">
-			<form  style="text-align:left;" class="form-inline" target="upload_iframe" id="upload" 
+			<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="upload" 
 				action="/ajax/upload" method="post" enctype="multipart/form-data">
 				<div class="input-prepend">
 					<span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope"></i></span>
