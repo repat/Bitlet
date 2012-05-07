@@ -46,5 +46,5 @@ function showUploadDone(result) {
 	});
 
 	// load the iframe page
-	$('.FileIFrame').attr('src', 'file');
+	$('.FileIFrame').attr('src', 'iframe/file/'+result);
 };

@@ -14,7 +14,3 @@
 	</div> <!-- end #inner-footer -->	
 </footer>
 
-<!-- insert javascripts last -->
-<? 
-	IncludeJSFiles('view/templates'); 
-?>

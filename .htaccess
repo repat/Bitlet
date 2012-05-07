@@ -10,6 +10,7 @@ RewriteRule ^terms/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^about/?(.*)$ controller.php?args=$1 [L]
 
 RewriteRule ^ajax/(.*)$ ajax.php [L]
+RewriteRule ^iframe/(.*)/(.*)$ iframe.php?args=$2 [L]
 RewriteRule ^/?$ controller.php [L]
 
 </IfModule>

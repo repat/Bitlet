@@ -56,7 +56,7 @@
 		$fid = NewFile($uid, $uploadname, 'generic');
 		Disconnect($db);
 
-		SendResult(1);
+		SendResult($fid);
 	}
 ?>
 

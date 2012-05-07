@@ -6,15 +6,7 @@ include 'lib/db.php';
 $db = Connect();
 
 // we can get either the fid or the furl
-$fid = $_GET['f'];
-$furl = $_GET['n'];
-
-// if neither GET variables exists, kill yourself
-if(!($fid || $furl)) {
-	die();
-} else if($furl) {
-	$fid = GetFidFromUrl($furl);
-}
+$fid = $args;
 
 $finfo = GetFileInfo($fid);
 $uid = $finfo['uid'];
