@@ -1,17 +1,26 @@
 <?
-$path = $_SERVER['DOCUMENT_ROOT'];
+	// send results
+	function SendResult($result)
+	{
+		echo '
+		<script language="javascript" type="text/javascript">
+			   window.PriceChanged('.$result.');
+		</script>';
+		exit();
+	}
 
-include $path.'/lib/db.php';
+	$path = $_SERVER['DOCUMENT_ROOT'];
 
-$fid = $_POST['fid'];
-$price = $_POST['price'];
-$db = Connect();
+	include $path.'/lib/db.php';
 
-SetPrice($fid, $price);
+	$fid = $_POST['fid'];
+	$price = $_POST['price'];
 
-Disconnect($db);
+	$db = Connect();
+	SetPrice($fid, $price);
+	Disconnect($db);
 
-// go back to orginal file
-header('Location: '.$fid);
+	// send results
+	SendResult($price);
 ?>
 

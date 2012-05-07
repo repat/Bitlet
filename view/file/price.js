@@ -1,0 +1,4 @@
+var PriceChanged = function(res)
+{
+}
+
