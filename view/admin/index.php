@@ -3,61 +3,27 @@
 include 'lib/db.php';
 ?>
 
-<div class="container">
-	<h1>Admin Panel</h1>
-	<div class="row">
-	<div class="span10 offset1">
-	<h3 style="text-align:left;">Credits: $ 
-<?
-$uid = $_GET['u'];
-$db = Connect();
+	<div class= "well container">
 
-$credits = GetCredits($uid);
-echo $credits;
-?>
-</h3>
-<table class="table table-bordered table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Downloads</th>
-	    </tr>
-	</thead> 
-	<tbody>
-
-
-<? $files = GetFids($uid);
-
-// iterate through files and display info for each file
-foreach($files as $file) {
-	$finfo = GetFileInfo($file);
-
-	$name = basename($finfo['name']);
-	$price = $finfo['price'];
-	$downloads = $finfo['downloads'];
-?>
-	<tr>		
-		<td>
-		<?echo $name;?>
-		</td>
-		<td>
-<?		echo $price; ?>
-		</td>
-		<td>
-<?		echo $downloads;?>
-		</td>
-	</tr>
-<?
-}
-
-Disconnect($db);
-
-?>
-		</tbody>
-		</table>
+		<div class="tabbable"> 
+		  <ul class="nav nav-tabs">
+			<li class="active"><a href="#tab1" data-toggle="tab">Bought</a></li>
+			<li><a href="#tab2" data-toggle="tab">Sold</a></li>
+			  <li><a href="#tab3" data-toggle="tab">Settings</a></li>
+		  </ul>
+		  <div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+			  <p>Things that I bought</p>
+			</div>
+			<div class="tab-pane" id="tab2">
+			  <p>Things that I sold</p>
+			</div>
+			<div class="tab-pane" id="tab3">
+				<p>Things that are Settings</p>
+			</div>
+		  </div>
 		</div>
-		</div>
-	</div>
+	</div>	
+
 </body>
 
