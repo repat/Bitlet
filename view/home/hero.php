@@ -32,7 +32,6 @@
 					 onchange="
 						load(''); 
 						fade('loading'); 
-						$('.file-button').attr('disabled', 'disabled'); 
 						$('.upload-button').attr('disabled', 'disabled'); 
 						upload.submit()"
 				/>
