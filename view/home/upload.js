@@ -3,8 +3,8 @@ var UploadDone = function(result) {
 		console.log("upload done!");
 
 		// hide loading div
-		document.getElementById("loading-bg").style.display = 'hidden';
-		document.getElementById("loading").style.display = 'hidden';
+		document.getElementById("loading-bg").style.display = 'none';
+		document.getElementById("loading").style.display = 'none';
 
 		// enable upload button
 		$('.file-button').removeAttr("disabled");

@@ -30,11 +30,12 @@
 				</button>
 				<input type="file" name="file" id="button" class="file-button" style="display:hidden"
 					 onchange="
+						upload.submit();
 						load(''); 
 						fade('loading'); 
-						$('.file-button').attr('disabled', 'disabled'); 
 						$('.upload-button').attr('disabled', 'disabled'); 
-						upload.submit()"
+						$('.file-button').attr('disabled', 'disabled'); 
+					"
 				/>
 			</form>
 			<div class="email-suggestion-wrap">
