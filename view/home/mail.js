@@ -9,7 +9,9 @@ $('#email').keyup(function() {
 	var email = $(this).val();
 
 	// emails should be at least 5 characters, and contain a '@' and a '.'
-	if(email.length > 4 && email.indexOf('@') != -1 && email.indexOf('.') != -1) {
+	var aix = email.indexOf('@');
+	var dix = email.indexOf('.');
+	if(email.length > 4 && aix != -1 && dix != -1 && aix < dix) {
 		$('.upload-button').removeAttr('disabled');
 		$('.file-button').removeAttr('disabled');
 	} else {
