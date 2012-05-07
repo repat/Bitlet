@@ -1,7 +1,7 @@
 body {
 	padding-bottom: 40px;
 	/*background-color: #EDEDED;*/
-	background: url(/img/bg-pattern.png) repeat-x repeat-y;
+	background: url(/img/bg-pattern.png) repeat;
 }
 
 /* Footer styles */
@@ -26,9 +26,7 @@ hr.soften {
 
 /* Footer Styling */
 footer[role="contentinfo"]{
-	background:#EDEDED;
 	padding-bottom:20px;
-	border-top: 1px solid #DDD;
 	margin-bottom:-50px;
 }
 #footer-box{
@@ -58,11 +56,6 @@ footer[role="contentinfo"]{
 	padding: 12px 10px 8px 10px;
 	line-height: 36px;
 }
-
-.navbar .brand {
-	margin-left: -130px;
-	}
-
 .modal-body {
 	max-height: 500px;
 }
