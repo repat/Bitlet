@@ -3,7 +3,9 @@
 <div class="tagline-descr">
 	<div class="quote-placement">
 		<div class="quote-background">
-			<h1 style="text-align:center; padding-bottom:10px; padding-top:10px;">Share & Sell Your Digital Content. </h1>
+			<h1 style="text-align:center; padding-bottom:10px; padding-top:10px;">
+				Share & Sell Your Digital Content.
+			</h1>
 			<table class="intro"> 
 			<tr>
 				<th style="width:300px;"><h2>Sell Instantly</h2></th>
@@ -45,7 +47,6 @@
 						$('.file-button').attr('disabled', 'disabled'); 
 					"
 				/>
-				<span class="complete-msg">hello</span>
 			</form>
 			<div class="email-suggestion-wrap">
 				<div class="email-suggestion"></div>
