@@ -9,7 +9,6 @@
 			<a href="#" class="footer-text">Privacy</a>
 			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
 			<a href="#" class="footer-text">Security</a>
-			<a href=#" class="footer-text">Team</a>
 			<p class="copyright-text"><br /> Copyright 2012, All Rights Reserved </p>
 			
 		</div>
