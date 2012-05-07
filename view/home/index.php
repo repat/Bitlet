@@ -2,7 +2,6 @@
 
 <?
 include 'hero.php';
-include 'marketing.php';
 ?>
 
 <!-- for loading screen -->

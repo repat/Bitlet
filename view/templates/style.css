@@ -58,6 +58,10 @@ footer[role="contentinfo"]{
 	line-height: 36px;
 }
 
+.navbar .brand {
+	margin-left: -130px;
+	}
+
 .modal-body {
 	max-height: 500px;
 }
