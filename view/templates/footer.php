@@ -10,7 +10,7 @@
 			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
 			<a href="#" class="footer-text">Help</a>
 			<a href="#" class="footer-text">Security</a>
-			<p class="copyright-text"><br /> Copyright 2012, All Rights Reserved </p>
+			<p class="copyright-text"><br />&copy;2012 Bitlet, Inc</p>
 			
 		</div>
 	</div> <!-- end #inner-footer -->	
