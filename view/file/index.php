@@ -20,8 +20,8 @@ Disconnect($db);
 ?>
 
 <body>
-	<h1>Current Price: $ <? echo $price ?></h1>
-	<form class="form-inline" id="price" action="set_price.php" method="post" enctype="multipart/form-data">
+	<h1>Current Price: $ <span id="price"><? echo $price ?><span></h1>
+	<form class="form-inline" id="price" action="/ajax/setprice" method="post" enctype="multipart/form-data">
 		<div class="input-prepend">
 			<span class="add-on" id="icona">$</span>
 			<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">

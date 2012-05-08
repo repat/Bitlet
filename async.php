@@ -7,6 +7,9 @@
 		case 'upload':
 			require('ajax/upload.php');
 			break;
+		case 'setprice':
+			require('ajax/setprice.php');
+			break;
 		default:
 			require('ajax/error.php');
 			break;
