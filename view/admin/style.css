@@ -4,6 +4,9 @@
 	margin-right:auto;
 	position: relative;
 	width: 970px;
+	background: #EDEDED;
+	padding: 5px;
+	border: 1px solid #333;
 }
 
 .tablebar tr {
@@ -11,9 +14,8 @@
 }
 
 .tablebar {
-	position: absolute;
-	left: 200px; 
-	width: 720px;
+	margin-left: 200px; 
+	width: 770px;
 
 	background:rgba(0,0,0,0); 
 	text-align:left
@@ -38,8 +40,8 @@
 
 .sidebar-div {
 	position:absolute; 
-	left:0px;
-	top:0px; 
+	left:5px;
+	top:5px; 
 }
 
 .table {
