@@ -1,29 +1,57 @@
 <body>
-<? 
-include 'lib/db.php';
-?>
+	<div class="main-shebang">
+		<div class= "sidebar-div">
+			<nav class="sidebar">
+				<div class="menu-item downloads">
+				  <h4 class="downloads"><a href="#">Downloads</a></h4>
+				</div>
+			 
+				<div class="menu-item">
+				  <h4><a href="#">Selling</a></h4>
+				 
+				</div>
+			 
+				<div class="menu-item">
+				  <h4><a href="#">Settings</a></h4>
+				</div>
+				
 
-	<div class= "well container">
-
-		<div class="tabbable"> 
-		  <ul class="nav nav-tabs">
-			<li class="active"><a href="#tab1" data-toggle="tab">Bought</a></li>
-			<li><a href="#tab2" data-toggle="tab">Sold</a></li>
-			  <li><a href="#tab3" data-toggle="tab">Settings</a></li>
-		  </ul>
-		  <div class="tab-content">
-			<div class="tab-pane active" id="tab1">
-			  <p>Things that I bought</p>
-			</div>
-			<div class="tab-pane" id="tab2">
-			  <p>Things that I sold</p>
-			</div>
-			<div class="tab-pane" id="tab3">
-				<p>Things that are Settings</p>
-			</div>
-		  </div>
-		</div>
-	</div>	
-
+			</nav>
+		</div>	
+	</div>
+				<div>
+					<table  class="tablebar" style="text-align:left"> 
+						<tr>
+							<th >Image</th>
+							<th>Image Name</th> 
+							<th>Download</th>
+							<th>Share</th>
+						</tr>
+						<tr> 
+							<td>Lala</td> 
+							<td>lala</td>
+							<td>603.0303</td>
+							<td></td>
+						</tr> 
+						<tr> 
+							<td>Lala</td> 
+							<td>lala</td>
+							<td>603.0303</td>
+							<td></td>
+						</tr> 
+							<tr> 
+							<td>Lala</td> 
+							<td>lala</td>
+							<td>603.0303</td>
+							<td></td>
+						</tr> 
+							<tr> 
+							<td>Lala</td> 
+							<td>lala</td>
+							<td>603.0303</td>
+							<td></td>
+						</tr> 
+					</table>
+				</div>
 </body>
 

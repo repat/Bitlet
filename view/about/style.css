@@ -26,3 +26,11 @@
 	left: 36%;
 }
 
+ a {
+ 	color:#0055CC;
+ }
+
+.nav-list .nav-header a {
+	color:#F05911; 
+}
+
