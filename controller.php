@@ -29,9 +29,6 @@
 		case 'buy':
 			$dir = 'view/buy';
 			break;
-		case 'file':
-			$dir = 'view/file';
-			break;
 		default:
 			$dir = 'view/error';
 			break;

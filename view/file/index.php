@@ -24,8 +24,7 @@ Disconnect($db);
 		<div class="input-prepend">
 			<span class="add-on" id="icona">$</span>
 			<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">
-			<input class="input-medium" type="text" name="price" placeholder="Price" 
-				onkeypress="return event.keyCode!=13">
+			<input class="input-medium" type="text" name="price" placeholder="Price">
 		</div>
 		<button type="submit" class="btn btn-primary">Set Price</button>
 	</form>

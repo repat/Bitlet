@@ -44,8 +44,7 @@
 						load(''); 
 						fade('loading'); 
 						$('.upload-button').attr('disabled', 'disabled'); 
-						$('.file-button').attr('disabled', 'disabled'); 
-					"
+						$('.file-button').attr('disabled', 'disabled');"
 				/>
 			</form>
 			<div class="email-suggestion-wrap">

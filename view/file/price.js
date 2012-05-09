@@ -17,5 +17,8 @@ $("#price-form").submit(function(event) {
 			console.log('price set at '+data.price);
 			$('#price').text(data.price);
 		}, "json");
+
+	// clear text input form
+	$('.input-medium').val('');
 });
 

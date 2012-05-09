@@ -9,7 +9,7 @@ include 'hero.php';
 
 	<div class="modal-header">
 		<button class="close" data-dismiss="modal">X</button>
-    	<h3>File Administration</h3>
+    	<h3>File Details</h3>
 	</div>
     <!-- dialog contents -->
     <div class="modal-body faq">

@@ -20,5 +20,6 @@
 	IncludeCSSFiles($dir); 
 	require_once($dir.'/index.php');
 	IncludeJSFiles('view/templates'); 
+	IncludeJSFiles($dir); 
 
 ?>
