@@ -15,11 +15,18 @@
 				  <h4><a href="#">Settings</a></h4>
 				</div>
 				
+				<div class="menu-item">
+				  <h4><a href="#"></a></h4>
+				</div>
+				<div class="menu-item">
+				  <h4><a href="#"></a></h4>
+				</div>
+				
 
 			</nav>
 		</div>	
 		<table  class="tablebar" style="text-align:left"> 
-			<tr>
+			<tr class="toprow">
 				<th >Image</th>
 				<th>Image Name</th> 
 				<th>Download</th>

@@ -7,7 +7,7 @@
 }
 
 .tablebar tr {
-	height:40px; 
+	height:34px; 
 }
 
 .tablebar {
@@ -60,6 +60,12 @@ nav {
   -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
      -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
           box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.toprow th {
+	background:#F05911; 
+	color:#fff; 
 }
 
 .menu-item {
