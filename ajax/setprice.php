@@ -1,14 +1,4 @@
 <?
-	// send results
-	function SendResult($result)
-	{
-		echo '
-		<script language="javascript" type="text/javascript">
-			   window.PriceChanged('.$result.');
-		</script>';
-		exit();
-	}
-
 	$path = $_SERVER['DOCUMENT_ROOT'];
 
 	include $path.'/lib/db.php';
@@ -21,6 +11,7 @@
 	Disconnect($db);
 
 	// send results
-	SendResult($price);
+	echo json_encode(array("price"=>$price));
+	exit();
 ?>
 
