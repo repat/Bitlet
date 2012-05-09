@@ -1,4 +1,3 @@
-
 <?
 
 include 'lib/db.php';
@@ -20,12 +19,12 @@ Disconnect($db);
 ?>
 
 <body>
-	<h1>Current Price: $ <span id="price"><? echo $price ?><span></h1>
-	<form class="form-inline" id="price" action="/ajax/setprice" method="post" enctype="multipart/form-data">
+	<h1>Current Price: $<span id="price"><? echo $price ?><span></h1>
+	<form class="form-inline" id="price-form" action="/ajax/setprice" method="post" enctype="multipart/form-data">
 		<div class="input-prepend">
 			<span class="add-on" id="icona">$</span>
 			<input type="text" name="fid" value="<? echo $fid ?>" style="display:none">
-			<input class="input-medium" id="price" type="text" name="price" placeholder="Price" 
+			<input class="input-medium" type="text" name="price" placeholder="Price" 
 				onkeypress="return event.keyCode!=13">
 		</div>
 		<button type="submit" class="btn btn-primary">Set Price</button>
