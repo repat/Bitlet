@@ -2,21 +2,17 @@
 .main-shebang {
 	margin-left:auto;
 	margin-right:auto;
-	position: absolute;
-	left: 50px; 
-	top: 100px; 
+	position: relative;
 	width: 970px;
-	height: 300px; 
 }
+
 .tablebar tr {
 	height:40px; 
 }
+
 .tablebar {
-	margin-left:250px;
-	margin-right:auto;
 	position: absolute;
-	left: 0px; 
-	top: 100px; 
+	left: 200px; 
 	width: 720px;
 
 	background:rgba(0,0,0,0); 
@@ -34,14 +30,11 @@
   background: -ms-linear-gradient(top, #F05911 0%,##6D2706 44%,#9D3A0B 100%); /* IE10+ */
   background: linear-gradient(top, #F05911 0%,##6D2706 44%,#9D3A0B 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F05911', endColorstr='#9D3A0B',GradientType=0 ); /* IE6-9 */
+}
 	
-
-
 .menu-item li:hover {
   background: #eee;
 }	
-	
-}
 
 .sidebar-div {
 	position:absolute; 

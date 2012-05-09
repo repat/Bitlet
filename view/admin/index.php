@@ -18,40 +18,38 @@
 
 			</nav>
 		</div>	
+		<table  class="tablebar" style="text-align:left"> 
+			<tr>
+				<th >Image</th>
+				<th>Image Name</th> 
+				<th>Download</th>
+				<th>Share</th>
+			</tr>
+			<tr> 
+				<td>Lala</td> 
+				<td>lala</td>
+				<td>603.0303</td>
+				<td></td>
+			</tr> 
+			<tr> 
+				<td>Lala</td> 
+				<td>lala</td>
+				<td>603.0303</td>
+				<td></td>
+			</tr> 
+				<tr> 
+				<td>Lala</td> 
+				<td>lala</td>
+				<td>603.0303</td>
+				<td></td>
+			</tr> 
+				<tr> 
+				<td>Lala</td> 
+				<td>lala</td>
+				<td>603.0303</td>
+				<td></td>
+			</tr> 
+		</table>
 	</div>
-				<div>
-					<table  class="tablebar" style="text-align:left"> 
-						<tr>
-							<th >Image</th>
-							<th>Image Name</th> 
-							<th>Download</th>
-							<th>Share</th>
-						</tr>
-						<tr> 
-							<td>Lala</td> 
-							<td>lala</td>
-							<td>603.0303</td>
-							<td></td>
-						</tr> 
-						<tr> 
-							<td>Lala</td> 
-							<td>lala</td>
-							<td>603.0303</td>
-							<td></td>
-						</tr> 
-							<tr> 
-							<td>Lala</td> 
-							<td>lala</td>
-							<td>603.0303</td>
-							<td></td>
-						</tr> 
-							<tr> 
-							<td>Lala</td> 
-							<td>lala</td>
-							<td>603.0303</td>
-							<td></td>
-						</tr> 
-					</table>
-				</div>
 </body>
 
