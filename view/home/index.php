@@ -42,6 +42,7 @@
 				<input type="file" name="file" id="button" class="file-button" style="display:hidden"
 					 onchange="
 						upload.submit();
+						// disable the file selection button
 						$('.upload-button').attr('disabled', 'disabled'); 
 						$('.file-button').attr('disabled', 'disabled');"
 				/>
@@ -79,8 +80,8 @@
 <div id="FileModal" class="modal hide fade">
 
 	<div class="modal-header">
-		<button class="close" data-dismiss="modal">X</button>
-    	<h3>File Details</h3>
+		<button class="close" data-dismiss="modal">x</button>
+    	<h3>Item Details</h3>
 	</div>
     <!-- dialog contents -->
     <div class="modal-body faq">
@@ -88,7 +89,7 @@
 	</div>
     <!-- dialog buttons -->
     <div class="modal-footer">
-        <a href="#" class="btn primary">OK</a>
+        <a href="#" class="btn primary">Upload Another File</a>
     </div>
 </div>
 
