@@ -54,6 +54,10 @@ footer[role="contentinfo"]{
 	margin-left:0px !important;
 }
 
+a.brand:hover {
+	background:url(/img/logobackground.png)  no-repeat;
+}
+
 .pull-right {
 	padding-top: 25px;
 }
