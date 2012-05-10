@@ -12,7 +12,7 @@
 				<h3>7</h3>
 			</span>
 			<span class="label label-info items-label"># of Items</span>
-			<button class="btn btn-success cash-out">Cash Out</button>
+			<button class="btn btn-success btn-large cash-out">Cash Out</button>
 		</div>
 	<div class= "sidebar-div">
 			<nav class="sidebar">
@@ -32,8 +32,9 @@
 				
 
 			</nav>
-		</div>	
-		<table  class="tablebar" style="text-align:left" cellpadding"10px" > 
+		</div>
+		<div class="tablediv">
+		<table  class="table table-bordered tablebar" style="text-align:left" cellpadding"10px" > 
 			<tr class="toprow">
 				<th>Image</th>
 				<th>Image Name</th> 
@@ -65,6 +66,7 @@
 				<td></td>
 			</tr> 
 		</table>
+		</div>
 	</div>
 </body>
 

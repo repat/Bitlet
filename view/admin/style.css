@@ -39,7 +39,7 @@
 
 .cash-out{
 	position:absolute; 
-	left:675px;
+	left:655px;
 	top:20px;
 }
 
@@ -71,9 +71,14 @@
 	height:34px; 
 }
 
+.tablediv {
+	width:770px; 
+	
+}
+
 .tablebar {
 	margin-left: 200px; 
-	width: 770px;
+	width: 700px;
 
 	background:rgba(0,0,0,0); 
 	text-align:left
@@ -115,11 +120,15 @@
 }
 
 .table {
-	height:700px;
-	width:800px;
+	width:770px;
+	border:3px;
 	
 	*border-collapse: collapse; /* IE7 and lower */
     border-spacing: 0;
+}
+
+.table td {
+	/*height:62px;*/
 }
 
 .thumbnails {
@@ -132,8 +141,8 @@ nav {
   font-size: 13px;
   line-height: 1.5;
   width: 200px;
- 	position:absolute; 
- 	top:68px;
+  position:absolute; 
+  top:68px;
 }
 
 
@@ -141,6 +150,7 @@ nav {
 	background:#76AACC; 
 	color:#fff;
 	border:10px;
+	/*height:30px; */
 }
 
 .menu-item {
