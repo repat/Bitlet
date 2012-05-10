@@ -5,19 +5,42 @@
 	// get the uid of user based on his email, also links up facebook id
 	function GetUID($email, $fbid)
 	{
+		// default password return as null if user already exist
+		$pass = null;
+
 		//Query the user database and see if the user already has an account
 		$result = mysql_query("SELECT id FROM user WHERE email = '$email'") or die();
-		$pass = null;
-		if (mysql_num_rows($result) == 0) {
+		if(mysql_num_rows($result) == 0) {
 			//create new user
 			$salt = substr(md5(rand()), 0, 8); 
 			$pass = substr(md5(rand()), 0, 8); 
-			$hashed_pass = Sha1($pass);
+			$hashed_pass = sha1($pass.$salt);
 			mysql_query("INSERT INTO user (email, fbid, password, salt, credits)
 				VALUES ('$email', '$fbid', '$hashed_pass', '$salt', '0')") or die();
 			return mysql_insert_id();
 		}
 		return array(mysql_result($result, 0), $pass);
+	}
+
+	// check for valid email/pass, return true on successful authentication
+	function Authenticate($email, $pass)
+	{
+		$result = mysql_query("SELECT salt, password FROM user WHERE email = '$email'") or die();
+		// check if correct result found
+		if(mysql_num_rows($result) < 2) {
+			return false;
+		} else {
+			$res = mysql_fetch_assoc($result);
+			$hash_pass = $res['password'];
+			$salt = $res['salt'];
+
+			// hash password and check validity 
+			if(sha1($pass.$salt) == $hash_pass) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	}
 
 	// add a new file under input user uid
@@ -109,7 +132,7 @@
 	{
 		//Query the user database and see if the user already has an account
 		$result = mysql_query("SELECT name FROM file WHERE id = '$fid'") or die();
-		if (mysql_num_rows($result) == 0) {
+		if(mysql_num_rows($result) == 0) {
 			die('File does not exist');
 		}
 		return mysql_result($result, 0);

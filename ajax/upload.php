@@ -19,13 +19,13 @@
 		$email = $_POST['email'];
 
 		// check size
-		if ($_FILES['file']['size'] > 10000000) {	// limit is 10 MB
+		if($_FILES['file']['size'] > 10000000) {	// limit is 10 MB
 			error_log('File too large, maximum size is 10 MB');
 			SendResult(0);
 		}
 
 		// check for errors
-		if ($_FILES['file']['error'] > 0) {
+		if($_FILES['file']['error'] > 0) {
 			error_log('File upload error, return code:'.$_FILES['file']['error']);
 			SendResult(0);
 		}
@@ -43,7 +43,7 @@
 		$sh = "mkdir $uploaddir";
 		`$sh`;
 
-		if (move_uploaded_file($tmp_name, $uploadname)) {
+		if(move_uploaded_file($tmp_name, $uploadname)) {
 			$sh ="chmod 755 $uploadname";
 			`$sh`;
 		} else {
