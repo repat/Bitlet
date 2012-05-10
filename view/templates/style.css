@@ -41,7 +41,7 @@ footer[role="contentinfo"]{
 /*navigation changes - goes against bootsrap norm */
 .navbar-inner{
 	background-image:none !important;
-	background-color:rgba(183,235,245,0.8) !important;
+	background-color:#E3FBFF !important;
 	/*padding-top: 10px;
 	padding-bottom: 10px;*/
 }
@@ -59,11 +59,11 @@ footer[role="contentinfo"]{
 }
 
 .navbar .navbar-text{
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 300;
 	padding: 20px 10px 8px 10px;
 	line-height: 0px;
-	color:#000;
+	color:#000066;
 }
 
 .modal-body {
