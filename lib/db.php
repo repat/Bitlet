@@ -51,7 +51,6 @@
 		mysql_query("INSERT INTO file (uid, file_name, type)
 			VALUES('$uid', '$filename', '$type')") or die();
 		return mysql_insert_id();
-
 	}
 
 	// set price for a file
