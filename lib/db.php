@@ -1,19 +1,46 @@
-<?php
+<?
 
 	include 'db_settings.php';  //load the DB Settings.
 
 	// get the uid of user based on his email, also links up facebook id
 	function GetUID($email, $fbid)
 	{
+		// default password return as null if user already exist
+		$pass = null;
+
 		//Query the user database and see if the user already has an account
 		$result = mysql_query("SELECT id FROM user WHERE email = '$email'") or die();
-		if (mysql_num_rows($result) == 0) {
+		if(mysql_num_rows($result) == 0) {
 			//create new user
-			mysql_query("INSERT INTO user (email, fbid, credits)
-				VALUES ('$email', '$fbid', '0')") or die();;
+			$salt = substr(md5(rand()), 0, 8); 
+			$pass = substr(md5(rand()), 0, 8); 
+			$hashed_pass = sha1($pass.$salt);
+			mysql_query("INSERT INTO user (email, fbid, password, salt, credits)
+				VALUES ('$email', '$fbid', '$hashed_pass', '$salt', '0')") or die();
 			return mysql_insert_id();
 		}
-		return mysql_result($result, 0);
+		return array(mysql_result($result, 0), $pass);
+	}
+
+	// check for valid email/pass, return true on successful authentication
+	function Authenticate($email, $pass)
+	{
+		$result = mysql_query("SELECT salt, password FROM user WHERE email = '$email'") or die();
+		// check if correct result found
+		if(mysql_num_rows($result) < 2) {
+			return false;
+		} else {
+			$res = mysql_fetch_assoc($result);
+			$hash_pass = $res['password'];
+			$salt = $res['salt'];
+
+			// hash password and check validity 
+			if(sha1($pass.$salt) == $hash_pass) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	}
 
 	// add a new file under input user uid
@@ -21,10 +48,9 @@
 	function NewFile($uid, $filename, $type)
 	{
 		// Insert file into files table
-		mysql_query("INSERT INTO file (uid, name, type, dname)
-			VALUES('$uid', '$filename', '$type', '$filename')") or die();
+		mysql_query("INSERT INTO file (uid, file_name, type)
+			VALUES('$uid', '$filename', '$type')") or die();
 		return mysql_insert_id();
-
 	}
 
 	// set price for a file
@@ -37,14 +63,14 @@
 	// set price for a file
 	function SetDisplayName($fid, $name)
 	{
-		mysql_query("UPDATE file SET dname='$name'
+		mysql_query("UPDATE file SET name='$name'
 			WHERE id='$fid'") or die();
 	}
 
 	// set price for a file
 	function SetURL($fid, $url)
 	{
-		mysql_query("UPDATE file SET price='$url'
+		mysql_query("UPDATE file SET url='$url'
 			WHERE id='$fid'") or die();
 	}
 
@@ -105,7 +131,7 @@
 	{
 		//Query the user database and see if the user already has an account
 		$result = mysql_query("SELECT name FROM file WHERE id = '$fid'") or die();
-		if (mysql_num_rows($result) == 0) {
+		if(mysql_num_rows($result) == 0) {
 			die('File does not exist');
 		}
 		return mysql_result($result, 0);

@@ -14,7 +14,7 @@
 		case '':
 			$dir = 'view/home';
 			break;
-		case 'admin':
+		case 'a':
 			$dir = 'view/admin';
 			break;
 		case 'faq':
@@ -26,8 +26,11 @@
 		case 'about':
 			$dir = 'view/about';
 			break;
-		case 'buy':
+		case 'b':
 			$dir = 'view/buy';
+			break;
+		case 'l':
+			$dir = 'view/link';
 			break;
 		default:
 			$dir = 'view/error';

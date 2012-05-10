@@ -19,13 +19,13 @@
 		$email = $_POST['email'];
 
 		// check size
-		if ($_FILES['file']['size'] > 10000000) {	// limit is 10 MB
+		if($_FILES['file']['size'] > 10000000) {	// limit is 10 MB
 			error_log('File too large, maximum size is 10 MB');
 			SendResult(0);
 		}
 
 		// check for errors
-		if ($_FILES['file']['error'] > 0) {
+		if($_FILES['file']['error'] > 0) {
 			error_log('File upload error, return code:'.$_FILES['file']['error']);
 			SendResult(0);
 		}
@@ -36,14 +36,14 @@
 		// setup database
 		include $path.'/lib/db.php';
 		$db = Connect();
-		$uid = GetUID($email, 0);
+		list($uid, $pass) = GetUID($email, 0);
 
 		$uploaddir = $uploadroot.$uid;
 		$uploadname = $uploaddir.'/'.$name;
 		$sh = "mkdir $uploaddir";
 		`$sh`;
 
-		if (move_uploaded_file($tmp_name, $uploadname)) {
+		if(move_uploaded_file($tmp_name, $uploadname)) {
 			$sh ="chmod 755 $uploadname";
 			`$sh`;
 		} else {
@@ -55,6 +55,11 @@
 		// file type: enum('generic','photo','music','digiart','document','video')
 		$fid = NewFile($uid, $uploadname, 'generic');
 		Disconnect($db);
+
+		if($pass != null) {
+			error_log('new user created, pass '.$pass);
+			// TODO: email the user the pass
+		}
 
 		SendResult($fid);
 	}

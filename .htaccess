@@ -2,9 +2,9 @@
 
 RewriteEngine On
 RewriteBase /
-RewriteRule ^admin/?(.*)$ controller.php?args=$1 [L]
-RewriteRule ^buy/?(.*)$ controller.php?args=$1 [L]
-RewriteRule ^file/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^a/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^b/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^l/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^faq/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^terms/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^about/?(.*)$ controller.php?args=$1 [L]
