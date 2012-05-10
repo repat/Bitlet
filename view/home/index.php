@@ -64,9 +64,10 @@
 		<div class="carousel-inner">
 			<div class="active item"> <img class="carouselImage" src="img/bg/leaf.jpg"> </div>
 			<div class="item"> <img class="carouselImage" src="img/bg/musician.jpg"></div>
+			<div class="item"> <img class="carouselImage" src="img/bg/music.jpg">
 			<!--<div class="item"> <img class="carouselImage" src="img/bg/doc.jpg"> </div>
 			<div class="item"> <img class="carouselImage" src="img/bg/movies.jpg"> </div>
-			<div class="item"> <img class="carouselImage" src="img/bg/music.jpg"> </div>
+			 </div>
 			<div class="item"> <img class="carouselImage" src="img/bg/files.jpg"> </div>-->
 		</div>
 	</div>
