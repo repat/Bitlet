@@ -2,17 +2,8 @@
 
 include 'lib/db.php';
 
+$fid = $args;
 $db = Connect();
-
-$fid = $_GET['f'];
-$furl = $_GET['n'];
-
-// if neither GET variables exists, kill yourself
-if(!($fid || $furl)) {
-	die();
-} else if($furl) {
-	$fid = GetFidFromUrl($furl);
-}
 
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
@@ -72,7 +63,7 @@ Disconnect($db);
 		<h2>What you're getting:</h2>
 		<br>
 
-		<img src="/img/mainpage-icons/file.png"/>
+		<img src="/img/buttons/file.png"/>
 		<hr/>
 		<p class="">
 			<b>Sold By:</b> <? echo $user; ?></br>

@@ -2,11 +2,11 @@
 window.onload = function () {
 	// declare datastructures
 	var Images = [
-		"img/buttons/ButtonMusic.png",
-		"img/buttons/ButtonDoc.png",
-		"img/buttons/ButtonCamera.png",
+		"img/buttons/music.png",
+		"img/buttons/file.png",
+		"img/buttons/camera.png",
 		"img/buttons/art.png",
-		"img/buttons/ButtonVideoCam.png",
+		"img/buttons/video.png",
 		"img/buttons/book.png",
 	];
 	
