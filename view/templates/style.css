@@ -1,16 +1,7 @@
 body {
 	padding-bottom: 40px;
-	padding-top: 80px;
-	/*background-color: #EDEDED;*/
+	padding-top:10px !important;
 	background: url(/img/bg-pattern.png) repeat;
-}
-
-/* Footer styles */
-footer p, 
-footer h1, 
-footer h2, 
-footer h3 {
-	color: #333;
 }
 
 /* Faded out hr */
@@ -36,6 +27,12 @@ footer[role="contentinfo"]{
 .attribution{
 	font-size: 16px;
 	padding-top:20px;
+}
+footer p, 
+footer h1, 
+footer h2, 
+footer h3 {
+	color: #333;
 }
 
 /*navigation changes - goes against bootsrap norm */
