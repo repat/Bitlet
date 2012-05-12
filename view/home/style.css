@@ -18,6 +18,10 @@
 	-webkit-box-shadow:-8px 0px 21px -11px black;
 	-moz-box-shadow:-8px 0px 21px -11px black;
 }
+#home-featured-right #content{
+	height:310px;
+	width:440px;
+}
 .email-suggestion-wrap{
 
 }
@@ -32,14 +36,14 @@
 }
 #top-triangle{
 	position: relative;
-	top: -93px;
+	top: -320px;
 	left: -46px;
 	z-index: -1;
 	border-width:18px;
 }
 #bottom-triangle{
 	position: relative;
-	top: 165px;
+	top: -62px;
 	left: -46px;
 	z-index: -1;
 	border-width:18px;
