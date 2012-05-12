@@ -1,6 +1,50 @@
-body {
-	padding-top: 70px;
+/* Bitlet-hero */
+#bitlet-hero{
+	height:300px;
+	width:100%;
+	background:#6885A7;
 }
+#home-featured-left{
+	float:left;
+}
+#home-featured-right{
+	float: right;
+	width: 440px;
+	background:url(/img/hero-pop-bg.png) repeat;
+	margin:-18px 0;
+	height:310px;
+	padding:10px;
+	box-shadow:-8px 0px 21px -11px black;
+	-webkit-box-shadow:-8px 0px 21px -11px black;
+	-moz-box-shadow:-8px 0px 21px -11px black;
+}
+.email-suggestion-wrap{
+
+}
+.email-suggestion{
+
+}
+.triangle {
+	border-color: transparent #DACFBA transparent transparent;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+#top-triangle{
+	position: relative;
+	top: -93px;
+	left: -46px;
+	z-index: -1;
+	border-width:18px;
+}
+#bottom-triangle{
+	position: relative;
+	top: 165px;
+	left: -46px;
+	z-index: -1;
+	border-width:18px;
+}
+/* other Home Page Only related stylings */
 
 /* upload iframe */
 .upload-iframe {

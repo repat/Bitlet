@@ -48,7 +48,6 @@
 	echo '<body>';
 		require_once('view/templates/nav.php');
 		require_once($dir.'/index.php');
-
 		require_once('view/templates/footer.php');
 		IncludeJSFiles('view/templates'); 
 		IncludeJSFiles($dir); 

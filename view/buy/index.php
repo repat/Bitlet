@@ -18,9 +18,6 @@ Disconnect($db);
 
 ?>
 
-<body>
-<br>
-
 <div class="container"><div class="row">
 
 	<div class="span7"><div class="well paymentwell">
@@ -72,6 +69,3 @@ Disconnect($db);
 		</p>
 	</div></div>
 </div></div>
-
-</body>
-
