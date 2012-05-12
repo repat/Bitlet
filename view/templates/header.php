@@ -5,6 +5,6 @@
 IncludeCSSFiles('view/templates'); 
 ?>
 
-<link rel="icon" href="/img/toptab.png" type="image/x-icon" />
-<link rel="shortcut icon" href="/img/toptab.png" type="image/x-icon" />
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
 
