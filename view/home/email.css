@@ -1,0 +1,39 @@
+/* Inputs */
+.input-medium#email {
+	height: 26px;
+	width: 260px;
+	font-size: 18px;
+	color: #111;
+}
+.add-on#emaila {
+	height: 26px;
+	width: 16px;
+}
+#email-icon {
+	margin-top: 5px;
+}
+
+/* we want to hide the actual upload button off screen */
+input[type="file"], .file-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+}
+
+/* bootstrap hackaround */
+.input-prepend .add-on, .input-prepend .btn {
+	margin-right: -5px !important;
+}
+
+/* email suggestion fixer */
+.email-suggestion{
+	color: #EEE;
+	text-align:left;
+	margin-left: 150px;
+}
+.email-suggestion-wrap{
+	height:25px;
+	margin-top:-15px;
+} 
