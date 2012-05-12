@@ -1,7 +1,3 @@
-<body>
-
-<!-- FAQ GOES HERE -->
-
 <div class="container faq">
 	<div class="row">
 		<div class="span8">	
@@ -47,7 +43,7 @@
 		</div>
 		<div class="span4">
 			<div class="well" style="padding: 8px 0;position:fixed;width:300px;">
-				<ul class="nav nav-list">
+				<ul class="about-nav nav nav-list">
 					<li class="nav-header"><a href="">Terms</a></li>
 					<li><a href="#">1.Home</a></li>
 					<li><a href="#">2.Library</a></li>
@@ -63,8 +59,3 @@
 
 	</div>
 </div>
-
-<!-- DONT EDIT BEYOND THIS POINT -->
-
-</body>
-

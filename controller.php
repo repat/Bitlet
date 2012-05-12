@@ -40,15 +40,18 @@
 	// Build the HTML page
 	echo '<html>';
 
-	require_once('view/templates/header.php');
-	IncludeCSSFiles($dir); 
+	echo '<head>';
+		require_once('view/templates/header.php');
+		IncludeCSSFiles($dir); 
+	echo '</head>';
 
-	require_once('view/templates/nav.php');
-	require_once($dir.'/index.php');
-
-	require_once('view/templates/footer.php');
-	IncludeJSFiles('view/templates'); 
-	IncludeJSFiles($dir); 
+	echo '<body>';
+		require_once('view/templates/nav.php');
+		require_once($dir.'/index.php');
+		require_once('view/templates/footer.php');
+		IncludeJSFiles('view/templates'); 
+		IncludeJSFiles($dir); 
+	echo '</body>';
 
 	echo '</html>';
 
