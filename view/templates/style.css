@@ -27,9 +27,12 @@ body {
 	float:right;	
 }
 .menu-navbar-bitlet{
-	font-size:16px;
+	font-size:15px;
 	padding-top:50px;
 	color:#08C;
+}
+.menu-navbar-bitlet a{
+	padding:0px 0px 0 15px;
 }
 /*
  * Footer Styling 
