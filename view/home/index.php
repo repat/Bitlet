@@ -53,7 +53,7 @@
 	<div class="row">
 		<div class="span8">
 			<h2>Your personal sales force</h2>
-			<p>Our network of professional marketers takes cae of the selling for you, so you can focus on what you do best - making awesome products.</p>
+			<p>Our network of professional marketers takes care of the selling for you, so you can focus on what you do best - making awesome products.</p>
 			<p>The moment a product is uploaded to Bitlet, it is accessable by professional marketers with influence over millions of potiential customers.</p>
 		</div>
 		<div class="span4">
