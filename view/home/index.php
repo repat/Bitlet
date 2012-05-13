@@ -35,7 +35,7 @@
 
 <!-- MARKETING STUFF GOES HERE -->
 <div class="container well marketing" >
-	<h1>With Bitlet, you'll be making money in no time!</h1>
+	<h1>Why you'll love using Bitlet</h1>
 	<hr>
 	<div class="row">
 		<div class="span4">
@@ -47,7 +47,7 @@
 			<p>Upload your digital work, and we'll give you a link to share so you can start selling right away. Additionally, we'll use our own sales army to help you get exposure and make money. And by the way, submitting content is free, we only make money when you do.</p>
 		</div>
 	</div>
-	<hr>
+	<br>
 	<div class="row">
 		<div class="span8">
 			<h2>Your personal sales force</h2>
@@ -58,7 +58,7 @@
 			<div class="thumbnail"><img src="/img/drawings/army.png" alt="your personal sales army"></div>
 		</div>
 	</div>
-	<hr>
+	<br>
 	<div class="row">
 		<div class="span4">
 			<div class="thumbnail"><img src="/img/drawings/backend.png" alt="backend to handle all your needs"></div>
@@ -66,7 +66,7 @@
 		<div class="span8">
 			<h2>Tools to help you succeed</h2>
 			<p>Do you think in moving averages? Well you've come to the right place. Bitlet includes a comprehensive analytics suite to help you keep track of your products, check out your sales numbers, and, of course, cash out on your earnings.</p>
-			<p>If you're an affiliate marketer, you're in luck! Go over to the <a href="http://affiliates.bitlet.co">Affiliate Portal</a> and check out our awesome affiliate suite.</p>
+			<p>If you're an affiliate marketer, you're in luck! Head over to the <a href="http://affiliates.bitlet.co">Affiliate Portal</a> and check out our awesome web suite built just for you.</p>
 		</div>
 	</div>
 </div>
