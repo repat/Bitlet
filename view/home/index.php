@@ -65,7 +65,8 @@
 		</div>
 		<div class="span8">
 			<h2>Tools to help you succeed</h2>
-			<p>hello world</p>
+			<p>Do you think in moving averages? Well you've come to the right place. Bitlet includes a comprehensive analytics suite to help you keep track of your products, check out your sales numbers, and, of course, cash out on your earnings.</p>
+			<p>If you're an affiliate marketer, you're in luck! Go over to the <a href="http://affiliates.bitlet.co">Affiliate Portal</a> and check out our awesome affiliate suite.</p>
 		</div>
 	</div>
 </div>
