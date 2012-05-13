@@ -1,7 +1,9 @@
 <div id="bitlet-hero">
 	<div class="container">
 		<div id="home-featured-left">
+			<img class="hero-img" src="http://placehold.it/460x270">
 		</div><!-- end of home-feature-left -->
+
 		<div id="home-featured-right">
 			<div id="content">
 				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="upload" 
