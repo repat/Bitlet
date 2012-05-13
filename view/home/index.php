@@ -1,7 +1,7 @@
 <div id="bitlet-hero">
-	<div class="container">
+	<div id="hero-container">
 		<div id="home-featured-left">
-			<img class="hero-img" src="http://placehold.it/460x270">
+			<img class="hero-img" src="http://placehold.it/500x270">
 		</div><!-- end of home-feature-left -->
 
 		<div id="home-featured-right">
@@ -44,7 +44,7 @@
 			<div class="thumbnail"><img src="/img/drawings/chart.png" alt="the chart is going up!"></div>
 		</div>
 		<div class="span8">
-			<h2>Earn cash for what you do best</h2>
+			<h2>Earn money for what you do best</h2>
 			<p>You shouldn't have to worry about business or marketing when working on your next masterpiece, and with Bitlet, you don't have to.</p>
 			<p>Upload your digital work, and we'll give you a link to share so you can start selling right away. Additionally, we'll use our own sales army to help you get exposure and make money. And by the way, submitting content is free, we only make money when you do.</p>
 		</div>
@@ -54,7 +54,7 @@
 		<div class="span8">
 			<h2>Your personal sales force</h2>
 			<p>Our network of professional marketers takes care of the selling for you, so you can focus on what you do best - making awesome products.</p>
-			<p>The moment a product is uploaded to Bitlet, it is accessable by professional marketers with influence over millions of potiential customers.</p>
+			<p>The moment a product is uploaded to Bitlet, it is accessable by professional marketers with influence over millions of potiential customers. You just sit back and relax, we'll take care of the rest.</p>
 		</div>
 		<div class="span4">
 			<div class="thumbnail"><img src="/img/drawings/army.png" alt="your personal sales army"></div>
