@@ -49,7 +49,43 @@
 	z-index: -1;
 	border-width:18px;
 }
-/* other Home Page Only related stylings */
+
+/* Marketing styles */
+
+.marketing .thumbnail {
+	border: 0px solid;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.marketing h1, h2 {
+	font-weight: 300;
+}
+
+.marketing h1 {
+	font-size: 36px;
+	padding-top: 30px;
+}
+
+.marketing h2 {
+	font-size: 30px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+
+.marketing p {
+	line-height: 25px;
+	font-size: 18px;
+	padding-left: 15px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	color: #555;
+}
 
 /* upload iframe */
 .upload-iframe {

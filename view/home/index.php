@@ -34,11 +34,42 @@
 </div><!-- end of bitlet-hero -->
 
 <!-- MARKETING STUFF GOES HERE -->
-<div class="container" >
-	<div class="well">
-
+<div class="container well marketing" >
+	<h1>With Bitlet, you'll be making money in no time!</h1>
+	<hr>
+	<div class="row">
+		<div class="span4">
+			<div class="thumbnail"><img src="/img/drawings/chart.png" alt="the chart is going up!"></div>
+		</div>
+		<div class="span8">
+			<h2>Earn cash for what you do best</h2>
+			<p>You shouldn't have to worry about business or marketing when working on your next masterpiece, and with Bitlet, you don't have to.</p>
+			<p>Upload your digital work, and we'll give you a link to share so you can start selling right away. Additionally, we'll use our own sales army to help you get exposure and make money. And by the way, submitting content is free, we only make money when you do.</p>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="span8">
+			<h2>Your personal sales force</h2>
+			<p>Our network of professional marketers takes cae of the selling for you, so you can focus on what you do best - making awesome products.</p>
+			<p>The moment a product is uploaded to Bitlet, it is accessable by professional marketers with influence over millions of potiential customers.</p>
+		</div>
+		<div class="span4">
+			<div class="thumbnail"><img src="/img/drawings/army.png" alt="your personal sales army"></div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="span4">
+			<div class="thumbnail"><img src="/img/drawings/backend.png" alt="backend to handle all your needs"></div>
+		</div>
+		<div class="span8">
+			<h2>Tools to help you succeed</h2>
+			<p>hello world</p>
+		</div>
 	</div>
 </div>
+
 <!-- Hidden Upload iFrame for Async Uploading -->
 <iframe name="upload_iframe" class="upload-iframe">
 </iframe>
