@@ -52,13 +52,14 @@ footer h3 {
 	color: #333;
 }
 .footer-text {
-	font-size: 18px; 
-	padding: 25px; 
-	padding-top: 10px; 
+	font-size: 13px; 
 	color: #73A6B0; 
+	padding: 0 5px 0 5px;
+	float:left;
 }
 .copyright-text {
 	 color:#9EC5CD; 
+	float:right;
 }
 
 /* 

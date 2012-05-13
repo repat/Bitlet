@@ -2,23 +2,20 @@
 	<div id="inner-footer" class="clearfix">
 		<nav class="clearfix">
 		</nav>
-		<br>
-		<br>
-		<div style="text-align:center" class="container">
+		<div class="container" style="width:980px">
 			<a href="/about/#terms" class="footer-text">Terms</a>
 			<a href="/about/#privacy" class="footer-text">Privacy</a>
 			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
 			<a href="#" class="footer-text" onclick="showFAQ();">Help</a>
 			<a href="/about/#security" class="footer-text">Security</a>
-			<p class="copyright-text"><br />&copy;2012 Bitlet, Inc</p>
-			
+			<p class="copyright-text">&copy;2012 Bitlet, Inc</p>
 		</div>
 	</div> <!-- end #inner-footer -->	
 </footer>
 
 <?php
 /****************************************************
-* set up the modal to start hidden and fade in and out -->
+* set up the modal to start hidden and fade in and out
 * Other Notes:
 *
 * **************************************************/ ?>
