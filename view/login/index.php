@@ -1,4 +1,3 @@
-
 <?
 //This stuff in PHP is from the buy page!
 /////
@@ -27,15 +26,14 @@ Disconnect($db);
 		<div class="span4 offset4">
 			<div class="well">
 				<h1>Login</h1>
-				<br />
+				<hr>
 				<form action="" method="POST" id="login-form">
-					<div class="">
-						<label id="">Email</label>
-						<input type="text" size="10" autocomplete="off" class="login-email" placeholder="name@email.com"/>
-						<label id="">Password</label>
-						<input type="text" size="10" autocomplete="off" class="login-password" placeholder=""/>
-					</div>
-					<button type="submit" class="submit-button btn btn-success">Submit Payment</button>
+					<div>
+						<input type="text" size="10" autocomplete="off" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
+						<input type="text" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
+					<p class="forgot-password-login"><a href="">Forgot Password?</a></p>	
+					<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-success">Login</button>
+					</div>	
 				</form>
 			</div>
 		</div>
