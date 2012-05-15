@@ -1,7 +1,7 @@
 <div id="bitlet-hero">
 	<div id="hero-container">
 		<div id="home-featured-left">
-			<img class="hero-img" src="/img/drawing/hero.png">
+			<img class="hero-img" src="/img/drawings/hero.png">
 		</div><!-- end of home-feature-left -->
 
 		<div id="home-featured-right">
