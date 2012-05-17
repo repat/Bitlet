@@ -8,11 +8,18 @@
 	width: 230px;
 	font-size: 18px;
 	color: #111;
+	border: 1px solid #6491CC;
+	border-left: 0px;
 }
+
 .add-on#emaila {
 	height: 26px;
 	width: 16px;
+	border: 1px solid #6491CC;
+	border-right: 0px;
+	background: #6491CC;
 }
+
 #email-icon {
 	margin-top: 5px;
 }
