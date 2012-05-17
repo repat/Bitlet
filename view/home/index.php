@@ -6,7 +6,8 @@
 
 		<div id="home-featured-right">
 			<div class="content">
-				<h1>Start Selling Now</h1>
+				<h1>Start Selling Online Instantly</h1>
+				<h2>Bitlet allows anyone to make money. Just enter your email and upload your work to get started!</h2>
 				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="upload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
 					<div class="input-prepend">

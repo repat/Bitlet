@@ -38,7 +38,23 @@
 
 /* Hero Content */
 .content h1 {
-	font-size: 36px;
+	margin-left: 30px;
+	margin-top: 30px;
+	color: #E37039;
+	font-size: 50px;
+	line-height: 60px;
+
+	/* letter press effect */
+	text-shadow:#FFF 0px 1px 0, #773A1E 0 -1px 0;
+}
+
+.content h2 {
+	margin-left: 35px;
+	margin-right: 30px;
+	margin-top: 15px;
+	color: #E38960;
+	font-size: 20px;
+	line-height: 20px;
 }
 
 .triangle {
