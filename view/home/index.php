@@ -5,7 +5,8 @@
 		</div><!-- end of home-feature-left -->
 
 		<div id="home-featured-right">
-			<div id="content">
+			<div class="content">
+				<h1>Start Selling Now</h1>
 				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="upload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
 					<div class="input-prepend">

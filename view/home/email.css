@@ -29,9 +29,9 @@ input[type="file"], .file-button {
 
 /* email suggestion fixer */
 .email-suggestion{
-	color: #EEE;
+	color: #333;
 	text-align:left;
-	margin-left: 150px;
+	margin-left: 40px;
 }
 .email-suggestion-wrap{
 	height:25px;

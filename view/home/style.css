@@ -25,7 +25,7 @@
 	-webkit-box-shadow:-8px 0px 21px -11px black;
 	-moz-box-shadow:-8px 0px 21px -11px black;
 }
-#home-featured-right #content{
+#home-featured-right .content{
 	height:310px;
 	width:440px;
 }
@@ -36,10 +36,11 @@
 	height: 270px;
 }
 
-.email-suggestion-wrap{
+/* Hero Content */
+.content h1 {
+	font-size: 36px;
 }
-.email-suggestion{
-}
+
 .triangle {
 	border-color: transparent #DACFBA transparent transparent;
 	border-style:solid;
@@ -97,6 +98,11 @@
 	padding-right: 30px;
 	padding-bottom: 10px;
 	color: #555;
+}
+
+.marketing hr {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid white;
 }
 
 /* upload iframe */
