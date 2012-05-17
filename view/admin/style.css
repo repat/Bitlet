@@ -4,7 +4,7 @@
 	margin-right:auto;
 	position: relative;
 	width: 970px;
-	background: #76AACC;
+	background: #6783A5;
 	padding: 5px;
 	border: 1px solid #333;
 	o-border-radius: 4px;
@@ -15,32 +15,21 @@
 }
 
 .main-shebang div{
-	-moz-border-radius-topleft:10px;
-	-webkit-border-top-left-radius: 10px;
-	border:0px solid; 
-	
 	-moz-border-radius-topright:10px;
 	-webkit-border-top-right-radius: 10px;
 	border:0px solid; 
-
 }
 
 
 
 .top-table-bar {
-	height:68px; 
+	height:54px; 
 	width:770px; 
-	background-color:#437799; 
+	background-color:#FF9933; 
 	margin-left:200px;
 	position: relative;
 	color:fff
 	border-top:10px; 
-}
-
-.cash-out{
-	position:absolute; 
-	left:655px;
-	top:20px;
 }
 
 .sales {
@@ -141,22 +130,28 @@ nav {
   font-size: 13px;
   line-height: 1.5;
   width: 200px;
-  position:absolute; 
-  top:68px;
+ 
+}
+
+.menu-item .cashOut {
+	height:46px;
+	-webkit-border-top-left-radius: 10px;
+	padding-top:15px; 
 }
 
 
+
 .toprow th {
-	background:#76AACC; 
-	color:#fff;
+	background:#ECF6FB; 
+	color:#000;
 	border:10px;
-	/*height:30px; */
 }
 
 .menu-item {
   background: #164563;
   width: 200px; 
   border:1px;
+	-webkit-border-top-left-radius: 10px;
    
 }
 
@@ -164,16 +159,17 @@ nav {
 .menu-item h4 {
   border-bottom: 1px solid rgba(0,0,0,0.3);
   border-top: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
+  color: #black;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 300;
   padding: 7px 12px;
+  height: 25px;
 
   /*Gradient*/
-  background: #76AACC; /* Old browsers */
+  background: #ECF6FB; /* Old browsers */
   background: -moz-linear-gradient(top, #76AACC 0%, ##6D2706 44%, #9D3A0B 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#76AACC), color-stop(44%,##6D2706), color-stop(100%,#9D3A0B)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #76AACC 0%,##6D2706 44%,#9D3A0B 100%); /* Chrome10+,Safari5.1+ */
+  background: -webkit-linear-gradient(top, ##6783A5 0%,##6D2706 44%,#9D3A0B 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #76AACC 0%,##6D2706 44%,#9D3A0B 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #76AACC 0%,##6D2706 44%,#9D3A0B 100%); /* IE10+ */
   background: linear-gradient(top, #76AACC 0%,##6D2706 44%,#9D3A0B 100%); /* W3C */
@@ -193,10 +189,16 @@ nav {
 }
 
 .menu-item h4 a {
-  color: white;
+  color: black;
+  font-size:12px;
   display: block;
   text-decoration: none;
   width: 200px;
+  padding:5px 0 5px 25px;
+}
+
+.menu-item .cashOut {
+	height:31px;
 }
 
 /*ul Styles*/
