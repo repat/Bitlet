@@ -51,7 +51,7 @@
 .content h2 {
 	margin-left: 35px;
 	margin-right: 30px;
-	margin-top: 15px;
+	margin-top: 10px;
 	color: #E38960;
 	font-size: 20px;
 	line-height: 20px;
@@ -65,14 +65,14 @@
 }
 #top-triangle{
 	position: relative;
-	top: -320px;
+	top: -350px;
 	left: -46px;
 	z-index: -1;
 	border-width:18px;
 }
 #bottom-triangle{
 	position: relative;
-	top: -62px;
+	top: -92px;
 	left: -46px;
 	z-index: -1;
 	border-width:18px;
