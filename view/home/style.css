@@ -90,7 +90,14 @@
 	box-shadow: none;
 }
 
-.marketing h1, h2 {
+.marketing #cloud {
+	position: absolute;
+	margin-left: 768px;
+	margin-top: -46px;
+	height: 84px;
+}
+
+.marketing h1, h2, h3 {
 	font-weight: 300;
 }
 
@@ -107,6 +114,11 @@
 	padding-left: 15px;
 }
 
+.marketing h3 {
+	font-size: 16px;
+	color: #999;
+}
+
 .marketing p {
 	line-height: 25px;
 	font-size: 18px;
@@ -119,6 +131,7 @@
 .marketing hr {
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid white;
+	margin-right: 200px;
 }
 
 /* upload iframe */

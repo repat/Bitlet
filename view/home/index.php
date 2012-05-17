@@ -40,6 +40,7 @@
 <!-- MARKETING STUFF GOES HERE -->
 <div class="container well marketing" >
 	<h1>Why you'll love using Bitlet</h1>
+	<img id="cloud" src="/img/drawings/bitcloud.png">
 	<hr>
 	<div class="row">
 		<div class="span4">
