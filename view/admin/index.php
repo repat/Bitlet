@@ -1,11 +1,12 @@
 <div class="main-shebang">
 	<div class="topDiv">
+		<form class=" form-search">
+  			<input type="text" class="input-medium search-query" placeholder="Dave is Weird">
+		</form>
 	</div>
-
 	<div class="leftSideDiv">
 	Hello
 	</div>
-
 	<div class= "sidebar-div">
 		<div class="tablediv">
 			<table  class="table table-bordered tablebar" style="text-align:left" cellpadding"10px" > 
@@ -27,13 +28,13 @@
 					<td>603.0303</td>
 					<td></td>
 				</tr> 
-					<tr> 
+				<tr> 
 					<td>Lala</td> 
 					<td>lala</td>
 					<td>603.0303</td>
 					<td></td>
 				</tr> 
-					<tr> 
+				<tr> 
 					<td>Lala</td> 
 					<td>lala</td>
 					<td>603.0303</td>
@@ -41,8 +42,8 @@
 				</tr> 
 			</table>
 		</div>
-
-		HIIIII
+	</div>
+	<div class="rightSideDiv">
 	</div>
 </div>
 	

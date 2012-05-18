@@ -11,7 +11,6 @@
 
 .topDiv {
 	height:100px;
-
 	background: #586CB9; /* for non-css3 browsers */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#586CB9', endColorstr='#3B53AD'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#586CB9), to(#3B53AD)); /* for webkit browsers */
@@ -27,21 +26,37 @@
 	height:100%; 
 	float: left; 
 	background: #475189; /*for non-css3 browsers*/
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#475189', endColorstr='#28306B'); /* for IE */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#475189', endColorstr='#28306B'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#475189), to(#28306B)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #475189,  #28306B); /* for firefox 3.6+ */ 
 }
 
 .rightSideDiv {
-	float:right;
-	width:150px; 
-	background:#000;
+	position:absolute;
+	z-index: -1000;
+	top: 0; 
+	right:0; 
+	width:200px; 
+	height:100%; 
+	float: right; 
+	background:#AEC0DF; 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AEC0DF', endColorstr='#C7DCFF'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#AEC0DF), to(#C7DCFF)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #AEC0DF,  #C7DCFF); /* for firefox 3.6+ */
+}
+
+.form-search {
+	position: absolute; 
+	float: right; 
+	top: 50px; 
+	right:20px; 
 }
 
 .sidebar-div{
 	z-index: -1000;
 	top: 0;
 	margin-left: 120px;
+	margin-right:200px; 
 }
 
 /*li Styles*/
