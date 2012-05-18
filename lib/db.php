@@ -23,26 +23,6 @@
 	}
 
 	// check for valid email/pass, return true on successful authentication
-	function Authenticate($email, $pass)
-	{
-		$result = mysql_query("SELECT salt, password FROM user WHERE email = '$email'") or die();
-		// check if correct result found
-		if(mysql_num_rows($result) < 2) {
-			return false;
-		} else {
-			$res = mysql_fetch_assoc($result);
-			$hash_pass = $res['password'];
-			$salt = $res['salt'];
-
-			// hash password and check validity 
-			if(sha1($pass.$salt) == $hash_pass) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-	}
-
 	// add a new file under input user uid
 	// file type: enum('generic','photo','music','digiart','document','video')
 	function NewFile($uid, $filename, $type)

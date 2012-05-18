@@ -1,9 +1,25 @@
-<!DOCTYPE html>
 <?
 	include_once 'lib/dir.php';
+	include_once 'lib/login.php';
 
     session_start();
-    #$_SESSION['user_id'] = 1234;
+
+	// check for autologin cookie
+	if(isset($_COOKIE[$cookie_name])) {
+		parse_str($_COOKIE[$cookie_name], $cookie);
+
+		// authenticate cookie
+		$uid = $cookie['uid'];
+		$session = $cookie['session'];		
+
+		if(AuthenticateCookie($uid, $session)) {
+			$_SESSION['uid'] = $uid;
+		} else {
+			$_SESSION['uid'] = -1;
+		}
+	} else { 
+		$_SESSION['uid'] = -1;	// start with a uid of -1 when not logged in 
+	}
 	
 	$url = explode('/', $_SERVER['REQUEST_URI']);
 	$args = $_GET['args'];
@@ -41,6 +57,7 @@
 	}
 
 	// Build the HTML page
+	echo '<!DOCTYPE html>';
 	echo '<html>';
 
 	echo '<head>';
@@ -59,4 +76,3 @@
 	echo '</html>';
 
 ?>
-
