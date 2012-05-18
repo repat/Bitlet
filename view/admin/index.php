@@ -1,7 +1,7 @@
 <div class="main-shebang">
 	<div class="topDiv">
 	</div>
-	<div class="sideDiv">
+	<div class="leftSideDiv">
 	Hello
 	</div>
 <div class= "sidebar-div">

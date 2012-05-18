@@ -3,8 +3,8 @@
 	margin-left:auto;
 	margin-right:auto;
 	position: relative;
-	width: 970px;
-	background: #6783A5;
+	width: 980px;
+	background: #fff;
 	border: 1px solid #333;
 }
 
@@ -16,14 +16,22 @@
 	background: -moz-linear-gradient(top,  #586CB9,  #3B53AD); /* for firefox 3.6+ */ 
 }
 
-.sideDiv { 
+.leftSideDiv { 
+	position:absolute;
+	top: 0; 
+	left:0; 
 	width:120px; 
-	height:300px; 
+	height:100%; 
 	float: left; 
 	background: #475189; /*for non-css3 browsers*/
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#475189', endColorstr='#28306B'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#475189), to(#28306B)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #475189,  #28306B); /* for firefox 3.6+ */ 
+}
+
+.rightSideDiv {
+	float:right;
+	width:150px; 
 }
 
 .sidebar-div{
