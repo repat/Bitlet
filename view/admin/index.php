@@ -5,7 +5,18 @@
 		</form>
 	</div>
 	<div class="leftSideDiv">
-	Hello
+		<div class="sideData" id="number0fSales">
+		18 
+		</div>
+		<div class="sideDataText" id="salesText"> 
+		 Sales
+		</div>
+			<div class="sideData" id="dollars">
+		500 
+		</div>
+		<div class="sideDataText" id="dollarsText"> 
+		 Dollars
+		</div>
 	</div>
 	<div class= "sidebar-div">
 		<div class="tablediv">
