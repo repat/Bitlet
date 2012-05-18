@@ -22,8 +22,9 @@
 			<div class="tablediv">
 				<div class="tabbable"> 
 				  <ul class="nav nav-tabs">
-					<li class="active"><a href="#tab1" data-toggle="tab">Purchases</a></li>
+					<li class="active"><a href="#tab1" data-toggle="tab" id="tab">Purchases</a></li>
 					<li><a href="#tab2" data-toggle="tab">Sales</a></li>
+					<li><a href="#tab3" data-toggle="tab">Analytics</a></li>
 				  </ul>
 				  <div class="tab-content">
 					<div class="tab-pane active" id="tab1">
