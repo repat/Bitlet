@@ -1,7 +1,7 @@
 <div class="main-shebang">
 	<div class="topDiv">
-		<form class=" form-search">
-  			<input type="text" class="input-medium search-query" placeholder="Dave is Weird">
+		<form class="form-search">
+  			<input type="text" class="input-medium search-query" placeholder="Search">
 		</form>
 	</div>
 	<div class="leftSideDiv">
