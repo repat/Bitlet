@@ -1,5 +1,6 @@
 <div class="main-shebang">
 	<div class="topDiv">
+		<h1> Welcome, Arianna! </h1>    
 		<form class="form-search">
   			<input type="text" class="input-medium search-query" placeholder="Search">
 		</form>
@@ -28,7 +29,7 @@
 				  </ul>
 				  <div class="tab-content">
 					<div class="tab-pane active" id="tab1">
-					  <p>Things You've Bought</p>
+					  <p style="padding-left:12px">Things You've Bought</p>
 					  <table  class="table table-bordered tablebar" style="text-align:left" cellpadding"10px" > 
 				<tr class="toprow">
 					<th>Image</th>
@@ -63,7 +64,7 @@
 			</table>
 					</div>
 					<div class="tab-pane" id="tab2">
-					  <p>Things You're Selling</p>
+					  <p style="padding-left:12px">Things You're Selling</p>
 					  <table  class="table table-bordered tablebar" style="text-align:left" cellpadding"10px" > 
 				<tr class="toprow">
 					<th>Image</th>
