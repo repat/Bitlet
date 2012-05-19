@@ -1,7 +1,5 @@
 <?
 
-$db = Connect();
-
 // we can get either the fid or the furl
 $fid = $args;
 
@@ -11,8 +9,6 @@ $price = $finfo['price'];
 
 $dl = "http://bitlet.co/l/$fid";
 $admin = "http://bitlet.co/user/$uid";
-
-Disconnect($db);
 
 ?>
 

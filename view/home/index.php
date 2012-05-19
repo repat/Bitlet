@@ -36,7 +36,7 @@ $email = GetUserEmail($uid);
 					/>
 				</form>	
 				<div class="email-suggestion-wrap">
-					<div class="email-suggestion"></div>
+					<? if($uid < 0) { // only show email suggestions when not logged in ?><div class="email-suggestion"></div><? } ?>
 				</div>
 			</div><? // content ?>
 			<div id="top-triangle" class="triangle"></div> 
