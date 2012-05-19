@@ -1,8 +1,5 @@
 <?
 
-include 'lib/file.php';
-include 'lib/user.php';
-
 $db = Connect();
 
 // we can get either the fid or the furl

@@ -1,8 +1,4 @@
 <?
-	$path = $_SERVER['DOCUMENT_ROOT'];
-
-	include $path.'/lib/file.php';
-
 	$fid = $_POST['fid'];
 	$price = $_POST['price'];
 

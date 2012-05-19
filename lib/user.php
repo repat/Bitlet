@@ -32,6 +32,13 @@
 			WHERE id='$uid'") or die();
 	}
 
+	// get user display name
+	function GetUserName($uid)
+	{
+		$result = mysql_query("SELECT name FROM user WHERE id='$uid'") or die();
+		return mysql_result($result, 0);
+	}
+
 	// get user from 
 	function GetUserInfo($uid)
 	{

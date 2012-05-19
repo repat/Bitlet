@@ -1,11 +1,12 @@
 <?
 	include_once 'lib/dir.php';
+	include_once 'lib/user.php';
 	include_once 'lib/login.php';
 
     session_start();
 
 	// check for autologin cookie
-	if(isset($_COOKIE[$cookie_name])) {
+	if(isset($_COOKIE[$cookie_name]) && (!isset($_SESSION['uid']) || $_SESSION['uid'] == -1)) {
 		parse_str($_COOKIE[$cookie_name], $cookie);
 
 		// authenticate cookie
@@ -17,7 +18,8 @@
 		} else {
 			$_SESSION['uid'] = -1;
 		}
-	} else { 
+	} else if(!isset($_SESSION['uid'])) {
+		error_log('new user, default session uid');
 		$_SESSION['uid'] = -1;	// start with a uid of -1 when not logged in 
 	}
 	

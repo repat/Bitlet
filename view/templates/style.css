@@ -34,6 +34,13 @@ body {
 .menu-navbar-bitlet a{
 	padding:0px 0px 0 15px;
 }
+.menu-navbar-bitlet #account {
+	padding: 0px;
+}
+.menu-navbar-bitlet #welcome {
+	color: #005580;
+}
+
 /*
  * Footer Styling 
  */

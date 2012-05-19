@@ -1,5 +1,7 @@
 <?
 	include_once 'lib/dir.php';
+	include_once 'lib/user.php';
+	include_once 'lib/login.php';
 
 	session_start();
 	$url = explode('/', $_SERVER['REQUEST_URI']);

@@ -12,9 +12,6 @@
 	// only do something if it's an actual file upload
 	if(isset($_FILES['file']))
 	{
-		// get root path
-		$path = $_SERVER['DOCUMENT_ROOT'];
-
 		$uploadroot = 'data/';
 		$email = $_POST['email'];
 
@@ -33,9 +30,6 @@
 		$tmp_name = $_FILES['file']['tmp_name'];
 		$name = $_FILES['file']['name'];
 
-		// setup database
-		include $path.'/lib/user.php';
-		include $path.'/lib/file.php';
 		$db = Connect();
 		list($uid, $pass) = GetUID($email, 0);
 

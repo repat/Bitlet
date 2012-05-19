@@ -1,5 +1,4 @@
 <?
-include 'lib/user.php';
 
 $uid = $_SESSION['uid'];
 if($uid >= 0) {

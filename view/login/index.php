@@ -3,8 +3,6 @@
 /////
 /////
 ////
-include 'lib/file.php';
-include 'lib/user.php';
 
 $fid = $args;
 $db = Connect();
