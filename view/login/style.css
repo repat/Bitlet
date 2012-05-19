@@ -1,3 +1,9 @@
+body {
+	background: #FFF;
+	text-align: center;
+	padding: 0px;
+}
+
 #login-form{
 
 }
@@ -7,10 +13,10 @@
 	width:250px;
 }
 .login-email{
-
+	width: 460px;
 }
 .login-password{
-
+	width: 460px;
 }
 .forgot-password-login{
 	float:left;

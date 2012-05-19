@@ -34,7 +34,8 @@
 		$name = $_FILES['file']['name'];
 
 		// setup database
-		include $path.'/lib/db.php';
+		include $path.'/lib/user.php';
+		include $path.'/lib/file.php';
 		$db = Connect();
 		list($uid, $pass) = GetUID($email, 0);
 

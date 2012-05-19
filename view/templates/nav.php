@@ -11,7 +11,7 @@
 				Welcome <? echo $name; ?>, View your
 				<a class="" href="/a" >Profile</a>
 			<? } else { // not logged in ?>
-				<a class="" href="/login" >Login</a>
+				<a class="" onclick="showLogin();" href="#" >Login</a>
 			<? } ?>
 		</div>
 	</div>
