@@ -30,7 +30,7 @@
 		case '':
 			$dir = 'view/home';
 			break;
-		case 'a':
+		case 'admin':
 			$dir = 'view/admin';
 			break;
 		case 'faq':
