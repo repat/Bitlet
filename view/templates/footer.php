@@ -109,7 +109,9 @@ function showFAQ() {
 	</div>
     <!-- dialog contents -->
 	<div class="modal-body">
-		<iframe class="LoginIFrame"></iframe>
+		<input type="text" size="10" autocomplete="on" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
+		<input type="text" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
+		<p class="forgot-password-login"><a href="#">Forgot Password?</a></p>
 	</div>
 	<div class="modal-footer">
 		<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-success">Login</button>

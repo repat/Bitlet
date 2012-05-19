@@ -1,12 +1,21 @@
 
-.LoginIFrame {
-	border: 0px;
-	width: 100%;
-	height: 200px;
-	overflow: hidden;
-}
+#login-form{
 
-#LoginModal {
-	width: 500px;
-	left: 50%;
+}
+.bitlet-login{
+	height:26px;
+	font-size:18px;
+	width:250px;
+}
+.login-email{
+	width: 250px;
+}
+.login-password{
+	width: 250px;
+}
+.forgot-password-login{
+	float:left;
+}
+.bitlet-login-submitbtn{
+	float:right;
 }
