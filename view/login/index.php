@@ -22,21 +22,8 @@ Disconnect($db);
 
 ?>
 
-<div class="container">
-	<div class="row">
-		<div class="span4 offset4">
-			<div class="well">
-				<h1>Login</h1>
-				<hr>
-				<form action="" method="POST" id="login-form">
-					<div>
-						<input type="text" size="10" autocomplete="off" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
-						<input type="text" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
-					<p class="forgot-password-login"><a href="">Forgot Password?</a></p>	
-					<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-success">Login</button>
-					</div>	
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+<input type="text" size="10" autocomplete="on" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
+<input type="text" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
+<div>
+	<p class="forgot-password-login"><a href="#">Forgot Password?</a></p>
+</div>	

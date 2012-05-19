@@ -19,6 +19,9 @@
 * Other Notes:
 *
 * **************************************************/ ?>
+
+<!-- FAQ Modal -->
+
 <div id="FAQModal" class="modal hide fade">
 
 	<div class="modal-header">
@@ -63,13 +66,12 @@
 		<br>
      </div>
     <!-- dialog buttons -->
-    <div class="modal-footer">
-        <a href="#" class="btn primary">OK</a>
-    </div>
+	<div class="modal-footer">
+		<a href="#" class="btn primary">OK</a>
+	</div>
 </div>
  
 <script type="text/javascript"> // ensure modal is only shown on page load
-
 function showFAQ() {
 	// wire up the buttons to dismiss the modal when shown
 	$("#FAQModal").bind("show", function() {
@@ -96,5 +98,52 @@ function showFAQ() {
 	  "show"      : true    // this parameter ensures the modal is shown immediately
 	});
 };
+</script>
 
+<!-- Login Modal -->
+
+<div id="LoginModal" class="modal hide fade">
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal">X</button>
+    	<h3>Login</h3>
+	</div>
+    <!-- dialog contents -->
+	<div class="modal-body">
+		<iframe class="LoginIFrame"></iframe>
+	</div>
+	<div class="modal-footer">
+		<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-success">Login</button>
+	</div>
+</div>
+ 
+<script type="text/javascript"> // ensure modal is only shown on page load
+function showLogin() {
+	// wire up the buttons to dismiss the modal when shown
+	$("#LoginModal").bind("show", function() {
+		$("#LoginModal a.btn").click(function(e) {
+			// do something based on which button was clicked
+			// we just log the contents of the link element for demo purposes
+			console.log("button pressed: "+$(this).html());
+	
+			// hide the dialog box
+			$("#LoginModal").modal('hide');
+		});
+	});
+	
+	// remove the event listeners when the dialog is hidden
+	$("#LoginModal").bind("hide", function() {
+		// remove event listeners on the buttons
+		$("#LoginModal a.btn").unbind();
+	});
+	
+	// finally, wire up the actual modal functionality and show the dialog
+	$("#LoginModal").modal({
+	  "backdrop"  : "static",
+	  "keyboard"  : true,
+	  "show"      : true    // this parameter ensures the modal is shown immediately
+	});
+
+	// load the iframe page
+	$('.LoginIFrame').attr('src', 'iframe/login/');
+};
 </script>

@@ -48,9 +48,6 @@
 		case 'l':
 			$dir = 'view/link';
 			break;
-		case 'login':
-			$dir = 'view/login';
-			break;
 		default:
 			$dir = 'view/error';
 			break;
