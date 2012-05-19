@@ -14,11 +14,18 @@
 			$salt = substr(md5(rand()), 0, 8); 
 			$pass = substr(md5(rand()), 0, 8); 
 			$hashed_pass = sha1($pass.$salt);
-			mysql_query("INSERT INTO user (email, fbid, password, salt, credits)
-				VALUES ('$email', '$fbid', '$hashed_pass', '$salt', '0')") or die();
+			mysql_query("INSERT INTO user (email, name, fbid, password, salt, credits)
+				VALUES ('$email', '$email', '$fbid', '$hashed_pass', '$salt', '0')") or die();
 			return mysql_insert_id();
 		}
 		return array(mysql_result($result, 0), $pass);
+	}
+
+	// set the user display name
+	function SetUserName($uid, $name)
+	{
+		mysql_query("UPDATE user SET name='$name'
+			WHERE id='$uid'") or die();
 	}
 
 	// get user from 
