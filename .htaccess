@@ -2,7 +2,7 @@
 
 RewriteEngine On
 RewriteBase /
-RewriteRule ^a/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^admin/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^b/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^l/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^faq/?(.*)$ controller.php?args=$1 [L]
