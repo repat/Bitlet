@@ -11,6 +11,9 @@
 		case 'file':
 			$dir = 'view/file';
 			break;
+		case 'login':
+			$dir = 'view/login';
+			break;
 		default:
 			$dir = 'view/ierror';
 			break;
