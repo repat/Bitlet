@@ -22,7 +22,7 @@
 	}
 	
 	$url = explode('/', $_SERVER['REQUEST_URI']);
-	$args = $_GET['args'];
+	$args = mysql_real_escape_string($_GET['args']);
 	error_log('url: '.$url[1]);
 	error_log('args: '.$args);
 

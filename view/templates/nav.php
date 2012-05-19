@@ -9,9 +9,9 @@
 			<a class="" onclick="showFAQ();"href="#">Help</a>
 			<? if($_SESSION['uid'] >= 0) { // already logged in ?>
 				Welcome <? echo $name; ?>, View your
-				<a class="" href="/a" >Profile</a>
+				<a class="" href="/admin">Account</a>
 			<? } else { // not logged in ?>
-				<a class="" onclick="showLogin();" href="#" >Login</a>
+				<a class="" onclick="showLogin();" href="#">Login</a>
 			<? } ?>
 		</div>
 	</div>

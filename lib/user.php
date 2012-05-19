@@ -7,6 +7,9 @@
 		// default password return as null if user already exist
 		$pass = null;
 
+		$email = mysql_real_escape_string($email);
+		$fbid = mysql_real_escape_string($fbid);
+
 		//Query the user database and see if the user already has an account
 		$result = mysql_query("SELECT id FROM user WHERE email = '$email'") or die();
 		if(mysql_num_rows($result) == 0) {
@@ -24,6 +27,7 @@
 	// set the user display name
 	function SetUserName($uid, $name)
 	{
+		$name = mysql_real_escape_string($name);
 		mysql_query("UPDATE user SET name='$name'
 			WHERE id='$uid'") or die();
 	}

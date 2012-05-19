@@ -1,6 +1,28 @@
+<?
+include 'lib/user.php';
+
+$uid = $_SESSION['uid'];
+if($uid >= 0) {
+	// logged in user
+	$db = Connect();
+
+	// get user info
+	$user = GetUserInfo($uid);
+
+	// get file info
+	// TODO: We may want to think about AJAXing this
+	
+	Disconnect($db);
+} else {
+	// test user
+	$user['name'] = 'Test Subject 42';
+}
+
+?>
+
 <div class="main-shebang">
 		<div class="topDiv">
-			<h1> Welcome, Arianna! </h1>    
+			<h1> Welcome, <? echo $user['name']; ?>!</h1>    
 			<form class="form-search">
 				<input type="text" class="input-medium search-query" placeholder="Search">
 			</form>

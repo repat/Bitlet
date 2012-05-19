@@ -15,9 +15,10 @@
 
 	function Authenticate($email, $pass)
 	{
-		$result = mysql_query("SELECT salt, password FROM user WHERE email = '$email'") or die();
+		$result = mysql_query("SELECT id, salt, password FROM user WHERE email = '$email'") or die();
 		// check if correct result found
-		if(mysql_num_rows($result) < 2) {
+		if(mysql_num_rows($result) < 1) {
+			error_log('No result found for email');
 			return false;
 		} else {
 			$res = mysql_fetch_assoc($result);
@@ -26,8 +27,9 @@
 
 			// hash password and check validity 
 			if(sha1($pass.$salt) == $hash_pass) {
-				return true;
+				return $res['id'];
 			} else {
+				error_log('Password incorrect');
 				return false;
 			}
 		}

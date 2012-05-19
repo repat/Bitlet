@@ -1,5 +1,5 @@
 <?
-
+	session_start();
 	$url = explode('/', $_SERVER['REQUEST_URI']);
 	error_log('ajax url: '.$url[2]);
 
@@ -9,6 +9,9 @@
 			break;
 		case 'setprice':
 			require('ajax/setprice.php');
+			break;
+		case 'login':
+			require('ajax/login.php');
 			break;
 		default:
 			require('ajax/error.php');

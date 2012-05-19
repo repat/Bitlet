@@ -6,6 +6,7 @@
 	// file type: enum('generic','photo','music','digiart','document','video')
 	function NewFile($uid, $filename, $type)
 	{
+		$filename = mysql_real_escape_string($filename);
 		// Insert file into files table
 		mysql_query("INSERT INTO file (uid, file_name, type)
 			VALUES('$uid', '$filename', '$type')") or die();
@@ -15,6 +16,8 @@
 	// set price for a file
 	function SetPrice($fid, $price)
 	{
+		$price = mysql_real_escape_string($price);
+		//TODO: Error check the price
 		mysql_query("UPDATE file SET price='$price'
 			WHERE id='$fid'") or die();
 	}
@@ -22,6 +25,7 @@
 	// set price for a file
 	function SetDisplayName($fid, $name)
 	{
+		$name = mysql_real_escape_string($name);
 		mysql_query("UPDATE file SET name='$name'
 			WHERE id='$fid'") or die();
 	}
@@ -29,6 +33,7 @@
 	// set price for a file
 	function SetURL($fid, $url)
 	{
+		$url = mysql_real_escape_string($url);
 		mysql_query("UPDATE file SET url='$url'
 			WHERE id='$fid'") or die();
 	}
@@ -68,6 +73,7 @@
 	// returns fid from input url
 	function GetFidFromUrl($url)
 	{
+		$url = mysql_real_escape_string($url);
 		$result = mysql_query("SELECT id FROM file WHERE url='$url'") or die();
 		return mysql_result($result, 0);
 	}
