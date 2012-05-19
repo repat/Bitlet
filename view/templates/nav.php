@@ -7,8 +7,12 @@
 		<div class="menu-navbar-bitlet pull-right">
 			<a class="" href="http://affiliates.bitlet.co">Affiliates</a> 
 			<a class="" onclick="showFAQ();"href="#">Help</a>
-			<a class="" href="/login" >Login</a>
+			<? if($_SESSION['uid'] >= 0) { // already logged in ?>
+				Welcome <? echo $name; ?>, View your
+				<a class="" href="/a" >Profile</a>
+			<? } else { // not logged in ?>
+				<a class="" href="/login" >Login</a>
+			<? } ?>
 		</div>
 	</div>
 </div>
-
