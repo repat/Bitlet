@@ -39,7 +39,14 @@
 		return mysql_result($result, 0);
 	}
 
-	// get user from 
+	// get user email
+	function GetUserEmail($uid)
+	{
+		$result = mysql_query("SELECT email FROM user WHERE id='$uid'") or die();
+		return mysql_result($result, 0);
+	}
+
+	// get all the user info
 	function GetUserInfo($uid)
 	{
 		$result = mysql_query("SELECT * FROM user WHERE id='$uid'") or die();

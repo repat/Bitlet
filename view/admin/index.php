@@ -2,16 +2,12 @@
 
 $uid = $_SESSION['uid'];
 if($uid >= 0) {
-	// logged in user
-	$db = Connect();
-
 	// get user info
 	$user = GetUserInfo($uid);
 
 	// get file info
 	// TODO: We may want to think about AJAXing this
 	
-	Disconnect($db);
 } else {
 	// test user
 	$user['name'] = 'Test Subject 42';

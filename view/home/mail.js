@@ -1,12 +1,8 @@
-
-// disable uplaod button by default
-$('.upload-button').attr('disabled', 'disabled'); 
-$('.file-button').attr('disabled', 'disabled'); 
-
 var domains = ['hotmail.com', 'gmail.com', 'aol.com', 'yahoo.com'];
 
-$('#email').keyup(function() {
-	var email = $(this).val();
+function CheckEmail() {
+	var email = $('#email').val();
+	//console.log("email val: " + email);
 
 	// emails should be at least 5 characters, and contain a '@' and a '.'
 	var aix = email.indexOf('@');
@@ -29,5 +25,12 @@ $('#email').keyup(function() {
 			$('.email-suggestion').html('').hide();  
 		}
 	});
-});
+};
 
+// disable uplaod button by default
+$('.upload-button').attr('disabled', 'disabled'); 
+$('.file-button').attr('disabled', 'disabled'); 
+
+$('#email').keyup(CheckEmail);
+setInterval(CheckEmail.bind($('#email')), 250);
+		

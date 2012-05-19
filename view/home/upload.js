@@ -1,4 +1,4 @@
-var UploadDone = function(result) {
+function UploadDone(result) {
 	if(result) {
 		console.log("upload done!");
 

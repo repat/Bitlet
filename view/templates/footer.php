@@ -113,3 +113,8 @@ function showFAQ() {
 		<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-success">Login</button>
 	</div>
 </div>
+
+<? 
+// disconnect from database after all is done
+Disconnect($db);
+?>

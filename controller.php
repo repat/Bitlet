@@ -5,6 +5,8 @@
 
     session_start();
 
+	$db = Connect();
+
 	// check for autologin cookie
 	if(isset($_COOKIE[$cookie_name]) && (!isset($_SESSION['uid']) || $_SESSION['uid'] == -1)) {
 		parse_str($_COOKIE[$cookie_name], $cookie);
@@ -74,4 +76,6 @@
 
 	echo '</html>';
 
+	// disconnect from database after all is done
+	Disconnect($db);
 ?>

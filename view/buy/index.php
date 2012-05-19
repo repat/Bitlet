@@ -1,7 +1,6 @@
 <?
 
 $fid = $args;
-$db = Connect();
 
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
@@ -11,8 +10,6 @@ $uid = $finfo['uid'];
 
 $uinfo = GetUserInfo($uid);
 $user = $uinfo['email'];
-
-Disconnect($db);
 
 ?>
 
