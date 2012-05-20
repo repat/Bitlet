@@ -5,6 +5,8 @@
 	include_once 'lib/file.php';
 
 	session_start();
+	$db = Connect();
+
 	$url = explode('/', $_SERVER['REQUEST_URI']);
 	$args = $_GET['args'];
 	error_log('iframe url: '.$url[2]);
@@ -29,4 +31,6 @@
 	IncludeJSFiles('view/templates'); 
 	IncludeJSFiles($dir); 
 
+	// disconnect from database after all is done
+	Disconnect($db);
 ?>

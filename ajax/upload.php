@@ -6,7 +6,6 @@
 		<script language="javascript" type="text/javascript">
 			   window.top.window.UploadDone('.$result.');
 		</script>';
-		exit();
 	}
 
 	// only do something if it's an actual file upload
@@ -30,7 +29,6 @@
 		$tmp_name = $_FILES['file']['tmp_name'];
 		$name = $_FILES['file']['name'];
 
-		$db = Connect();
 		list($uid, $pass) = GetUID($email, 0);
 
 		$uploaddir = $uploadroot.$uid;
@@ -49,7 +47,6 @@
 		// insert file into db
 		// file type: enum('generic','photo','music','digiart','document','video')
 		$fid = NewFile($uid, $uploadname, 'generic');
-		Disconnect($db);
 
 		if($pass != null) {
 			error_log('new user created, pass '.$pass);
