@@ -1,6 +1,5 @@
 <?
 $uid = $_SESSION['uid'];
-$name = GetUserName($uid);
 ?>
 
 <div class="navbar-bitlet">
@@ -9,7 +8,7 @@ $name = GetUserName($uid);
 
 		<div class="menu-navbar-bitlet pull-right">
 			<? if($uid >= 0) { // already logged in ?>
-				<span id="welcome">Welcome <? echo $name; ?>, </span>
+				<span id="welcome">Welcome <? echo GetUserName($uid); ?>, </span>
 				<a id="account" href="/admin">View your account</a>
 			<? } else { // not logged in ?>
 				<a href="http://affiliates.bitlet.co">Affiliates</a> 

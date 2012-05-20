@@ -1,7 +1,3 @@
-<?
-$email = GetUserEmail($uid);
-?>
-
 <div id="bitlet-hero">
 	<div id="hero-container">
 		<div id="home-featured-left">
@@ -17,7 +13,7 @@ $email = GetUserEmail($uid);
 					<div class="input-prepend">
 						<span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope icon-white"></i></span>
 						<? if($uid >= 0) { // if logged in ?>
-							<input class="input-medium" id="email" type="text" name="email" value="<? echo $email; ?>" disabled="disabled" onkeypress="return event.keyCode!=13">
+							<input class="input-medium" id="email" type="text" name="email" value="<? echo GetUserEmail($uid); ?>" disabled="disabled" onkeypress="return event.keyCode!=13">
 						<? } else { ?>
 							<input class="input-medium" id="email" type="text" name="email" placeholder="Email" onkeypress="return event.keyCode!=13">
 						<? } ?>
