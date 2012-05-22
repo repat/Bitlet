@@ -132,6 +132,8 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 	color:#475189; 	
 }
 
+
+
 .tabbable {
 	  background:#fff; 
 }
@@ -152,7 +154,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 }
 
 .nav-tabs {
-	font-size:18px; 
+	font-size:14px; 
 	background:#6491cc; 
 	color:#fff;
 	border:none; 
@@ -174,6 +176,12 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 	margin-top: 65px;
 	margin-left: 120px;
 	margin-right:200px;   
+}
+
+.itemThumbnail {
+	height: 50px; 
+	width:50px; 
+	padding-left:20px;
 }
 
 
