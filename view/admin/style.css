@@ -16,7 +16,7 @@
 .topDiv {
 	position:absolute; 
 	top:0; 
-	left:0; 
+	left:-1px; 
 	border: 10px; 
 	width:100%; 
 	height:65px;
@@ -30,10 +30,11 @@
 	/* For IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-	o-border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
+	-moz-border-top-left-radius: 18px;
+	-webkit-border-top-left-radius: 18px;
+	-moz-border-top-right-radius: 18px;
+	-webkit-border-top-right-radius: 18px;
+	
 }
 
 .tab-content .table {
@@ -60,12 +61,12 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#475189', endColorstr='#28306B'); /* for IE */
 	background: -webkit-gradient(linear, left top, right top, from(#475189), to(#28306B)); /* for webkit browsers */
 	background: -moz-linear-gradient(left,  #475189,  #28306B); /* for firefox 3.6+ */ 
-	o-border-top-left-radius: 20px;
-	-moz-border-top-left-radius: 20px;
-	-webkit-border-top-left-radius: 20px;
-	o-border-bottom-left-radius: 20px;
-	-moz-border-bottom-left-radius: 20px;
-	-webkit-border-bottom-left-radius: 20px;
+	o-border-top-left-radius: 18px;
+	-moz-border-top-left-radius: 18px;
+	-webkit-border-top-left-radius: 18px;
+	o-border-bottom-left-radius: 18px;
+	-moz-border-bottom-left-radius: 18px;
+	-webkit-border-bottom-left-radius: 18px;
 }
 
 .leftSideDiv .sideData {
@@ -110,12 +111,12 @@
 	height:100%; 
 	float: right; 
 	background:#BCD0DD; 
-	o-border-top-right-radius: 20px;
-	-moz-border-top-right-radius: 20px;
-	-webkit-border-top-right-radius: 20px;
-	o-border-bottom-right-radius: 20px;
-	-moz-border-bottom-right-radius: 20px;
-	-webkit-border-bottom-right-radius: 20px;
+	o-border-top-right-radius: 18px;
+	-moz-border-top-right-radius: 18px;
+	-webkit-border-top-right-radius: 18px;
+	o-border-bottom-right-radius: 18px;
+	-moz-border-bottom-right-radius: 18px;
+	-webkit-border-bottom-right-radius: 18px;
 }
 
 #shadow {
