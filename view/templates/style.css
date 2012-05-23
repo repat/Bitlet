@@ -29,10 +29,11 @@ body {
 .menu-navbar-bitlet{
 	font-size:15px;
 	padding-top:50px;
-	color:#08C;
+	color:#000066;
 }
 .menu-navbar-bitlet a{
 	padding:0px 0px 0 15px;
+	color:#000066; 
 }
 .menu-navbar-bitlet #account {
 	padding: 0px;
