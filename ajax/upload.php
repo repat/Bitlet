@@ -67,6 +67,9 @@
 					'Reply-To: team@bitlet.co' . "\r\n" .
 					'X-Mailer: PHP/' . phpversion();
 			mail($to, $subject, $message, $headers);
+
+			// auto login 
+			$_SESSION['uid'] = $uid;
 		}
 
 		SendResult($fid);
