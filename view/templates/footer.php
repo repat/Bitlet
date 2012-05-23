@@ -8,6 +8,10 @@
 			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
 			<a href="#" class="footer-text" onclick="showFAQ();">Help</a>
 			<a href="/about/#security" class="footer-text">Security</a>
+			<? if($uid >= 0) { // already logged in ?>
+				<a href="#" class="footer-text">Log Out</a>
+			<? } ?>
+
 			<p class="copyright-text">&copy;2012 Bitlet, Inc</p>
 		</div>
 	</div> <!-- end #inner-footer -->	
