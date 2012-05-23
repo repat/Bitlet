@@ -14,6 +14,7 @@
 	border-radius: 10px;
 }
 
+
 .topDiv {
 	position:absolute; 
 	top:0; 
@@ -112,7 +113,7 @@
 	width:300px; 
 	height:100%; 
 	float: right; 
-	background:#BCD0DD; 
+	background:#CFE5F4; 
 	o-border-top-right-radius: 10px;
 	-moz-border-radius-topright: 10px;
 	-webkit-border-top-right-radius: 10px;
@@ -161,58 +162,37 @@
 	color:#475189; 	
 }
 
-
-
-.tabbable {
-	  background:#fff; 
-}
-
 #twitter {
-	height:20px; 
-	width:20px; 
+	position:absolute; 
+	top:350px; 
+	left:230px; 
+	height:25px; 
+	width:25px; 
+	
 }
 
 #facebook {
-	height:20px; 
-	width:20px; 
+	position:absolute; 
+	top:350px; 
+	left:200px; 
+	height:25px; 
+	width:25px; 
 }
 
-.nav li a:hover{
-	background:#89AFCD; 
-	border:none; 
+#envelope {
+	position:absolute; 
+	top:350px; 
+	left:160px; 
+	height:22px; 
+	width:34px; 
+	border:1px solid silver; 
 }
 
-.nav-tabs {
-	font-size:12px; 
-	background:#6491cc; 
-	color:#fff;
-	border:none; 
-	margin-bottom:17px; 
-}
-
-.nav-tabs li a {
-	margin-left:0px; 
-	margin-bottom:-1px; 
-	-webkit-border-radius: 8px 8px 0 0;
-	-moz-border-radius: 8px 8px 0 0;
-	border-radius: 8px 8px 0 0;
-}
-
-.nav-tabs  li  a, .nav-pills  li a {
-	padding-right: 3px;
-	padding-left: 3px;
-	margin-right: 5px;
-	margin-top:8px; 
-	line-height:10px;
-	height:7px; 
-}
-
-.nav-tabs {
-	-webkit-border-topright:10px; 
-}
-
-.nav a {
-	color:#fff; 
+.rightSideDiv textarea {
+	position:absolute; 
+	top: 350px;
+	left:20px; 
+	width:130px; 
 }
 
 .form-search {
@@ -223,18 +203,82 @@
 	z-index: 100; 
 }
 
-.sidebar-div{ 
+#Share {
+	position:absolute; 
+	top:370px; 
+	left:20px; 
+	height:22px; 
+	font-size:10px; 
+}
+
+
+.centerDiv{ 
 	margin-top: 65px;
 	margin-left: 120px;
 	margin-right:200px;   
 }
 
-.itemThumbnail {
-	height: 50px; 
-	width:50px; 
-	padding-left:20px;
+#productName {
+	position: absolute; 
+	top: 110px; 
+	left: 10px; 
+	color:#666; 
 }
 
+#productURL {
+	position: absolute; 
+	top: 350px; 
+	left: 10px; 
+	width:100px; 
+	height:11px;
+	color:#666; 
+	border-radius:10px; 
+	cursor:pointer; 
+	}
+
+.rightSideDiv h2 {
+	font-size:18px; 
+}
+
+.rightSideDiv h3 {
+	font-size:14px; 
+}
+
+.rightSideDiv h4 {
+	font-size:11px; 
+}
+
+#fileName {
+	position:absolute; 
+	top: 135px; 
+	left: 10px; 
+	color:#666; 
+}
+
+#Category {
+	position: absolute; 
+	top:140px; 
+	left:215px; 
+	color:#666; 
+}
+
+#Price {
+	position: absolute; 
+	top:116px; 
+	left:226px;
+	color:#666; 
+}
+
+#rightDivhr {
+	position: absolute; 
+	top:160px; 
+	width:280px; 
+	left:10px; 
+}
+
+.table-bordered {
+	width:100%; 
+}
 
 /*li Styles*/
 .menu-item li {

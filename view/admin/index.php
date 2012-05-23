@@ -28,11 +28,57 @@ if($uid >= 0) {
 				<div class="sideData" id="dollars">500</div>
 			<div class="sideDataText" id="dollarsText">Total Dollars</div>
 		</div>
-		<div class= "sidebar-div">
+		<div class= "centerDiv">
+			<table class="table-bordered table-striped" id="products">
+				  <thead style="text-align:left">
+					<tr>
+					  <th>Product</th>
+					  <th>Name</th>
+					  <th>Upload Date</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td></td>
+					  <td>Cats.jpg</td>
+					  <td>Uploaded on 1/2/12 </td>
+					</tr>
+					<tr>
+					  <td></td>
+					  <td>Cats.jpg</td>
+					  <td>Uploaded on 1/2/12 </td>
+					</tr>
+					<tr>
+					  <td></td>
+					  <td>Cats.jpg</td>
+					  <td>Uploaded on 1/2/12 </td>
+					</tr>
+				  </tbody>
+			</table>
 		</div>
 		<div id="shadow"></div>
 		<div class="rightSideDiv">
-				<button class="btn" id="edit">Edit </button> 
+				<button class="btn" id="edit">Edit </button>
+				<div id="productName"> 
+					<h2>Product Name</h2>
+				</div>
+				<div id="fileName">
+					<h3>File Name</h3>
+				</div>
+				<div id="Category"> 
+					<h4>Category</h4>
+				</div>
+				<div id="Price">
+					<h3>$2.00</h3>
+				</div>
+				<hr id="rightDivhr">
+				<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
+				<a href="http://facebook.com"> <img src="/img/facebook.png" id="facebook"/> </a>
+				<img src="/img/envelope.png" id="envelope"/>
+				<div>
+					<input id="productURL" type="text" readonly="readonly" name="FirstName" value="www.product.co" onclick=this.select() />
+				</div>
+				<p id="Share"> Share this link!</p>
 		</div>
 		
 		</div>
