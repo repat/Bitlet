@@ -8,6 +8,12 @@ function UploadDone(result) {
 
 		// show modal
 		showUploadDone(result);
+
+		// the user should be auto logged in now, make the page look like auto logged in
+		$('#email').attr("disabled", "disabled");
+		$('.menu-navbar-bitlet').html(
+			'<span id="welcome">Welcome ' + $('#email').val() +
+			', </span><a id="account" href="/admin">View your account</a>');
 	} else {
 		console.error("upload error!");
 		

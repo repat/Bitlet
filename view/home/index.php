@@ -25,7 +25,7 @@
 					</button>
 					<input type="file" name="file" id="button" class="file-button" style="display:hidden"
 						 onchange="
-							upload.submit();
+							$('#upload').submit();
 							// disable the file selection button
 							$('.upload-button').attr('disabled', 'disabled'); 
 							$('.file-button').attr('disabled', 'disabled');"

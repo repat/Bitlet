@@ -20,6 +20,9 @@
 		case 'login':
 			require('ajax/login.php');
 			break;
+		case 'logout':
+			require('ajax/logout.php');
+			break;
 		default:
 			require('ajax/error.php');
 			break;
