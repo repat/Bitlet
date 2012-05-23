@@ -2,6 +2,7 @@
 .main-shebang {
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:20px; 
 	position: relative;
 	min-height:400px; 
 	width: 980px;
@@ -30,15 +31,15 @@
 	/* For IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-	-moz-border-top-left-radius: 18px;
+	-moz-border-radius-topleft: 18px;
 	-webkit-border-top-left-radius: 18px;
-	-moz-border-top-right-radius: 18px;
+	-moz-border-radius-topright: 18px;
 	-webkit-border-top-right-radius: 18px;
 	
 }
 
 .tab-content .table {
-	margin-top:-18px; 
+	margin-top:-17px; 
 }
 
  
@@ -47,6 +48,7 @@
 	padding-left: 20px; 
 	padding-top:21px; 
 	font-size:18px; 
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.43);
 }
 
 .leftSideDiv { 
@@ -62,10 +64,10 @@
 	background: -webkit-gradient(linear, left top, right top, from(#475189), to(#28306B)); /* for webkit browsers */
 	background: -moz-linear-gradient(left,  #475189,  #28306B); /* for firefox 3.6+ */ 
 	o-border-top-left-radius: 18px;
-	-moz-border-top-left-radius: 18px;
+	-moz-border-radius-topleft: 18px;
 	-webkit-border-top-left-radius: 18px;
 	o-border-bottom-left-radius: 18px;
-	-moz-border-bottom-left-radius: 18px;
+	-moz-border-radius-bottomleft: 18px;
 	-webkit-border-bottom-left-radius: 18px;
 }
 
@@ -77,6 +79,7 @@
 	text-align:center; 
 	color:#fff; 
 	font-size:35px; 
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.43);
 }
 
 .leftSideDiv .sideDataText {
@@ -88,6 +91,7 @@
 	text-align:center; 
 	color:#fff; 
 	font-size:16px;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.43);
 }
 
 .leftSideDiv .sideDataText#salesText {
@@ -112,10 +116,10 @@
 	float: right; 
 	background:#BCD0DD; 
 	o-border-top-right-radius: 18px;
-	-moz-border-top-right-radius: 18px;
+	-moz-border-radius-topright: 18px;
 	-webkit-border-top-right-radius: 18px;
 	o-border-bottom-right-radius: 18px;
-	-moz-border-bottom-right-radius: 18px;
+	-moz-border-radius-bottomright: 18px;
 	-webkit-border-bottom-right-radius: 18px;
 }
 
@@ -125,7 +129,7 @@
 	width:3px; 
 	z-index:25;
 	top: 0; 
-	right:197px; 
+	right:198px; 
 	background:transparent; 
 	 /* webkit example */
 	background-image: -webkit-gradient(
@@ -175,10 +179,32 @@
 }
 
 .nav-tabs {
-	font-size:14px; 
+	font-size:12px; 
 	background:#6491cc; 
 	color:#fff;
 	border:none; 
+	margin-bottom:17px; 
+}
+
+.nav-tabs li a {
+	margin-left:0px; 
+	margin-bottom:-1px; 
+	-webkit-border-radius: 8px 8px 0 0;
+	-moz-border-radius: 8px 8px 0 0;
+	border-radius: 8px 8px 0 0;
+}
+
+.nav-tabs  li  a, .nav-pills  li a {
+	padding-right: 3px;
+	padding-left: 3px;
+	margin-right: 5px;
+	margin-top:8px; 
+	line-height:10px;
+	height:7px; 
+}
+
+.nav-tabs {
+	-webkit-border-topright:10px; 
 }
 
 .nav a {

@@ -104,7 +104,7 @@ if($uid >= 0) {
 							<td>
 								<img class="itemThumbnail" src="/img/ski.png"/>
 							</td> 
-							<td>lala</td>
+							<td>Mottarone</td>
 							<td>http://ilovecats.com</td>
 							<td> 
 								<img id="twitter" src="/img/twitter.png"/>
