@@ -29,122 +29,13 @@ if($uid >= 0) {
 			<div class="sideDataText" id="dollarsText">Total Dollars</div>
 		</div>
 		<div class= "sidebar-div">
-			<div class="tablediv">
-					<div class="tabbable"> 
-					  <ul class="nav nav-tabs">
-						<li class="active"><a href="#tab1" data-toggle="tab" id="tab">Purchases</a></li>
-						<li><a href="#tab2" data-toggle="tab">Sales</a></li>
-						<li><a href="#tab3" data-toggle="tab">Analytics</a></li>
-					  </ul>
-						  <div class="tab-content">
-							<div class="tab-pane active" id="tab1">
-					<table  class="table table tablebar" style="text-align:left" cellpadding"10px" > 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/motta.png"/>
-							</td> 
-							<td>lala</td>
-							<td> <button class="btn btn-small btn-primary">Download</button>
-							</td>
-							<td> www.cats.com </td>
-							<td>
-								<img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/>
-							</td>
-						
-						</tr> 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/ski.png"/>
-							</td> 
-							<td>lala</td>
-							<td> <button class="btn btn-small btn-primary">Download</button>
-							</td>
-							<td> www.cats.com </td>
-							<td> 
-								<img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/>
-							</td>
-							
-						</tr> 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/motta.png"/>
-							</td> 
-							<td>lala</td>
-							<td><button class="btn btn-small btn-primary">Download</button>
-							</td>
-							<td> www.cats.com </td>
-							<td> 
-								<img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/>
-							</td>
-							
-						</tr> 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/ski.png"/>
-							</td> 
-							<td>lala</td>
-							<td><button class="btn btn-small btn-primary">Download</button>
-							</td>
-							<td> www.cats.com </td>
-							<td> 
-								<img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/>
-							</td>
-							
-						</tr> 
-					</table>
-				</div>
-				<div class="tab-pane" id="tab2">
-					<table  class="table table tablebar" style="text-align:left" cellpadding"10px" > 
+		</div>
+		<div id="shadow"></div>
+		<div class="rightSideDiv">
+				<button class="btn" id="edit">Edit </button> 
+		</div>
 		
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/ski.png"/>
-							</td> 
-							<td>Mottarone</td>
-							<td>http://ilovecats.com</td>
-							<td> 
-								<img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/>
-							</td>
-						</tr> 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/motta.png"/>
-							</td> 
-							<td>lala</td>
-							<td>http://ilovecats.com</td>
-							<td><img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/></td>
-						</tr> 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/ski.png"/>
-							</td>
-							<td>lala</td>
-							<td>http://ilovecats.com</td>
-							<td><img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/></td>
-						</tr> 
-						<tr> 
-							<td>
-								<img class="itemThumbnail" src="/img/motta.png"/>
-							</td>
-							<td>lala</td>
-							<td>http://ilovecats.com</td>
-							<td><img id="twitter" src="/img/twitter.png"/>
-								<img id="facebook" src="/img/facebook.png"/></td>
-						</tr> 
-					</table>
-				</div>
-			  </div>
-			</div>
 		</div>
 	</div>
-	<div id="shadow"></div>
-	<div class="rightSideDiv"></div>
 </div>
 	
