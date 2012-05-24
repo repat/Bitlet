@@ -1,5 +1,5 @@
 var $window = $(window),
-	$stickyEl = $('.rightSideDiv');
+	$stickyEl = $('.sticky');
 
 var elTop = $stickyEl.offset().top;
    

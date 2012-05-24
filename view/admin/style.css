@@ -144,11 +144,6 @@
 	
 }
 
-.rightSideDiv.sticky {
-     position: fixed;
-     top: 0;
-  }
-
 #edit {
 	position:absolute; 
 	top:80px; 
