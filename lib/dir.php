@@ -14,7 +14,8 @@
 
 			closedir($handle);
 		}
-		return sort($ret);
+		sort($ret);	// sorts it in alphabetical order - thats how we determine which file goes first
+		return $ret;
 	}
 
 	// echo out all js files
