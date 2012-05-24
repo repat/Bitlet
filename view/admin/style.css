@@ -86,7 +86,6 @@
 	line-height:25px; 
 	font-size:16px; 
 	position:fixed; 
-	top:30%; 
 	z-index:25; 
 	width:120px; 
 	text-align:center; 
@@ -96,16 +95,19 @@
 	
 }
 
+.leftSideDiv .sideDataText#number0fSales {
+	top:200px; 
+}
 .leftSideDiv .sideDataText#salesText {
-	top:230; 
+	top:230px; 
 }
 
 .leftSideDiv .sideData#dollars {
-	top:230px;
+	top:295px;
 }
 
 .leftSideDiv .sideDataText#dollarsText {
-	top:260px;
+	top:325px;
 }
 
 .rightSideBottom {
