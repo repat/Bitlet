@@ -126,10 +126,10 @@
 }
 
 .rightSideDiv {
-	position:fixed;
+	position:absolute;
 	z-index: 20;
-	top:101px; 
-	right:230px; 
+	top:0px; 
+	right:0px; 
 	width:300px; 
 	float: right; 
 	/*background:#CFE5F4; 
