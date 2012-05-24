@@ -72,7 +72,7 @@
 }
 
 .leftSideDiv .sideData {
-	position:fixed; 
+	position:absolute; 
 	z-index:25; 
 	top:200px; 
 	width:120px; 
@@ -83,10 +83,9 @@
 }
 
 .leftSideDiv .sideDataText {
+	position:absolute; 
 	line-height:25px; 
 	font-size:16px; 
-	position:fixed; 
-	top:30%; 
 	z-index:25; 
 	width:120px; 
 	text-align:center; 
@@ -96,16 +95,19 @@
 	
 }
 
+.leftSideDiv .sideDataText#number0fSales {
+	top:200px; 
+}
 .leftSideDiv .sideDataText#salesText {
-	top:230; 
+	top:230px; 
 }
 
 .leftSideDiv .sideData#dollars {
-	top:230px;
+	top:295px;
 }
 
 .leftSideDiv .sideDataText#dollarsText {
-	top:260px;
+	top:325px;
 }
 
 .rightSideBottom {
@@ -128,8 +130,6 @@
 .rightSideDiv {
 	position:absolute;
 	z-index: 20;
-	top:0px; 
-	right:0px; 
 	width:300px; 
 	float: right; 
 	/*background:#CFE5F4; 
@@ -140,6 +140,11 @@
 	-moz-border-radius-bottomright: 10px;
 	-webkit-border-bottom-right-radius: 10px;*/
 	
+}
+
+.sticky {
+	position: fixed;
+	top: 0px;
 }
 
 #edit {
@@ -184,7 +189,7 @@
 
 #twitter {
 	position:absolute; 
-	top:350px; 
+	top:500px; 
 	left:230px; 
 	height:25px; 
 	width:25px; 
@@ -193,7 +198,7 @@
 
 #facebook {
 	position:absolute; 
-	top:350px; 
+	top:500px; 
 	left:200px; 
 	height:25px; 
 	width:25px; 
@@ -201,7 +206,7 @@
 
 #envelope {
 	position:absolute; 
-	top:350px; 
+	top:500px; 
 	left:160px; 
 	height:22px; 
 	width:34px; 
@@ -210,7 +215,7 @@
 
 .rightSideDiv textarea {
 	position:absolute; 
-	top: 350px;
+	top: 500px;
 	left:20px; 
 	width:130px; 
 }
@@ -225,7 +230,7 @@
 
 #Share {
 	position:absolute; 
-	top:375px; 
+	top:525px; 
 	left:40px; 
 	height:22px; 
 	font-size:10px; 
@@ -256,7 +261,7 @@
 
 #productURL {
 	position: absolute; 
-	top: 350px; 
+	top:500px; 
 	left: 10px; 
 	width:120px; 
 	height:15px;
