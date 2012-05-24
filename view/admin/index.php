@@ -40,21 +40,23 @@ if($uid >= 0) {
 					</tr>
 				  </thead>
 				  <tbody>
-					<tr>
-					  <td></td>
-					  <td>Cats.jpg</td>
-					  <td>Uploaded on 1/2/12 </td>
-					</tr>
-					<tr>
-					  <td></td>
-					  <td>Cats.jpg</td>
-					  <td>Uploaded on 1/2/12 </td>
-					</tr>
-					<tr>
-					  <td></td>
-					  <td>Cats.jpg</td>
-					  <td>Uploaded on 1/2/12 </td>
-					</tr>
+					<? for($i = 0; $i < 100; $i++) { ?>
+						<tr>
+						  <td></td>
+						  <td>Cats.jpg</td>
+						  <td>Uploaded on 1/2/12 </td>
+						</tr>
+						<tr>
+						  <td></td>
+						  <td>Cats.jpg</td>
+						  <td>Uploaded on 1/2/12 </td>
+						</tr>
+						<tr>
+						  <td></td>
+						  <td>Cats.jpg</td>
+						  <td>Uploaded on 1/2/12 </td>
+						</tr>
+					<? } ?>
 				  </tbody>
 			</table>
 		</div>
