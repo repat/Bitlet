@@ -49,3 +49,13 @@ $(".bitlet-login-submitbtn").click(function(event) {
 	// clear password input form
 	$('.login-password').val('');
 });
+
+// attach a click handler to the logout button
+$(".logout-btn").click(function(event) {
+	$.post("/ajax/logout", 
+		function(data) {
+			console.log('logout successful');
+			// reload the window on logout
+			window.location.reload();
+		}, "json");
+});
