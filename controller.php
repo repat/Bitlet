@@ -41,9 +41,6 @@
 		case 'faq':
 			$dir = 'view/faq';
 			break;
-		case 'terms':
-			$dir = 'view/terms';
-			break;
 		case 'about':
 			$dir = 'view/about';
 			break;
@@ -52,6 +49,9 @@
 			break;
 		case 'l':
 			$dir = 'view/link';
+			break;
+		case 'legal':
+			$dir = 'view/legal';
 			break;
 		default:
 			$dir = 'view/error';
