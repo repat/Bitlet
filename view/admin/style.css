@@ -72,9 +72,9 @@
 }
 
 .leftSideDiv .sideData {
-	position:absolute; 
+	position:fixed; 
 	z-index:25; 
-	top:130px; 
+	top:200px; 
 	width:120px; 
 	text-align:center; 
 	color:#fff; 
@@ -85,17 +85,19 @@
 .leftSideDiv .sideDataText {
 	line-height:25px; 
 	font-size:16px; 
-	position:absolute; 
+	position:fixed; 
+	top:30%; 
 	z-index:25; 
 	width:120px; 
 	text-align:center; 
 	color:#fff; 
 	font-size:16px;
 	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.43);
+	
 }
 
 .leftSideDiv .sideDataText#salesText {
-	top:160px; 
+	top:230; 
 }
 
 .leftSideDiv .sideData#dollars {
@@ -109,7 +111,7 @@
 .rightSideBottom {
 	position:absolute;
 	z-index: 18;
-	top: 15px; 
+	top: 0px; 
 	right:0px; 
 	width:300px; 
 	height:100%; 
@@ -121,15 +123,14 @@
 	o-border-bottom-right-radius: 10px;
 	-moz-border-radius-bottomright: 10px;
 	-webkit-border-bottom-right-radius: 10px;
-	
 }
+
 .rightSideDiv {
 	position:fixed;
 	z-index: 20;
 	top:101px; 
 	right:230px; 
 	width:300px; 
-	height:100%; 
 	float: right; 
 	/*background:#CFE5F4; 
 	o-border-top-right-radius: 10px;
@@ -141,11 +142,10 @@
 	
 }
 
-rightSideDiv .rightSideDivScrolling {
-	position:fixed; 
-	top:195px; 
-	left:20px; 
-}
+.rightSideDiv.sticky {
+     position: fixed;
+     top: 0;
+  }
 
 #edit {
 	position:absolute; 
