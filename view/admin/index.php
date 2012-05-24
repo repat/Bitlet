@@ -57,6 +57,8 @@ if($uid >= 0) {
 			</table>
 		</div>
 		<div id="shadow"></div>
+		<div class="rightSideBottom">
+		</div>
 		<div class="rightSideDiv">
 				<button class="btn" id="edit">Edit </button>
 				<div id="productName"> 
@@ -72,6 +74,9 @@ if($uid >= 0) {
 					<h3>$2.00</h3>
 				</div>
 				<hr id="rightDivhr">
+				<div id="imgDiv">
+					<img src="/img/motta.png"/>
+				</div>
 				<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
 				<a href="http://facebook.com"> <img src="/img/facebook.png" id="facebook"/> </a>
 				<img src="/img/envelope.png" id="envelope"/>
@@ -79,8 +84,8 @@ if($uid >= 0) {
 					<input id="productURL" type="text" readonly="readonly" name="FirstName" value="www.product.co" onclick=this.select() />
 				</div>
 				<p id="Share"> Share this link!</p>
+			
 		</div>
-		
 		</div>
 	</div>
 </div>

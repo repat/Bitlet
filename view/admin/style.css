@@ -4,7 +4,7 @@
 	margin-right:auto;
 	margin-bottom:20px; 
 	position: relative;
-	min-height:400px; 
+	min-height:600px; 
 	width: 980px;
 	background: #fff;
 	border: 1px solid #333;
@@ -12,6 +12,7 @@
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+	overflow:hide; 
 }
 
 
@@ -105,10 +106,10 @@
 	top:260px;
 }
 
-.rightSideDiv {
+.rightSideBottom {
 	position:absolute;
-	z-index: 20;
-	top: 0px; 
+	z-index: 18;
+	top: 15px; 
 	right:0px; 
 	width:300px; 
 	height:100%; 
@@ -120,6 +121,30 @@
 	o-border-bottom-right-radius: 10px;
 	-moz-border-radius-bottomright: 10px;
 	-webkit-border-bottom-right-radius: 10px;
+	
+}
+.rightSideDiv {
+	position:fixed;
+	z-index: 20;
+	top:101px; 
+	right:230px; 
+	width:300px; 
+	height:100%; 
+	float: right; 
+	/*background:#CFE5F4; 
+	o-border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	o-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;*/
+	
+}
+
+rightSideDiv .rightSideDivScrolling {
+	position:fixed; 
+	top:195px; 
+	left:20px; 
 }
 
 #edit {
@@ -205,12 +230,21 @@
 
 #Share {
 	position:absolute; 
-	top:370px; 
-	left:20px; 
+	top:375px; 
+	left:40px; 
 	height:22px; 
 	font-size:10px; 
+	
 }
 
+/*larger thumbnail view*/
+.rightSideDiv img {
+	position:absolute; 
+	top:195px; 
+	left:75px; 
+	height:150px; 
+	width:150px; 
+}
 
 .centerDiv{ 
 	margin-top: 65px;
@@ -229,11 +263,12 @@
 	position: absolute; 
 	top: 350px; 
 	left: 10px; 
-	width:100px; 
-	height:11px;
+	width:120px; 
+	height:15px;
 	color:#666; 
 	border-radius:10px; 
 	cursor:pointer; 
+	text-align:center;
 	}
 
 .rightSideDiv h2 {
