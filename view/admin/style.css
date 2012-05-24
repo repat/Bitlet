@@ -83,9 +83,9 @@
 }
 
 .leftSideDiv .sideDataText {
+	position:fixed; 
 	line-height:25px; 
 	font-size:16px; 
-	position:fixed; 
 	z-index:25; 
 	width:120px; 
 	text-align:center; 
@@ -130,8 +130,7 @@
 .rightSideDiv {
 	position:absolute;
 	z-index: 20;
-	top:0px; 
-	right:0px; 
+	top:100px; 
 	width:300px; 
 	float: right; 
 	/*background:#CFE5F4; 
@@ -142,6 +141,11 @@
 	-moz-border-radius-bottomright: 10px;
 	-webkit-border-bottom-right-radius: 10px;*/
 	
+}
+
+.sticky {
+	position: fixed;
+	top: 0px;
 }
 
 #edit {

@@ -1,13 +1,10 @@
-var $window = $(window),
-	$stickyEl = $('.sticky');
-
+var $window = $(window);
+var $stickyEl = $('.sticky-div');
 var elTop = $stickyEl.offset().top;
-   
+
 $window.scroll(function() {
 	var windowTop = $window.scrollTop();
 	
 	// if above window, move the element down
-	if(windowTop > elTop) {
-		$stickyEl.offset({top: windowTop});
-	}
+	$stickyEl.toggleClass('sticky', windowTop > elTop);
 });
