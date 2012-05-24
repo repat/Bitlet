@@ -38,8 +38,8 @@
 		case 'admin':
 			$dir = 'view/admin';
 			break;
-		case 'faq':
-			$dir = 'view/faq';
+		case 'help':
+			$dir = 'view/help';
 			break;
 		case 'about':
 			$dir = 'view/about';
