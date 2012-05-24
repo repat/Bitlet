@@ -53,7 +53,7 @@
 		<div class="span8">
 			<h2>Earn money for what you do best</h2>
 			<p>You shouldn't have to worry about business or marketing when working on your next masterpiece, and with Bitlet, you don't have to.</p>
-			<p>Upload your digital work, and we'll give you a link to share so you can start selling right away. Additionally, we'll use our own sales army to help you get exposure and make money. And by the way, submitting content is free, we only make money when you do.</p>
+			<p>Upload your digital work, and we'll give you a link to share so you can start selling right away. Additionally, we'll use our own sales army to help you get exposure and earn a profit. And by the way, submitting content is free, we only make money when you do.</p>
 		</div>
 	</div>
 	<br>
@@ -61,7 +61,7 @@
 		<div class="span8">
 			<h2>Your personal sales force</h2>
 			<p>Our network of professional marketers takes care of the selling for you, so you can focus on what you do best - making awesome products.</p>
-			<p>The moment a product is uploaded to Bitlet, it is accessable by professional marketers with influence over millions of potiential customers. You just sit back and relax, we'll take care of the rest.</p>
+			<p>The moment a product is uploaded to Bitlet, it is accessible by professional marketers with influence over millions of potiential customers. You just sit back and relax, we'll take care of the rest.</p>
 		</div>
 		<div class="span4">
 			<div class="thumbnail"><img src="/img/drawings/army.png" alt="your personal sales army"></div>
@@ -74,7 +74,7 @@
 		</div>
 		<div class="span8">
 			<h2>Tools to help you succeed</h2>
-			<p>Do you think in moving averages? Well you've come to the right place. Bitlet includes a comprehensive analytics suite to help you keep track of your products, check out your sales numbers, and, of course, cash out on your earnings.</p>
+			<p>Do you think in moving averages? You've come to the right place. Bitlet includes a comprehensive analytics suite to help you keep track of your products, check out your sales numbers, and, of course, cash out on your earnings.</p>
 			<p>If you're an affiliate marketer, you're in luck! Head over to the <a href="http://affiliates.bitlet.co">Affiliate Portal</a> and check out our awesome web suite built just for you.</p>
 		</div>
 	</div>
