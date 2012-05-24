@@ -23,7 +23,7 @@ if($uid >= 0) {
 			</form>
 		</div>
 		<div class="leftSideDiv">
-			<div class="leftSideData">
+			<div class="leftSideData sticky-div">
 				<div class="sideData" id="number0fSales">18</div>
 				<div class="sideDataText" id="salesText">Total Sales</div>
 					<div class="sideData" id="dollars">500</div>
