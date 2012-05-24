@@ -237,6 +237,31 @@
 	
 }
 
+#cameraType {
+	position:absolute; 
+	top:400px; 
+	left:10px; 
+
+}
+
+#shutterSpeed {
+	position:absolute; 
+	top:420px; 
+	left:10px; 	
+}
+
+#ISO{
+	position:absolute; 
+	top:440px; 
+	left:10px; 	
+}
+
+#fileSize {
+	position:absolute; 
+	top:460px; 
+	left:10px; 	
+}
+
 /*larger thumbnail view*/
 .rightSideDiv img {
 	position:absolute; 
@@ -249,7 +274,8 @@
 .centerDiv{ 
 	margin-top: 65px;
 	margin-left: 120px;
-	margin-right:200px;   
+	margin-right:300px; 
+	padding:20px; 
 }
 
 #productName {
@@ -312,7 +338,26 @@
 }
 
 .table-bordered {
-	width:100%; 
+	width:100%;
+	border: 1px solid #ddd; 
+}
+
+.nav-pills .active a, .nav-pills .active a:hover {
+	background:#ddd; 
+	color:#fff;
+	font-style:bold;
+	background: #586CB9; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#586CB9', endColorstr='#3B53AD'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#586CB9), to(#3B53AD)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #586CB9,  #3B53AD); /* for firefox 3.6+ */ 
+	/* For IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	
+}
+
+.nav-pills a {
+color:#000; 
 }
 
 /*li Styles*/

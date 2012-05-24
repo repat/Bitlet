@@ -31,7 +31,14 @@ if($uid >= 0) {
 			</div>
 		</div>
 		<div class= "centerDiv">
-			<table class="table-bordered table-striped" id="products">
+			<div class="tabbable">
+				  <ul class="nav nav-pills">
+					<li class="active"><a href="#tab1" data-toggle="tab">Products</a></li>
+					<li><a href="#tab2" data-toggle="tab">Purchased</a></li>
+				  </ul>
+				  <div class="tab-content">
+					<div class="tab-pane active" id="tab1">
+					  <table class="table-bordered table-striped" id="products">
 				  <thead style="text-align:left">
 					<tr>
 					  <th>Product</th>
@@ -59,6 +66,13 @@ if($uid >= 0) {
 					<? } ?>
 				  </tbody>
 			</table>
+					</div>
+					<div class="tab-pane" id="tab2">
+					  <p>Purchased</p>
+					</div>
+				  </div>
+				</div>
+		
 		</div>
 		<div id="shadow"></div>
 		<div class="rightSideBottom">
@@ -76,12 +90,17 @@ if($uid >= 0) {
 					<div id="Price">
 						<h3>$2.00</h3>
 					</div>
+					<div id="cameraType">Camera Type</div>
+					<div id="shutterSpeed">Shutter Speed</div>
+					<div id="ISO"> ISO </div>
+					<div id="fileSize">File Size</div>
 					<hr id="rightDivhr">
 					<div id="imgDiv">
 						<img src="/img/motta.png"/>
 					</div>
+					<div id="
 					<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
-					<a href="http://facebook.com"> <img src="/img/facebook.png" id="facebook"/> </a>
+					<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
 					<img src="/img/envelope.png" id="envelope"/>
 					<div>
 						<input id="productURL" type="text" readonly="readonly" name="FirstName" value="www.product.co" onclick=this.select() />
