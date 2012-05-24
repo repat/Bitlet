@@ -14,7 +14,7 @@
 
 			closedir($handle);
 		}
-		return $ret;
+		return sort($ret);
 	}
 
 	// echo out all js files
