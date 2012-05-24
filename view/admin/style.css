@@ -186,7 +186,7 @@
 
 #twitter {
 	position:absolute; 
-	top:350px; 
+	top:500px; 
 	left:230px; 
 	height:25px; 
 	width:25px; 
@@ -195,7 +195,7 @@
 
 #facebook {
 	position:absolute; 
-	top:350px; 
+	top:500px; 
 	left:200px; 
 	height:25px; 
 	width:25px; 
@@ -203,7 +203,7 @@
 
 #envelope {
 	position:absolute; 
-	top:350px; 
+	top:500px; 
 	left:160px; 
 	height:22px; 
 	width:34px; 
@@ -212,7 +212,7 @@
 
 .rightSideDiv textarea {
 	position:absolute; 
-	top: 350px;
+	top: 500px;
 	left:20px; 
 	width:130px; 
 }
@@ -227,7 +227,7 @@
 
 #Share {
 	position:absolute; 
-	top:375px; 
+	top:525px; 
 	left:40px; 
 	height:22px; 
 	font-size:10px; 
@@ -258,7 +258,7 @@
 
 #productURL {
 	position: absolute; 
-	top: 350px; 
+	top:500px; 
 	left: 10px; 
 	width:120px; 
 	height:15px;
