@@ -4,7 +4,7 @@ $uid = $_SESSION['uid'];
 
 <div class="navbar-bitlet">
 	<div class="container" style="width:980px;">
-		<a class="brand" href="http://bitlet.co"><h1>Bitlet</h1/img/logoSmall.png"></a>
+		<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
 
 		<div class="menu-navbar-bitlet pull-right">
 			<? if($uid >= 0) { // already logged in ?>
