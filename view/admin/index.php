@@ -23,10 +23,12 @@ if($uid >= 0) {
 			</form>
 		</div>
 		<div class="leftSideDiv">
-			<div class="sideData" id="number0fSales">18</div>
-			<div class="sideDataText" id="salesText">Total Sales</div>
-				<div class="sideData" id="dollars">500</div>
-			<div class="sideDataText" id="dollarsText">Total Dollars</div>
+			<div class="leftSideData sticky">
+				<div class="sideData" id="number0fSales">18</div>
+				<div class="sideDataText" id="salesText">Total Sales</div>
+					<div class="sideData" id="dollars">500</div>
+				<div class="sideDataText" id="dollarsText">Total Dollars</div>
+			</div>
 		</div>
 		<div class= "centerDiv">
 			<table class="table-bordered table-striped" id="products">
@@ -59,7 +61,7 @@ if($uid >= 0) {
 		<div id="shadow"></div>
 		<div class="rightSideBottom">
 		</div>
-		<div class="rightSideDiv">
+		<div class="rightSideDiv sticky">
 				<button class="btn" id="edit">Edit </button>
 				<div id="productName"> 
 					<h2>Product Name</h2>
