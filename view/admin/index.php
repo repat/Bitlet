@@ -38,37 +38,37 @@ if($uid >= 0) {
 				  </ul>
 				  <div class="tab-content">
 					<div class="tab-pane active" id="tab1">
-					  <table class="table-bordered table-striped" id="products">
-				  <thead style="text-align:left">
-					<tr>
-					  <th>Product</th>
-					  <th>Name</th>
-					  <th>Upload Date</th>
-					</tr>
-				  </thead>
-				  <tbody>
-					<? for($i = 0; $i < 100; $i++) { ?>
-						<tr>
-						  <td></td>
-						  <td>Cats.jpg</td>
-						  <td>Uploaded on 1/2/12 </td>
-						</tr>
-						<tr>
-						  <td></td>
-						  <td>Cats.jpg</td>
-						  <td>Uploaded on 1/2/12 </td>
-						</tr>
-						<tr>
-						  <td></td>
-						  <td>Cats.jpg</td>
-						  <td>Uploaded on 1/2/12 </td>
-						</tr>
-					<? } ?>
-				  </tbody>
-			</table>
+						<table class="table-bordered table-striped" id="products">
+							  <thead style="text-align:left">
+								<tr>
+								  <th>Product</th>
+								  <th>Name</th>
+								  <th>Upload Date</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<? for($i = 0; $i < 100; $i++) { ?>
+									<tr>
+									  <td></td>
+									  <td>Cats.jpg</td>
+									  <td>Uploaded on 1/2/12 </td>
+									</tr>
+									<tr>
+									  <td></td>
+									  <td>Cats.jpg</td>
+									  <td>Uploaded on 1/2/12 </td>
+									</tr>
+									<tr>
+									  <td></td>
+									  <td>Cats.jpg</td>
+									  <td>Uploaded on 1/2/12 </td>
+									</tr>
+								<? } ?>
+							  </tbody>
+						</table>
 					</div>
 					<div class="tab-pane" id="tab2">
-					  <p>Purchased</p>
+					  <p>...</p>
 					</div>
 				  </div>
 				</div>
@@ -101,7 +101,6 @@ if($uid >= 0) {
 					<div id="
 					<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
 					<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
-					<img src="/img/envelope.png" id="envelope"/>
 					<div>
 						<input id="productURL" type="text" readonly="readonly" name="FirstName" value="www.product.co" onclick=this.select() />
 					</div>
