@@ -14,6 +14,7 @@
 
 			closedir($handle);
 		}
+		sort($ret);	// sorts it in alphabetical order - thats how we determine which file goes first
 		return $ret;
 	}
 
