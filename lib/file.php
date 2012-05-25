@@ -1,6 +1,4 @@
 <?
-	include_once 'db.php';  //load the DB Settings.
-
 	// check for valid email/pass, return true on successful authentication
 	// add a new file under input user uid
 	// file type: enum('generic','photo','music','digiart','document','video')

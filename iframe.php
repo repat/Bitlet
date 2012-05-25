@@ -1,4 +1,5 @@
 <?
+	include_once 'lib/db.php';
 	include_once 'lib/dir.php';
 	include_once 'lib/user.php';
 	include_once 'lib/login.php';

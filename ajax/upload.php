@@ -83,7 +83,9 @@
 		SendResult($fid);
 
 		/*** UPLOAD TO AWS ***/
-		
+		if(!AwsUpload($fid, $uploadname)) {
+			// TODO: we should do something here..
+			die('Cannot upload to AWS');
+		}
 	}
 ?>
-
