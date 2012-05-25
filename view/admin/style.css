@@ -13,7 +13,7 @@
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	overflow:hide; 
-	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif; 
+	font-family: "Quicksand",Helvetica,Arial,Verdana,sans-serif; 
 }
 
 
@@ -27,7 +27,7 @@
 	z-index:100; 
 	border: 1px solid #333; 
 	letter-spacing:1px; 
-	
+	font-family: Helvetica,Arial,Verdana,sans-serif; 
 	background: #586CB9; /* for non-css3 browsers */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#586CB9', endColorstr='#3B53AD'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#586CB9), to(#3B53AD)); /* for webkit browsers */
@@ -50,7 +50,7 @@
 	color: #F2E3CC;
 	padding-left: 20px; 
 	padding-top:21px; 
-	font-size:18px; 
+	font-size:22px; 
 }
 
 .leftSideDiv { 
@@ -97,21 +97,36 @@
 	
 }
 
-.leftSideDiv .sideDataText#number0fSales {
-	top:200px; 
+.leftSideDiv .sideData#credits {
+	top:100px; 
 }
-.leftSideDiv .sideDataText#salesText {
-	top:230px; 
-}
-
-.leftSideDiv .sideData#dollars {
-	top:295px;
+.leftSideDiv .sideDataText#totalCredits{
+	top:130px; 
 }
 
-.leftSideDiv .sideDataText#dollarsText {
-	top:325px;
+.leftSideDiv .sideData#sales {
+	top:195px;
 }
 
+.leftSideDiv .sideDataText#totalSales {
+	top:225px;
+}
+
+.leftSideDiv .sideData#selling {
+	top:290px;
+}
+
+.leftSideDiv .sideDataText#totalSelling {
+	top:320px;
+}
+
+.leftSideDiv .sideData#bought {
+	top:385px;
+}
+
+.leftSideDiv .sideDataText#totalBought {
+	top:415px;
+}
 .rightSideBottom {
 	position:absolute;
 	z-index: 18;
@@ -220,7 +235,6 @@
 	left:40px; 
 	height:22px; 
 	font-size:10px; 
-	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif; 
 }
 
 #cameraType {
@@ -262,6 +276,7 @@
 	margin-left: 120px;
 	margin-right:300px; 
 	padding:20px; 
+	font-family: Helvetica,Arial,Verdana,sans-serif; 
 }
 
 #productName {
