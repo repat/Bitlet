@@ -53,6 +53,9 @@
 		case 'legal':
 			$dir = 'view/legal';
 			break;
+		case 'reset-password':
+			$dir = 'view/reset-password';
+			break;
 		default:
 			$dir = 'view/error';
 			break;
