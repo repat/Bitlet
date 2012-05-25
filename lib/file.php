@@ -1,5 +1,5 @@
 <?
-	include_once 'db_settings.php';  //load the DB Settings.
+	include_once 'db.php';  //load the DB Settings.
 
 	// check for valid email/pass, return true on successful authentication
 	// add a new file under input user uid

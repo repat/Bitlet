@@ -1,5 +1,5 @@
 <?
-	include_once 'db_settings.php';
+	include_once 'db.php';
 	$cookie_name = 'BitletAuth';
 
 	function Autologin($uid) {

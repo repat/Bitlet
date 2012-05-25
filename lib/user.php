@@ -1,5 +1,5 @@
 <?
-	include_once 'db_settings.php';  //load the DB Settings.
+	include_once 'db.php';  //load the DB Settings.
 
 	// get the uid of user based on his email, also links up facebook id
 	function GetUID($email, $fbid)
