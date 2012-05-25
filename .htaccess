@@ -8,6 +8,7 @@ RewriteRule ^l/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^help/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^about/?(.*)$ controller.php?args=$1 [L]
 RewriteRule ^legal/?(.*)$ controller.php?args=$1 [L]
+RewriteRule ^reset-password/?(.*)$ controller.php?args=$1 [L]
 
 RewriteRule ^ajax/(.*)$ async.php [L]
 RewriteRule ^iframe/(.*)/(.*)$ iframe.php?args=$2 [L]
