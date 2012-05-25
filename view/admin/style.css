@@ -53,6 +53,7 @@
 	font-size:22px; 
 }
 
+/*Everything pertaining to the left side div begins here*/
 .leftSideDiv { 
 	position:absolute;
 	z-index: 20;
@@ -127,6 +128,9 @@
 .leftSideDiv .sideDataText#totalBought {
 	top:415px;
 }
+
+/*Everything pertaining to the right side div begins here*/
+
 .rightSideBottom {
 	position:absolute;
 	z-index: 18;
@@ -159,8 +163,8 @@
 
 #edit {
 	position:absolute; 
-	top:80px; 
-	left: 220px;
+	top:450px; 
+	left: 226px;
 }
 
 #shadow {
@@ -199,8 +203,8 @@
 
 #twitter {
 	position:absolute; 
-	top:500px; 
-	left:230px; 
+	top:360px; 
+	left:220px; 
 	height:25px; 
 	width:25px; 
 	
@@ -208,8 +212,8 @@
 
 #facebook {
 	position:absolute; 
-	top:500px; 
-	left:200px; 
+	top:360px; 
+	left:190px; 
 	height:25px; 
 	width:25px; 
 }
@@ -229,43 +233,35 @@
 	z-index: 100; 
 }
 
-#Share {
-	position:absolute; 
-	top:525px; 
-	left:40px; 
-	height:22px; 
-	font-size:10px; 
-}
-
 #cameraType {
 	position:absolute; 
-	top:400px; 
+	top:435px; 
 	left:10px; 
 
 }
 
 #shutterSpeed {
 	position:absolute; 
-	top:420px; 
+	top:455px; 
 	left:10px; 	
 }
 
 #ISO{
 	position:absolute; 
-	top:440px; 
+	top:475px; 
 	left:10px; 	
 }
 
 #fileSize {
 	position:absolute; 
-	top:460px; 
+	top:495px; 
 	left:10px; 	
 }
 
 /*larger thumbnail view*/
 .rightSideDiv img {
 	position:absolute; 
-	top:195px; 
+	top:180px; 
 	left:75px; 
 	height:150px; 
 	width:150px; 
@@ -281,22 +277,61 @@
 
 #productName {
 	position: absolute; 
-	top: 110px; 
+	top: 80px; 
 	left: 10px; 
 }
 
+#fileName {
+	position:absolute; 
+	top: 105px; 
+	left: 10px;  
+}
+
+#Category {
+	position: absolute; 
+	top:110px; 
+	left:215px; 
+}
+
+#Price {
+	position: absolute; 
+	top:86px; 
+	left:226px; 
+}
+
+#rightDivhr {
+	position: absolute; 
+	top:130px; 
+	width:280px; 
+	left:10px; 
+}
+
+#rightDivhr2 {
+	position: absolute; 
+	top:395px; 
+	width:280px; 
+	left:10px; 
+}
 #productURL {
 	position: absolute; 
-	top:500px; 
-	left: 10px; 
+	top:360px; 
+	left:55px; 
 	width:120px; 
 	height:15px;
 	color:#666; 
-	border-radius:10px; 
+	border-radius:4px; 
 	cursor:pointer; 
 	text-align:center;
 	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif; 
-	}
+}
+
+#Share {
+	position:absolute; 
+	top:385px; 
+	left:90px; 
+	height:22px; 
+	font-size:10px; 
+}
 
 .rightSideDiv h2 {
 	font-size:18px; 
@@ -310,33 +345,8 @@
 	font-size:11px; 
 }
 
-#fileName {
-	position:absolute; 
-	top: 135px; 
-	left: 10px;  
-}
-
 th {
 letter-spacing:1px; 
-}
-
-#Category {
-	position: absolute; 
-	top:140px; 
-	left:215px; 
-}
-
-#Price {
-	position: absolute; 
-	top:116px; 
-	left:226px; 
-}
-
-#rightDivhr {
-	position: absolute; 
-	top:160px; 
-	width:280px; 
-	left:10px; 
 }
 
 .table-bordered {

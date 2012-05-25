@@ -102,6 +102,7 @@ if($uid >= 0) {
 					<div id="imgDiv">
 						<img src="/img/motta.png"/>
 					</div>
+					<hr id="rightDivhr2">
 					<div id="
 					<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
 					<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
