@@ -1,4 +1,6 @@
 <?
+	require_once 'lib/aws.php';
+
 	// send results
 	function SendResult($result)
 	{
@@ -8,15 +10,18 @@
 		</script>';
 	}
 
+	$MAX_SIZE = 5000000000;		// limit is 5 GB
+
 	// only do something if it's an actual file upload
 	if(isset($_FILES['file']))
 	{
+		/*** RECEIVE FILE ***/
 		$uploadroot = 'data/';
 		$email = $_POST['email'];
 
 		// check size
-		if($_FILES['file']['size'] > 10000000) {	// limit is 10 MB
-			error_log('File too large, maximum size is 10 MB');
+		if($_FILES['file']['size'] > $MAX_SIZE) {	
+			error_log('File too large, maximum size is '.$MAX_SIZE);
 			SendResult(0);
 		}
 
@@ -72,7 +77,13 @@
 			$_SESSION['uid'] = $uid;
 		}
 
+		/*** POST PROCESS FILE ***/
+
+		/*** AJAX BACK TO USER ***/
 		SendResult($fid);
+
+		/*** UPLOAD TO AWS ***/
+		
 	}
 ?>
 
