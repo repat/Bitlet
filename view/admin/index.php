@@ -17,6 +17,7 @@ if($uid >= 0) {
 
 <div class="main-shebang">
 		<div class="topDiv">
+		<img class="profilePic" src="/img/arianna.png"/>
 			<h1> Welcome, <? echo $user['name']; ?>!</h1>    
 			<form class="form-search">
 				<input type="text" class="input-medium search-query" placeholder="Search">
@@ -35,6 +36,7 @@ if($uid >= 0) {
 			</div>
 		</div>
 		<div class= "centerDiv">
+		<button class="btn btn-success" id="newProduct">Add a Product </button>
 			<div class="tabbable">
 				  <ul class="nav nav-pills">
 					<li class="active"><a href="#tab1" data-toggle="tab">Products</a></li>
@@ -42,30 +44,18 @@ if($uid >= 0) {
 				  </ul>
 				  <div class="tab-content">
 					<div class="tab-pane active" id="tab1">
-						<table class="table-bordered table-striped" id="products">
-							  <thead style="text-align:left">
-								<tr>
-								  <th>Product</th>
-								  <th>Name</th>
-								  <th>Upload Date</th>
-								</tr>
-							  </thead>
+						<table class="table-striped" id="products">
 							  <tbody>
 								<? for($i = 0; $i < 100; $i++) { ?>
 									<tr>
-									  <td></td>
+									  <td><img id="thumbnail" src="/img/motta.png"/></td>
 									  <td>Cats.jpg</td>
-									  <td>Uploaded on 1/2/12 </td>
-									</tr>
-									<tr>
-									  <td></td>
-									  <td>Cats.jpg</td>
-									  <td>Uploaded on 1/2/12 </td>
-									</tr>
-									<tr>
-									  <td></td>
-									  <td>Cats.jpg</td>
-									  <td>Uploaded on 1/2/12 </td>
+									  <td>
+									  	<p class="uploaded">Uploaded on</p>
+									  	<p class="date">1/2/12
+									  	<span>at</span>
+									  	3:22 PM</p>
+									  </td>
 									</tr>
 								<? } ?>
 							  </tbody>
@@ -94,10 +84,6 @@ if($uid >= 0) {
 					<div id="Price">
 						<h3>$2.00</h3>
 					</div>
-					<div id="cameraType">Camera Type</div>
-					<div id="shutterSpeed">Shutter Speed</div>
-					<div id="ISO"> ISO </div>
-					<div id="fileSize">File Size</div>
 					<hr id="rightDivhr">
 					<div id="imgDiv">
 						<img src="/img/motta.png"/>
@@ -110,6 +96,32 @@ if($uid >= 0) {
 						<input id="productURL" type="text" readonly="readonly" name="FirstName" value="www.product.co" onclick=this.select() />
 					</div>
 					<p id="Share"> Share this link!</p>
+					<table id="productInfo">
+						<tr>
+							<td id="left">Camera Type</td>
+							<td id="right">Nikon</td>
+						</tr>
+						<tr>
+							<td id="left">Shutter Speed </td>
+							<td id="right">1/320 </td>
+						</tr>
+						<tr>
+							<td id="left">ISO</td>
+							<td id="right">3200</td>
+						</tr>
+						<tr>
+							<td id="left">Aperture</td>
+							<td id="right">f2.8</td>
+						</tr>
+						<tr>
+							<td id="left">Dimension</td>
+							<td id="right">5000x4000</td>
+						</tr>
+						<tr>
+							<td id="left">File Size</td>
+							<td id="right">1.4MB</td>
+						</tr>
+					</table>
 			</div>
 		</div>
 	</div>
