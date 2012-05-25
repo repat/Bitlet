@@ -12,7 +12,7 @@ $uid = $_SESSION['uid'];
 				<a id="account" href="/admin">View your account</a>
 			<? } else { // not logged in ?>
 				<a href="http://affiliates.bitlet.co">Affiliates</a> 
-				<a onclick="showFAQ();"href="#">Help</a>
+				<a href="/help">Help</a>
 				<a onclick="showLogin();" href="#">Login</a>
 			<? } ?>
 		</div>
