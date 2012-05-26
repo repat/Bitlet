@@ -68,6 +68,7 @@
 
 	echo '<head>';
 		require_once('view/templates/header.php');
+		IncludeCSSFiles('view/templates'); 
 		IncludeCSSFiles($dir); 
 	echo '</head>';
 
