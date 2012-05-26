@@ -87,5 +87,8 @@
 			// TODO: we should do something here..
 			die('Cannot upload to AWS');
 		}
+
+		// once uploaded, delete the local copy
+		$sh = "rm $uploadname";
 	}
 ?>

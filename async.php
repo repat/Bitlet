@@ -4,6 +4,7 @@
 	include_once 'lib/user.php';
 	include_once 'lib/login.php';
 	include_once 'lib/file.php';
+	include_once 'lib/aws.php';
 
 	session_start();
 	$db = Connect();
@@ -23,6 +24,9 @@
 			break;
 		case 'logout':
 			require('ajax/logout.php');
+			break;
+		case 'download':
+			require('ajax/download.php');
 			break;
 		default:
 			require('ajax/error.php');
