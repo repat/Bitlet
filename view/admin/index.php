@@ -13,6 +13,8 @@ if($uid >= 0) {
 	$user['name'] = 'Test Subject 42';
 }
 
+
+$catagory = 'art';
 ?>
 
 <div class="main-shebang">
@@ -66,11 +68,10 @@ if($uid >= 0) {
 						</table>
 					</div>
 					<div class="tab-pane" id="tab2">
-					  <p>...</p>
+						<p>...</p>
 					</div>
-				  </div>
 				</div>
-		
+			</div>
 		</div>
 		<div id="shadow"></div>
 		<div class="rightSideBottom">
@@ -102,30 +103,64 @@ if($uid >= 0) {
 				</div>
 				<div class="tableDiv">
 					<table class="productInfo">
-						<tr>
-							<td id="left">Camera Type</td>
-							<td id="right">Nikon</td>
-						</tr>
-						<tr>
-							<td id="left">Shutter Speed </td>
-							<td id="right">1/320 </td>
-						</tr>
-						<tr>
-							<td id="left">ISO</td>
-							<td id="right">3200</td>
-						</tr>
-						<tr>
-							<td id="left">Aperture</td>
-							<td id="right">f2.8</td>
-						</tr>
-						<tr>
-							<td id="left">Dimension</td>
-							<td id="right">5000x4000</td>
-						</tr>
-						<tr>
-							<td id="left">File Size</td>
-							<td id="right">1.4MB</td>
-						</tr>
+						<? switch($catagory) {	// different HTML for different catagory of files
+							case 'photo': ?>
+							<tr>
+								<td id="left">Camera Type</td>
+								<td id="right">Nikon</td>
+							</tr>
+							<tr>
+								<td id="left">Shutter Speed </td>
+								<td id="right">1/320 </td>
+							</tr>
+							<tr>
+								<td id="left">ISO</td>
+								<td id="right">3200</td>
+							</tr>
+							<tr>
+								<td id="left">Aperture</td>
+								<td id="right">f2.8</td>
+							</tr>
+							<tr>
+								<td id="left">Dimension</td>
+								<td id="right">5000x4000</td>
+							</tr>
+							<tr>
+								<td id="left">File Size</td>
+								<td id="right">1.4MB</td>
+							</tr>
+						<? break; ?>
+						<? case 'art': ?>
+							<tr>
+								<td id="left">Camera Type</td>
+								<td id="right">Nikon</td>
+							</tr>
+						<? break; ?>
+						<? case 'music': ?>
+							<tr>
+								<td id="left">Camera Type</td>
+								<td id="right">Nikon</td>
+							</tr>
+						<? break; ?>
+						<? case 'book': ?>
+							<tr>
+								<td id="left">Camera Type</td>
+								<td id="right">Nikon</td>
+							</tr>
+						<? break; ?>
+						<? case 'document': ?>
+							<tr>
+								<td id="left">Camera Type</td>
+								<td id="right">Nikon</td>
+							</tr>
+						<? break; ?>
+						<? case 'video': ?>
+							<tr>
+								<td id="left">Camera Type</td>
+								<td id="right">Nikon</td>
+							</tr>
+						<? break; ?>
+						<? } ?>
 					</table>
 				</div>
 			</div>
