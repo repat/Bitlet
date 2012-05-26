@@ -100,7 +100,8 @@ if($uid >= 0) {
 						<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
 						<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="www.product.co"/>
 				</div>
-					<table id="productInfo">
+				<div class="tableDiv">
+					<table class="productInfo">
 						<tr>
 							<td id="left">Camera Type</td>
 							<td id="right">Nikon</td>
@@ -126,6 +127,7 @@ if($uid >= 0) {
 							<td id="right">1.4MB</td>
 						</tr>
 					</table>
+				</div>
 			</div>
 		</div>
 	</div>
