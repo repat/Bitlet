@@ -39,17 +39,17 @@ if($uid >= 0) {
 		<div class= "centerDiv">
 		<button class="btn btn-success" id="newProduct">Add a Product </button>
 			<div class="tabbable">
-				  <ul class="nav nav-pills">
-					<li class="active"><a href="#tab1">Products</a></li>
-					<li><a href="#tab2">Purchased</a></li>
-				  </ul>
+				 <div class="btn-group" data-toggle="buttons-radio">
+					<button class="btn active" href="#tab1" data-toggle="tab">Products</button>
+					<button class="btn" href="#tab2" data-toggle="tab">Purchased</button>
+				  </div>
 				  <div class="tab-content">
 					<div class="tab-pane active" id="tab1">
 						<table class="table-striped" id="products">
 							  <tbody>
 								<? for($i = 0; $i < 100; $i++) { ?>
 									<tr>
-									  <td><img id="thumbnail" src="/img/motta.png"/></td>
+									  <td><img class="thumbnails" src="/img/motta.png"/></td>
 									  <td>
 									  	<p class="date">Image of Cats</p>
 										<p class="uploaded">Cats.png</p>
@@ -90,7 +90,7 @@ if($uid >= 0) {
 						<h3>$2.00</h3>
 					</div>
 				</div>
-					<div id="imgDiv">
+					<div class="imgDiv">
 						<img src="/img/motta.png"/>
 					</div>
 					

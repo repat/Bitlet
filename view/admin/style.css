@@ -22,7 +22,7 @@
 	left:-1px; 
 	border: 10px; 
 	width:100%; 
-	height:70px;
+	height:80px;
 	z-index:100; 
 	border: 1px solid #333; 
 	letter-spacing:1px; 
@@ -48,7 +48,7 @@
 	border:2px solid #fff; 
 	float: left; 
 	left:20px; 
-	top:10px;
+	top:16px;
 	z-index: 100; 
 }
 
@@ -59,7 +59,7 @@
 .topDiv h1 {
 	color: #F2E3CC;
 	padding-left: 80px; 
-	padding-top:10px; 
+	padding-top:15px; 
 	font-size:22px; 
 }
 
@@ -68,7 +68,7 @@
 	padding-left:80px; 
 	padding-top:15; 
 	font-size:12px; 
-	line-height:12px; 
+	line-height:8px; 
 }
 
 /*Everything pertaining to the left side div commences here*/
@@ -79,6 +79,7 @@
 	left:0; 
 	width:120px; 
 	height:100%; 
+	font-weight:300; 
 	float: left; 
 	background: #475189; /*for non-css3 browsers*/
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#475189', endColorstr='#28306B'); /* for IE */
@@ -171,13 +172,13 @@
 	z-index: 20;
 	width:300px; 
 	float: right; 
-	color:#2A326D
 }
 
-#thumbnail {
+.thumbnails {
 	height:30px; 
 	width:30px; 
-	margin-left:10px; 
+	margin-left:10px;  
+	box-shadow:2px 2px 1px #888888;	
 }
 
 .sticky {
@@ -255,13 +256,19 @@ padding-right:20px;
 
 
 /*larger thumbnail view*/
-.rightSideDiv img {
-	height:200px; 
-	width:200px;
-	margin-left:45px; 
+.imgDiv {
+	height:270px; 
+	text-align:center; 
+}
+
+.imgDiv img {
+	height:250px; 
+	width:250px;
 	border:5px solid #fff; 
 	box-shadow:4px 4px 2px #888888;	
 }
+
+
 
 #topInfo {
 	margin-top:100px; 
@@ -275,7 +282,7 @@ padding-right:20px;
 
 #twitter {
 	position:absolute; 
-	left:190px; 
+	left:210px; 
 	height:32px; 
 	width:32px; 
 	border:none;
@@ -285,7 +292,7 @@ padding-right:20px;
 
 #facebook {
 	position:absolute;  
-	left:150px; 
+	left:170px; 
 	height:32px; 
 	width:32px; 
 	border:none; 
@@ -306,32 +313,32 @@ padding-right:20px;
 
 #newProduct {
 	position:absolute; 
-	top:100px; 
-	left: 550px; 
+	top:97px; 
+	left: 556px; 
 }
 
 #productName {
 	position: absolute; 
 	top: 80px; 
-	left: 10px; 
+	left: 20px; 
 }
 
 #fileName {
 	position:absolute; 
 	top: 105px; 
-	left: 10px;  
+	left: 20px;  
 }
 
 #Category {
 	position: absolute; 
 	top:110px; 
-	left:215px; 
+	left:212px; 
 }
 
 #Price {
 	position: absolute; 
 	top:86px; 
-	left:226px; 
+	left:245px; 
 }
 
 #rightDivhr2 {
@@ -342,7 +349,7 @@ padding-right:20px;
 }
 #productURL {
 	position: absolute; 
-	left:55px; 
+	left:33px; 
 	width:120px; 
 	height:22px;
 	color:#666; 
@@ -368,8 +375,7 @@ padding-right:20px;
 }
 
 .tab-content {
-	padding-left:20px; 
-	padding-right:20px; 
+	padding-top:20px; 
 }
 
 .table-striped tr {
@@ -382,6 +388,12 @@ border-top: 1px solid #ddd;
 	margin:5px; 
 }
 
+.tabbable {
+	padding-top:30px; 
+	padding-left:20px; 
+	padding-right:20px; 
+	padding-bottom:30px; 
+}
 .date {
 	margin:5px; 
 }
