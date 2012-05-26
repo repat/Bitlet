@@ -18,7 +18,8 @@ if($uid >= 0) {
 <div class="main-shebang">
 		<div class="topDiv">
 		<img class="profilePic" src="/img/arianna.png"/>
-			<h1> Welcome, <? echo $user['name']; ?>!</h1>    
+			<h1> Welcome, <? echo $user['name']; ?>!</h1> 
+			<h2>Modify your account</h2>
 			<form class="form-search">
 				<input type="text" class="input-medium search-query" placeholder="Search">
 			</form>
@@ -39,8 +40,8 @@ if($uid >= 0) {
 		<button class="btn btn-success" id="newProduct">Add a Product </button>
 			<div class="tabbable">
 				  <ul class="nav nav-pills">
-					<li class="active"><a href="#tab1" data-toggle="tab">Products</a></li>
-					<li><a href="#tab2" data-toggle="tab">Purchased</a></li>
+					<li class="active"><a href="#tab1">Products</a></li>
+					<li><a href="#tab2">Purchased</a></li>
 				  </ul>
 				  <div class="tab-content">
 					<div class="tab-pane active" id="tab1">
@@ -49,7 +50,10 @@ if($uid >= 0) {
 								<? for($i = 0; $i < 100; $i++) { ?>
 									<tr>
 									  <td><img id="thumbnail" src="/img/motta.png"/></td>
-									  <td>Cats.jpg</td>
+									  <td>
+									  	<p class="date">Image of Cats</p>
+										<p class="uploaded">Cats.png</p>
+									  </td>
 									  <td>
 									  	<p class="uploaded">Uploaded on</p>
 									  	<p class="date">1/2/12
@@ -72,30 +76,30 @@ if($uid >= 0) {
 		<div class="rightSideBottom">
 			<div class="rightSideDiv sticky-div">
 					<button class="btn" id="edit">Edit </button>
+				<div id="topInfo">
 					<div id="productName"> 
-						<h2>Product Name</h2>
+						<h2>Image of Cats</h2>
 					</div>
 					<div id="fileName">
-						<h3>File Name</h3>
+						<h3>Cats.png</h3>
 					</div>
 					<div id="Category"> 
-						<h4>Category</h4>
+						<h4>Photographs</h4>
 					</div>
 					<div id="Price">
 						<h3>$2.00</h3>
 					</div>
-					<hr id="rightDivhr">
+				</div>
 					<div id="imgDiv">
 						<img src="/img/motta.png"/>
 					</div>
-					<hr id="rightDivhr2">
-					<div id="
-					<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
-					<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
-					<div>
-						<input id="productURL" type="text" readonly="readonly" name="FirstName" value="www.product.co" onclick=this.select() />
-					</div>
-					<p id="Share"> Share this link!</p>
+					
+					<div id="shareInfo"
+						<hr id="rightDivhr2">
+						<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
+						<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
+						<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="www.product.co"/>
+				</div>
 					<table id="productInfo">
 						<tr>
 							<td id="left">Camera Type</td>
