@@ -188,7 +188,7 @@
 
 #edit {
 	position:absolute; 
-	top:650px; 
+	top:620px; 
 	left:220px;
 }
 
@@ -244,11 +244,7 @@
 .productInfo { 
 	height:150px; 
 	padding-left:50px; 
-	margin-top:20px; 
-}
-
-.productInfo tr {
-	line-height:1px; 
+	margin-top:5px; 
 }
 
 .tableDiv {
@@ -256,13 +252,13 @@
 	line-height:10px; 
 }
 
-#left {
+.left {
 	text-align:right; 
 	padding-left:50px; 
 	padding-right:20px; 
 }
 
-#right {
+.right {
 	text-align:left; 
 }
 
@@ -287,7 +283,7 @@
 }
 
 #shareInfo {
-	margin-top:20px; 
+	margin-top:10px; 
 	height:45px; 
 }
 
@@ -325,7 +321,8 @@
 #newProduct {
 	position:absolute; 
 	top:97px; 
-	left: 556px; 
+	left: 556px;
+	z-index:100; 
 }
 
 #productName {

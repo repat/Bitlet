@@ -14,7 +14,7 @@ if($uid >= 0) {
 }
 
 
-$catagory = 'art';
+$category = 'video';
 ?>
 
 <div class="main-shebang">
@@ -103,61 +103,97 @@ $catagory = 'art';
 				</div>
 				<div class="tableDiv">
 					<table class="productInfo">
-						<? switch($catagory) {	// different HTML for different catagory of files
+						<? switch($category) {	// different HTML for different catagory of files
 							case 'photo': ?>
 							<tr>
-								<td id="left">Camera Type</td>
-								<td id="right">Nikon</td>
+								<td class="left">Camera Type</td>
+								<td class="right">Nikon</td>
 							</tr>
 							<tr>
-								<td id="left">Shutter Speed </td>
-								<td id="right">1/320 </td>
+								<td class="left">Shutter Speed </td>
+								<td class="right">1/320 </td>
 							</tr>
 							<tr>
-								<td id="left">ISO</td>
-								<td id="right">3200</td>
+								<td class="left">ISO</td>
+								<td class="right">3200</td>
 							</tr>
 							<tr>
-								<td id="left">Aperture</td>
-								<td id="right">f2.8</td>
+								<td class="left">Aperture</td>
+								<td class="right">f2.8</td>
 							</tr>
 							<tr>
-								<td id="left">Dimension</td>
-								<td id="right">5000x4000</td>
+								<td class="left">Dimension</td>
+								<td class="right">5000x4000</td>
 							</tr>
 							<tr>
-								<td id="left">File Size</td>
-								<td id="right">1.4MB</td>
+								<td class="left">File Size</td>
+								<td class="right">1.4MB</td>
 							</tr>
 						<? break; ?>
 						<? case 'art': ?>
 							<tr>
-								<td id="left">Camera Type</td>
-								<td id="right">Nikon</td>
+								<td class="left">Dimension</td>
+								<td class="right">5000x4000</td>
 							</tr>
 						<? break; ?>
 						<? case 'music': ?>
 							<tr>
-								<td id="left">Camera Type</td>
-								<td id="right">Nikon</td>
+								<td class="left">Artist</td>
+								<td class="right">My Band</td>
+							</tr>
+							<tr>
+								<td class="left">Album</td>
+								<td class="right">My Album</td>
+							</tr>
+							<tr>
+								<td class="left">Genre</td>
+								<td class="right">Rock</td>
+							</tr>
+							<tr>
+								<td class="left">Length</td>
+								<td class="right">3:12</td> 
 							</tr>
 						<? break; ?>
 						<? case 'book': ?>
 							<tr>
-								<td id="left">Camera Type</td>
-								<td id="right">Nikon</td>
+								<td class="left">Pages</td>
+								<td class="right">233</td>
+							</tr>
+							<tr>
+								<td class="left">Description</td>
+								<td class="right">Story of a farm girl who runs away from home in search of a career as an actress.</td>
 							</tr>
 						<? break; ?>
 						<? case 'document': ?>
 							<tr>
-								<td id="left">Camera Type</td>
-								<td id="right">Nikon</td>
+								<td class="left">Description<td>
+								<td class="right">This is a PS file which allows you to make an awesome cat image. </td>
 							</tr>
 						<? break; ?>
 						<? case 'video': ?>
+						<tr>
+								<td class="left">Camera Type</td>
+								<td class="right">Nikon</td>
+							</tr>
 							<tr>
-								<td id="left">Camera Type</td>
-								<td id="right">Nikon</td>
+								<td class="left">Shutter Speed </td>
+								<td class="right">1/320 </td>
+							</tr>
+							<tr>
+								<td class="left">ISO</td>
+								<td class="right">3200</td>
+							</tr>
+							<tr>
+								<td class="left">Camera Type</td>
+								<td class="right">Nikon</td>
+							</tr>
+							<tr>
+								<td class="left">Length</td>
+								<td class="right">1:12:11</td>
+							</tr>
+							<tr>
+								<td class="left">Description</td>
+								<td class="right">A video of cats playing with a ball of yarn. </td>
 							</tr>
 						<? break; ?>
 						<? } ?>
