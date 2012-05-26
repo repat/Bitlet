@@ -79,7 +79,7 @@
 	function GetFileFromId($fid)
 	{
 		//Query the user database and see if the user already has an account
-		$result = mysql_query("SELECT name FROM file WHERE id = '$fid'") or die();
+		$result = mysql_query("SELECT file_name FROM file WHERE id = '$fid'") or die();
 		if(mysql_num_rows($result) == 0) {
 			die('File does not exist');
 		}

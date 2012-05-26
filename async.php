@@ -25,6 +25,9 @@
 		case 'logout':
 			require('ajax/logout.php');
 			break;
+		case 'download':
+			require('ajax/download.php');
+			break;
 		default:
 			require('ajax/error.php');
 			break;

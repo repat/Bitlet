@@ -1,14 +1,12 @@
 <? 
-
-	$path = $_SERVER['DOCUMENT_ROOT'];
-	include $path.'/lib/db.php';
-
 	$fid = $_POST['fid'];
 
-	$db = Connect();
 	$name = GetFileFromId($fid);
+	list($url, $size) = AwsGetUrl($fid);
+
+	error_log('Filename: '.$name);
+	error_log('AWS URL: '.$url);
 	IncrementDownloads($fid);
-	Disconnect($db);
 
 	header('Content-Description: File Transfer');
 	header('Content-Type: application/octet-stream');
@@ -17,10 +15,10 @@
 	header('Expires: 0');
 	header('Cache-Control: must-revalidate');
 	header('Pragma: public');
-	header('Content-Length: ' . filesize($name));
+	header('Content-Length: '.$size);
 	ob_clean();
 	flush();
-	readfile($name);
+	readfile($url);
 	exit;
 
 ?>

@@ -14,7 +14,6 @@ $user = $uinfo['email'];
 ?>
 
 <div class="container"><div class="row">
-
 	<div class="span7"><div class="well paymentwell">
 		<h1>Pay With Credit Card</h1>
 		<h3>Price: $ <? echo $price; ?></br></h3>
@@ -45,7 +44,7 @@ $user = $uinfo['email'];
 			<p>Download should start automatically, Or:</p>
 			<hr>
 		</div>
-		<form action="download.php" method="POST" id="go-download">
+		<form action="/ajax/download" method="POST" id="go-download">
 			<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
 			<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 		</form>
@@ -64,3 +63,6 @@ $user = $uinfo['email'];
 		</p>
 	</div></div>
 </div></div>
+
+<!-- Official Stripe JS file -->
+<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
