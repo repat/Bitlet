@@ -4,6 +4,7 @@
 	include_once 'lib/user.php';
 	include_once 'lib/login.php';
 	include_once 'lib/file.php';
+	include_once 'lib/aws.php';
 
 	session_start();
 	$db = Connect();
