@@ -56,4 +56,26 @@ $('.team#ari').hover(function() {
 	
 }); 
 
+$(function() {
+	var randomnumber=Math.floor(Math.random()*3)
+
+	switch  (randomnumber) {
+		case 0: 
+			$('.teamPics#dave').addClass('picsHover');
+			$('.team#dave').addClass('teamHover');
+			break; 
+		case 1:
+			$('.team#zach').addClass('teamHover');
+			$('.teamPics#zach').addClass('picsHover');
+			break; 
+		default: 
+			$('.team#ari').addClass('teamHover');
+			$('.teamPics#ari').addClass('picsHover');
+			break; 
+	}
+});
+
+
 $('.teamPics#dave').tooltip();
+$('.teamPics#zach').tooltip();
+$('.teamPics#ari').tooltip();
