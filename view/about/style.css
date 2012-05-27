@@ -1,6 +1,7 @@
 .namesDiv {
 	float:left; 
-	margin-right:100px;
+	margin-right:50px;
+	margin-left:50px; 
 	width:265px; 
 }
 
@@ -11,10 +12,23 @@
 	font-size:25px; 
 }
 
+.team active {
+	text-decoration:none; 
+	color:#000; 
+	font-weight:300; 
+	font-size:25px; 
+}
+
 .team a:hover {
 	font-size:120%;
 	text-decoration:none;
 }
+
+.teamHover {
+	font-size:120%;
+	text-decoration:none;
+}
+
  .picsDiv {
 	float:left; 
 	padding:10px; 
