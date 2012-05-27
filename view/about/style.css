@@ -1,12 +1,23 @@
+.namesDiv {
+	float:left; 
+	margin-right:100px;
+	width:265px; 
+}
+
 .team a {
 	text-decoration:none; 
 	color:#000; 
-	font-weight:300px; 
+	font-weight:300; 
+	font-size:25px; 
 }
 
 .team a:hover {
-font-size:120%;
-text-decoration:none;
+	font-size:120%;
+	text-decoration:none;
+}
+ .picsDiv {
+	float:left; 
+	padding:10px; 
 }
 
 .teamPics {
@@ -15,14 +26,18 @@ text-decoration:none;
 	opacity: 0.5;
 	height:150px; 
 	width:150px; 
+	box-shadow:2px 2px 1px #888888;
+	margin:10px; 
 }
 
-}
 .teamPics:hover {
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
 	-moz-opacity: 1;
 	opacity: 1;
 }
+
+
+
 
 /*Starting FAQ section*/
 .faq h1 {
