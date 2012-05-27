@@ -1,7 +1,7 @@
 .cloud {
 	float:left; 
-	padding-left:50px; 
-	padding-top:20px;
+	margin-left:50px; 
+	margin-top:20px;
 }
 
 .about {
@@ -19,8 +19,8 @@
 }
 
 .picsDiv {
-	float:left;
-	padding:10px; 
+	float:right;
+	margin:10px; 
 }
 
 .team {
@@ -28,11 +28,11 @@
 	font-weight:300; 
 	font-size:25px; 
 	text-align:right; 
+	color:#000; 
 }
 
-.team a{
+a:hover {
 	text-decoration:none; 
-	color:#000; 
 }
 
 .teamHover {
