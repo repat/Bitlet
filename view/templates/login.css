@@ -4,17 +4,19 @@
 .bitlet-login{
 	height:26px;
 	font-size:18px;
-	width:260px;
+	width:193px;/*
+*	220px
+*/
 }
 .login-email{
 }
 .login-password{
 }
 .forgot-password-login{
-	float:left;
+	float:right;
 }
 .bitlet-login-submitbtn{
-	float:right;
+	width:100%;
 }
 .close{
 	border:none !important;
@@ -22,3 +24,26 @@
 	font-size:13px !important;
 
 }
+.login-modal-header{
+	background:whiteSmoke;
+	-webkit-border-radius: 6px 6px 0px 0px;
+	-moz-border-radius: 6px 6px 0px 0px;
+	border-radius: 6px 6px 0px 0px;
+	border-bottom: 1px solid #DDD;
+}
+.modal-body{
+	padding:15px 35px 0px;
+}
+.modal-login-footer{
+	background: none;
+	padding: 0px 35px 15px;
+	border: none;
+}
+.login-add-on{
+	height:26px !important;
+	margin-top:-8px;
+}
+.icon-user{
+	margin-top:5px;
+}
+
