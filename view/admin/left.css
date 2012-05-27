@@ -1,0 +1,77 @@
+/*Everything pertaining to the left side div commences here*/
+.leftSideDiv { 
+	position:absolute;
+	z-index: 20;
+	top: 0; 
+	left:0; 
+	width:120px; 
+	height:100%; 
+	font-weight:300; 
+	float: left; 
+	background: #475189; /*for non-css3 browsers*/
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#475189', endColorstr='#28306B'); /* for IE */
+	background: -webkit-gradient(linear, left top, right top, from(#475189), to(#28306B)); /* for webkit browsers */
+	background: -moz-linear-gradient(left,  #475189,  #28306B); /* for firefox 3.6+ */ 
+	o-border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	o-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+.leftSideDiv .sideData {
+	position:absolute; 
+	z-index:25; 
+	top:200px; 
+	width:120px; 
+	text-align:center; 
+	color:#fff; 
+	font-size:35px; 
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.43);
+}
+
+.leftSideDiv .sideDataText {
+	position:absolute; 
+	line-height:25px; 
+	font-size:16px; 
+	z-index:25; 
+	width:120px; 
+	text-align:center; 
+	color:#fff; 
+	font-size:16px;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.43);
+	
+}
+
+.leftSideDiv .sideData#credits {
+	top:100px; 
+}
+.leftSideDiv .sideDataText#totalCredits{
+	top:130px; 
+}
+
+.leftSideDiv .sideData#sales {
+	top:195px;
+}
+
+.leftSideDiv .sideDataText#totalSales {
+	top:225px;
+}
+
+.leftSideDiv .sideData#selling {
+	top:290px;
+}
+
+.leftSideDiv .sideDataText#totalSelling {
+	top:320px;
+}
+
+.leftSideDiv .sideData#bought {
+	top:385px;
+}
+
+.leftSideDiv .sideDataText#totalBought {
+	top:415px;
+}
+
