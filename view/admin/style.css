@@ -113,27 +113,6 @@
 	z-index: 100; 
 }
 
-.productInfo { 
-	height:150px; 
-	padding-left:50px; 
-	margin-top:5px; 
-}
-
-.tableDiv {
-	text-align:center;
-	line-height:10px; 
-}
-
-.left {
-	text-align:right; 
-	padding-left:50px; 
-	padding-right:20px; 
-}
-
-.right {
-	text-align:left; 
-}
-
 .centerDiv{ 
 	margin-top: 65px;
 	margin-left: 120px;
@@ -151,5 +130,92 @@
 	top:97px; 
 	left: 556px;
 	z-index:100; 
+}
+
+.thumbnails {
+	height:45px; 
+	width:45px; 
+	margin:10px;  
+	box-shadow:2px 2px 1px #888888;	
+}
+
+.sticky {
+	position: fixed;
+	top: 0px;
+}
+
+.table-striped {
+	width:100%;
+}
+
+.tab-content {
+	padding-top:20px; 
+}
+
+.table-striped tr {
+border-top: 1px solid #ddd; 
+}
+
+.uploaded {
+	font-size:10px;
+	line-height:10px; 
+	margin:5px; 
+}
+
+.tabbable {
+	padding-top:30px; 
+	padding-left:20px; 
+	padding-right:20px; 
+	padding-bottom:30px; 
+}
+
+.date {
+	margin:5px; 
+}
+
+.date span {
+	font-size:10px;
+}
+
+.nav-pills .active a, .nav-pills .active a:hover {
+	background:#ddd; 
+	color:#fff;
+	font-style:bold;
+	background: #586CB9; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#586CB9', endColorstr='#3B53AD'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#586CB9), to(#3B53AD)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #586CB9,  #3B53AD); /* for firefox 3.6+ */ 
+	/* For IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	
+}
+
+.nav-pills a {
+color:#000; 
+}
+
+/*li Styles*/
+.menu-item li {
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item li:hover {
+  background: #eee;
+}
+
+/*First Item Styles*/
+.alpha p {
+	padding: 8px 12px;
+	color: #aaa;
+}
+
+.alpha p a {
+	color: #aaa;
+	font-style: italic;
+}
+
+.alpha p a:hover {
+	color: #ccc;
 }
 

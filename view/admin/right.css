@@ -23,182 +23,34 @@
 	float: right; 
 }
 
-.thumbnails {
-	height:45px; 
-	width:45px; 
-	margin:10px;  
-	box-shadow:2px 2px 1px #888888;	
+.topLeft {
+	margin-top:100px; 
+	float: left;
 }
 
-.sticky {
-	position: fixed;
-	top: 0px;
+.topRight {
+	margin-top:100px; 
+	float: right;
+	text-align: right;
 }
 
-#edit {
-	position:absolute; 
-	top:620px; 
-	left:220px;
-}
-
-#productName {
-	position: absolute; 
-	top: 80px; 
-	left: 20px; 
-}
-
-#fileName {
-	position:absolute; 
-	top: 105px; 
-	left: 20px;  
-}
-
-#Category {
-	position: absolute; 
-	top:110px; 
-	left:212px; 
-}
-
-#Price {
-	position: absolute; 
-	top:86px; 
-	left:245px; 
-}
-
-#rightDivhr2 {
-	position: absolute; 
-	top:395px; 
-	width:280px; 
-	left:10px; 
-}
-#productURL {
-	position: absolute; 
-	left:33px; 
-	width:120px; 
-	height:22px;
-	color:#666; 
-	border-radius:4px; 
-	cursor:pointer; 
-	text-align:center;
-}
-
-.rightSideDiv h2 {
+.topLeft h2 {
 	font-size:18px; 
 }
 
-.rightSideDiv h3 {
+.topLeft h3 {
 	font-size:14px; 
 }
 
-.rightSideDiv h4 {
-	font-size:11px; 
+.topRight h2 {
+	font-size:18px; 
 }
 
-.table-striped {
-	width:100%;
+.topRight h3 {
+	font-size:14px; 
 }
 
-.tab-content {
-	padding-top:20px; 
-}
-
-.table-striped tr {
-border-top: 1px solid #ddd; 
-}
-
-.uploaded {
-	font-size:10px;
-	line-height:10px; 
-	margin:5px; 
-}
-
-.tabbable {
-	padding-top:30px; 
-	padding-left:20px; 
-	padding-right:20px; 
-	padding-bottom:30px; 
-}
-.date {
-	margin:5px; 
-}
-
-.date span {
-	font-size:10px;
-}
-.nav-pills .active a, .nav-pills .active a:hover {
-	background:#ddd; 
-	color:#fff;
-	font-style:bold;
-	background: #586CB9; /* for non-css3 browsers */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#586CB9', endColorstr='#3B53AD'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#586CB9), to(#3B53AD)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #586CB9,  #3B53AD); /* for firefox 3.6+ */ 
-	/* For IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
-	/* For IE 5.5 - 7 */
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-	
-}
-
-.nav-pills a {
-color:#000; 
-}
-
-/*li Styles*/
-.menu-item li {
-  border-bottom: 1px solid #eee;
-}
-
-.menu-item li:hover {
-  background: #eee;
-}
-
-/*First Item Styles*/
-.alpha p {
-	padding: 8px 12px;
-	color: #aaa;
-}
-
-.alpha p a {
-	color: #aaa;
-	font-style: italic;
-}
-
-.alpha p a:hover {
-	color: #ccc;
-}
-
-#topInfo {
-	margin-top:100px; 
-	height:45px; 
-}
-
-#shareInfo {
-	margin-top:10px; 
-	height:45px; 
-}
-
-#twitter {
-	position:absolute; 
-	left:210px; 
-	height:32px; 
-	width:32px; 
-	border:none;
-	box-shadow:none; 
-	
-}
-
-#facebook {
-	position:absolute;  
-	left:170px; 
-	height:32px; 
-	width:32px; 
-	border:none; 
-	box-shadow:none;
-}
-
-/*larger thumbnail view*/
 .imgDiv {
-	height:270px; 
 	text-align:center; 
 }
 
@@ -209,10 +61,59 @@ color:#000;
 	box-shadow:4px 4px 2px #888888;	
 }
 
-.rightSideDiv textarea {
+.shareInfo {
+	margin-top:10px; 
+	text-align:center;
+}
+
+#twitter {
+	left:210px; 
+	height:32px; 
+	width:32px; 
+	border:none;
+	box-shadow:none; 
+}
+
+#facebook {
+	height:32px; 
+	width:32px; 
+	border:none; 
+	box-shadow:none;
+}
+
+#productURL {
+	width:120px; 
+	height:22px;
+	color:#666; 
+	border-radius:4px; 
+	cursor:pointer; 
+	text-align:center;
+}
+
+.tableDiv {
+	text-align:center;
+	line-height:10px; 
+}
+
+.productInfo { 
+	height:150px; 
+	padding-left:50px; 
+	margin-top:5px; 
+}
+
+.left {
+	text-align:right; 
+	padding-left:50px; 
+	padding-right:20px; 
+}
+
+.right {
+	text-align:left; 
+}
+
+#edit {
 	position:absolute; 
-	top: 500px;
-	left:20px; 
-	width:130px; 
+	top:620px; 
+	left:220px;
 }
 

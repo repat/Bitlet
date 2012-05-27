@@ -1,27 +1,23 @@
 <div class="rightSideBottom">
 	<div class="rightSideDiv sticky-div">
-		<button class="btn" id="edit">Edit</button>
-		<div id="topInfo">
-			<div id="productName"> 
-				<h2>Image of Cats</h2>
-			</div>
-			<div id="fileName">
-				<h3>Cats.png</h3>
-			</div>
-			<div id="Category"> 
-				<h4>Photographs</h4>
-			</div>
-			<div id="Price">
-				<h3>$2.00</h3>
-			</div>
+		<div class="topLeft">
+			<h2>Image of Cats</h2>
+			<h3>Cats.png</h3>
 		</div>
+		<div class="topRight">
+			<h2>$2.00</h2>
+			<h3>Photographs</h3>
+		</div>
+
 		<div class="imgDiv"><img src="/img/motta.png"/></div>
-		<div id="shareInfo"
-			<hr id="rightDivhr2">
-			<a href="http://twitter.com"> <img src="/img/twitter.png" id="twitter"/> </a>
-			<a href="http://facebook.com"> <img src="/img/Facebook.png" id="facebook"/> </a>
+
+		<div class="shareInfo">
+			<hr>
 			<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="www.product.co"/>
+			<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
+			<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
 		</div>
+
 		<div class="tableDiv">
 			<table class="productInfo">
 				<? switch($category) {	// different HTML for different catagory of files
@@ -120,5 +116,6 @@
 				<? } ?>
 			</table>
 		</div>
-	</div>
-</div>
+		<button class="btn" id="edit">Edit</button>
+	</div>	<!-- end of sticky div -->
+</div>	<!-- end of right side bottom -->
