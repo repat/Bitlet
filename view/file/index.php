@@ -1,7 +1,7 @@
 <?
 
 // we can get either the fid or the furl
-$fid = $args;
+$fid = $args[1];
 
 $finfo = GetFileInfo($fid);
 $uid = $finfo['uid'];

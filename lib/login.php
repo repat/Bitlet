@@ -1,11 +1,11 @@
 <?
-	$cookie_name = 'BitletAuth';
+	const COOKIE_NAME = 'BitletAuth';
 
 	function Autologin($uid) {
 		// autogenerate a session hash
 		$session = md5(rand());
 		// autoexpire after 5 days
-		setcookie($cookie_name, 'uid='.$uid.'&session='.$session, time()+60*60*24*5, '/');
+		setcookie(COOKIE_NAME, 'uid='.$uid.'&session='.$session, time()+60*60*24*5, '/');
 
 		// save session in SQL database
 		mysql_query("UPDATE user SET session='$session'
