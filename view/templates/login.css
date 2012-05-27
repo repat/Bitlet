@@ -43,7 +43,13 @@
 	height:26px !important;
 	margin-top:-8px;
 }
+
 .icon-user{
 	margin-top:5px;
 }
-
+.icon-lock{
+	margin-top:5px;
+}
+.login-remember-me{
+	float:left;
+}

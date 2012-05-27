@@ -36,14 +36,25 @@
 	</div>
     <!-- dialog contents -->
 	<div class="modal-body">
+
 		<div class="input-prepend">
 			<span class="add-on login-add-on">
 				<i class="icon-user"></i>
 			</span>
 		<input type="text" size="10" autocomplete="on" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
         </div>
+	
+		<div class="input-prepend">
+			<span class="add-on login-add-on">
+				<i class="icon-lock"></i>
+			</span>
+			<input type="password" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
+        </div>
 
-		<input type="password" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
+		<label class="checkbox login-remember-me">
+			<input type="checkbox" name="rememberMe" value="rememberMe">
+			Remember Me	
+        </label>
 		<p class="forgot-password-login"><a href="reset-details">Forgot Details?</a></p>
 	</div>
 	<div class="modal-footer modal-login-footer">
