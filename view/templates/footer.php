@@ -30,17 +30,17 @@
 	<!-- Silence is golden -->
 <? } else { // not logged in ?>
 <div id="LoginModal" class="modal hide fade">
-	<div class="modal-header">
+	<div class="modal-header modal-login-footer">
 		<button class="close" data-dismiss="modal">X</button>
-    	<h3>Login to Bitlet</h3>
+    	<h3>Login</h3>
 	</div>
     <!-- dialog contents -->
 	<div class="modal-body">
 		<input type="text" size="10" autocomplete="on" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
 		<input type="password" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
-		<p class="forgot-password-login"><a href="#">Forgot Password?</a></p>
+		<p class="forgot-password-login"><a href="reset-details">Forgot Details?</a></p>
 	</div>
-	<div class="modal-footer">
+	<div class="modal-footer modal-login-footer">
 		<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-success">Login</button>
 	</div>
 </div>

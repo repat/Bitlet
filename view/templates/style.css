@@ -83,6 +83,13 @@ footer h3 {
 	max-height: 500px;
 }
 
+/*
+ * Login modal
+ */
+#LoginModal{
+	width:300px !important;
+	left:60%;
+}
 
 /*
  * Faded out hr 

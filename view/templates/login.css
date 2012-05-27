@@ -1,21 +1,24 @@
-
 #login-form{
 
 }
 .bitlet-login{
 	height:26px;
 	font-size:18px;
-	width:250px;
+	width:260px;
 }
 .login-email{
-	width: 250px;
 }
 .login-password{
-	width: 250px;
 }
 .forgot-password-login{
 	float:left;
 }
 .bitlet-login-submitbtn{
 	float:right;
+}
+.close{
+	border:none !important;
+	background:none !important;
+	font-size:13px !important;
+
 }
