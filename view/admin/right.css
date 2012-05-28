@@ -99,6 +99,7 @@
 }
 
 #description {
+	padding: 0 10px;
 	text-align: center;
 	font-size: 12px;
 }
@@ -119,7 +120,7 @@
 }
 
 .shareInfo {
-	background: #FFF;
+	background: #FFE0C0;
 	margin: 10px 10px 0 10px; 
 	padding: 10px 0;
 	text-align: center;
@@ -133,16 +134,19 @@
 .shareInfo h3 {
 	font-size: 12px;
 	line-height: 15px;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .shareInfo hr {
 	margin: 5px 0;
+	border-top: 1px solid #E0C0A0;
+	border-bottom: 1px solid #FFFDDD;
 }
 
 #twitter {
 	height: 30px; 
 	width: 30px; 
+	margin-top: 5px;
 	border: none;
 	box-shadow: none; 
 }
@@ -150,6 +154,7 @@
 #facebook {
 	height: 30px; 
 	width: 30px; 
+	margin-top: 5px;
 	border: none; 
 	box-shadow: none;
 }
@@ -157,9 +162,11 @@
 #productURL {
 	width: 120px; 
 	height: 20px;
-	margin-top: 8px;
+	margin-top: 5px;
+	margin-bottom: 0px;
 	width: 160px;
-	color: #666; 
+	background-color: #FFFDDD;
+	font-size: 15px;
 	border-radius: 4px; 
 	cursor: pointer; 
 	text-align: center;

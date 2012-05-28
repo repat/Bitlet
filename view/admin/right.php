@@ -11,7 +11,7 @@
 		<div class="imgDiv"><img src="/img/motta.png"/></div>
 
 		<div class="tableDiv"><div class="productInfo">
-			<p id="description">This is a PS file which allows you to make an awesome cat image.</p>
+			<p id="description"><b>About this file - </b>This is a PS file which allows you to make an awesome cat image.</p>
 			<hr>
 			<table>
 				<? switch($category) {	// different HTML for different catagory of files
@@ -100,7 +100,7 @@
 		</div></div>
 
 		<div class="shareInfo">
-			<h3>Share this product</h3>
+			<h3>Share this product and earn credits!</h3>
 			<hr>
 			<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="bitlet.co/l/24d3f"/>
 			<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
