@@ -100,6 +100,8 @@
 		</div></div>
 
 		<div class="shareInfo">
+			<h3>Share this product</h3>
+			<hr>
 			<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="bitlet.co/l/24d3f"/>
 			<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
 			<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
