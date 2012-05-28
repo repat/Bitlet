@@ -43,7 +43,7 @@
 				$dir = 'view/legal';
 				break;
 			case 'reset-details':
-				$dir = 'view/reset-password';
+				$dir = 'view/reset-details';
 				break;
 			default:
 				$dir = 'view/error';
