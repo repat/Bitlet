@@ -20,9 +20,9 @@ $category = 'video';
 <div class="main-shebang">
 
 		<div class="topDiv">
-			<img class="profilePic" src="/img/arianna.png"/>
-			<h1> Welcome, <? echo $user['name']; ?>!</h1> 
-			<h2>Modify your account</h2>
+			<img class="profilePic" src="/img/team/arianna.png"/>
+			<h1>Welcome, <? echo $user['name']; ?>!</h1> 
+			<h2>"The early bird may get the worm, but the second mouse gets the cheese." -<i>A wise man</i></h2>
 			<form class="form-search">
 				<input type="text" class="input-medium search-query" placeholder="Search">
 			</form>

@@ -1,13 +1,13 @@
 /*Everything pertaining to the right side div commences here*/
 .rightSideBottom {
-	position:absolute;
+	position: absolute;
 	z-index: 18;
 	top: 0px; 
-	right:0px; 
-	width:300px; 
-	height:100%; 
+	right: 0px; 
+	width: 300px; 
+	height: 100%; 
 	float: right; 
-	background:#CFE5F4; 
+	background: url(/img/bg/bg-grey.png);
 	o-border-top-right-radius: 10px;
 	-moz-border-radius-topright: 10px;
 	-webkit-border-top-right-radius: 10px;
@@ -17,103 +17,138 @@
 }
 
 .rightSideDiv {
-	position:absolute;
+	margin-top: 80px;
+	padding-top: 5px;
+	position: absolute;
 	z-index: 20;
-	width:300px; 
+	width: 300px; 
 	float: right; 
 }
 
 .topLeft {
-	margin-top:100px; 
+	margin-left: 15px;
 	float: left;
+	text-align: left;
 }
 
 .topRight {
-	margin-top:100px; 
-	float: right;
+	margin-right: 15px;
 	text-align: right;
 }
 
 .topLeft h2 {
-	font-size:18px; 
+	font-size: 18px; 
+	line-height: 30px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.43);
 }
 
 .topLeft h3 {
-	font-size:14px; 
+	font-size: 12px; 
+	line-height: 16px;
+	font-weight: 300;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.43);
 }
 
 .topRight h2 {
-	font-size:18px; 
+	font-size: 30px; 
+	line-height: 50px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.43);
 }
 
 .topRight h3 {
-	font-size:14px; 
+	font-size: 14px; 
+	line-height: 16px;
+	font-weight: 300;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.43);
 }
 
 .imgDiv {
-	text-align:center; 
+	background: #111;
+	text-align: center; 
+	margin-top: 10px;
 }
 
 .imgDiv img {
-	height:250px; 
-	width:250px;
-	border:5px solid #fff; 
-	box-shadow:4px 4px 2px #888888;	
+	height: 250px; 
+	width: 250px;
+	border: 2px solid #111;
 }
 
-.shareInfo {
-	margin-top:10px; 
-	text-align:center;
-}
-
-#twitter {
-	left:210px; 
-	height:32px; 
-	width:32px; 
-	border:none;
-	box-shadow:none; 
-}
-
-#facebook {
-	height:32px; 
-	width:32px; 
-	border:none; 
-	box-shadow:none;
-}
-
-#productURL {
-	width:120px; 
-	height:22px;
-	color:#666; 
-	border-radius:4px; 
-	cursor:pointer; 
-	text-align:center;
-}
 
 .tableDiv {
-	text-align:center;
-	line-height:10px; 
+	text-align: center;
 }
 
 .productInfo { 
-	height:150px; 
-	padding-left:50px; 
-	margin-top:5px; 
+	background: #FFF;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 0;
+	width: 280px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px 1px #999;
+	-moz-box-shadow: 2px 2px 5px 1px #999;
+	-webkit-box-shadow: 2px 2px 5px 1px #999;
+}
+
+.productInfo hr {
+	margin: 5px 0;
+}
+
+#description {
+	text-align: center;
+	font-size: 12px;
 }
 
 .left {
-	text-align:right; 
-	padding-left:50px; 
-	padding-right:20px; 
+	text-align: right; 
+	vertical-align: text-top;
+	width: 130px;
+	color: #555;
+	padding-right: 10px;
 }
 
 .right {
-	text-align:left; 
+	text-align: left; 
+	vertical-align: text-top;
+	width: 130px;
+	padding-left: 10px;
+}
+
+.shareInfo {
+	margin-top: 10px; 
+	text-align: center;
+}
+
+#twitter {
+	left: 210px; 
+	height: 32px; 
+	width: 32px; 
+	border: none;
+	box-shadow: none; 
+}
+
+#facebook {
+	height: 32px; 
+	width: 32px; 
+	border: none; 
+	box-shadow: none;
+}
+
+#productURL {
+	width: 120px; 
+	height: 22px;
+	color: #666; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	text-align: center;
 }
 
 #edit {
-	position:absolute; 
-	top:620px; 
-	left:220px;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20px;
 }
 
