@@ -11,7 +11,7 @@
 		<div class="imgDiv"><img src="/img/motta.png"/></div>
 
 		<div class="tableDiv"><div class="productInfo">
-			<p id="description"><b>About this file - </b>This is a PS file which allows you to make an awesome cat image.</p>
+			<p id="description"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image.</p>
 			<hr>
 			<table>
 				<? switch($category) {	// different HTML for different catagory of files
@@ -85,10 +85,6 @@
 					<tr>
 						<td class="left">ISO</td>
 						<td class="right">3200</td>
-					</tr>
-					<tr>
-						<td class="left">Camera Type</td>
-						<td class="right">Nikon</td>
 					</tr>
 					<tr>
 						<td class="left">Length</td>
