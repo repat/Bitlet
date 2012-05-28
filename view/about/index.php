@@ -2,10 +2,10 @@
 	<div class="aboutTop">
 		<div class="cloud"><img src="img/drawings/bitcloud.png"/></div>
 		<div class="about">
-			<h3>Meet Bitlet</h3>
-			<p> David, Zach, and Arianna started Bitlet because they thought people should have an easy way to sell the cool things they create. 
-			David, Zach, and Arianna started Bitlet because they thought people should have an easy way to sell the cool things they create. 
-			David, Zach, and Arianna started Bitlet because they thought people should have an easy way to sell the cool things they create.  </p>
+			<h3 class="teamTitle">Meet Bitlet</h3>
+			<p class="teamText"> David, Zach, and Arianna started Bitlet because they thought people should have an easy way to sell the cool things they create. We know there's nothing better than making money doing what you love. </p>
+			<p class="teamText">Now you can write a book, make a video, or produce any other kind of quality digital content, and sell it through Bitlet.</p>
+			<p class="teamText">Whether you're an up-and-coming musician, digital artist, or writer, you Bitlet will help you start making a profit, right now. </p>
 		</div>
 	</div>
 	<hr>
