@@ -49,7 +49,6 @@
 	margin-right: auto;
 	padding: 3px 10px;
 	top: 10px;
-	background: #28306B;
 	width: 500px;
 
 	o-border-radius: 5px;
@@ -58,9 +57,16 @@
 	border-radius: 5px;
 	
 	/* inner shadow */
-	-moz-box-shadow:    inset 0px 1px 5px #000000;
-	-webkit-box-shadow: inset 0px 1px 5px #000000;
-	box-shadow:         inset 0px 1px 5px #000000;
+	-moz-box-shadow:    inset 0px 1px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0px 1px 5px rgba(0,0,0,0.5);
+	box-shadow:         inset 0px 1px 5px rgba(0,0,0,0.5);
+
+	/* vertical gradient */
+	background: #28306B; /* for non-css3 browsers */
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F3A7E', endColorstr='#28306B'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2F3A7E), to(#28306B)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2F3A7E,  #28306B); /* for firefox 3.6+ */ 
 }
 
 .overviewData td {
@@ -72,5 +78,9 @@
 #overviewNum {
 	font-size: 35px;
 	line-height: 35px;
+}
+
+#overviewDescr {
+	font-weight: 300;
 }
 
