@@ -56,6 +56,11 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	
+	/* inner shadow */
+	-moz-box-shadow:    inset 0px 1px 5px #000000;
+	-webkit-box-shadow: inset 0px 1px 5px #000000;
+	box-shadow:         inset 0px 1px 5px #000000;
 }
 
 .overviewData td {

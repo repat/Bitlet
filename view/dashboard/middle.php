@@ -1,11 +1,6 @@
 <div class= "centerDiv">
-	<button class="btn btn-success" id="newProduct">Add a Product </button>
 	<div class="tabbable">
-		 <div class="btn-group" data-toggle="buttons-radio">
-			<button class="btn active" href="#tab1" data-toggle="tab">Products</button>
-			<button class="btn" href="#tab2" data-toggle="tab">Purchases</button>
-		  </div>
-		  <div class="tab-content">
+		<div class="tab-content">
 			<div class="tab-pane active" id="tab1">
 				<table class="table-striped" id="products">
 					  <tbody>
