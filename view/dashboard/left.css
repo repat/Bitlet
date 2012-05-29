@@ -24,25 +24,31 @@
 	margin: 80px 0 10px 0;
 }
 
+.leftSideMenu img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
 .leftSideMenu li a {
 	color: #FFF;
-	height: 32px;
   	voice-family: "\"}\""; 
   	voice-family: inherit;
-  	height: 24px;
 	text-decoration: none;
-	height: 40px;
-	vertical-align: middle;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
 }	
 	
 .leftSideMenu li a:link, #navMenu li a:visited {
 	display: block;
-	padding: 8px 0 0 10px;
+	padding: 10px 0 10px 0;
 }
 	
 .leftSideMenu li a:hover {
 	color: #FFF;
-	padding: 8px 0 0 10px;
+	padding: 10px 0 10px 0;
 	background: #5561A5;
 }
 .leftSideMenu ul {
