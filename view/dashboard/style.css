@@ -104,14 +104,6 @@
 	color:#475189; 	
 }
 
-.form-search {
-	position: absolute; 
-	float: right; 
-	bottom: 0px; 
-	right:20px; 
-	z-index: 100; 
-}
-
 .centerDiv{ 
 	margin-left: 120px;
 	margin-right:300px;  

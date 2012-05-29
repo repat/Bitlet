@@ -20,12 +20,17 @@ $category = 'video';
 <div class="main-shebang">
 
 		<div class="topDiv">
-			<img class="profilePic" src="/img/team/arianna.png"/>
-			<h1>Welcome, <? echo $user['name']; ?>!</h1> 
-			<h2>"The early bird may get the worm, but the second mouse gets the cheese." -<i>A wise man</i></h2>
-			<form class="form-search">
-				<input type="text" class="input-medium search-query" placeholder="Search">
-			</form>
+			<div id="overviewData">
+				<div id="credits">18</div>
+				<div id="totalCredits">Total Credits</div>
+
+				<div class="sideData" id="sales">50</div>
+				<div class="sideDataText" id="totalSales">Total Sales</div>
+				<div class="sideData" id="bought">12</div>
+				<div class="sideDataText" id="totalBought">Purchased</div>
+				<div class="sideData" id="selling">9</div>
+				<div class="sideDataText" id="totalSelling">Products</div>
+			</div>
 		</div>
 	
 		<? require_once 'left.php'?>
