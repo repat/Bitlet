@@ -43,6 +43,11 @@ body {
 	color: #005580;
 }
 
+
+#userEmail {
+	color:#000; 
+	background:none; 
+}
 /*
  * Footer Styling 
  */
