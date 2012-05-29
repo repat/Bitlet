@@ -5,10 +5,14 @@ body {
 }
 
 /*
- * Navigation Styling 
+ * Navigation Styling/ Top Area Styles 
+ * 
  */
-.navbar-bitlet{
+#navbar-bitlet{
 	height:100px;
+}
+#navbar-bitlet .container{
+	width:980px;
 }
 .brand{
 	background:url(/img/logoSmall.png) no-repeat;
@@ -21,25 +25,21 @@ body {
 .brand h1{
 	text-indent:-99999px;
 }
-.brand:hover {
-}
-.pull-right {
-	float:right;	
-}
 .menu-navbar-bitlet{
 	font-size:15px;
 	padding-top:50px;
 	color:#000066;
 	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	float:right;
 }
 .menu-navbar-bitlet a{
 	padding:0px 0px 0 15px;
 	color:#000066; 
 }
-.menu-navbar-bitlet #account {
+#imenu-navbar-account {
 	padding: 0px;
 }
-.menu-navbar-bitlet #welcome {
+#menu-navbar-welcome {
 	color: #005580;
 }
 
@@ -78,6 +78,11 @@ footer h3 {
 	 color:#9EC5CD; 
 	float:right;
 }
+
+/*
+ * Styles that are commonly used
+ */
+
 
 /* 
  * Other Sytling Non-Major Standard Units, Etc:
