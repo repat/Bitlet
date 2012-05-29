@@ -3,10 +3,10 @@
 		<nav class="clearfix">
 		</nav>
 		<div class="container" style="width:980px">
-			<a href="/" class="footer-text">FAQ</a>
-			<a href="/" class="footer-text">About</a>
+			<a href="/faq" class="footer-text">FAQ</a>
+			<a href="/about" class="footer-text">About</a>
 			<a href="/legal" class="footer-text">Legal</a>
-			<a href="/" class="footer-text">Support</a>
+			<a href="/support" class="footer-text">Support</a>
 			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
 
 			<p class="copyright-text">&copy;2012 Bitlet, Inc</p>
@@ -52,7 +52,7 @@
 			<input type="checkbox" name="rememberMe" value="rememberMe">
 			Remember Me	
         </label>
-		<p class="forgot-password-login"><a href="reset-details">Forgot Details?</a></p>
+		<p class="forgot-password-login"><a href="/reset-details">Forgot Details?</a></p>
 	</div>
 	<div class="modal-footer modal-login-footer">
 		<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-primary">Login</button>
