@@ -36,7 +36,7 @@
 	-webkit-border-top-left-radius: 10px;
 	-moz-border-radius-topright: 10px;
 	-webkit-border-top-right-radius: 10px;
-	
+	border-bottom: 1px solid #28306B;	
 }
 
 .profilePic {
