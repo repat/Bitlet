@@ -20,5 +20,33 @@
 }
 
 .leftSideMenu {
-	margin-top: 80px;
+	width: 120px;
+	margin: 80px 0 10px 0;
+}
+
+.leftSideMenu li a {
+	color: #FFF;
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 24px;
+	text-decoration: none;
+	height: 100px;
+}	
+	
+.leftSideMenu li a:link, #navMenu li a:visited {
+	display: block;
+	padding: 8px 0 0 10px;
+	background: #475189;
+}
+	
+.leftSideMenu li a:hover {
+	color: #FFF;
+	padding: 8px 0 0 10px;
+	background: #5561A5;
+}
+.leftSideMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
