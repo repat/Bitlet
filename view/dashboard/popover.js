@@ -1,2 +1,4 @@
 $('#productURL').tooltip({placement:'bottom'});
-$('#productURL').click(this.select());
+$('#productURL').click(function() {
+	this.select();
+});

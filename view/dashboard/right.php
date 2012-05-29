@@ -11,7 +11,7 @@
 		<div class="imgDiv"><img src="/img/motta.png"/></div>
 
 		<div class="tableDiv"><div class="productInfo">
-			<p id="description"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image.</p>
+			<p id="productDescr"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image.</p>
 			<hr>
 			<table>
 				<? switch($category) {	// different HTML for different catagory of files

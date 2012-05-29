@@ -17,18 +17,17 @@ $category = 'video';
 
 ?>
 
-<div class="main-shebang">
-
-		<div class="topDiv">
-			<div id="overviewData">
+<div id="main-shebang">
+		<div id="topDiv">
+			<div class="overviewData">
 				<table>
-					<tr id="numbers">
+					<tr id="overviewNum">
 						<td>18</td>
 						<td>50</td>
 						<td>50</td>
 						<td>50</td>
 					</tr>
-					<tr id="description">
+					<tr id="overviewDescr">
 						<td>Total Credits</td>
 						<td>Total Sales</td>
 						<td>Purchases</td>
@@ -41,6 +40,5 @@ $category = 'video';
 		<? require_once 'left.php'?>
 		<? require_once 'middle.php'?>
 		<? require_once 'right.php'?>
-
 </div>
 	
