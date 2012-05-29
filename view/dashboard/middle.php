@@ -3,7 +3,7 @@
 	<div class="tabbable">
 		 <div class="btn-group" data-toggle="buttons-radio">
 			<button class="btn active" href="#tab1" data-toggle="tab">Products</button>
-			<button class="btn" href="#tab2" data-toggle="tab">Purchased</button>
+			<button class="btn" href="#tab2" data-toggle="tab">Purchases</button>
 		  </div>
 		  <div class="tab-content">
 			<div class="tab-pane active" id="tab1">
@@ -33,4 +33,4 @@
 		</div>
 	</div>
 </div>
-<div id="shadow"></div>
+<div id="divShadow"></div>

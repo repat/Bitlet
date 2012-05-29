@@ -21,15 +21,20 @@ $category = 'video';
 
 		<div class="topDiv">
 			<div id="overviewData">
-				<div id="credits">18</div>
-				<div id="totalCredits">Total Credits</div>
-
-				<div class="sideData" id="sales">50</div>
-				<div class="sideDataText" id="totalSales">Total Sales</div>
-				<div class="sideData" id="bought">12</div>
-				<div class="sideDataText" id="totalBought">Purchased</div>
-				<div class="sideData" id="selling">9</div>
-				<div class="sideDataText" id="totalSelling">Products</div>
+				<table>
+					<tr id="numbers">
+						<td>18</td>
+						<td>50</td>
+						<td>50</td>
+						<td>50</td>
+					</tr>
+					<tr id="description">
+						<td>Total Credits</td>
+						<td>Total Sales</td>
+						<td>Purchases</td>
+						<td>Products</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	
