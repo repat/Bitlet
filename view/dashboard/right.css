@@ -1,12 +1,11 @@
 /*Everything pertaining to the right side div commences here*/
-.rightSideBottom {
+.rightSideContainer {
 	position: absolute;
 	z-index: 18;
 	top: 0px; 
 	right: 0px; 
 	width: 300px; 
 	height: 100%; 
-	float: right; 
 	background: url(/img/bg/bg-grey.png);
 	o-border-top-right-radius: 10px;
 	-moz-border-radius-topright: 10px;
@@ -16,13 +15,10 @@
 	-webkit-border-bottom-right-radius: 10px;
 }
 
-.rightSideDiv {
+.rightSideMenu {
 	margin-top: 80px;
 	padding-top: 5px;
-	position: absolute;
-	z-index: 20;
 	width: 300px; 
-	float: right; 
 }
 
 .topLeft {
