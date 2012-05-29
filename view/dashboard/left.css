@@ -31,13 +31,13 @@
   	voice-family: inherit;
   	height: 24px;
 	text-decoration: none;
-	height: 100px;
+	height: 40px;
+	vertical-align: middle;
 }	
 	
 .leftSideMenu li a:link, #navMenu li a:visited {
 	display: block;
 	padding: 8px 0 0 10px;
-	background: #475189;
 }
 	
 .leftSideMenu li a:hover {
@@ -49,4 +49,10 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.leftSideMenu hr {
+	margin: 0;
+	border-top: 1px solid #28306B;
+	border-bottom: 1px solid #475189;
 }
