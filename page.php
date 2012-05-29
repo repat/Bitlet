@@ -27,8 +27,8 @@
 			case 'dashboard':
 				$dir = 'view/dashboard';
 				break;
-			case 'help':
-				$dir = 'view/help';
+			case 'faq':
+				$dir = 'view/faq';
 				break;
 			case 'about':
 				$dir = 'view/about';

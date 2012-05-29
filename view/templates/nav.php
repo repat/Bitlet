@@ -2,17 +2,17 @@
 $uid = $_SESSION['uid'];
 ?>
 
-<div class="navbar-bitlet">
-	<div class="container" style="width:980px;">
+<div id="navbar-bitlet">
+	<div class="container">
 		<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
 
-		<div class="menu-navbar-bitlet pull-right">
+		<div class="menu-navbar-bitlet">
 			<? if($uid >= 0) { // already logged in ?>
-				<span id="welcome">Welcome <? echo GetUserName($uid); ?>, </span>
-				<a id="account" href="/admin">View your account</a>
+				<span id="menu-navbar-welcome">Welcome <? echo GetUserName($uid); ?>, </span>
+				<a id="menu-navbar-account" href="/dashboard">View your account</a>
 			<? } else { // not logged in ?>
 				<a href="http://affiliates.bitlet.co">Affiliates</a> 
-				<a href="/help">Help</a>
+				<a href="/faq">FAQ</a>
 				<a onclick="showLogin();" href="#">Login</a>
 			<? } ?>
 		</div>
