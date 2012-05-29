@@ -24,8 +24,8 @@
 			case '':
 				$dir = 'view/home';
 				break;
-			case 'admin':
-				$dir = 'view/admin';
+			case 'dashboard':
+				$dir = 'view/dashboard';
 				break;
 			case 'help':
 				$dir = 'view/help';
