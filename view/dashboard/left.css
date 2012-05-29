@@ -62,3 +62,7 @@
 	border-top: 1px solid #28306B;
 	border-bottom: 1px solid #475189;
 }
+
+.leftSideMenu .active a {
+	background: #5055A0;
+}
