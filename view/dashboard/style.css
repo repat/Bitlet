@@ -19,7 +19,7 @@
 	-webkit-box-shadow: 2px 2px 5px 1px #999;
 
 	/* rounded corner */
-	o-border-radius: 20px;
+	o-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -33,6 +33,8 @@
 	z-index:100; 
 	letter-spacing:1px; 
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
+
+	/* gradient */
 	background: #586CB9; /* for non-css3 browsers */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#586CB9', endColorstr='#3B53AD'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#586CB9), to(#3B53AD)); /* for webkit browsers */
@@ -49,16 +51,20 @@
 
 .overviewData {
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	top: 10px;
-	height: 60px;
+	float: left;
+	margin-left: 115px;
+	top: 7px;
+	height: 66px;
 	width: 500px;
 
-	o-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	o-border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+	o-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	
 	/* inner shadow */
 	-moz-box-shadow:    inset 0px 1px 5px rgba(0,0,0,0.5);
@@ -81,15 +87,52 @@
 	float: left;
 }
 
+#creditsDiv {
+	float: left;
+	overflow: hidden;
+	margin-top: 7px;
+	color: #FFF;
+	height: 64px;
+	min-width: 115px;
+	padding: 0 5px;
+	text-align: center;
+	border-top: 1px solid #6571B5;
+	border-bottom: 1px solid #253175;
+	border-left: 1px solid #253175;
+	border-right: 1px solid #6571B5;
+
+	background: #5561A5;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5561A5', endColorstr='#354185'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#5561A5), to(#354185)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #5561A5,  #354185); /* for firefox 3.6+ */ 
+}
+
+#cashOut {
+	float: left;
+	margin-top: 7px;
+	width: 125px;
+	height: 66px;
+	background: #2CA942;
+
+	o-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	o-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 #overviewNum {
-	font-size: 35px;
+	font-size: 30px;
 	line-height: 35px;
-	margin: 3px 0;
+	margin: 5px 0 3px 0;
 }
 
 #overviewDescr {
 	font-weight: 300;
 	font-size: 12px;
-	font-height: 12px;
+	line-height: 12px;
 }
 

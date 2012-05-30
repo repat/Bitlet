@@ -22,7 +22,7 @@ $category = 'video';
 			<div class="overviewData">
 				<div class="theData">
 					<p id="overviewNum">18</p>
-					<p id="overviewDescr">Credits</p>
+					<p id="overviewDescr">Shares</p>
 				</div>
 				<div class="theData">
 					<p id="overviewNum">18</p>
@@ -36,6 +36,13 @@ $category = 'video';
 					<p id="overviewNum">18</p>
 					<p id="overviewDescr">Products</p>
 				</div>
+			</div>
+			<div id="creditsDiv">
+				<p id="overviewNum">$3000</p>
+				<p id="overviewDescr">Credits</p>
+			</div>
+			<div id="cashOut">
+				Cash Out!
 			</div>
 		</div>
 	
