@@ -1,5 +1,6 @@
 <?
-$uid = $_SESSION['uid'];
+$uid = $_SESSION['uid']; 
+list($name, ) = explode('@', GetUserNames($uid));
 ?>
 
 <div id="navbar-bitlet">
@@ -8,23 +9,23 @@ $uid = $_SESSION['uid'];
 
 		<div class="menu-navbar-bitlet">
 			<? if($uid >= 0) { // already logged in ?>
-				<span id="welcome">Welcome</span>
+				<span id="welcome">Welcome,</span>
 					<ul class="nav login">
 						<li class="dropdown"> 
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail"><? echo GetUserName($uid); ?>,  
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail"><? echo $name; ?>!  
 								<b class="caret"></b>
 							</a>
 								<ul class="dropdown-menu" id="menu1">
-									<li>
+									<li class="dropObj">
 										<a href="#">Dashboard</a>
 									</li>
-									<li>
+									<li class="dropObj">
 										<a href="#">FAQ</a>
 									</li>
-									<li>
+									<li class="dropObj">
 										<a href="#">Settings</a>
 									</li>
-									<li>
+									<li class="dropObj">
 										<a href="#">Logout</a>
 									</li>
 								</ul>

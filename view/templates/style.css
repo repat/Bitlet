@@ -43,9 +43,12 @@ body {
 	color: #005580;
 }
 
+.dropObj {
+	font-size:11px; 
+}
 
 #userEmail {
-	color:#000; 
+	color:#005580; 
 	background:none; 
 }
 /*
