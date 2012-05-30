@@ -47,22 +47,48 @@ body {
 #userEmail {
 	color:#3F4042; 
 	border: 1px solid #ddd; 
-	background:#D3D3D4;
 	padding:5px; 
+	border-radius:5px;
+	box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
+	text-decoration:none; 
+}
+
+#userEmail a:hover {
+	color:white; 
+	text-decoration:none; 
+}
+
+.open #userEmail {
+	background:transparent; 
+	text-decoration:none; 
+}
+
+#caret {
+	border-radius:5px;
+	background:#D3D3D4;
+	margin-right:6px; 
 }
 
 /* Dropdown menu styles */
 
 #menu1 {
-	min-width:120px; 
+	min-width:135px; 
 	font-size:11px; 
 	color:#333; 
+	background:white; 
+	margin-top:4px;
+	text-align:right;
+	opacity: 0.8; 
 }
 
 #menu1 a{
 	color:#333; 
 	padding:5px; 
 	padding-left:10px; 
+}
+
+#menu1 a:hover {
+	background:white; 
 }
 /*/
  * Footer Styling 
