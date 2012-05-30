@@ -1,14 +1,14 @@
-<div id="bitlet-hero">
-	<div id="hero-container">
-		<div id="home-featured-left">
-			<img id="hero-img" src="/img/drawings/hero.png">
+<div id="bitletHero">
+	<div id="heroContainer">
+		<div id="homeFeaturedLeft">
+			<img id="heroImg" src="/img/drawings/hero.png">
 		</div><? // end of home-feature-left ?>
 
-		<div id="home-featured-right">
+		<div id="homeFeaturedRight">
 			<div class="content">
 				<h1>Start Selling Online Instantly</h1>
 				<h2>Bitlet allows anyone to make money. Just enter your email and select your masterpiece to get started!</h2>
-				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="home-upload" 
+				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="homeUpload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
 					<div class="input-prepend">
 						<span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope icon-white"></i></span>
@@ -25,18 +25,18 @@
 					</button>
 					<input type="file" name="file" id="button" class="file-button" style="display:hidden"
 						 onchange="
-							$('#home-upload').submit();
+							$('#homeUpload').submit();
 							// disable the file selection button
 							$('.upload-button').attr('disabled', 'disabled'); 
 							$('.file-button').attr('disabled', 'disabled');"
 					/>
 				</form>	
-				<div class="email-suggestion-wrap">
-					<? if($uid < 0) { // only show email suggestions when not logged in ?><div class="email-suggestion"></div><? } ?>
+				<div id="emailSuggestionWrap">
+					<? if($uid < 0) { // only show email suggestions when not logged in ?><div id="emailSuggestion"></div><? } ?>
 				</div>
 			</div><? // content ?>
-			<div id="top-triangle" class="triangle"></div> 
-			<div id="bottom-triangle" class="triangle"></div> 
+			<div id="topTriangle" class="triangle"></div> 
+			<div id="bottomTriangle" class="triangle"></div> 
 		</div><? // end of home-feature-right ?>
 	</div><? // end of contianer ?>
 </div><? // end of bitlet-hero ?>
@@ -44,7 +44,7 @@
 <? // MARKETING STUFF GOES HERE ?>
 <div id="marketingBg" class="container well" >
 	<h1>Why you'll love using Bitlet</h1>
-	<img id="bitlet-cloud-home" src="/img/drawings/bitcloud.png">
+	<img id="bitletCloudHome" src="/img/drawings/bitcloud.png">
 	<hr>
 	<div class="row">
 		<div class="span4">
@@ -81,21 +81,6 @@
 </div>
 
 <? // Hidden Upload iFrame for Async Uploading ?>
-<iframe name="upload_iframe" class="upload-iframe">
+<iframe name="upload_iframe" id="homeUploadIframe">
 </iframe>
 
-<? // uploaded file view modal ?>
-<div id="FileModal" class="modal hide fade">
-	<div class="modal-header">
-		<button class="close" data-dismiss="modal">x</button>
-    	<h3>Item Details</h3>
-	</div>
-	<? // dialog contents ?>
-    <div class="modal-body">
-		<iframe class="FileIFrame"></iframe>
-	</div>
-	<? // dialog buttons ?>
-    <div class="modal-footer">
-        <a href="#" class="btn primary">Upload Another File</a>
-    </div>
-</div>

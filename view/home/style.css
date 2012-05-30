@@ -1,20 +1,20 @@
 /* Bitlet-hero */
-#bitlet-hero{
+#bitletHero{
 	height:300px;
 	width:100%;
 	background:#6885A7;
 	margin-bottom:35px;
 }
-#hero-container {
+#heroContainer {
 	margin-left: auto;
 	margin-right: auto;
 	width: 980px;
 }
 
-#home-featured-left{
+#homeFeaturedLeft{
 	float:left;
 }
-#home-featured-right{
+#homeFeaturedRight{
 	float: right;
 	width: 440px;
 	background:url(/img/hero-pop-bg.png) repeat;
@@ -25,19 +25,19 @@
 	-webkit-box-shadow:-8px 0px 21px -11px black;
 	-moz-box-shadow:-8px 0px 21px -11px black;
 }
-#home-featured-right .content{
+#homeFeaturedRight .content{
 	height:310px;
 	width:440px;
 }
 
-#hero-img {
+#heroImg {
 	width: 520px;
 	height: 312px;
 	margin-top: -12px;
 }
 
 /* Hero Content */
-#home-featured-right .content h1 {
+#homeFeaturedRight .content h1 {
 	margin-left: 30px;
 	margin-top: 30px;
 	color: #E37039;
@@ -48,7 +48,7 @@
 	text-shadow:#FFF 0px 1px 0, #773A1E 0 -1px 0;
 }
 
-#home-featured-right .content h2 {
+#homeFeaturedRight .content h2 {
 	margin-left: 35px;
 	margin-right: 30px;
 	margin-top: 10px;
@@ -57,20 +57,20 @@
 	line-height: 20px;
 }
 
-#home-featured-right .triangle {
+#homeFeaturedRight .triangle {
 	border-color: transparent #DACFBA transparent transparent;
 	border-style:solid;
 	height:0px;
 	width:0px;
 }
-#top-triangle{
+#topTriangle{
 	position: relative;
 	top: -350px;
 	left: -46px;
 	z-index: -1;
 	border-width:18px;
 }
-#bottom-triangle{
+#bottomTriangle{
 	position: relative;
 	top: -92px;
 	left: -46px;
@@ -80,11 +80,11 @@
 
 /* Email and Upload Area in Hero
 Inputs */
-#home-upload {
+#homeUpload {
 	margin-top: 20px;
 }
 
-#home-upload #email {
+#homeUpload #email {
 	height: 26px;
 	width: 230px;
 	font-size: 18px;
@@ -93,7 +93,7 @@ Inputs */
 	border-left: 0px;
 }
 
-#home-upload #emaila {
+#homeUpload #emaila {
 	height: 26px;
 	width: 16px;
 	border: 1px solid #6491CC;
@@ -101,33 +101,33 @@ Inputs */
 	background: #6491CC;
 }
 
-#home-upload #email-icon {
+#homeUpload #email-icon {
 	margin-top: 5px;
 }
 
 /* we want to hide the actual upload button off screen*/
-#home-upload input[type="file"], .file-button {
+#homeUpload input[type="file"], .file-button {
 	opacity: 0;
 	-moz-opacity: 0;
 	position: absolute;
 	top: -100px;
 	left: -100px;
 }
-#home-upload .upload-button, .btn{
+#homeUpload .upload-button, .btn{
 	font-size:14px;
 }
 /* bootstrap hackaround */
-#home-upload .input-prepend .add-on {
+#homeUpload .input-prepend .add-on {
 	margin-right: -5px !important;
 }
 
 /* email suggestion */
-.email-suggestion{
+#emailSuggestion{
 	color: #34619C;
 	text-align:left;
 	margin-left: 40px;
 }
-.email-suggestion-wrap{
+#emailSuggestionWrap{
 	height:25px;
 	margin-top:-15px;
 } 
@@ -151,7 +151,7 @@ Inputs */
 	box-shadow: none;
 }
 
-#bitlet-cloud-home {
+#bitletCloudHome {
 	position: absolute;
 	margin-left: 768px;
 	margin-top: -46px;
@@ -195,3 +195,7 @@ Inputs */
 	margin-right: 200px;
 }
 
+/* upload iframe */
+#homeUploadIframe {
+	display: none;
+}
