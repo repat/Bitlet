@@ -14,8 +14,7 @@ if($uid >= 0)
 
 		<div class="menu-navbar-bitlet">
 			<? if($uid >= 0) { // already logged in ?>
-				<span id="welcome">Welcome,</span>
-					<span  class="dropdown">
+					<div  class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail">
 							<? echo $name; ?>! <b class="caret"></b>
 						</a>
@@ -33,7 +32,7 @@ if($uid >= 0)
 								<a href="#">Logout</a>
 							</li>
 						</ul>
-					</span>
+					</div>
 			<? } else { // not logged in ?>
 				<a href="http://affiliates.bitlet.co">Affiliates</a> 
 				<a href="/faq">FAQ</a>

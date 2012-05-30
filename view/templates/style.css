@@ -45,7 +45,10 @@ body {
 }
 
 #userEmail {
-	color:#005580; 
+	color:#3F4042; 
+	border: 1px solid #ddd; 
+	background:#D3D3D4;
+	padding:5px; 
 }
 
 /* Dropdown menu styles */

@@ -15,12 +15,13 @@
 	background: -moz-linear-gradient(left,  #475189,  #28306B); /* for firefox 3.6+ */ 
 
 	/* rounded corner */
-	o-border-top-left-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-webkit-border-top-left-radius: 10px;
-	o-border-bottom-left-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	-webkit-border-bottom-left-radius: 10px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
 }
 
 .leftSideMenu {
@@ -33,9 +34,9 @@
 
 	border-right: 1px solid #687CC9;
 
-	o-border-top-left-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
 
 	/* gradient */
 	background: #586CB9; /* for non-css3 browsers */

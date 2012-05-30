@@ -1,5 +1,6 @@
 <div class="rightSideContainer">
 	<div class="rightSideMenu sticky-div">
+		<div id="topBar"></div>
 		<div class="topLeft">
 			<h2>Image of Cats</h2>
 			<h3>Cats.png | 36.5 KB</h3>
