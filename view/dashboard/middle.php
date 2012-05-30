@@ -2,31 +2,29 @@
 	<div class="tabbable">
 		<div class="tab-content">
 			<div class="tab-pane active" id="tab1">
-				<table class="table contentTable">
-					  <tbody>
-						<? for($i = 0; $i < 100; $i++) { ?>
-							<tr>
-								<td id="imgTd"><img id="tableThumb" src="/img/motta.png"/></td>
-								<td class="nameTd">
-									<p id="big">Image of Cats</p>
-									<p id="small">Cats.png</p>
-								</td>
-								<td class="divider"><div></div></td>
-								<td class="infoTd">
-									<p id="big">200</p>	
-									<p id="small">Views</p>
-								</td>
-								<td class="infoTd">
-									<p id="big">10</p>	
-									<p id="small">Downloads</p>
-								</td>
-								<td class="infoTd">
-									<p id="big">$30</p>	
-									<p id="small">Earned</p>
-								</td>
-							</tr>
-						<? } ?>
-					  </tbody>
+				<ul class="contentTable">
+					<? for($i = 0; $i < 100; $i++) { ?>
+						<li>
+							<div id="imgTd"><img id="tableThumb" src="/img/motta.png"/></div>
+							<div class="nameTd">
+								<p id="big">Image of Cats</p>
+								<p id="small">Cats.png</p>
+							</div>
+							<div class="divider"><div></div></div>
+							<div class="infoTd">
+								<p id="big">200</p>	
+								<p id="small">Views</p>
+							</div>
+							<div class="infoTd">
+								<p id="big">10</p>	
+								<p id="small">Downloads</p>
+							</div>
+							<div class="infoTd">
+								<p id="big">$30</p>	
+								<p id="small">Earned</p>
+							</div>
+						</li>
+					<? } ?>
 				</table>
 			</div>
 			<div class="tab-pane" id="tab2">
