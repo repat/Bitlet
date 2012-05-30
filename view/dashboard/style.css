@@ -1,6 +1,27 @@
 .sticky {
 	position: fixed;
-	top: -60px;
+	top: -10px;
+}
+
+#top-shebang {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 980px;
+	height: 80px;
+
+	/* gradient */
+	background: #4999AC; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79C4D6', endColorstr='#4999AC'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#79C4D6), to(#4999AC)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #79C4D6,  #4999AC); /* for firefox 3.6+ */ 
+
+	/* rounded corner */
+	o-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 
 #main-shebang {
@@ -28,8 +49,9 @@
 
 #topDiv {
 	position: relative;
-	width:100%; 
-	height:80px;
+	width:859px;
+	left: 120px;	
+	height:30px;
 	z-index:100; 
 	letter-spacing:1px; 
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
@@ -42,17 +64,18 @@
 	/* For IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-	-moz-border-radius-topleft: 10px;
-	-webkit-border-top-left-radius: 10px;
+
 	-moz-border-radius-topright: 10px;
 	-webkit-border-top-right-radius: 10px;
+
 	border-bottom: 1px solid #28306B;	
+	border-left: 1px solid #28306B;
 }
 
 .overviewData {
 	position: relative;
-	float: left;
 	margin-left: 115px;
+	float: left;
 	top: 7px;
 	height: 66px;
 	width: 500px;

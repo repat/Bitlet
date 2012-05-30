@@ -1,6 +1,7 @@
 <div class="leftSideContainer">
 	<div class="leftSideMenu sticky-div">
 		<ul>
+			<li id="topCorner"></li>
 			<hr>
 			<li><a href="#"><img src="http://placekitten.com/100/100"/>Upload</a></li>
 			<hr>
