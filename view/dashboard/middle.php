@@ -2,24 +2,29 @@
 	<div class="tabbable">
 		<div class="tab-content">
 			<div class="tab-pane active" id="tab1">
-				<table class="table-striped" id="products">
-					  <tbody>
-						<? for($i = 0; $i < 100; $i++) { ?>
-							<tr>
-							  <td><img class="thumbnails" src="/img/motta.png"/></td>
-							  <td>
-								<p class="date">Image of Cats</p>
-								<p class="uploaded">Cats.png</p>
-							  </td>
-							  <td>
-								<p class="uploaded">Uploaded on</p>
-								<p class="date">1/2/12
-								<span>at</span>
-								3:22 PM</p>
-							  </td>
-							</tr>
-						<? } ?>
-					  </tbody>
+				<ul class="contentTable">
+					<? for($i = 0; $i < 100; $i++) { ?>
+						<li>
+							<div id="imgTd"><img id="tableThumb" src="/img/motta.png"/></div>
+							<div class="nameTd">
+								<p id="big">Image of Cats</p>
+								<p id="small">Cats.png</p>
+							</div>
+							<div class="divider"><div></div></div>
+							<div class="infoTd">
+								<p id="big">$30</p>	
+								<p id="small">Earned</p>
+							</div>
+							<div class="infoTd">
+								<p id="big">200</p>	
+								<p id="small">Views</p>
+							</div>
+							<div class="infoTd">
+								<p id="big">10</p>	
+								<p id="small">Downloads</p>
+							</div>
+						</li>
+					<? } ?>
 				</table>
 			</div>
 			<div class="tab-pane" id="tab2">

@@ -1,5 +1,11 @@
 <?
-$uid = $_SESSION['uid'];
+
+$uid = $_SESSION['uid']; 
+if($uid >= 0)
+{
+	list($name, ) = explode('@', GetUserName($uid));
+}
+
 ?>
 
 <div id="navbar-bitlet">
@@ -8,8 +14,26 @@ $uid = $_SESSION['uid'];
 
 		<div class="menu-navbar-bitlet">
 			<? if($uid >= 0) { // already logged in ?>
-				<span id="menu-navbar-welcome">Welcome <? echo GetUserName($uid); ?>, </span>
-				<a id="menu-navbar-account" href="/dashboard">View your account</a>
+				<span id="welcome">Welcome,</span>
+					<span  class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail">
+							<? echo $name; ?>! <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li >
+								<a href="#">Dashboard</a>
+							</li>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+							<li>
+								<a href="#">Logout</a>
+							</li>
+						</ul>
+					</span>
 			<? } else { // not logged in ?>
 				<a href="http://affiliates.bitlet.co">Affiliates</a> 
 				<a href="/faq">FAQ</a>

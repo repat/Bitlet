@@ -22,6 +22,7 @@ body {
 	margin-top:35px;
 	float:left;
 }
+
 .brand h1{
 	text-indent:-99999px;
 }
@@ -43,7 +44,24 @@ body {
 	color: #005580;
 }
 
-/*
+#userEmail {
+	color:#005580; 
+}
+
+/* Dropdown menu styles */
+
+#menu1 {
+	min-width:120px; 
+	font-size:11px; 
+	color:#333; 
+}
+
+#menu1 a{
+	color:#333; 
+	padding:5px; 
+	padding-left:10px; 
+}
+/*/
  * Footer Styling 
  */
 footer[role="contentinfo"]{

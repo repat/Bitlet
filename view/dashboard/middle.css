@@ -1,19 +1,3 @@
-.topDiv h1 {
-	color: #FFF;
-	padding-left: 80px; 
-	padding-top:15px; 
-	font-size:22px; 
-}
-
-.topDiv h2 {
-	color:#FFF;
-	font-weight: 300;	
-	padding-left:80px; 
-	padding-top:15; 
-	font-size:12px; 
-	line-height:8px; 
-}
-
 #divShadow {
 	position:absolute; 
 	height:100%; 
@@ -43,38 +27,100 @@
 	);
 }
 
-.centerDiv{ 
+.centerDiv { 
+	border-left: 1px solid #29497F;
 	margin-left: 120px;
 	margin-right:300px;  
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
+	background: #EEE;
 }
 
-.thumbnails {
-	height:45px; 
-	width:45px; 
-	margin:10px;  
-	box-shadow:2px 2px 1px #888888;	
+.contentTable {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-.table-striped {
-	width:100%;
+.contentTable li {
+	height: 60px;
+	padding: 10px 10px 10px 0;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #CCC;
+	overflow: hidden;
 }
 
-.table-striped tr {
-border-top: 1px solid #ddd; 
+.contentTable li:hover {
+	padding: 10px 10px 10px 0;
+
+	/* gradient */
+	background: #CBD7ED; /*for non-css3 browsers*/
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CBD7ED', endColorstr='#EEEEEE'); /* for IE */
+	background: -webkit-gradient(linear, left top, right top, from(#CBD7ED), to(#EEEEEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(left,  #CBD7ED,  #EEEEEE); /* for firefox 3.6+ */ 
 }
 
-.uploaded {
-	font-size:10px;
-	line-height:10px; 
-	margin:5px; 
+.divider {
+	float: left;
 }
 
-.date {
-	margin:5px; 
+.divider div {
+	height: 60px;
+	border-left: 1px solid #DDD;
 }
 
-.date span {
-	font-size:10px;
+#tableThumb {
+	height:60px; 
+	width:60px; 
+	border: 1px solid white;
+
+	/* drop shadow */
+	box-shadow: 1px 1px 1px 0px #999;
+	-moz-box-shadow: 1px 1px 1px 0px #999;
+	-webkit-box-shadow: 1px 1px 1px 0px #999;
+}
+
+#imgTd {
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.nameTd {
+	float: left;
+	width: 218px;
+}
+
+.nameTd #big {
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.nameTd #small {
+	font-size: 12px;
+	line-height: 12px;
+	color: #888;
+}
+
+.infoTd {
+	max-width: 60px;
+	overflow: hidden;
+	float: left;
+	margin: 3px 10px 0 10px;
+}
+
+.infoTd p {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.infoTd #small {
+	font-size:12px;
+	line-height:12px; 
+	color: #888;
+}
+
+.infoTd #big {
+	font-size: 20px;
+	line-height: 20px;
 }
 

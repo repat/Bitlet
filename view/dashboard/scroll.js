@@ -1,6 +1,6 @@
 var $window = $(window);
 var $stickyEl = $('.sticky-div');
-var elTop = $stickyEl.offset().top - 20;
+var elTop = $stickyEl.offset().top + 10;
 
 $window.scroll(function() {
 	var windowTop = $window.scrollTop();
