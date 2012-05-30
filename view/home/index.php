@@ -1,14 +1,14 @@
 <div id="bitlet-hero">
 	<div id="hero-container">
 		<div id="home-featured-left">
-			<img class="hero-img" src="/img/drawings/hero.png">
+			<img id="hero-img" src="/img/drawings/hero.png">
 		</div><? // end of home-feature-left ?>
 
 		<div id="home-featured-right">
 			<div class="content">
 				<h1>Start Selling Online Instantly</h1>
 				<h2>Bitlet allows anyone to make money. Just enter your email and select your masterpiece to get started!</h2>
-				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="upload" 
+				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="home-upload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
 					<div class="input-prepend">
 						<span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope icon-white"></i></span>
@@ -25,7 +25,7 @@
 					</button>
 					<input type="file" name="file" id="button" class="file-button" style="display:hidden"
 						 onchange="
-							$('#upload').submit();
+							$('#home-upload').submit();
 							// disable the file selection button
 							$('.upload-button').attr('disabled', 'disabled'); 
 							$('.file-button').attr('disabled', 'disabled');"
