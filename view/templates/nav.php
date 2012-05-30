@@ -21,16 +21,16 @@ if($uid >= 0)
 								<b class="caret"></b>
 							</a>
 								<ul class="dropdown-menu" id="menu1">
-									<li class="dropObj">
+									<li >
 										<a href="#">Dashboard</a>
 									</li>
-									<li class="dropObj">
+									<li>
 										<a href="#">FAQ</a>
 									</li>
-									<li class="dropObj">
+									<li>
 										<a href="#">Settings</a>
 									</li>
-									<li class="dropObj">
+									<li>
 										<a href="#">Logout</a>
 									</li>
 								</ul>
