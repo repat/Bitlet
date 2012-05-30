@@ -20,20 +20,22 @@ $category = 'video';
 <div id="main-shebang">
 		<div id="topDiv">
 			<div class="overviewData">
-				<table>
-					<tr id="overviewNum">
-						<td>18</td>
-						<td>50</td>
-						<td>50</td>
-						<td>50</td>
-					</tr>
-					<tr id="overviewDescr">
-						<td>Total Credits</td>
-						<td>Total Sales</td>
-						<td>Purchases</td>
-						<td>Products</td>
-					</tr>
-				</table>
+				<div class="theData">
+					<p id="overviewNum">18</p>
+					<p id="overviewDescr">Credits</p>
+				</div>
+				<div class="theData">
+					<p id="overviewNum">18</p>
+					<p id="overviewDescr">Sales</p>
+				</div>
+				<div class="theData">
+					<p id="overviewNum">18</p>
+					<p id="overviewDescr">Purchases</p>
+				</div>
+				<div class="theData">
+					<p id="overviewNum">18</p>
+					<p id="overviewDescr">Products</p>
+				</div>
 			</div>
 		</div>
 	
