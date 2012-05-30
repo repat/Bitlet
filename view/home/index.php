@@ -42,9 +42,9 @@
 </div><? // end of bitlet-hero ?>
 
 <? // MARKETING STUFF GOES HERE ?>
-<div id="marketingBg" class="container well marketing" >
+<div id="marketingBg" class="container well" >
 	<h1>Why you'll love using Bitlet</h1>
-	<img id="cloud" src="/img/drawings/bitcloud.png">
+	<img id="bitlet-cloud-home" src="/img/drawings/bitcloud.png">
 	<hr>
 	<div class="row">
 		<div class="span4">
