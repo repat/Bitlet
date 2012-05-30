@@ -44,9 +44,9 @@
 .contentTable li {
 	height: 60px;
 	padding: 10px 10px 10px 0;
-	vertical-align: middle;
 	border-top: 1px solid #FFF;
 	border-bottom: 1px solid #CCC;
+	overflow: hidden;
 }
 
 .contentTable li:hover {
@@ -87,7 +87,7 @@
 
 .nameTd {
 	float: left;
-	width: 200px;
+	width: 218px;
 }
 
 .nameTd #big {
@@ -102,8 +102,10 @@
 }
 
 .infoTd {
+	max-width: 60px;
+	overflow: hidden;
 	float: right;
-	margin: 0 10px;
+	margin: 3px 10px 0 10px;
 }
 
 .infoTd p {

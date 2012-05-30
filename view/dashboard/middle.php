@@ -12,16 +12,16 @@
 							</div>
 							<div class="divider"><div></div></div>
 							<div class="infoTd">
-								<p id="big">200</p>	
-								<p id="small">Views</p>
+								<p id="big">$30</p>	
+								<p id="small">Earned</p>
 							</div>
 							<div class="infoTd">
 								<p id="big">10</p>	
 								<p id="small">Downloads</p>
 							</div>
 							<div class="infoTd">
-								<p id="big">$30</p>	
-								<p id="small">Earned</p>
+								<p id="big">200</p>	
+								<p id="small">Views</p>
 							</div>
 						</li>
 					<? } ?>
