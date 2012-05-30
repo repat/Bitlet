@@ -101,6 +101,10 @@
 	border-left: 1px solid #253175;
 	border-right: 1px solid #6571B5;
 
+	/* letter press effect */
+	text-shadow:#FFF 0px 1px 0, #253175 0 -1px 0;
+
+	/* gradient */
 	background: #5561A5;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5561A5', endColorstr='#354185'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#5561A5), to(#354185)); /* for webkit browsers */
