@@ -59,8 +59,10 @@ body {
 }
 
 .open #userEmail {
-	background:transparent; 
+	background:white; 
 	text-decoration:none; 
+	opacity: 0.8;
+	
 }
 
 #caret {
