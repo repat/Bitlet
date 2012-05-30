@@ -41,8 +41,8 @@ $category = 'video';
 				<p id="overviewNum">$3000</p>
 				<p id="overviewDescr">Credits</p>
 			</div>
-			<div id="cashOut">
-				Cash Out!
+			<div class="cashOut">
+				<img src="/img/claim.png"/>
 			</div>
 		</div>
 	

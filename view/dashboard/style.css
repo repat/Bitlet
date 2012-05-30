@@ -99,7 +99,7 @@
 	border-top: 1px solid #6571B5;
 	border-bottom: 1px solid #253175;
 	border-left: 1px solid #253175;
-	border-right: 1px solid #6571B5;
+	border-right: 1px solid #253175;
 
 	/* letter press effect */
 	text-shadow:#FFF 0px 1px 0, #253175 0 -1px 0;
@@ -111,12 +111,21 @@
 	background: -moz-linear-gradient(top,  #5561A5,  #354185); /* for firefox 3.6+ */ 
 }
 
-#cashOut {
+.cashOut {
 	float: left;
 	margin-top: 7px;
 	width: 125px;
-	height: 66px;
-	background: #2CA942;
+	height: 64px;
+	border-top: 1px solid #FFDF85;
+	border-right: 1px solid #FFDF85;
+	border-bottom: 1px solid #CF7800;
+	border-left: 1px solid #CF7800;
+
+	/* gradient */
+	background: #FFA804;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCF75', endColorstr='#FFA804'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFCF75), to(#FFA804)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFCF75,  #FFA804); /* for firefox 3.6+ */ 
 
 	o-border-top-right-radius: 5px;
 	-moz-border-radius-topright: 5px;
@@ -126,6 +135,26 @@
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-bottom-right-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+.cashOut img {
+	width: 100px;
+	height: 35px;
+	padding: 12px 0 0 12px;
+}
+
+.cashOut:hover {
+	background: #FFA804;
+}
+
+.cashOut p {
+	font-size: 35px;
+	line-height: 35px;
+	color: #364282;
+	padding: 12px 0 0 12px;
+
+	/* letter press effect */
+	text-shadow:#7B89D6 0px 1px 0, #253175 0 -1px 0;
 }
 
 #overviewNum {
