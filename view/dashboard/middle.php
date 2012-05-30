@@ -2,18 +2,18 @@
 	<div class="tabbable">
 		<div class="tab-content">
 			<div class="tab-pane active" id="tab1">
-				<table class="table-striped" id="products">
+				<table class="table">
 					  <tbody>
 						<? for($i = 0; $i < 100; $i++) { ?>
 							<tr>
-							  <td><img class="thumbnails" src="/img/motta.png"/></td>
+							  <td><img id="tableThumb" src="/img/motta.png"/></td>
 							  <td>
-								<p class="date">Image of Cats</p>
-								<p class="uploaded">Cats.png</p>
+								<p id="tableSmall">Image of Cats</p>
+								<p id="tableBig">Cats.png</p>
 							  </td>
 							  <td>
-								<p class="uploaded">Uploaded on</p>
-								<p class="date">1/2/12
+								<p id="tableSmall">Uploaded on</p>
+								<p id="tableBig">1/2/12
 								<span>at</span>
 								3:22 PM</p>
 							  </td>

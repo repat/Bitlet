@@ -49,11 +49,10 @@
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
 }
 
-.thumbnails {
+#tableThumb {
 	height:45px; 
 	width:45px; 
-	margin:10px;  
-	box-shadow:2px 2px 1px #888888;	
+	margin-left: 20px;
 }
 
 .table-striped {
@@ -64,17 +63,13 @@
 border-top: 1px solid #ddd; 
 }
 
-.uploaded {
+#tableSmall {
 	font-size:10px;
 	line-height:10px; 
-	margin:5px; 
 }
 
-.date {
-	margin:5px; 
-}
-
-.date span {
-	font-size:10px;
+#tableBig {
+	font-size: 16px;
+	line-height: 16px;
 }
 

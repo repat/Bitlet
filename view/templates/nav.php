@@ -1,6 +1,11 @@
 <?
+
 $uid = $_SESSION['uid']; 
-list($name, ) = explode('@', GetUserNames($uid));
+if($uid >= 0)
+{
+	list($name, ) = explode('@', GetUserName($uid));
+}
+
 ?>
 
 <div id="navbar-bitlet">
