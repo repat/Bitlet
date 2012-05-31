@@ -26,11 +26,11 @@ function showLogin() {
 };
 
 // attach a submit handler to the login button
-$(".bitlet-login-submitbtn").click(function(event) {
+$("#bitletLoginSubmitbtn").click(function(event) {
 
 	// get some values from elements on the page:
-	var email = $(".login-email").val();
-	var pass = $(".login-password").val();
+	var email = $(".loginEmail").val();
+	var pass = $(".loginPassword").val();
 
 	// Send the data using post and put the results in a div
 	$.post("/ajax/login", {email:email, pass:pass},
@@ -47,11 +47,11 @@ $(".bitlet-login-submitbtn").click(function(event) {
 		}, "json");
 
 	// clear password input form
-	$('.login-password').val('');
+	$('.loginPassword').val('');
 });
 
 // attach a click handler to the logout button
-$(".logout-btn").click(function(event) {
+$("#logoutBtn").click(function(event) {
 	$.post("/ajax/logout", 
 		function(data) {
 			console.log('logout successful');

@@ -38,14 +38,14 @@
 			<span class="add-on loginAddOn">
 				<i class="icon-user loginIcon"></i>
 			</span>
-		<input type="text" size="10" autocomplete="on" class="bitletLogin login-email" placeholder="Bit@bitlet.co"/>
+		<input type="text" size="10" autocomplete="on" class="bitletLogin loginEmail" placeholder="Bit@bitlet.co"/>
         </div>
 	
 		<div class="input-prepend">
 			<span class="add-on loginAddOn">
 				<i class="icon-lock loginIcon"></i>
 			</span>
-			<input type="password" size="10" autocomplete="off" class="bitletLogin login-password" placeholder="Password"/>
+			<input type="password" size="10" autocomplete="off" class="bitletLogin loginPassword" placeholder="Password"/>
         </div>
 
 		<label class="checkbox loginRememberMe">
