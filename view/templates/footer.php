@@ -27,7 +27,7 @@
 	<!-- Silence is golden -->
 <? } else { // not logged in ?>
 <div id="LoginModal" class="modal hide fade">
-	<div class="modal-header login-modal-header">
+	<div id="loginModalHeader" class="modal-header">
 		<button class="close" data-dismiss="modal">X</button>
     	<h3>Login</h3>
 	</div>
@@ -35,27 +35,27 @@
 	<div class="modal-body">
 
 		<div class="input-prepend">
-			<span class="add-on login-add-on">
-				<i class="icon-user"></i>
+			<span class="add-on loginAddOn">
+				<i class="icon-user loginIcon"></i>
 			</span>
-		<input type="text" size="10" autocomplete="on" class="bitlet-login login-email" placeholder="Bit@bitlet.co"/>
+		<input type="text" size="10" autocomplete="on" class="bitletLogin login-email" placeholder="Bit@bitlet.co"/>
         </div>
 	
 		<div class="input-prepend">
-			<span class="add-on login-add-on">
-				<i class="icon-lock"></i>
+			<span class="add-on loginAddOn">
+				<i class="icon-lock loginIcon"></i>
 			</span>
-			<input type="password" size="10" autocomplete="off" class="bitlet-login login-password" placeholder="Password"/>
+			<input type="password" size="10" autocomplete="off" class="bitletLogin login-password" placeholder="Password"/>
         </div>
 
-		<label class="checkbox login-remember-me">
+		<label class="checkbox loginRememberMe">
 			<input type="checkbox" name="rememberMe" value="rememberMe">
 			Remember Me	
         </label>
-		<p class="forgot-password-login"><a href="/reset-details">Forgot Details?</a></p>
+		<p id="forgotPasswordLogin"><a href="/reset-details">Forgot Details?</a></p>
 	</div>
-	<div class="modal-footer modal-login-footer">
-		<button type="submit" class="bitlet-login-submitbtn btn-large submit-button btn btn-primary">Login</button>
+	<div class="modal-footer modalLoginFooter">
+		<button type="submit" id="bitletLoginSubmitbtn" class="btn-large submit-button btn btn-primary">Login</button>
 	</div>
 </div>
 <? } ?>
