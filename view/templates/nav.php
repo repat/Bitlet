@@ -16,7 +16,7 @@ if($uid >= 0)
 			<? if($uid >= 0) { // already logged in ?>
 			
 					<div  class="dropdown">
-							<a class="dropdown-toggle rounded-corners" data-toggle="dropdown" href="#" id="userEmail">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail">
 								<? echo $name; ?> <b class="caret" id="caret" ></b>
 							</a>
 							<ul class=" dropdown-menu" id="menu1">
