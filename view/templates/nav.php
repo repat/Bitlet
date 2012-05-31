@@ -14,23 +14,16 @@ if($uid >= 0)
 
 		<div class="menu-navbar-bitlet">
 			<? if($uid >= 0) { // already logged in ?>
-				<div class="dropdown">
+				<div class="dropdown bitletRoundedCorners">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail">
 						<? echo $name; ?> <b class="caret" id="caret" ></b>
 					</a>
 					<ul class="dropdown-menu" id="menu1">
-						<li >
-							<a href="/dashboard">Dashboard</a>
-						</li>
-						<li>
-							<a href="/faq">FAQ</a>
-						</li>
-						<li>
-							<a href="/settings">Settings</a>
-						</li>
-						<li>
-							<a href="#">Logout</a>
-						</li>
+						<li ><a href="/dashboard">Dashboard</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/settings">Settings</a></li>
+						<li class="divider" id="divider"></li>
+						<li><a href="#">Log Out</a></li>
 					</ul>
 				</div>
 			<? } else { // not logged in ?>

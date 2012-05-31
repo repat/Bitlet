@@ -12,11 +12,13 @@
 .bitletDropShadow{
 	box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 	-moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+	-ms-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
 
 .bitletInnerShadow{
 	-moz-box-shadow:    inset 0px 1px 5px rgba(0,0,0,0.5);
+	-ms-box-shadow:    inset 0px 1px 5px rgba(0,0,0,0.5);
 	-webkit-box-shadow: inset 0px 1px 5px rgba(0,0,0,0.5);
 	box-shadow:         inset 0px 1px 5px rgba(0,0,0,0.5);
 }

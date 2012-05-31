@@ -36,12 +36,13 @@ $category = 'video';
 			<p id="overviewDescr">Products</p>
 		</div>
 	</div>
-	<div id="creditsDiv">
+	<div class="creditsDiv">
 		<p id="overviewNum">$3000</p>
 		<p id="overviewDescr">Credits</p>
 	</div>
 	<div class="cashOut">
-		<img src="/img/claim.png"/>
+		<!--<img src="/img/claim.png"/>-->
+		<p>Claim</p>
 	</div>
 </div>
 
