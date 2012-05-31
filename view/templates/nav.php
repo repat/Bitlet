@@ -18,18 +18,18 @@ if($uid >= 0)
 							<a class="dropdown-toggle rounded-corners" data-toggle="dropdown" href="#" id="userEmail">
 								<? echo $name; ?> <b class="caret" id="caret" ></b>
 							</a>
-							<ul class="dropdown-menu" id="menu1">
+							<ul class=" dropdown-menu" id="menu1">
 								<li >
-									<a href="#">Dashboard</a>
+									<a href="http://bitlet.co/dashboard">Dashboard</a>
 								</li>
 								<li>
-									<a href="#">FAQ</a>
+									<a href="http://bitlet.co/faq">FAQ</a>
 								</li>
 								<li>
-									<a href="#">Settings</a>
+									<a href="http://bitlet.co/settings">Settings</a>
 								</li>
 								<li>
-									<a href="#">Logout</a>
+									<a href="http://bitlet.co">Logout</a>
 								</li>
 							</ul>
 					

@@ -44,24 +44,32 @@ body {
 	color: #005580;
 }
 
-.rounded-corners .menu-navbar-bitlet #userEmail {
+.menu-navbar-bitlet #userEmail a{
 	color:#3F4042; 
 	border: 1px solid #ddd; 
 	padding:5px; 
-	border-radius:5px;
 	text-decoration:none; 
+	padding: 0px 0px 0px 5px; 
 }
-
 .dropdown a:hover {
 	text-decoration:none; 
+	color:#5E5E60;
 }
 
-#userEmail {
-	margin-left:2px; 
-
-}
-.open #userEmail {
+ .open #userEmail {
 	background:white; 
+	opacity: 0.8;
+	box-shadow: none; 
+	color:black; 
+	padding-left:5px; 
+}
+
+#userEmail  a:hover {
+	color:#ddd; 
+}
+
+.open a:hover{
+	background:black; 
 	opacity: 0.8;
 	box-shadow: none; 
 	color:black; 
@@ -80,19 +88,17 @@ body {
 	font-size:11px; 
 	color:#333; 
 	background:white; 
-	padding-left:5px;
-	opacity: 0.8; 
+	opacity: 0.85; 
 	border:none;
 }
 
 #menu1 a{
 	color:#333; 
 	padding:5px; 
-	padding-left:10px; 
 }
 
 #menu1 a:hover {
-	background:white; 
+	background:#E1E3E7; 
 }
 /*/
  * Footer Styling 
