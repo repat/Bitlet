@@ -25,6 +25,9 @@ function showLogin() {
 	});
 };
 
+// enable submit button loading state
+$("#bitletLoginSubmitbtn").button();
+
 // attach a submit handler to the login button
 $("#bitletLoginSubmitbtn").click(function(event) {
 
@@ -36,6 +39,7 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 	$.post("/ajax/login", {email:email, pass:pass},
 		function(data) {
 			console.log('login status: '+data.success);
+			$("#bitletLoginSubmitbtn").button('reset');
 			if(data.success) {
 				// hide the dialog box
 				$("#LoginModal").modal('hide');

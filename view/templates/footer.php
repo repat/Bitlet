@@ -55,7 +55,7 @@
 		<p id="forgotPasswordLogin"><a href="/reset-details">Forgot Details?</a></p>
 	</div>
 	<div class="modal-footer modalLoginFooter">
-		<button type="submit" id="bitletLoginSubmitbtn" class="btn-large submit-button btn btn-primary">Login</button>
+		<button type="submit" id="bitletLoginSubmitbtn" autocomplete="off" data-loading-text="Logging you in..." class="btn-large submit-button btn btn-primary">Login</button>
 	</div>
 </div>
 <? } ?>
