@@ -20,16 +20,16 @@ if($uid >= 0)
 					</a>
 					<ul class="dropdown-menu" id="menu1">
 						<li >
-							<a href="http://bitlet.co/dashboard">Dashboard</a>
+							<a href="/dashboard">Dashboard</a>
 						</li>
 						<li>
-							<a href="http://bitlet.co/faq">FAQ</a>
+							<a href="/faq">FAQ</a>
 						</li>
 						<li>
-							<a href="http://bitlet.co/settings">Settings</a>
+							<a href="/settings">Settings</a>
 						</li>
 						<li>
-							<a href="http://bitlet.co">Logout</a>
+							<a href="#">Logout</a>
 						</li>
 					</ul>
 				</div>

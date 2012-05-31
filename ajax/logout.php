@@ -4,4 +4,6 @@
 $_SESSION['uid'] = -1;
 session_destroy();
 
+// set headers 
+
 ?>
