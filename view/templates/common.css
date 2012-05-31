@@ -1,7 +1,7 @@
 /* Commonly Used CSS Features */
 
 /*Rounded Corners*/
-.rounded-corners{
+.bitletRoundedCorners{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px; /* future proofing */
@@ -9,10 +9,10 @@
 }
 
 /*Drop Shadow - similar to dashboard area */
-.bitlet-shadow{
-	box-shadow: 2px 2px 5px 1px #999;
-	-moz-box-shadow: 2px 2px 5px 1px #999;
-	-webkit-box-shadow: 2px 2px 5px 1px #999;
+.bitletDropShadow{
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+	-moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
 
 .bitletInnerShadow{

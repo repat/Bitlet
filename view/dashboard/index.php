@@ -17,8 +17,8 @@ $category = 'video';
 
 ?>
 
-<div id="top-shebang">
-	<div class="overviewData">
+<div id="topShebang" class="bitletRoundedCorners bitletDropShadow">
+	<div class="overviewData bitletInnerShadow">
 		<div class="theData">
 			<p id="overviewNum">18</p>
 			<p id="overviewDescr">Shares</p>
@@ -45,7 +45,7 @@ $category = 'video';
 	</div>
 </div>
 
-<div id="main-shebang">
+<div id="mainShebang" class="bitletRoundedCorners bitletDropShadow">
 		<div id="topDiv">
 		</div>
 	
