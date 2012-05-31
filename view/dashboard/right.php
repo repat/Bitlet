@@ -11,7 +11,7 @@
 
 		<div class="imgDiv"><img src="/img/motta.png"/></div>
 
-		<div class="tableDiv"><div class="productInfo">
+		<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
 			<p id="productDescr"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image.</p>
 			<hr>
 			<table>
@@ -96,7 +96,7 @@
 			</table>
 		</div></div>
 
-		<div class="shareInfo">
+		<div class="shareInfo bitletDropShadow bitletRoundedCorners">
 			<h3>Share this product and earn credits!</h3>
 			<hr>
 			<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="bitlet.co/l/24d3f"/>

@@ -101,11 +101,6 @@
 	margin-right: auto;
 	padding: 5px 0;
 	width: 280px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	box-shadow: 2px 2px 5px 1px #999;
-	-moz-box-shadow: 2px 2px 5px 1px #999;
-	-webkit-box-shadow: 2px 2px 5px 1px #999;
 }
 
 .productInfo hr {
@@ -138,11 +133,6 @@
 	margin: 10px 10px 0 10px; 
 	padding: 10px 0;
 	text-align: center;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	box-shadow: 2px 2px 5px 1px #999;
-	-moz-box-shadow: 2px 2px 5px 1px #999;
-	-webkit-box-shadow: 2px 2px 5px 1px #999;
 }
 
 .shareInfo h3 {

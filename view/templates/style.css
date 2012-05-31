@@ -44,25 +44,65 @@ body {
 	color: #005580;
 }
 
-#userEmail {
+#ha {
+	opacity:0.5; 
+	z-index:100; 
+}
+.menu-navbar-bitlet #userEmail a{
 	color:#3F4042; 
 	border: 1px solid #ddd; 
-	background:#D3D3D4;
 	padding:5px; 
+	text-decoration:none; 
+	padding: 0px 0px 0px 5px; 
+}
+.dropdown a:hover {
+	text-decoration:none; 
+	color:#5E5E60;
+}
+
+ .open #userEmail {
+	background:white; 
+	opacity: 0.85;
+	box-shadow: none; 
+	color:black; 
+	padding-left:5px; 
+}
+
+#userEmail  a:hover {
+	color:#ddd; 
+}
+
+.open a:hover{
+	background:black; 
+	opacity: 0.8;
+	box-shadow: none; 
+	color:black; 
+}
+
+#caret {
+	border-radius:5px;
+	background:#D3D3D4;
+	margin-right:6px; 
 }
 
 /* Dropdown menu styles */
 
 #menu1 {
-	min-width:120px; 
+	min-width:135px; 
 	font-size:11px; 
 	color:#333; 
+	background:white; 
+	opacity: 0.85; 
+	border:none;
 }
 
 #menu1 a{
 	color:#333; 
 	padding:5px; 
-	padding-left:10px; 
+}
+
+#menu1 a:hover {
+	background:#E1E3E7; 
 }
 /*/
  * Footer Styling 
