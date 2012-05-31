@@ -44,12 +44,9 @@ body {
 	color: #005580;
 }
 
-#ha {
-	opacity:0.5; 
-	z-index:100; 
-}
+
 .menu-navbar-bitlet #userEmail a{
-	color:#3F4042; 
+	color:#A3A4A5; 
 	border: 1px solid #ddd; 
 	padding:5px; 
 	text-decoration:none; 
@@ -58,6 +55,7 @@ body {
 .dropdown a:hover {
 	text-decoration:none; 
 	color:#5E5E60;
+	opacity:0.5; 
 }
 
  .open #userEmail {
@@ -72,16 +70,15 @@ body {
 	color:#ddd; 
 }
 
-.open a:hover{
-	background:black; 
+.open a:hover{ 
 	opacity: 0.8;
 	box-shadow: none; 
-	color:black; 
+	
 }
 
 #caret {
 	border-radius:5px;
-	background:#D3D3D4;
+
 	margin-right:6px; 
 }
 
@@ -89,7 +86,7 @@ body {
 
 #menu1 {
 	min-width:135px; 
-	font-size:11px; 
+	font-size:12px; 
 	color:#333; 
 	background:white; 
 	opacity: 0.85; 
