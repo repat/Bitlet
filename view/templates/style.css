@@ -65,6 +65,14 @@ body {
 	box-shadow: 0 1px 0 white;
 }
 
+.open {
+	/* gradient */
+	background: #EFFCFD; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFDCDD', endColorstr='#EFFCFD'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#CFDCDD), to(#EFFCFD)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #CFDCDD,  #EFFCFD); /* for firefox 3.6+ */ 
+}
+
 .dropdown #userEmail{
 	font-size: 20px;
 	line-height: 20px;
