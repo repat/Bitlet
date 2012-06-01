@@ -3,12 +3,17 @@
 	top: -10px;
 }
 
-#topShebang {
+#topContainer {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 10px;
 	width: 980px;
+	height: 80px;
+	margin-bottom: 10px;
+}
+
+#topShebang {
+	float: left;
 	height: 80px;
 
 	/* gradient */
@@ -16,6 +21,16 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79C4D6', endColorstr='#4999AC'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#79C4D6), to(#4999AC)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #79C4D6,  #4999AC); /* for firefox 3.6+ */ 
+}
+
+#creditsShebang {
+	float: right;
+	height: 80px;
+
+	/* gradient */
+	background: #4999AC; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79C4D6', endColorstr='#4999AC'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#79C4D6), to(#4999AC)); /* for webkit browsers */
 }
 
 #mainShebang {
@@ -55,20 +70,12 @@
 
 .overviewData {
 	position: relative;
-	margin-left: 115px;
+	margin: 0 30px;
 	float: left;
 	top: 7px;
 	height: 66px;
 	width: 500px;
 
-	-moz-border-radius-topleft: 5px;
-	-webkit-border-top-left-radius: 5px;
-	border-top-left-radius: 5px;
-
-	-moz-border-radius-bottomleft: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	
 	/* vertical gradient */
 	background: #28306B; /* for non-css3 browsers */
 
@@ -88,10 +95,11 @@
 .creditsDiv {
 	float: left;
 	overflow: hidden;
+	margin-left: 30px;
 	margin-top: 7px;
 	color: #FFF;
 	height: 64px;
-	min-width: 115px;
+	width: 200px;
 	padding: 0 5px;
 	text-align: center;
 	border-top: 1px solid #6571B5;
@@ -100,10 +108,18 @@
 	border-right: 1px solid #253175;
 
 	/* gradient */
-	background: #5561A5;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5561A5', endColorstr='#354185'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#5561A5), to(#354185)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #5561A5,  #354185); /* for firefox 3.6+ */ 
+	background: #28306B; /* for non-css3 browsers */
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F3A7E', endColorstr='#28306B'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2F3A7E), to(#28306B)); /* for webkit browsers */
+
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 .creditsDiv #overviewNum {
@@ -119,6 +135,7 @@
 .cashOut {
 	float: left;
 	margin-top: 7px;
+	margin-right: 30px;
 	width: 125px;
 	height: 64px;
 	border-top: 1px solid #FFDF85;
