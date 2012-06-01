@@ -23,7 +23,7 @@ if($uid >= 0)
 						<li><a href="/faq">FAQ <i class="icon-question-sign"></i></a></li>
 						<li><a href="/settings">Settings <i class="icon-cog"></i></a></li>
 						<li class="divider" id="divider"></li>
-						<li><a href="#">Log Out <i class="icon-off"></i></a></li>
+						<li><a id="logoutBtn" href="#">Log Out <i class="icon-off"></i></a></li>
 					</ul>
 				</div>
 			<? } else { // not logged in ?>
