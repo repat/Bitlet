@@ -17,10 +17,10 @@
 	font-size:13px !important;
 
 }
-#loginModalHeader .modal-body{
+#LoginModal .modal-body{
 	padding:15px 35px 0px;
 }
-#loginModal .modalLoginFooter{
+#LoginModal .modalLoginFooter{
 	background: none;
 	padding: 0px 35px 15px;
 	border: none;
