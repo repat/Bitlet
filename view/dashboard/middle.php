@@ -5,7 +5,7 @@
 				<ul class="contentTable">
 					<? for($i = 0; $i < 100; $i++) { ?>
 						<li>
-							<div id="imgTd"><img id="tableThumb" src="/img/motta.png"/></div>
+							<div id="imgTd"><img id="tableThumb" src="http://placekitten.com/60/60"/></div>
 							<div class="nameTd">
 								<p id="big">Image of Cats</p>
 								<p id="small">Cats.png</p>

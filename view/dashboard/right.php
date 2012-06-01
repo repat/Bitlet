@@ -9,7 +9,7 @@
 			<h2>$2.00</h2>
 		</div>
 
-		<div class="imgDiv"><img src="/img/motta.png"/></div>
+		<div class="imgDiv"><img src="http://placekitten.com/250/250"/></div>
 
 		<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
 			<p id="productDescr"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image.</p>
