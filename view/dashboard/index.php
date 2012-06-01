@@ -44,10 +44,10 @@ $category = 'video';
 			<p id="overviewNum">$3000</p>
 			<p id="overviewDescr">Credits</p>
 		</div>
-		<div class="cashOut">
+		<button class="cashOut">
 			<!--<img src="/img/claim.png"/>-->
 			<p>Claim</p>
-		</div>
+		</button>
 	</div>
 </div>
 
