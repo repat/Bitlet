@@ -5,7 +5,7 @@
 			<hr>
 			<li><a href="#"><img src="/img/upload.png"/>Upload</a></li>
 			<hr>
-			<li class="active"><a href="#products" id="productsBtn"><img src="/img/products.png"/>Products</a></li>
+			<li><a href="#products" id="productsBtn"><img src="/img/products.png"/>Products</a></li>
 			<hr>
 			<li><a href="#purchases" id="purchasesBtn"><img src="/img/purchases.png"/>Purchases</a></li>
 			<hr>

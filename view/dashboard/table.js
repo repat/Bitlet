@@ -1,5 +1,9 @@
 
 function DisplayProducts() {
+	// toggle button states
+	$('#purchasesBtn').removeClass('active');
+	$('#productsBtn').addClass('active');
+
 	// run AJAX query
 	$.post("/ajax/products", 
 		function(data) {
@@ -8,6 +12,10 @@ function DisplayProducts() {
 }
 
 function DisplayPurchases() {
+	// toggle button states
+	$('#purchasesBtn').addClass('active');
+	$('#productsBtn').removeClass('active');
+
 	// run AJAX query
 	$.post("/ajax/purchases", 
 		function(data) {
