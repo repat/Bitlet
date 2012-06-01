@@ -41,8 +41,8 @@ $category = 'video';
 
 	<div id="creditsShebang" class="bitletRoundedCorners bitletDropShadow">
 		<div class="creditsDiv bitletInnerShadow">
-			<p id="overviewNum">$3000</p>
-			<p id="overviewDescr">Credits</p>
+			<p id="overviewNum">3000</p>
+			<p id="overviewDescr">Dollars</p>
 		</div>
 		<button class="cashOut">
 			<!--<img src="/img/claim.png"/>-->
