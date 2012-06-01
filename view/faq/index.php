@@ -1,4 +1,4 @@
-<div class="container well faq">
+<div class="container well faq bitletDropShadow">
 	<h1>Frequently Asked Questions<h1>
 	<hr>
 
