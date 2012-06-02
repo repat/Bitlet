@@ -1,5 +1,5 @@
 USE bitlet;
-DROP TABLE users, files, purchases;
+DROP TABLE if exists users, files, purchases;
 
 -- phpMyAdmin SQL Dump
 -- version 3.3.10.4
