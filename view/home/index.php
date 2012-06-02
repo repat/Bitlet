@@ -84,3 +84,5 @@
 <iframe name="upload_iframe" id="homeUploadIframe">
 </iframe>
 
+<? include 'upload.php'; ?>
+

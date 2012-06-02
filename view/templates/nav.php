@@ -19,11 +19,11 @@ if($uid >= 0)
 						<? echo $name; ?> <b class="caret" id="caret" ></b>
 					</a>
 					<ul class="dropdown-menu" id="menu1">
-						<li ><a href="/dashboard">Dashboard</a></li>
-						<li><a href="/faq">FAQ</a></li>
-						<li><a href="/settings">Settings</a></li>
+						<li ><a href="/dashboard">Dashboard <i class="icon-user"></i></a></li>
+						<li><a href="/faq">FAQ <i class="icon-question-sign"></i></a></li>
+						<li><a href="/settings">Settings <i class="icon-cog"></i></a></li>
 						<li class="divider" id="divider"></li>
-						<li><a href="#">Log Out</a></li>
+						<li><a id="logoutBtn" href="#">Log Out <i class="icon-off"></i></a></li>
 					</ul>
 				</div>
 			<? } else { // not logged in ?>

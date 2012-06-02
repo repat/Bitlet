@@ -35,13 +35,13 @@
 	background: #EEE;
 }
 
-.contentTable {
+.dashTable {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.contentTable li {
+.dashTable li {
 	height: 60px;
 	padding: 10px 10px 10px 0;
 	border-top: 1px solid #FFF;
@@ -49,7 +49,7 @@
 	overflow: hidden;
 }
 
-.contentTable li:hover {
+.dashTable li:hover {
 	padding: 10px 10px 10px 0;
 
 	/* gradient */

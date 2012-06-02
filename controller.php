@@ -1,7 +1,6 @@
 <?
 	include_once 'page.php';
 	include_once 'async.php';
-	include_once 'iframe.php';
 
 	// include lib files
 	foreach (glob("lib/*.php") as $filename) {
@@ -19,9 +18,6 @@
 	// see if request is for iframe, ajax, or just normal page
 	switch($url[1])
 	{
-	case 'iframe':
-		ViewIframe($url[2], $args);
-		break;
 	case 'ajax':
 		ViewAjax($url[2], $args);
 		break;

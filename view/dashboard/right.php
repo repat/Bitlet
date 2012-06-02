@@ -12,9 +12,9 @@
 		<div class="imgDiv"><img src="http://placekitten.com/250/250"/></div>
 
 		<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
-			<p id="productDescr"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image.</p>
-			<hr>
-			<table>
+			<p id="productDescr"><b>About this file: </b>This is a PS file which allows you to make an awesome cat image. 
+				<button class="btn btn-mini" data-toggle="collapse" data-target="#dataTable">more <span class="caret"></span></button></p>
+			<div id="dataTable" class="collapse in"><hr><table>
 				<? switch($category) {	// different HTML for different catagory of files
 					case 'photo': ?>
 					<tr>
@@ -93,7 +93,7 @@
 					</tr>
 				<? break; ?>
 				<? } ?>
-			</table>
+			</table></div>
 		</div></div>
 
 		<div class="shareInfo bitletDropShadow bitletRoundedCorners">
