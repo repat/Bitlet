@@ -17,11 +17,11 @@
 	<hr>
 	<h2>Preferences</h2>
 		<div class="profile bitletDropShadow roundedCorners" id="preferences"> 
-			<p class="pref" ></p><input type="checkbox" id="check1" >Email me when someone purchases one of my products!</p>
+			<p class="pref" ><input type="checkbox" id="check1" >Email me when someone purchases one of my products!</p>
 			<p class="pref"><input type="checkbox" id="check2">Email me a weekly summary of my sales</p>
 			<h4 id="changePw">Change Password</h4>
-			<p class="pwField">Old Password:<input class="input focused" id="focusedInput-old" type="text" value="ILoveCats"></p>
-			<p class="pwField">New Password:<input class="input focused" id="focusedInput" type="text" value=""></p>
+			<p class="pwField" id="old">Old Password:<input class="input focused" id="focusedInput-old" type="text" value="ILoveCats"></p>
+			<p class="pwField" id ="new">New Password:<input class="input focused" id="focusedInput" type="text" value=""></p>
 			<p class="pwField">Confirm New Password:<input class="input focused" id="focusedInput" type="text" value=""></p>
 		
 		</div>

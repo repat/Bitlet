@@ -60,6 +60,12 @@ left: -290px;
 	margin-left:50px; 
 }
 
+#new {
+	margin-left:97px; 
+}
+#old {
+	margin-left: 102px;
+}
 
 /*Starting FAQ section*/
 .faq h1 {
