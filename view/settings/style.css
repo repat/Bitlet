@@ -1,3 +1,40 @@
+#profilePic {
+	border: 3px solid white; 
+	box-shadow:2px 2px 1px #888; 
+	
+	margin:15px; 
+}
+
+#leftCol {
+	margin:0px;
+}
+
+#check1 {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+#check2 {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.pref {
+	padding-top:20px;
+	padding-left:50px; 
+}
+
+#changePw {
+	padding-left:30px; 
+	margin-top:20px; 
+	margin-bottom:20px;
+}
+
+.pwField {
+	margin-left:50px; 
+}
+
+
 /*Starting FAQ section*/
 .faq h1 {
 	margin: 0px 0 0 px;
