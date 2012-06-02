@@ -1,12 +1,37 @@
+#leftCol {
+	margin:0px;
+	opacity:0.7; 
+}
+
 #profilePic {
 	border: 3px solid white; 
 	box-shadow:2px 2px 1px #888; 
-	
-	margin:15px; 
+	float: left;
+	margin:15px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
-#leftCol {
-	margin:0px;
+#uploadButton-up {
+position: relative;
+top: 100px;
+left: -290px;
+}
+
+#email{
+	position: relative;
+	top: -40px;
+	left: 369px;
+}
+
+#website {
+	position: relative;
+	left: 352px;
+	bottom: 50px;
+}
+
+#preferences {
+	opacity:0.7; 
 }
 
 #check1 {
@@ -29,6 +54,7 @@
 	margin-top:20px; 
 	margin-bottom:20px;
 }
+
 
 .pwField {
 	margin-left:50px; 
