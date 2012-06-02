@@ -33,6 +33,9 @@
 			case 'about':
 				$dir = 'view/about';
 				break;
+			case 'settings':
+				$dir = 'view/settings';
+				break;
 			case 'legal':
 				$dir = 'view/legal';
 				break;
