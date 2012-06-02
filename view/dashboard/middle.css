@@ -28,11 +28,12 @@
 }
 
 .centerDiv { 
-	border-left: 1px solid #29497F;
 	margin-left: 120px;
 	margin-right:300px;  
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
 	background: #EEE;
+	min-height: 600px;
+	border-left: 1px solid #333;
 }
 
 .dashTable {
