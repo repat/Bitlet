@@ -1,9 +1,8 @@
 <?
 
-$uid = $_SESSION['uid']; 
-if($uid >= 0)
+if($UID >= 0)
 {
-	list($name, ) = explode('@', GetUserName($uid));
+	list($name, ) = explode('@', GetUserName($UID));
 }
 
 ?>
@@ -13,7 +12,7 @@ if($uid >= 0)
 		<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
 
 		<div class="menu-navbar-bitlet">
-			<? if($uid >= 0) { // already logged in ?>
+			<? if($UID >= 0) { // already logged in ?>
 				<div class="dropdown bitletRoundedCorners">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail">
 						<? echo $name; ?> <b class="caret" id="caret" ></b>

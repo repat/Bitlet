@@ -12,13 +12,15 @@
 
 			if(AuthenticateCookie($uid, $session)) {
 				$_SESSION['uid'] = $uid;
+				error_log('session auto-authenticated into uid '.$uid);
 			} else {
 				$_SESSION['uid'] = -1;
+				error_log('authentication cookie invalid');
 			}
-		} else if(!isset($_SESSION['uid'])) {
-			error_log('new user, default session uid');
-			$_SESSION['uid'] = -1;	// start with a uid of -1 when not logged in 
 		}
+
+		// we define a macro for shortness sake
+		$UID = $_SESSION['uid'];
 
 		switch($url) {
 			case '':

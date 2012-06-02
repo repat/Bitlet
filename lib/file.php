@@ -1,96 +1,98 @@
 <?
-	// check for valid email/pass, return true on successful authentication
-	// add a new file under input user uid
-	// file type: enum('generic','photo','music','digiart','document','video')
-	function NewFile($uid, $filename, $type)
-	{
-		$filename = mysql_real_escape_string($filename);
-		// Insert file into files table
-		mysql_query("INSERT INTO files (uid, file_name, type)
-			VALUES('$uid', '$filename', '$type')") or die();
-		return mysql_insert_id();
-	}
 
-	// set price for a file
-	function SetPrice($fid, $price)
-	{
-		$price = mysql_real_escape_string($price);
-		//TODO: Error check the price
-		mysql_query("UPDATE files SET price='$price'
-			WHERE id='$fid'") or die();
-	}
+// check for valid email/pass, return true on successful authentication
+// add a new file under input user uid
+// file type: enum('generic','photo','music','digiart','document','video')
+function NewFile($uid, $filename, $type)
+{
+	$filename = mysql_real_escape_string($filename);
+	// Insert file into files table
+	mysql_query("INSERT INTO files (uid, file_name, type)
+		VALUES('$uid', '$filename', '$type')") or die();
+	return mysql_insert_id();
+}
 
-	// set price for a file
-	function SetDisplayName($fid, $name)
-	{
-		$name = mysql_real_escape_string($name);
-		mysql_query("UPDATE files SET name='$name'
-			WHERE id='$fid'") or die();
-	}
+// set price for a file
+function SetPrice($fid, $price)
+{
+	$price = mysql_real_escape_string($price);
+	//TODO: Error check the price
+	mysql_query("UPDATE files SET price='$price'
+		WHERE id='$fid'") or die();
+}
 
-	// set price for a file
-	function SetURL($fid, $url)
-	{
-		$url = mysql_real_escape_string($url);
-		mysql_query("UPDATE files SET url='$url'
-			WHERE id='$fid'") or die();
-	}
+// set price for a file
+function SetDisplayName($fid, $name)
+{
+	$name = mysql_real_escape_string($name);
+	mysql_query("UPDATE files SET name='$name'
+		WHERE id='$fid'") or die();
+}
 
-	// increment number sold and also add to the user's credits
-	function IncrementDownloads($fid)
-	{
-		// get price
-		$result = mysql_query("SELECT price, uid FROM files WHERE id='$fid'") or die();
-		$row = mysql_fetch_row($result);
-		$price = $row[0];
-		$uid = $row[1];
+// set price for a file
+function SetURL($fid, $url)
+{
+	$url = mysql_real_escape_string($url);
+	mysql_query("UPDATE files SET url='$url'
+		WHERE id='$fid'") or die();
+}
 
-		// add price to user id credits
-		mysql_query("UPDATE users SET credits = credits + '$price' WHERE id='$uid'") or die();
-		// update downloads list and increment money made
-		mysql_query("UPDATE files SET downloads = downloads + 1, earned = earned + '$price' WHERE id='$fid'") or die();
-	}
+// increment number sold and also add to the user's credits
+function IncrementDownloads($fid)
+{
+	// get price
+	$result = mysql_query("SELECT price, uid FROM files WHERE id='$fid'") or die();
+	$row = mysql_fetch_row($result);
+	$price = $row[0];
+	$uid = $row[1];
 
-	function IncrementViews($fid)
-	{
-		// update views
-		mysql_query("UPDATE files SET views = views + 1 WHERE id='$fid'") or die();
-	}
+	// add price to user id credits
+	mysql_query("UPDATE users SET credits = credits + '$price' WHERE id='$uid'") or die();
+	// update downloads list and increment money made
+	mysql_query("UPDATE files SET downloads = downloads + 1, earned = earned + '$price' WHERE id='$fid'") or die();
+}
 
-	// returns an array of fid from user
-	function GetFids($uid)
-	{
-		$result = mysql_query("SELECT id FROM files WHERE uid='$uid'") or die('cant get fids');
-		$rows = array();
-		while($row = mysql_fetch_row($result)) {
-			$rows[] = $row[0];
-		}
-		return $rows;
-	}
+function IncrementViews($fid)
+{
+	// update views
+	mysql_query("UPDATE files SET views = views + 1 WHERE id='$fid'") or die();
+}
 
-	// returns info about the file
-	function GetFileInfo($fid)
-	{
-		$result = mysql_query("SELECT * FROM files WHERE id='$fid'") or die();
-		return mysql_fetch_assoc($result);
+// returns an array of fid from user
+function GetFids($uid)
+{
+	$result = mysql_query("SELECT id FROM files WHERE uid='$uid'") or die('cant get fids');
+	$rows = array();
+	while($row = mysql_fetch_row($result)) {
+		$rows[] = $row[0];
 	}
+	return $rows;
+}
 
-	// returns fid from input url
-	function GetFidFromUrl($url)
-	{
-		$url = mysql_real_escape_string($url);
-		$result = mysql_query("SELECT id FROM files WHERE url='$url'") or die();
-		return mysql_result($result, 0);
-	}
+// returns info about the file
+function GetFileInfo($fid)
+{
+	$result = mysql_query("SELECT * FROM files WHERE id='$fid'") or die();
+	return mysql_fetch_assoc($result);
+}
 
-	function GetFileFromId($fid)
-	{
-		//Query the user database and see if the user already has an account
-		$result = mysql_query("SELECT file_name FROM files WHERE id = '$fid'") or die();
-		if(mysql_num_rows($result) == 0) {
-			die('File does not exist');
-		}
-		return mysql_result($result, 0);
+// returns fid from input url
+function GetFidFromUrl($url)
+{
+	$url = mysql_real_escape_string($url);
+	$result = mysql_query("SELECT id FROM files WHERE url='$url'") or die();
+	return mysql_result($result, 0);
+}
+
+// get the filename of specifided file
+function GetFileFromId($fid)
+{
+	//Query the user database and see if the user already has an account
+	$result = mysql_query("SELECT file_name FROM files WHERE id = '$fid'") or die();
+	if(mysql_num_rows($result) == 0) {
+		die('File does not exist');
 	}
+	return mysql_result($result, 0);
+}
 
 ?>
