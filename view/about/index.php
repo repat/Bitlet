@@ -1,4 +1,4 @@
-<div class="container well">
+<div class="container well bitletDropShadow">
 	<div class="aboutTop">
 		<div class="cloud"><img src="img/drawings/bitcloud.png"/></div>
 		<div class="about">
