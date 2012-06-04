@@ -43,10 +43,9 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 			if(data.success) {
 				// hide the dialog box
 				$("#LoginModal").modal('hide');
-				// redirect to account page
-				window.location.reload();
+				window.location = '/dashboard';
 			} else {
-				// TODO: Display warning message
+					
 			}
 		}, "json");
 
