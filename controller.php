@@ -9,6 +9,12 @@
 
     session_start();
 
+	if(!isset($_SESSION['uid'])) {
+		error_log('new user, default session uid');
+		// start with a uid of -1 when not logged in 
+		$_SESSION['uid'] = -1;	
+	}
+
 	$db = Connect();
 
 	$url = explode('/', $_SERVER['REQUEST_URI']);

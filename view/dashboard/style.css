@@ -38,7 +38,6 @@
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:20px; 
-	min-height:700px; 
 	width: 980px;
 	background: #EEE;
 	overflow:hide; 
@@ -47,7 +46,7 @@
 
 #topDiv {
 	position: relative;
-	width:559px;
+	width:558px;
 	left: 120px;	
 	height:30px;
 	z-index:100; 

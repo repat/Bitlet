@@ -23,10 +23,10 @@
 
 <!-- Login Modal -->
 
-<? if($uid >= 0) { // already logged in ?>
+<? if($UID >= 0) { // already logged in ?>
 	<!-- Silence is golden -->
 <? } else { // not logged in ?>
-<div id="LoginModal" class="modal hide fade">
+	<div id="LoginModal" class="modal hide fade">
 	<div id="loginModalHeader" class="modal-header">
 		<button class="close" data-dismiss="modal">X</button>
     	<h3>Login</h3>

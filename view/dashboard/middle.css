@@ -28,11 +28,12 @@
 }
 
 .centerDiv { 
-	border-left: 1px solid #29497F;
 	margin-left: 120px;
 	margin-right:300px;  
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
 	background: #EEE;
+	min-height: 600px;
+	border-left: 1px solid #333;
 }
 
 .dashTable {
@@ -43,14 +44,15 @@
 
 .dashTable li {
 	height: 60px;
-	padding: 10px 10px 10px 0;
+	padding: 10px 10px 10px 20px;
 	border-top: 1px solid #FFF;
 	border-bottom: 1px solid #CCC;
 	overflow: hidden;
 }
 
 .dashTable li:hover {
-	padding: 10px 10px 10px 0;
+	padding: 10px 10px 10px 12px;
+	border-left: 8px solid #59A9BC;
 
 	/* gradient */
 	background: #CBD7ED; /*for non-css3 browsers*/
@@ -81,7 +83,6 @@
 
 #imgTd {
 	float: left;
-	margin-left: 20px;
 	margin-right: 10px;
 }
 

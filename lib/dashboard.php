@@ -43,8 +43,4 @@ function BuildPurchaseRow($name, $filename, $thumb)
 HTML;
 }
 
-function BuildDashboardTable($uid)
-{
-}
-
 ?>

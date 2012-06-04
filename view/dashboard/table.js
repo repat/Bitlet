@@ -4,11 +4,12 @@ function DisplayProducts() {
 	$('#purchasesBtn').removeClass('active');
 	$('#productsBtn').addClass('active');
 
+	// clear the table
+	// TODO: Add loading animation
+	$(".dashTable").html('');
+
 	// run AJAX query
-	$.post("/ajax/products", 
-		function(data) {
-			$("dashTable").html(data);
-		}, "html");
+	$(".dashTable").load("/ajax/products");
 }
 
 function DisplayPurchases() {
@@ -16,11 +17,12 @@ function DisplayPurchases() {
 	$('#purchasesBtn').addClass('active');
 	$('#productsBtn').removeClass('active');
 
+	// clear the table
+	// TODO: Add loading animation
+	$(".dashTable").html('');
+
 	// run AJAX query
-	$.post("/ajax/purchases", 
-		function(data) {
-			$("dashTable").html(data);
-		}, "html");
+	$(".dashTable").load("/ajax/purchases");
 }
 
 $('#productsBtn').click(DisplayProducts);

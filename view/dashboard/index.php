@@ -1,9 +1,8 @@
 <?
 
-$uid = $_SESSION['uid'];
-if($uid >= 0) {
+if($UID >= 0) {
 	// get user info
-	$user = GetUserInfo($uid);
+	$user = GetUserInfo($UID);
 
 	// get file info
 	// TODO: We may want to think about AJAXing this

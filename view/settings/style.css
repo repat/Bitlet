@@ -1,0 +1,102 @@
+#leftCol {
+	margin:0px;
+	opacity:0.7; 
+}
+
+#profilePic {
+	border: 3px solid white; 
+	box-shadow:2px 2px 1px #888; 
+	float: left;
+	margin:15px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+
+#textCount{
+	width:25px; 	
+	margin-right:5px; 
+}
+
+#save {
+	margin-top: 50px;
+	margin-left: 300px;
+}
+
+#desc {
+	margin-top: -15px;
+}
+
+#preferences {
+	opacity:0.7; 
+}
+
+#check1 {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+#check2 {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.pref {
+	padding-top:20px;
+	padding-left:50px; 
+}
+
+#changePw {
+	padding-left:30px; 
+	margin-top:20px; 
+	margin-bottom:20px;
+}
+
+
+.pwField {
+	margin-left:50px; 
+}
+
+#new {
+	margin-left:97px; 
+}
+#old {
+	margin-left: 102px;
+}
+
+/*Starting FAQ section*/
+.faq h1 {
+	margin: 0px 0 0 px;
+	font-size:30px;
+	font-weight: 300;
+}
+.faq h2,
+.faq h3 {
+	font-weight: normal;
+}
+.faq h2 {
+	font-size: 16px;
+}
+.faq p {
+	text-align: left;
+	margin-right: 12px;
+	font-size: 12px; 
+}
+
+.container .faq {
+	width: 531;
+}
+
+#FAQModal {
+	width: 970px; 
+	left: 36%;
+}
+
+ a {
+ 	color:#0055CC;
+ }
+
+.about-nav .nav-list .nav-header a {
+	color:#F05911; 
+}
+

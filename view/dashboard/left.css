@@ -4,9 +4,10 @@
 	z-index: 20;
 	top: 0; 
 	left:0; 
-	width:120px; 
+	width:119px; 
 	height:100%; 
 	font-weight:300; 
+	border-right: 1px solid #687CC9;
 
 	/* gradient */
 	background: #475189; /*for non-css3 browsers*/
@@ -25,13 +26,13 @@
 }
 
 .leftSideMenu {
-	width: 120px;
+	width: 119px;
 	margin: 0 0 10px 0;
 }
 
 .leftSideMenu #topCorner {
 	height: 30px;
-
+	width: 119px;
 	border-right: 1px solid #687CC9;
 
 	border-top-left-radius: 5px;
