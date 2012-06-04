@@ -12,22 +12,19 @@
 	margin-right: 30px;
 }
 
-#uploadButton-up {
-position: relative;
-top: 100px;
-left: -290px;
+
+#textCount{
+	width:25px; 	
+	margin-right:5px; 
 }
 
-#email{
-	position: relative;
-	top: -40px;
-	left: 369px;
+#save {
+	margin-top: 50px;
+	margin-left: 300px;
 }
 
-#website {
-	position: relative;
-	left: 352px;
-	bottom: 50px;
+#desc {
+	margin-top: -15px;
 }
 
 #preferences {
