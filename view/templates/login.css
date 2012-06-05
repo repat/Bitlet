@@ -11,12 +11,6 @@
 	border-bottom: 1px solid #DDD;
 }
 
-#loginModalHeader .close{
-	border:none !important;
-	background:none !important;
-	font-size:13px !important;
-
-}
 #LoginModal .modal-body{
 	padding:15px 35px 0px;
 }
@@ -43,4 +37,14 @@
 #bitletLoginSubmitbtn{
 	width:100%;
 }
-
+#bitletLoginNewAccount{
+	width:200px;
+}
+.hrLogin{
+	width:100px;
+	float:left;
+}
+#loginOr{
+	float:left;	
+	margin:9px;
+}

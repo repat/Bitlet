@@ -91,8 +91,7 @@ body {
 	margin-right:6px; 
 }
 
-#menu1 {
-	margin-left: -37px;
+#menuLoggedIn {
 	font-size:13px; 
 	text-align: right;
 	color:#333; 
@@ -100,9 +99,11 @@ body {
 	border:1px solid #DDD;
 	border-radius:5px; 
 	margin-top:3px; 
+	left:auto;
+	right:0;
 }
 
-#menu1 a{
+#menuLoggedIn a{
 	color:#222;
 	padding:5px 15px 0 0; 
 }

@@ -45,7 +45,10 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 				$("#LoginModal").modal('hide');
 				window.location = '/dashboard';
 			} else {
-					
+					$('.loginPassword').val('');
+					$('.loginEmail').val('');
+					$loginErrorMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><h4 class='alert-heading'>We Do Not Recognize You</h4><p>Please reenter your password and username. If you think you entered everything correctly please contact us.</p></div>";
+					$('.bitletTopOfLogin').before($loginErrorMessage);
 			}
 		}, "json");
 
@@ -59,6 +62,6 @@ $("#logoutBtn").click(function(event) {
 		function(data) {
 			console.log('logout successful');
 			// reload the window on logout
-			window.location.reload();
+			window.location ='/';	
 		}, "json");
 });

@@ -28,13 +28,13 @@
 <? } else { // not logged in ?>
 	<div id="LoginModal" class="modal hide fade">
 	<div id="loginModalHeader" class="modal-header">
-		<button class="close" data-dismiss="modal">X</button>
+		<button type="button" class="close" data-dismiss="modal">x</button>
     	<h3>Login</h3>
 	</div>
     <!-- dialog contents -->
 	<div class="modal-body">
 
-		<div class="input-prepend">
+		<div class="input-prepend bitletTopOfLogin">
 			<span class="add-on loginAddOn">
 				<i class="icon-user loginIcon"></i>
 			</span>
@@ -56,6 +56,10 @@
 	</div>
 	<div class="modal-footer modalLoginFooter">
 		<button type="submit" id="bitletLoginSubmitbtn" autocomplete="off" data-loading-text="Logging you in..." class="btn-large submit-button btn btn-primary">Login</button>
+		<hr class="hrLogin">
+		<p id="loginOr">or</p>
+		<hr class="hrLogin">
+		<a id="bitletLoginNewAccount" class="btn-large submit-button btn btn-info">Sign Up</a>
 	</div>
 </div>
 <? } ?>
