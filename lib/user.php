@@ -58,6 +58,19 @@ function GetUserEmail($uid)
 	return mysql_result($result, 0);
 }
 
+//Check if email exists
+function CheckUserEmail($email)
+{
+	$result = mysql_query("SELECT id FROM users WHERE email='$email'")
+		or die('Cannot find account in our Database, email='.$email);
+	if(mysql_num_rows($result) < 1) {
+		error_log('No result found for email');
+		return false;	
+	}
+	else{
+		return mysql_result($result);
+	}	
+}
 // get all the user info
 function GetUserInfo($uid)
 {
