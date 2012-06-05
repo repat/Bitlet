@@ -1,6 +1,3 @@
-#leftCol {
-	margin:0px;
-}
 
 #profilePic {
 	border: 3px solid white; 
@@ -24,7 +21,7 @@
 	height: 270px;
 	width: 270px;
 	position: absolute;
-	top: 570px;
+	top: 460px;
 	left: 810px;
 }
 
