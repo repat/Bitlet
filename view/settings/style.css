@@ -17,15 +17,25 @@
 }
 
 #save {
-	margin-left: 176px;
+	margin-left: 257px;
 }
 
-#bioBox {
-	
+#toolbox{
+	height: 270px;
+	width: 270px;
+	position: absolute;
+	top: 570px;
+	left: 810px;
 }
+
 #bioBox textarea{
 	width:300px !important; 
 }
+
+#bio {
+	height:0px; 
+}
+
 
 #check1 {
 	margin-left:10px;

@@ -19,7 +19,7 @@
 					</form>
 				
 					
-					<button class="btn-primary" id="save">Save</button>
+					<button class="btn btn-primary" id="save">Save</button>
 				</div>
 		</div>
 	<hr>
@@ -28,9 +28,9 @@
 			<p class="pref" ><input type="checkbox" id="check1" >Email me when someone purchases one of my products!</p>
 			<p class="pref"><input type="checkbox" id="check2">Email me a weekly summary of my sales</p>
 			<h4 id="changePw">Change Password</h4>
-			<p class="pwField" id="old">Old Password:<input class="input focused" id="focusedInput-old" type="text" value="ILoveCats"></p>
-			<p class="pwField" id ="new">New Password:<input class="input focused" id="focusedInput" type="text" value=""></p>
-			<p class="pwField">Confirm New Password:<input class="input focused" id="focusedInput" type="text" value=""></p>
-			<p> Security Question
+			<p class="pwField" id="old">Old Password:<input class="input focused" id="focusedInput-old" type="password" value="ILoveCats"></p>
+			<p class="pwField" id ="new">New Password:<input class="input focused" id="focusedInput" type="password" value=""></p>
+			<p class="pwField">Confirm New Password:<input class="input focused" id="focusedInput" type="password" value=""></p>
+			<img id="toolbox" src="/img/drawings/backend.png">
 		</div>
 </div>

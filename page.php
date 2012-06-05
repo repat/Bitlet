@@ -50,6 +50,9 @@
 			case 'legal':
 				$dir = 'view/legal';
 				break;
+			case 'create-account':
+				$dir = 'view/create-account';
+				break;
 			case 'reset-details':
 				$dir = 'view/reset-details';
 				break;
