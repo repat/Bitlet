@@ -8,21 +8,31 @@
 	margin-right: 30px;
 }
 
+.prof {
+	margin-left:15px; 
+	clear:both; 
+}
+
 #textCount{
 	width:25px; 	
 	margin-right:5px; 
 }
 
 #save {
-	margin-left: 250px;
+	width: 220px; 
+	font-size:16px; 
+	margin-left:113px; 
+}
+
+.rightSide {
+	clear:both; 
 }
 
 #toolbox{
-	height: 270px;
-	width: 270px;
-	position: absolute;
-	top: 460px;
-	left: 810px;
+	height: 200px; 
+	margin-top:30px;
+	margin-bottom:35px; 
+	float:left; 
 }
 
 #bioBox textarea{
@@ -45,26 +55,26 @@
 }
 
 .pref {
-	padding-top:20px;
-	padding-left:50px; 
+	padding-left:10px; 
 }
 
 #changePw {
-	padding-left:30px; 
+	margin-left:10px; 
 	margin-top:20px; 
 	margin-bottom:20px;
 }
 
 
 .pwField {
-	margin-left:50px; 
+	margin-left:2px; 
 }
 
 #new {
-	margin-left:97px; 
+	margin-left:19px; 
 }
+
 #old {
-	margin-left: 102px;
+	margin-left: 23px;
 }
 
 /*Starting FAQ section*/

@@ -55,7 +55,20 @@ $category = 'video';
 		</div>
 	
 		<? require_once 'left.php'?>
-		<? require_once 'middle.php'?>
-		<? require_once 'right.php'?>
+		
+		<!-- center -->
+		<div class= "centerDiv">
+			<div class="tabbable">
+				<div class="tab-content">
+					<ul class="dashTable">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="divShadow"></div>
+
+		<!-- right side -->
+		<div class="rightSideContainer">
+		</div>
 </div>
 	
