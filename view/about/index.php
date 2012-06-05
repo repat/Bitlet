@@ -16,7 +16,7 @@
 			<a href="http://twitter.com/#!/DavidZhangToGo"><img class="teamPics" id="dave" rel="tooltip" 
 				title="David Zhang" data-content="David is all around a pretty awesome dude. He's known for being always right* <span style='font-size: 9px'>(52% of the time)</span>." src="img/team/david.png"/></a>
 			<a href="http://twitter.com/#!/zzimbler"><img class="teamPics" id="zach" rel="tooltip" 
-				title="Zach Zimbler" data-content="Zach apparently likes Frisbee, and broken bones." src="/img/team/zach.png"/></a>
+				title="Zach Zimbler" data-content="Zach once ran a marathon backwards, backpacked the Appalachian trail in one day, and got knighted at the same time. Zach doesn't always listen to music but when he does he listens to <a href='http://phish.com'>phish</a>" src="/img/team/zach.png"/></a>
 			<a href="http://twitter.com/#!/AriannaSimpson"><img class="teamPics" id="ari" rel="tooltip" 
 				title="Arianna Simpson" data-content="Arianna grew up in Italy and loves traveling. She also falls down a lot." src="/img/team/arianna.png"/></a>
 		</div>
