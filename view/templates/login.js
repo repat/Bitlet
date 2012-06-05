@@ -47,7 +47,7 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 			} else {
 					$('.loginPassword').val('');
 					$('.loginEmail').val('');
-					$loginErrorMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><h4 class='alert-heading'>We Do Not Recognize You</h4><p>Please reenter your password and username. If you think you entered everything correctly please contact us.</p></div>";
+					$loginErrorMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Wrong Username/Email and password combination</p></div>";
 					$('.bitletTopOfLogin').before($loginErrorMessage);
 			}
 		}, "json");

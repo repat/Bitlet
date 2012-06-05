@@ -42,7 +42,7 @@
 </div><? // end of bitlet-hero ?>
 
 <? // MARKETING STUFF GOES HERE ?>
-<div id="marketingBg" class="container well" >
+<div id="marketingBg" class="container well bitletDropShadow" >
 	<h1>Why you'll love using Bitlet</h1>
 	<img id="bitletCloudHome" src="/img/drawings/bitcloud.png">
 	<hr>
