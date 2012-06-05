@@ -17,7 +17,7 @@ if($UID >= 0)
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userEmail">
 						<? echo $name; ?> <b class="caret" id="caret" ></b>
 					</a>
-					<ul class="dropdown-menu" id="menu1">
+					<ul class="dropdown-menu" id="menuLoggedIn">
 						<li ><a href="/dashboard">Dashboard <i class="icon-user"></i></a></li>
 						<li><a href="/faq">FAQ <i class="icon-question-sign"></i></a></li>
 						<li><a href="/settings">Settings <i class="icon-cog"></i></a></li>
