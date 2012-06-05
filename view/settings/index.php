@@ -14,11 +14,11 @@
 			</form>
 		</div>
 		<br>
-
+		<hr id="line">
 		<h2 class="prof">Preferences</h2>
 		<img id="toolbox" src="/img/drawings/backend.png">
 		<div class="span6">
-			<p class="pref" ><input type="checkbox" id="check1" >Email me when someone purchases one of my products!</p>
+			<p class="pref" ><input type="checkbox" id="check1" >Email me when someone purchases my products!</p>
 					<p class="pref"><input type="checkbox" id="check2">Email me a weekly summary of my sales</p>
 					<h4 id="changePw">Change Password</h4>
 						<p class="pwField" id="old">Old Password:<input class="input focused" id="focusedInput-old" type="password" value=""></p>
