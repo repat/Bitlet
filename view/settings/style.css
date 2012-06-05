@@ -8,21 +8,30 @@
 	margin-right: 30px;
 }
 
+#prof {
+	margin-left:15px; 
+}
+
 #textCount{
 	width:25px; 	
 	margin-right:5px; 
 }
 
 #save {
-	margin-left: 250px;
+	width: 200px; 
+	float:right; 
+	font-size:20px; 
+}
+
+.rightSide {
+	clear:both; 
 }
 
 #toolbox{
 	height: 270px;
 	width: 270px;
-	position: absolute;
-	top: 460px;
-	left: 810px;
+	margin-left:50px; 
+	margin-bottom:35px; 
 }
 
 #bioBox textarea{
