@@ -18,7 +18,7 @@
 			<a href="http://twitter.com/#!/zzimbler"><img class="teamPics" id="zach" rel="tooltip" 
 				title="Zach Zimbler" data-content="Zach apparently likes Frisbee, and broken bones." src="/img/team/zach.png"/></a>
 			<a href="http://twitter.com/#!/AriannaSimpson"><img class="teamPics" id="ari" rel="tooltip" 
-				title="Arianna Simpson" data-content="Arianna is usually the reason why the site is broken." src="/img/team/arianna.png"/></a>
+				title="Arianna Simpson" data-content="Arianna grew up in Italy and loves traveling. She also falls down a lot." src="/img/team/arianna.png"/></a>
 		</div>
 	</div>
 </div>
