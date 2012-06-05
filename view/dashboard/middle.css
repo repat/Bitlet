@@ -32,7 +32,7 @@
 	margin-right:300px;  
 	font-family: Helvetica,Arial,Verdana,sans-serif; 
 	background: #EEE;
-	min-height: 600px;
+	min-height: 650px;
 	border-left: 1px solid #333;
 }
 
@@ -59,6 +59,22 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CBD7ED', endColorstr='#EEEEEE'); /* for IE */
 	background: -webkit-gradient(linear, left top, right top, from(#CBD7ED), to(#EEEEEE)); /* for webkit browsers */
 	background: -moz-linear-gradient(left,  #CBD7ED,  #EEEEEE); /* for firefox 3.6+ */ 
+}
+
+.dashTable li:active {
+	padding: 10px 10px 10px 12px;
+	border-left: 8px solid #59A9BC;
+
+	/* gradient */
+	background: #ABB7CD; /*for non-css3 browsers*/
+}
+
+.dashTable #selected {
+	padding: 10px 10px 10px 12px;
+	border-left: 8px solid #59A9BC;
+
+	/* gradient */
+	background: #CBD7ED; /*for non-css3 browsers*/
 }
 
 .divider {
