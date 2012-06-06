@@ -9,10 +9,11 @@ function DisplayProducts() {
 
 	// clear the table
 	// TODO: Add loading animation
-	$(".dashTable").html('');
+	$('.dashTable').html('');
+	$('.rightSideMenu').html('<div id="topBar"></div>');
 
 	// run AJAX query
-	$(".dashTable").load("/ajax/products");
+	$('.dashTable').load('/ajax/products');
 
 	// set state
 	tableSelected = 0;
@@ -25,10 +26,11 @@ function DisplayPurchases() {
 
 	// clear the table
 	// TODO: Add loading animation
-	$(".dashTable").html('');
+	$('.dashTable').html('');
+	$('.rightSideMenu').html('<div id="topBar"></div>');
 
 	// run AJAX query
-	$(".dashTable").load("/ajax/purchases");
+	$('.dashTable').load('/ajax/purchases');
 
 	// set state
 	tableSelected = 1;
@@ -41,20 +43,17 @@ $('#purchasesBtn').click(DisplayPurchases);
 DisplayProducts();
 
 /*** table right column functions ***/
-function SelectRow() {
-	// products selected
-	if(tableSelected == 0) {
-	} else {
-	}
-}
-
 $('.dashTable li').live('click', function () {
 	// figure out which table was selected
 	var fid = $(this).attr('title');
 
-	// AJAX the page with fid as argument
-	$.post('/ajax/itemdetails', {fid: fid}, function(data) {
-		$('.rightSideMenu').html(data);
-	});	
+	// products selected
+	if(tableSelected == 0) {
+		// AJAX the page with fid as argument
+		$.post('/ajax/productdetails', {fid: fid}, function(data) {
+			$('.rightSideMenu').html(data);
+		});	
+	} else {
+	}
 });
 
