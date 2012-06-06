@@ -43,7 +43,7 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 HTML;
 }
 
-function BuildItemDetails($name, $filename, $size, $price, $image, $descr, $category, $sharelink, $param)
+function BuildProductItemDetails($name, $filename, $size, $price, $image, $descr, $category, $sharelink, $param)
 {
 	$details = '';
 
@@ -147,7 +147,7 @@ HTML;
 		<h3>$filename | $size bytes</h3>
 	</div>
 	<div class="topRight">
-		<h2>$price</h2>
+		<h2>$$price</h2>
 	</div>
 
 	<div class="imgDiv"><img src="$image"/></div>
