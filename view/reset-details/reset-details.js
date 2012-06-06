@@ -1,4 +1,4 @@
-/ enable submit button loading state
+// enable submit button loading state
 $("#resetPassSubBtn").button();
 
 // Attach the submit button to the reset handler 
@@ -14,7 +14,7 @@ $("#resetPassSubBtn").click(function(event) {
 			$("#resetPassSubBtn").button('reset');
 			if(data.success) {
 				// TODO need to create link that is below
-				window.location = '/reset-details/success';
+				window.location = '/reset-details';
 			} else {
 					$("#emailToReset").val('');
 					$loginErrorMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Wrong Username/Email and password combination</p></div>";
@@ -23,5 +23,5 @@ $("#resetPassSubBtn").click(function(event) {
 		}, "json");
 
 	// clear password input form
-	$('.loginPassword').val('');
+	$('#emailToReset').val('');
 });
