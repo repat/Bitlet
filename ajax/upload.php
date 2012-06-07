@@ -17,7 +17,7 @@ $MAX_SIZE = 5000000000;		// limit is 5 GB
 if(isset($_FILES['file']))
 {
 	/*** RECEIVE FILE ***/
-	$uploadroot = 'data/';
+	$uploadroot = 'temp/';
 	$email = $_POST['email'];
 
 	// check size
@@ -50,9 +50,46 @@ if(isset($_FILES['file']))
 		SendResult(0);
 	}
 
+	// figure out filetype
+	$ftype = strtolower(end(explode('.', $name)));
+	$ftype_str = '';
+	switch($ftype) {
+	case 'png':
+	case 'jpg':
+	case 'gif':
+	case 'tif':
+	case 'tiff':
+		$ftype_str = 'photo';
+		$thumbpath = GenerateImageThumbnail($uid.'/'.$name);
+		break;
+	case 'psd':
+		$ftype_str = 'digiart';
+		break;
+	case 'mov':
+	case 'avi':
+	case 'wmv':
+	case 'mkv':
+		$ftype_str = 'video';
+		break;
+	case 'pdf':
+	case 'doc':
+	case 'docx':
+	case 'rtf':
+	case 'txt':
+		$ftype_str = 'document';
+		break;
+	case 'wma':
+	case 'mp3':
+		$ftype_str = 'music';
+		break;
+	default:
+		$ftype_str = 'generic';
+		break;
+	}
+
 	// insert file into db
 	// file type: enum('generic','photo','music','digiart','document','video')
-	$fid = NewFile($uid, $uploadname, 'generic');
+	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath);
 
 	if($pass != null) {
 		error_log('new user created, pass '.$pass);
@@ -62,8 +99,6 @@ if(isset($_FILES['file']))
 		$_SESSION['uid'] = $uid;
 		$UID = $uid;
 	}
-
-	/*** POST PROCESS FILE ***/
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);

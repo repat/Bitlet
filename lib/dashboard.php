@@ -43,8 +43,103 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 HTML;
 }
 
-function BuildItemDetails($name, $filename, $size, $price, $image, $descr, $category, $sharelink, $param)
+function BuildProductItemDetails($name, $filename, $size, $price, $image, $descr, $category, $sharelink, $param)
 {
+	$details = '';
+
+	// build the details table based on catagory
+	switch($category) {	// different HTML for different category of files
+	case 'photo': 
+		$details = <<<HTML
+		<tr>
+			<td class="left">Camera Type</td>
+			<td class="right">Nikon</td>
+		</tr>
+		<tr>
+			<td class="left">Shutter Speed </td>
+			<td class="right">1/320 </td>
+		</tr>
+		<tr>
+			<td class="left">ISO</td>
+			<td class="right">3200</td>
+		</tr>
+		<tr>
+			<td class="left">Aperture</td>
+			<td class="right">f2.8</td>
+		</tr>
+		<tr>
+			<td class="left">Dimension</td>
+			<td class="right">5000x4000</td>
+		</tr>
+		<tr>
+			<td class="left">File Size</td>
+			<td class="right">1.4MB</td>
+		</tr>
+HTML;
+		break;
+	case 'art':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Dimension</td>
+			<td class="right">5000x4000</td>
+		</tr>
+HTML;
+		break;
+	case 'music':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Artist</td>
+			<td class="right">My Band</td>
+		</tr>
+		<tr>
+			<td class="left">Album</td>
+			<td class="right">My Album</td>
+		</tr>
+		<tr>
+			<td class="left">Genre</td>
+			<td class="right">Rock</td>
+		</tr>
+		<tr>
+			<td class="left">Length</td>
+			<td class="right">3:12</td> 
+		</tr>
+HTML;
+		break;
+	case 'book':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Pages</td>
+			<td class="right">233</td>
+		</tr>
+HTML;
+		break;
+	case 'document':
+		$details = <<<HTML
+HTML;
+		break;
+	case 'video':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Camera Type</td>
+			<td class="right">Nikon</td>
+		</tr>
+		<tr>
+			<td class="left">Shutter Speed </td>
+			<td class="right">1/320 </td>
+		</tr>
+		<tr>
+			<td class="left">ISO</td>
+			<td class="right">3200</td>
+		</tr>
+		<tr>
+			<td class="left">Length</td>
+			<td class="right">1:12:11</td>
+		</tr>
+HTML;
+		break;
+	}
+
+	// return the final built HTML
 	return <<<HTML
 	<div id="topBar"></div>
 	<div class="topLeft">
@@ -52,7 +147,7 @@ function BuildItemDetails($name, $filename, $size, $price, $image, $descr, $cate
 		<h3>$filename | $size bytes</h3>
 	</div>
 	<div class="topRight">
-		<h2>$price</h2>
+		<h2>$$price</h2>
 	</div>
 
 	<div class="imgDiv"><img src="$image"/></div>
@@ -60,86 +155,7 @@ function BuildItemDetails($name, $filename, $size, $price, $image, $descr, $cate
 	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
 		<p id="productDescr"><b>About this file: </b>$descr 
 			<button class="btn btn-mini" data-toggle="collapse" data-target="#dataTable">more <span class="caret"></span></button></p>
-		<div id="dataTable" class="collapse in"><hr><table>
-			<? switch($category) {	// different HTML for different category of files
-				case 'photo': ?>
-				<tr>
-					<td class="left">Camera Type</td>
-					<td class="right">Nikon</td>
-				</tr>
-				<tr>
-					<td class="left">Shutter Speed </td>
-					<td class="right">1/320 </td>
-				</tr>
-				<tr>
-					<td class="left">ISO</td>
-					<td class="right">3200</td>
-				</tr>
-				<tr>
-					<td class="left">Aperture</td>
-					<td class="right">f2.8</td>
-				</tr>
-				<tr>
-					<td class="left">Dimension</td>
-					<td class="right">5000x4000</td>
-				</tr>
-				<tr>
-					<td class="left">File Size</td>
-					<td class="right">1.4MB</td>
-				</tr>
-			<? break; ?>
-			<? case 'art': ?>
-				<tr>
-					<td class="left">Dimension</td>
-					<td class="right">5000x4000</td>
-				</tr>
-			<? break; ?>
-			<? case 'music': ?>
-				<tr>
-					<td class="left">Artist</td>
-					<td class="right">My Band</td>
-				</tr>
-				<tr>
-					<td class="left">Album</td>
-					<td class="right">My Album</td>
-				</tr>
-				<tr>
-					<td class="left">Genre</td>
-					<td class="right">Rock</td>
-				</tr>
-				<tr>
-					<td class="left">Length</td>
-					<td class="right">3:12</td> 
-				</tr>
-			<? break; ?>
-			<? case 'book': ?>
-				<tr>
-					<td class="left">Pages</td>
-					<td class="right">233</td>
-				</tr>
-			<? break; ?>
-			<? case 'document': ?>
-			<? break; ?>
-			<? case 'video': ?>
-			<tr>
-					<td class="left">Camera Type</td>
-					<td class="right">Nikon</td>
-				</tr>
-				<tr>
-					<td class="left">Shutter Speed </td>
-					<td class="right">1/320 </td>
-				</tr>
-				<tr>
-					<td class="left">ISO</td>
-					<td class="right">3200</td>
-				</tr>
-				<tr>
-					<td class="left">Length</td>
-					<td class="right">1:12:11</td>
-				</tr>
-			<? break; ?>
-			<? } ?>
-		</table></div>
+		<div id="dataTable" class="collapse in"><hr><table>$details</table></div>
 	</div></div>
 
 	<div class="shareInfo bitletDropShadow bitletRoundedCorners">

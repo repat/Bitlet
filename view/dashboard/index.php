@@ -70,7 +70,6 @@ $category = 'video';
 		<!-- right side -->
 		<div class="rightSideContainer">
 			<div class="rightSideMenu sticky-div">
-				<div id="topBar"></div>
 			</div>	<!-- end of sticky div -->
 		</div>
 </div>
