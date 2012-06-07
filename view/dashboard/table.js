@@ -7,6 +7,9 @@ function DisplayProducts() {
 	$('#purchasesBtn').removeClass('active');
 	$('#productsBtn').addClass('active');
 
+	// scroll to top
+	$("html, body").animate({ scrollTop: 0 }, 200);
+
 	// clear the table
 	// TODO: Add loading animation
 	$('.dashTable').html('');
@@ -23,6 +26,9 @@ function DisplayPurchases() {
 	// toggle button states
 	$('#purchasesBtn').addClass('active');
 	$('#productsBtn').removeClass('active');
+
+	// scroll to top
+	$("html, body").animate({ scrollTop: 0 }, 200);
 
 	// clear the table
 	// TODO: Add loading animation
