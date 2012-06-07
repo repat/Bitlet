@@ -54,6 +54,10 @@ $('.dashTable li').live('click', function () {
 			$('.rightSideMenu').html(data);
 		});	
 	} else {
+		// AJAX the page with fid as argument
+		$.post('/ajax/purchasedetails', {fid: fid}, function(data) {
+			$('.rightSideMenu').html(data);
+		});	
 	}
 });
 

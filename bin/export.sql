@@ -6,7 +6,7 @@ DROP TABLE if exists users, files, purchases;
 -- http://www.phpmyadmin.net
 --
 -- Host: mysql.simply.io
--- Generation Time: Jun 01, 2012 at 03:01 PM
+-- Generation Time: Jun 07, 2012 at 02:25 PM
 -- Server version: 5.1.39
 -- PHP Version: 5.3.5
 
@@ -27,6 +27,8 @@ CREATE TABLE IF NOT EXISTS `files` (
   `uid` int(11) unsigned NOT NULL,
   `name` tinytext NOT NULL COMMENT 'display name',
   `type` enum('generic','photo','music','digiart','document','video') NOT NULL,
+  `param` text NOT NULL COMMENT 'file type parameters that will be parsed via parse_str() in php',
+  `size` int(11) NOT NULL DEFAULT '0' COMMENT 'file size in bytes',
   `price` double NOT NULL DEFAULT '2',
   `earned` double NOT NULL DEFAULT '0' COMMENT 'How much money made so far',
   `views` int(11) unsigned NOT NULL DEFAULT '0',
