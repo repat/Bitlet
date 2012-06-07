@@ -3,12 +3,12 @@
 // check for valid email/pass, return true on successful authentication
 // add a new file under input user uid
 // file type: enum('generic','photo','music','digiart','document','video')
-function NewFile($uid, $filename, $type)
+function NewFile($uid, $filename, $type='generic', $thumb='')
 {
 	$filename = mysql_real_escape_string($filename);
 	// Insert file into files table
-	mysql_query("INSERT INTO files (uid, file_name, type)
-		VALUES('$uid', '$filename', '$type')") or die();
+	mysql_query("INSERT INTO files (uid, file_name, type, thumb_url)
+		VALUES('$uid', '$filename', '$type', '$thumb')") or die();
 	return mysql_insert_id();
 }
 

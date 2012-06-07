@@ -60,7 +60,7 @@ if(isset($_FILES['file']))
 	case 'tif':
 	case 'tiff':
 		$ftype_str = 'photo';
-		list($dest, $destsmall) = GenerateImageThumbnail($uploadname);
+		$thumbpath = GenerateImageThumbnail($uid.'/'.$name);
 		break;
 	case 'psd':
 		$ftype_str = 'digiart';
@@ -89,7 +89,7 @@ if(isset($_FILES['file']))
 
 	// insert file into db
 	// file type: enum('generic','photo','music','digiart','document','video')
-	$fid = NewFile($uid, $uploadname, $ftype_str);
+	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath);
 
 	if($pass != null) {
 		error_log('new user created, pass '.$pass);
@@ -99,8 +99,6 @@ if(isset($_FILES['file']))
 		$_SESSION['uid'] = $uid;
 		$UID = $uid;
 	}
-
-	/*** POST PROCESS FILE ***/
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);
