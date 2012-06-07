@@ -13,7 +13,7 @@ function EmailUser($email, $msg, $subject, $name = "Customer")
 		$headers = 'From: Bitlet Thinks'.$name.' is awesome <lisa@bitlet.co>'."\r\n" .
 			'Reply-To: team@bitlet.co' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
-		$concatNameEmail = $name.'<'.$email'>';
+		$concatNameEmail = $name.'<'.$email.'>';
 		mail($concatNameEmail, $subject, $msg, $headers);
 	}
 }
