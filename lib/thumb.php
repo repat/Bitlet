@@ -36,7 +36,7 @@ function GenerateImageThumbnail($imgpath)
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 
-	return $path;
+	return $path.'/'.basename($imgpath);
 }
 
 ?>

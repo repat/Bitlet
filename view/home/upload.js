@@ -13,7 +13,7 @@ function UploadDone(result) {
 		$('#email').attr("disabled", "disabled");
 		$('.menu-navbar-bitlet').html(
 			'<span id="welcome">Welcome ' + $('#email').val() +
-			', </span><a id="account" href="/admin">View your account</a>');
+			', </span><a id="account" href="/dashboard">View your account</a>');
 	} else {
 		console.error("upload error!");
 		

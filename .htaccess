@@ -2,6 +2,6 @@
 
 RewriteEngine On
 
-RewriteRule !^(view|lib|img)/ controller.php [NC,L]
+RewriteRule !^(data|view|lib|img)/ controller.php [NC,L]
 
 </IfModule>
