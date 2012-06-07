@@ -2,14 +2,12 @@
 
 function EmailUser($email, $msg, $subject, $name = "Customer")
 {
-	if($name = "Customer")
-	{ 
+	if($name == "Customer") { 
 		$headers = 'From: Lisa Bitlet <lisa@bitlet.co>'."\r\n" .
 			'Reply-To: team@bitlet.co' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 		mail($email, $subject, $msg, $headers); 
-	}
-	else{
+	} else {
 		$headers = 'From: Bitlet Thinks'.$name.' is awesome <lisa@bitlet.co>'."\r\n" .
 			'Reply-To: team@bitlet.co' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
@@ -48,4 +46,5 @@ function EmailPasswordReset($email, $pass, $name)
 		;
 	EmailUser($email, $message);
 }
+
 ?>
