@@ -64,11 +64,11 @@ function CheckUserEmail($email)
 	$result = mysql_query("SELECT id FROM users WHERE email='$email'")
 		or die('Cannot find account in our Database, email='.$email);
 	if(mysql_num_rows($result) < 1) {
-		error_log('No result found for email');
+		error_log('No result found for email= '.$email);
 		return false;	
 	}
 	else{
-		return mysql_result($result);
+		return mysql_result($result, 0);
 	}	
 }
 // get all the user info
