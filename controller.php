@@ -2,6 +2,9 @@
 	include_once 'page.php';
 	include_once 'async.php';
 
+	// set base global var
+	$BASE = dirname(__FILE__);
+
 	// include lib files
 	foreach (glob("lib/*.php") as $filename) {
 		include_once $filename;

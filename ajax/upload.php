@@ -43,7 +43,7 @@ if(isset($_FILES['file']))
 	`$sh`;
 
 	if(move_uploaded_file($tmp_name, $uploadname)) {
-		$sh ="chmod 755 $uploadname";
+		$sh ="chmod 777 $uploadname";
 		`$sh`;
 	} else {
 		error_log('File storage error');
@@ -60,7 +60,7 @@ if(isset($_FILES['file']))
 	case 'tif':
 	case 'tiff':
 		$ftype_str = 'photo';
-		$thumbpath = GenerateImageThumbnail($uid.'/'.$name);
+		$thumbpath = GenerateImageThumbnail($uploadname);
 		break;
 	case 'psd':
 		$ftype_str = 'digiart';
