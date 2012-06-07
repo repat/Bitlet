@@ -4,12 +4,12 @@ function EmailUser($email, $msg, $subject, $name = "Customer")
 {
 	if($name == "Customer") { 
 		$headers = 'From: Lisa Bitlet <lisa@bitlet.co>'."\r\n" .
-			'Reply-To: team@bitlet.co' . "\r\n" .
+			'Reply-To: Lisa Bitlet <lisa@bitlet.co>' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 		mail($email, $subject, $msg, $headers); 
 	} else {
 		$headers = 'From: Bitlet Thinks'.$name.' is awesome <lisa@bitlet.co>'."\r\n" .
-			'Reply-To: team@bitlet.co' . "\r\n" .
+			'Reply-To: Lisa Bitlet <lisa@bitlet.co>' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 		$concatNameEmail = $name.'<'.$email.'>';
 		mail($concatNameEmail, $subject, $msg, $headers);
@@ -35,16 +35,16 @@ function EmailNewUser($email, $pass)
 // email the user their new password
 function EmailPasswordReset($email, $pass, $name)
 {
-	$subject = 'Bitlet!';
+	$subject = 'New Bitlet.co Password!';
 	$message = 
-		'Hi'.$name.','."\r\n\r\n".
+		'Hi '.$name.','."\r\n\r\n".
 		'Your temporary password is: '.$pass."\r\n\r\n".
 		'Please use your email and temporary password to login and be sure to reset your password.'."\r\n\r\n".
 		'Next time try not forget your password! We have to send Explorer Bitlet out to find you a new one everytime!'."\r\n\r\n".
 		'Happy hunting,'."\r\n".
 		'Team Bitlet'
 		;
-	EmailUser($email, $message);
+	EmailUser($email, $message, $subject);
 }
 
 ?>

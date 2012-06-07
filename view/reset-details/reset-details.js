@@ -12,13 +12,14 @@ $("#resetPassSubBtn").click(function(event) {
 		function(data) {
 			//console.log('reset status: '+data.success);
 			$("#resetPassSubBtn").button('reset');
-			if(data.success) {
-				// TODO need to create link that is below
-				window.location = '/reset-details';
+			if(data.success == true) {
+					$("#emailToReset").val('');
+					$resetMessage = "<div class='alert fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We have sent a new password to your email. Hope to see you soon!</p></div>";
+					$('#resetContent').after($resetMessage);
 			} else {
 					$("#emailToReset").val('');
-					$loginErrorMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Wrong Username/Email and password combination</p></div>";
-					$('.bitletTopOfLogin').before($loginErrorMessage);
+					$resetMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't find your email<p></div>";
+					$('.resetContent').after($resetMessage);
 			}
 		}, "json");
 
