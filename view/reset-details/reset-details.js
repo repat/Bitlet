@@ -14,12 +14,14 @@ $("#resetPassSubBtn").click(function(event) {
 			$("#resetPassSubBtn").button('reset');
 			if(data.success == true) {
 					$("#emailToReset").val('');
-					$resetMessage = "<div class='alert fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We have sent a new password to your email. Hope to see you soon!</p></div>";
+					$resetMessage = "<div class='alert fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We have sent a new password to your email. Hope to see you soon!</p></div>";
+					$('.resetDetailsAlert').remove();
 					$('#resetContent').after($resetMessage);
 			} else {
 					$("#emailToReset").val('');
-					$resetMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't find your email<p></div>";
-					$('.resetContent').after($resetMessage);
+					$resetMessage = "<div class='alert alert-block alert-error fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't find your email<p></div>";
+					$('.resetDetailsAlert').remove();	
+					$('#resetContent').after($resetMessage);
 			}
 		}, "json");
 
