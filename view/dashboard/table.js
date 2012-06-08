@@ -53,6 +53,12 @@ $('.dashTable li').live('click', function () {
 	// figure out which table was selected
 	var fid = $(this).attr('title');
 
+	// mark the table as selected
+	$('.dashTable li').each(function() {
+		$(this).removeClass('selected');
+	});
+	$(this).addClass('selected');
+
 	// products selected
 	if(tableSelected == 0) {
 		// AJAX the page with fid as argument
