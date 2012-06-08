@@ -56,8 +56,8 @@ function BuildProductItemDetails($name, $filename, $size, $price, $image, $descr
 			<td class="right">Nikon</td>
 		</tr>
 		<tr>
-			<td class="left">Shutter Speed </td>
-			<td class="right">1/320 </td>
+			<td class="left">Shutter Speed</td>
+			<td class="right">1/320</td>
 		</tr>
 		<tr>
 			<td class="left">ISO</td>
@@ -165,8 +165,9 @@ HTML;
 		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
 		<a href="http://facebook.com"><img onload="collapseRight()" src="/img/Facebook.png" id="facebook"/></a>
 	</div>
-	<button class="btn btn-info" id="edit">Edit</button>
+	<button class="btn btn-info" id="edit" onclick="showEdit()">Edit</button>
 HTML;
 }
 
 ?>
+

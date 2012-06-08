@@ -54,7 +54,7 @@ $category = 'video';
 		<div id="topDiv">
 		</div>
 	
-		<? require_once 'left.php'?>
+		<? require_once 'left.php'; ?>
 		
 		<!-- center -->
 		<div class= "centerDiv">
@@ -73,4 +73,6 @@ $category = 'video';
 			</div>	<!-- end of sticky div -->
 		</div>
 </div>
+
+<? require_once 'edit.php'; ?>
 	
