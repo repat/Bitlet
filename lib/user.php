@@ -66,8 +66,7 @@ function CheckUserEmail($email)
 	if(mysql_num_rows($result) < 1) {
 		error_log('No result found for email= '.$email);
 		return false;	
-	}
-	else{
+	} else {
 		return mysql_result($result, 0);
 	}	
 }
