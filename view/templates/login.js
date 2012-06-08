@@ -65,3 +65,11 @@ $("#logoutBtn").click(function(event) {
 			window.location ='/';	
 		}, "json");
 });
+
+
+// attach a click handler to the logout button
+$("#bitletLoginNewAccount").click(function(event) {
+			window.location ='/signup';	
+});
+
+

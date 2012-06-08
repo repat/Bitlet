@@ -50,7 +50,7 @@ function ViewPage($url, $args)
 		case 'legal':
 			$dir = 'view/legal';
 			break;
-		case 'create-account':
+		case 'signup':
 			$dir = 'view/create-account';
 			break;
 		case 'reset-details':
