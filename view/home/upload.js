@@ -10,7 +10,7 @@ function UploadDone(result) {
 		showUploadDone(result);
 
 		// the user should be auto logged in now, make the page look like auto logged in
-		$('#email').attr("disabled", "disabled");
+		$('#email').attr("readonly", "true");
 		$('.menu-navbar-bitlet').html(
 			'<span id="welcome">Welcome ' + $('#email').val() +
 			', </span><a id="account" href="/dashboard">View your account</a>');
