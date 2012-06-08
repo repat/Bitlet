@@ -87,9 +87,13 @@ if(isset($_FILES['file']))
 		break;
 	}
 
+	// get file size
+	$fsize = filesize($uploadname);
+	error_log('file size: '.$fsize);
+
 	// insert file into db
 	// file type: enum('generic','photo','music','digiart','document','video')
-	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath);
+	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath, $fsize);
 
 	if($pass != null) {
 		error_log('new user created, pass '.$pass);

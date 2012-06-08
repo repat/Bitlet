@@ -7,6 +7,9 @@ function DisplayProducts() {
 	$('#purchasesBtn').removeClass('active');
 	$('#productsBtn').addClass('active');
 
+	// scroll to top
+	$("html, body").animate({ scrollTop: 0 }, 200);
+
 	// clear the table
 	// TODO: Add loading animation
 	$('.dashTable').html('');
@@ -23,6 +26,9 @@ function DisplayPurchases() {
 	// toggle button states
 	$('#purchasesBtn').addClass('active');
 	$('#productsBtn').removeClass('active');
+
+	// scroll to top
+	$("html, body").animate({ scrollTop: 0 }, 200);
 
 	// clear the table
 	// TODO: Add loading animation
@@ -47,6 +53,12 @@ $('.dashTable li').live('click', function () {
 	// figure out which table was selected
 	var fid = $(this).attr('title');
 
+	// mark the table as selected
+	$('.dashTable li').each(function() {
+		$(this).removeClass('selected');
+	});
+	$(this).addClass('selected');
+
 	// products selected
 	if(tableSelected == 0) {
 		// AJAX the page with fid as argument
@@ -54,6 +66,10 @@ $('.dashTable li').live('click', function () {
 			$('.rightSideMenu').html(data);
 		});	
 	} else {
+		// AJAX the page with fid as argument
+		$.post('/ajax/purchasedetails', {fid: fid}, function(data) {
+			$('.rightSideMenu').html(data);
+		});	
 	}
 });
 
