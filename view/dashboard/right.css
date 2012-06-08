@@ -184,3 +184,12 @@
 	margin-top: 15px;
 }
 
+/* form overrides */
+.editForm .control-label {
+	width: 80px;
+}
+
+.editForm .controls {
+	margin-left: 100px;
+}
+
