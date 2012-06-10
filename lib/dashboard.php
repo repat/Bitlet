@@ -103,7 +103,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<table class="detailsTable"></table>
 	</div></div>
 
-	<div class="shareInfo bitletDropShadow bitletRoundedCorners">
+	<div class="shareInfo bitletRoundedCorners bitletDropShadow">
 		<h3>Share this product and earn credits!</h3>
 		<hr>
 		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
