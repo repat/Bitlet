@@ -2,13 +2,11 @@
 
 // grab the fid from javascript
 $fid = $_POST['fid'];
+$selected = $_POST['selected'];
 $finfo = GetFileInfo($fid);
 
-$thumb = $finfo['thumb_url'].THUMB_END;
-
 // display name, file name, size (bytes), price, image, description, catagory, sharelink, param
-$ret = BuildProductItemDetails($finfo['name'], $finfo['file_name'], $finfo['size'], $finfo['price'], 
-	$thumb, $finfo['description'], $finfo['type'], $finfo['url'], $finfo['param']);
+$ret = BuildProductDetails(strtolower($selected), $finfo['param']);
 
 // return AJAX
 echo $ret;

@@ -12,8 +12,6 @@ if($UID >= 0) {
 	$user['name'] = 'Test Subject 42';
 }
 
-$category = 'video';
-
 ?>
 
 <div id="topContainer">
@@ -73,6 +71,4 @@ $category = 'video';
 			</div>	<!-- end of sticky div -->
 		</div>
 </div>
-
-<? require_once 'edit.php'; ?>
 	

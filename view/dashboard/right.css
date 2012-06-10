@@ -89,6 +89,40 @@
 	border: 2px solid #222;
 }
 
+.productHead {
+	background: #FFF;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0px;
+	width: 280px;
+}
+
+.productHead h3 {
+	font-size: 12px; 
+	line-height: 14px;
+	font-weight: 300;
+	margin-left: 60px;
+}
+
+.productHead .add-on {
+	margin-top: -8px;
+}
+
+.columnInput {
+	width: 195px;
+}
+
+#price.columnInput {
+	width: 167px;
+}
+
+.columnLabel {
+	float: left;
+	margin-top: 5px;
+	margin-right: 5px;
+	text-align: right;
+	width: 50px;
+}
 
 .tableDiv {
 	text-align: center;
@@ -107,6 +141,15 @@
 	margin: 5px 0;
 }
 
+.productInfo select {
+	width: 250px;
+}
+
+.productInfo textarea {
+	width: 240px;
+	height: 120px;
+}
+
 #productDescr {
 	padding: 0 10px;
 	text-align: center;
@@ -116,16 +159,47 @@
 .left {
 	text-align: right; 
 	vertical-align: text-top;
-	width: 130px;
+	width: 100px;
 	color: #555;
-	padding-right: 10px;
+	padding-right: 5px;
 }
 
 .right {
 	text-align: left; 
 	vertical-align: text-top;
-	width: 130px;
-	padding-left: 10px;
+	width: 160px;
+}
+
+.detailsTable input {
+	font-size: 12px;
+	line-height: 14px;
+	height: 14px;
+	margin: 2px 0;
+}
+
+.inputMiddle .add-on {
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	text-align: center;
+	text-shadow: 0 1px 0 white;
+	vertical-align: middle;
+	padding: 4px 5px;
+}
+
+#dleft.inputMiddle {
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+
+#dright.inputMiddle {
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.detailsTable .add-on {
+	height: 14px;
 }
 
 .shareInfo {

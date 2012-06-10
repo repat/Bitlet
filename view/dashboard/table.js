@@ -1,7 +1,8 @@
 
 var tableSelected;
+var fid;
 
-/*** table AJAX functions ***/
+/*** FUNCTION DECLARATIONS ***/
 function DisplayProducts() {
 	// toggle button states
 	$('#purchasesBtn').removeClass('active');
@@ -42,6 +43,27 @@ function DisplayPurchases() {
 	tableSelected = 1;
 }
 
+function CollapseRight() {
+	$(".collapse").collapse();
+}
+
+function EditCategory() {
+	var selected = $("#categoryInput option:selected").text();
+
+	$.post('/ajax/productdetails', {fid: fid, selected: selected}, function(data) {
+		// file the details table
+		$('.detailsTable').html(data);
+
+		// select and copy share link on input box click
+		$('#productURL').tooltip({placement:'bottom'});
+		$('#productURL').click(function() {
+			this.select();
+		});
+	});
+}
+
+/*** EXECUTE ***/
+
 $('#productsBtn').click(DisplayProducts);
 $('#purchasesBtn').click(DisplayPurchases);
 
@@ -51,7 +73,7 @@ DisplayProducts();
 /*** table right column functions ***/
 $('.dashTable li').live('click', function () {
 	// figure out which table was selected
-	var fid = $(this).attr('title');
+	fid = $(this).attr('title');
 
 	// mark the table as selected
 	$('.dashTable li').each(function() {
@@ -62,12 +84,15 @@ $('.dashTable li').live('click', function () {
 	// products selected
 	if(tableSelected == 0) {
 		// AJAX the page with fid as argument
-		$.post('/ajax/productdetails', {fid: fid}, function(data) {
+		$.post('/ajax/productcolumn', {fid: fid}, function(data) {
 			$('.rightSideMenu').html(data);
+
+			// run category function
+			EditCategory();
 		});	
 	} else {
 		// AJAX the page with fid as argument
-		$.post('/ajax/purchasedetails', {fid: fid}, function(data) {
+		$.post('/ajax/purchasecolumn', {fid: fid}, function(data) {
 			$('.rightSideMenu').html(data);
 		});	
 	}

@@ -43,102 +43,79 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 HTML;
 }
 
-function BuildProductItemDetails($name, $filename, $size, $price, $image, $descr, $category, $sharelink, $param)
+function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $category, $sharelink)
 {
-	$details = '';
+	// default textarea code
+	$textarea = $descr == '' ? 'Describe this file in 3 sentences here...' : $descr;
 
-	// build the details table based on catagory
-	switch($category) {	// different HTML for different category of files
-	case 'photo': 
-		$details = <<<HTML
-		<tr>
-			<td class="left">Camera Type</td>
-			<td class="right">Nikon</td>
-		</tr>
-		<tr>
-			<td class="left">Shutter Speed</td>
-			<td class="right">1/320</td>
-		</tr>
-		<tr>
-			<td class="left">ISO</td>
-			<td class="right">3200</td>
-		</tr>
-		<tr>
-			<td class="left">Aperture</td>
-			<td class="right">f2.8</td>
-		</tr>
-		<tr>
-			<td class="left">Dimension</td>
-			<td class="right">5000x4000</td>
-		</tr>
-		<tr>
-			<td class="left">File Size</td>
-			<td class="right">1.4MB</td>
-		</tr>
-HTML;
-		break;
-	case 'art':
-		$details = <<<HTML
-		<tr>
-			<td class="left">Dimension</td>
-			<td class="right">5000x4000</td>
-		</tr>
-HTML;
-		break;
-	case 'music':
-		$details = <<<HTML
-		<tr>
-			<td class="left">Artist</td>
-			<td class="right">My Band</td>
-		</tr>
-		<tr>
-			<td class="left">Album</td>
-			<td class="right">My Album</td>
-		</tr>
-		<tr>
-			<td class="left">Genre</td>
-			<td class="right">Rock</td>
-		</tr>
-		<tr>
-			<td class="left">Length</td>
-			<td class="right">3:12</td> 
-		</tr>
-HTML;
-		break;
-	case 'book':
-		$details = <<<HTML
-		<tr>
-			<td class="left">Pages</td>
-			<td class="right">233</td>
-		</tr>
-HTML;
-		break;
-	case 'document':
-		$details = <<<HTML
-HTML;
-		break;
-	case 'video':
-		$details = <<<HTML
-		<tr>
-			<td class="left">Camera Type</td>
-			<td class="right">Nikon</td>
-		</tr>
-		<tr>
-			<td class="left">Shutter Speed </td>
-			<td class="right">1/320 </td>
-		</tr>
-		<tr>
-			<td class="left">ISO</td>
-			<td class="right">3200</td>
-		</tr>
-		<tr>
-			<td class="left">Length</td>
-			<td class="right">1:12:11</td>
-		</tr>
-HTML;
-		break;
+	// generate the correct default catagory selection box code
+	$select = '';
+	if($category == 'photo') {
+		$select .= '<option selected="selected">Image</option>';
+	} else {
+		$select .= '<option>Image</option>';
+	}
+	if($category == 'art') {
+		$select .= '<option selected="selected">Art</option>';
+	} else {
+		$select .= '<option>Art</option>';
+	}
+	if($category == 'music') {
+		$select .= '<option selected="selected">Music</option>';
+	} else {
+		$select .= '<option>Music</option>';
+	}
+	if($category == 'document') {
+		$select .= '<option selected="selected">Document</option>';
+	} else {
+		$select .= '<option>Document</option>';
+	}
+	if($category == 'video') {
+		$select .= '<option selected="selected">Video</option>';
+	} else {
+		$select .= '<option>Video</option>';
+	}
+	if($category == 'generic') {
+		$select .= '<option selected="selected">Generic</option>';
+	} else {
+		$select .= '<option>Generic</option>';
 	}
 
+	// return the final built HTML
+	return <<<HTML
+	<div id="topBar"></div>
+
+	<div class="productHead bitletRoundedCorners bitletDropShadow">
+		<span class="columnLabel">Name</span>
+		<input type="text" class="columnInput" value="$name"></input>
+		<span class="columnLabel">Price</span>
+		<div class="input-prepend">
+			<span class="add-on">$</span><input type="text" id="price" class="columnInput" value="$price"></input>
+		</div>
+		<h3>$filename | $size bytes</h3>
+	</div>
+
+	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
+		<p id="productDescr"><b>About this file: </b></p>
+		<select id="categoryInput" onchange="EditCategory()">$select</select>
+		<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
+		<hr>
+		<table class="detailsTable"></table>
+	</div></div>
+
+	<div class="shareInfo bitletDropShadow bitletRoundedCorners">
+		<h3>Share this product and earn credits!</h3>
+		<hr>
+		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
+		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
+		<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+	</div>
+	<button class="btn btn-danger" id="edit" onclick="ExecuteDelete()">Delete</button>
+HTML;
+}
+
+function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $sharelink)
+{
 	// return the final built HTML
 	return <<<HTML
 	<div id="topBar"></div>
@@ -155,7 +132,7 @@ HTML;
 	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
 		<p id="productDescr"><b>About this file: </b>$descr 
 			<button class="btn btn-mini" data-toggle="collapse" data-target="#dataTable">more <span class="caret"></span></button></p>
-		<div id="dataTable" class="collapse in"><hr><table>$details</table></div>
+		<div id="dataTable" class="collapse in"><hr><table class="detailsTable"></table></div>
 	</div></div>
 
 	<div class="shareInfo bitletDropShadow bitletRoundedCorners">
@@ -163,10 +140,199 @@ HTML;
 		<hr>
 		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
 		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
-		<a href="http://facebook.com"><img onload="collapseRight()" src="/img/Facebook.png" id="facebook"/></a>
+		<a href="http://facebook.com"><img onload="CollapseRight()" src="/img/Facebook.png" id="facebook"/></a>
 	</div>
-	<button class="btn btn-info" id="edit" onclick="showEdit()">Edit</button>
+	<button class="btn btn-info" id="edit">Download</button>
 HTML;
+}
+
+function BuildProductDetails($category, $param)
+{
+	$details = '';
+	parse_str($param);
+
+	// build the details table based on category
+	switch($category) {	// different HTML for different category of files
+	case 'image': 
+		$details = <<<HTML
+		<tr>
+			<td class="left">Camera Type</td>
+			<td class="right"><input class="input-medium" value="$camera_type"></input></td>
+		</tr>
+		<tr>
+			<td class="left">Shutter Speed</td>
+			<td class="right"><input class="input-medium" value="$shutter_speed"></input></td>
+		</tr>
+		<tr>
+			<td class="left">ISO</td>
+			<td class="right"><input class="input-medium" value="$iso"></input></td>
+		</tr>
+		<tr>
+			<td class="left">Aperture</td>
+			<td class="right"><div class="input-prepend">
+				<span class="add-on">f</span><input class="input-small" value="$aperture"></input>
+			</div></td>
+		</tr>
+		<tr>
+			<td class="left">Dimension</td>
+			<td class="right"><div class="inputMiddle">
+				<input class="input-mini" id="dleft" value="$dx"></input><span class="add-on">x</span>
+				<input class="input-mini" id="dright" value="$dy"></input></td>
+			</div>
+		</tr>
+HTML;
+		break;
+	case 'art':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Dimension</td>
+			<td class="right">$dx x $dy</td>
+		</tr>
+HTML;
+		break;
+	case 'music':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Artist</td>
+			<td class="right">$artist</td>
+		</tr>
+		<tr>
+			<td class="left">Album</td>
+			<td class="right">$album</td>
+		</tr>
+		<tr>
+			<td class="left">Genre</td>
+			<td class="right">$genre</td>
+		</tr>
+		<tr>
+			<td class="left">Length</td>
+			<td class="right">$length</td> 
+		</tr>
+HTML;
+		break;
+	case 'document':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Pages</td>
+			<td class="right">$pages</td>
+		</tr>
+HTML;
+		break;
+	case 'video':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Camera Type</td>
+			<td class="right">$camera_type</td>
+		</tr>
+		<tr>
+			<td class="left">FPS</td>
+			<td class="right">$fps</td>
+		</tr>
+		<tr>
+			<td class="left">Length</td>
+			<td class="right">$length</td>
+		</tr>
+HTML;
+		break;
+	case 'generic':
+		$details = <<<HTML
+HTML;
+		break;
+	}
+
+	return $details;
+}
+
+function BuildPurchasesDetails($category, $param)
+{
+	$details = '';
+	parse_str($param);
+
+	// build the details table based on category
+	switch($category) {	// different HTML for different category of files
+	case 'image': 
+		$details = <<<HTML
+		<tr>
+			<td class="left">Camera Type</td>
+			<td class="right">$camera_type</td>
+		</tr>
+		<tr>
+			<td class="left">Shutter Speed</td>
+			<td class="right">$shutter_speed</td>
+		</tr>
+		<tr>
+			<td class="left">ISO</td>
+			<td class="right">$iso</td>
+		</tr>
+		<tr>
+			<td class="left">Aperture</td>
+			<td class="right">f$aperture</td>
+		</tr>
+		<tr>
+			<td class="left">Dimension</td>
+			<td class="right">$dx x $dy</td>
+		</tr>
+HTML;
+		break;
+	case 'art':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Dimension</td>
+			<td class="right">$dx x $dy</td>
+		</tr>
+HTML;
+		break;
+	case 'music':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Artist</td>
+			<td class="right">$artist</td>
+		</tr>
+		<tr>
+			<td class="left">Album</td>
+			<td class="right">$album</td>
+		</tr>
+		<tr>
+			<td class="left">Genre</td>
+			<td class="right">$genre</td>
+		</tr>
+		<tr>
+			<td class="left">Length</td>
+			<td class="right">$length</td> 
+		</tr>
+HTML;
+		break;
+	case 'document':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Pages</td>
+			<td class="right">$pages</td>
+		</tr>
+HTML;
+		break;
+	case 'video':
+		$details = <<<HTML
+		<tr>
+			<td class="left">Camera Type</td>
+			<td class="right">$camera_type</td>
+		</tr>
+		<tr>
+			<td class="left">FPS</td>
+			<td class="right">$fps</td>
+		</tr>
+		<tr>
+			<td class="left">Length</td>
+			<td class="right">$length</td>
+		</tr>
+HTML;
+		break;
+	case 'generic':
+		$details = <<<HTML
+HTML;
+		break;
+	}
+
+	return $details;
 }
 
 ?>
