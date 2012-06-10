@@ -148,6 +148,7 @@
 .productInfo textarea {
 	width: 240px;
 	height: 110px;
+	resize: none;
 }
 
 #productDescr {
