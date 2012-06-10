@@ -147,7 +147,7 @@
 
 .productInfo textarea {
 	width: 240px;
-	height: 120px;
+	height: 110px;
 }
 
 #productDescr {
@@ -184,15 +184,23 @@
 	text-shadow: 0 1px 0 white;
 	vertical-align: middle;
 	padding: 4px 5px;
+	margin-left: -1px;
+	margin-right: -5px;
+	display: inline-block;
+	line-height: 12px;
 }
 
-#dleft.inputMiddle {
-	-webkit-border-radius: 0 3px 3px 0;
-	-moz-border-radius: 0 3px 3px 0;
-	border-radius: 0 3px 3px 0;
+.detailsTable .input-prepend input {
+	width: 123px;
 }
 
-#dright.inputMiddle {
+input#dleft {
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+
+input#dright {
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
