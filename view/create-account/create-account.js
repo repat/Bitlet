@@ -1,33 +1,3 @@
-// enable submit button loading state
-$("#createAccountSubmit").button();
-
-// Attach the submit button to the create account functions 
-$("#createAccountSubmit").click(function(event) {
-
-	// get some values from elements on the page:
-	var email = $("#emailToReset").val();
-
-	// Send the data using post and put the results in a div
-	$.post("/ajax/createAccount", {email:email},
-		function(data) {
-			//console.log('reset status: '+data.success);
-			$("#resetPassSubBtn").button('reset');
-			if(data.success == true) {
-					$("#emailToReset").val('');
-					$resetMessage = "<div class='alert fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We have sent a new password to your email. Hope to see you soon!</p></div>";
-					$('.resetDetailsAlert').remove();
-					$('#resetContent').after($resetMessage);
-			} else {
-					$("#emailToReset").val('');
-					$resetMessage = "<div class='alert alert-block alert-error fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't find your email<p></div>";
-					$('.resetDetailsAlert').remove();	
-					$('#resetContent').after($resetMessage);
-			}
-		}, "json");
-
-	// clear password input form
-	$('#emailToReset').val('');
-});
 
 $(document).ready(function(){
 	//Variables used to validate the form	
@@ -35,14 +5,14 @@ $(document).ready(function(){
 	var email = $("#email");
 	var pass1 = $("#password1");
 	var pass2 = $("#password2");
-	var domains = ['hotmail.com', 'gmail.com', 'aol.com', 'yahoo.com'];
-	
+	var subBtn = $("#createAccountSubmit");	
+	var goodEmail = null; 
+
 	//On blur
 	name.blur(validateName);
 	email.blur(validateEmail);
 	pass1.blur(validatePass1);
 	pass2.blur(validatePass2);
-
 	//On key press
 	name.keyup(validateName);
 	pass1.keyup(validatePass1);
@@ -68,32 +38,53 @@ $(document).ready(function(){
 	}
 	
 	function validateEmail(){
-		
-		var email = $('#email').val();
-		//console.log("email val: " + email);
+		var emailVal = $('#email').val();
+		//console.log("email val: " + emailVal);
 
 		// emails should be at least 5 characters, and contain a '@' and a '.'
-		var aix = email.indexOf('@');
-		var dix = email.indexOf('.');
-		if(email.length > 4 && aix != -1 && dix != -1 && aix < dix) {
-			$('.upload-button').removeAttr('disabled');
-			$('.file-button').removeAttr('disabled');
-		} else {
-			$('.upload-button').attr('disabled', 'disabled'); 
-			$('.file-button').attr('disabled', 'disabled'); 
+		var aix = emailVal.indexOf('@');
+		var dix = emailVal.indexOf('.');
+		if(emailVal.length == 0){
+			$('#emailTip .invalid').addClass('hide'); 
+			$('#emailTip .tip').removeClass('hide'); 
+			$('#emailTip .isaok').addClass('hide'); 
+			$('#emailTip .taken').addClass('hide'); 
+			goodEmail = false;	
+			return;	
 		}
-
-		$(this).mailcheck({
-			domains: domains,   
-			suggested: function(element, suggestion) {
-				$('.email-suggestion')
-					.html('Did you mean '+suggestion.address+'@'+'<strong>'+suggestion.domain+'</strong>?').show();
-			},
-			empty: function(element) {
-				$('.email-suggestion').html('').hide();  
-			}
-		});
-
+		else if(emailVal.length > 4 && aix != -1 && dix != -1 && aix < dix) {
+			//check the database if the email exists
+			//console.log("email val: " + emailVal);
+			$.post("/ajax/validateCreateAccount", {email:emailVal},
+				function(data) {
+					//console.log('reset status: '+data.success);
+					if(data.success == true) {
+						$('#emailTip .invalid').addClass('hide'); 
+						$('#emailTip .tip').addClass('hide'); 
+						$('#emailTip .isaok').removeClass('hide'); 
+						$('#emailTip .taken').addClass('hide');
+						goodEmail = true;	
+					} else {
+						$('#emailTip .invalid').addClass('hide'); 
+						$('#emailTip .tip').addClass('hide'); 
+						$('#emailTip .isaok').addClass('hide'); 
+						$('#emailTip .taken').removeClass('hide'); 
+						goodEmail = false;
+					}
+				}, "json");
+			//If email does exists offer to send to login or recover page
+			//If it does not exist then say it looks good
+			return;	
+		
+		} else {
+			//Not valid email 	
+			$('#emailTip .invalid').removeClass('hide'); 
+			$('#emailTip .tip').addClass('hide'); 
+			$('#emailTip .isaok').addClass('hide'); 
+			$('#emailTip .taken').addClass('hide'); 
+			goodEmail = false;	
+			return;	
+		}
 	}
 
 	function validatePass1(){
@@ -135,6 +126,7 @@ $(document).ready(function(){
 			return true;
 		}
 	}
+
 	function validatePass2(){
 		var pass2Tip = $("#passTip2 .tip");
 		var pass2Invalid = $("#passTip2 .invalid");
@@ -143,6 +135,12 @@ $(document).ready(function(){
 		//are NOT valid
 		if( pass1.val() != pass2.val() && pass2.val().length==0 ){
 			pass2Tip.removeClass("hide");
+			pass2Invalid.addClass("hide");
+			pass2Isaok.addClass("hide");	
+			return false;
+		}
+		else if( pass1.val() == pass2.val() && pass2.val().length==0 ){
+			pass2Tip.addClass("hide");
 			pass2Invalid.addClass("hide");
 			pass2Isaok.addClass("hide");	
 			return false;
@@ -161,5 +159,41 @@ $(document).ready(function(){
 			return true;
 		}
 	}
-	
+
+
+	// enable submit button loading state
+	$("#createAccountSubmit").button();
+
+	// Attach the submit button to the create account functions 
+	 $("#createAccountSubmit").click(function(event) {
+
+			if(validateName() && (goodEmail == true) && validatePass1() && validatePass2()){
+			
+				name = $("#name").val();
+				email = $("#email").val();
+				pass1 = $("#password1").val(); 
+
+				// Send the data using post and put the results in a div
+				$.post("/ajax/createAccount", {name:name, email:email, password:pass1},
+					function(data) {
+						//console.log('reset status: '+data.success);
+						$("#resetPassSubBtn").button('reset');
+						if(data.success == true) {
+							window.location = "/dashboard";		
+						} else {
+							console.log('fuck there was an error');
+							window.location = "/404
+						}
+					}, "json");
+			
+			} else{
+				console.log('bad');	
+			}
+
+
+		// clear password input form
+		$('#emailToReset').val('');
+	});
+
+
 });

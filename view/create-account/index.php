@@ -18,7 +18,7 @@
 		<div class="sideTip" id="emailTip">
                       <p class="tip">What's your email address?</p>
                       <p class="isaok hide"><i class="icon-ok"></i> Looks good, we will email you a confirmation.</p>
-                      <p class="invalid hide" role="alert">Doesn't look like a valid email.</p>
+                      <p class="invalid hide" role="alert"><i class="icon-remove"></i> Doesn't look like a valid email.</p>
                       <p class="taken hide" role="alert">This email is already registered. Want to <a onclick="showLogin();" href="#">Login</a> or <a href="/reset-details">recover your password</a>?</p>
         </div>
 		<div style="clear:both;"></div>	

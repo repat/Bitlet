@@ -31,6 +31,19 @@ function EmailNewUser($email, $pass)
 		;
 	EmailUser($email, $message, $subject);
 }
+function EmailNewCreatedAccount($email, $pass, $name)
+{
+	
+	$subject = 'Welcome to Bitlet!';
+	$message = 
+		'Hi '.$name.','."\r\n\r\n".
+		'Welcome to Bitlet, the easiest way to sell your digital content.'."\r\n\r\n".
+		'Your password is: '.$pass."\r\n\r\n".
+		'Thanks for using us and let us know how Ewe can help you be awesome (seriously.. anything)'."\r\n".
+		'Team Bitlet'
+		;
+	EmailUser($email, $message, $subject);
+}
 
 // email the user their new password
 function EmailPasswordReset($email, $pass, $name)
