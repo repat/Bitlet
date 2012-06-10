@@ -13,10 +13,15 @@
 	line-height: 25px;
 }
 #createAccountSubmit{
-	width:45%;
+	width:30%;
 	margin-top:9px;
 }
 .createAccountHelpText{
-	display: inline;
-	margin-left: 15px;
+}
+.sideTip{
+	float:left;
+	margin: 41px 0px 0px 20px;
+}
+.inputAlign{
+	float:left;
 }
