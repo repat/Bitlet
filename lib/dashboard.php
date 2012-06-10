@@ -96,7 +96,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	</div>
 
 	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
-		<p id="productDescr"><b>About this file: </b></p>
+		<p id="productDescr"><b>About this file</b></p>
 		<select id="categoryInput" onchange="EditCategory()">$select</select>
 		<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
 		<hr>
