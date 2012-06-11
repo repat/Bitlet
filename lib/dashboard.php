@@ -186,7 +186,10 @@ HTML;
 		$details = <<<HTML
 		<tr>
 			<td class="left">Dimension</td>
-			<td class="right">$dx x $dy</td>
+			<td class="right"><div class="inputMiddle">
+				<input class="input-mini" id="dleft" value="$dx"></input><span class="add-on">x</span>
+				<input class="input-mini" id="dright" value="$dy"></input></td>
+			</div>
 		</tr>
 HTML;
 		break;
@@ -194,19 +197,19 @@ HTML;
 		$details = <<<HTML
 		<tr>
 			<td class="left">Artist</td>
-			<td class="right">$artist</td>
+			<td class="right"><input class="input-medium" value="$artist"></input></td>
 		</tr>
 		<tr>
 			<td class="left">Album</td>
-			<td class="right">$album</td>
+			<td class="right"><input class="input-medium" value="$album"></input></td>
 		</tr>
 		<tr>
 			<td class="left">Genre</td>
-			<td class="right">$genre</td>
+			<td class="right"><input class="input-medium" value="$genre"></input></td>
 		</tr>
 		<tr>
 			<td class="left">Length</td>
-			<td class="right">$length</td> 
+			<td class="right"><input class="input-medium" value="$length"></input></td>
 		</tr>
 HTML;
 		break;
@@ -214,7 +217,7 @@ HTML;
 		$details = <<<HTML
 		<tr>
 			<td class="left">Pages</td>
-			<td class="right">$pages</td>
+			<td class="right"><input class="input-medium" value="$Pages"></input></td>
 		</tr>
 HTML;
 		break;
@@ -222,15 +225,15 @@ HTML;
 		$details = <<<HTML
 		<tr>
 			<td class="left">Camera Type</td>
-			<td class="right">$camera_type</td>
+			<td class="right"><input class="input-medium" value="$camera_type"></input></td>
 		</tr>
 		<tr>
 			<td class="left">FPS</td>
-			<td class="right">$fps</td>
+			<td class="right"><input class="input-medium" value="$fps"></input></td>
 		</tr>
 		<tr>
 			<td class="left">Length</td>
-			<td class="right">$length</td>
+			<td class="right"><input class="input-medium" value="$length"></input></td>
 		</tr>
 HTML;
 		break;

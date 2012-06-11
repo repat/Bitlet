@@ -31,7 +31,7 @@ switch($url[1])
 case 'ajax':
 	ViewAjax($url[2], $args);
 	break;
-case 'buy':
+case 'f':
 	ViewBuy($url[2], $args);
 	break;
 default:
