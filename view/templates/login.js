@@ -47,6 +47,7 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 			} else {
 					$('.loginPassword').val('');
 					$('.loginEmail').val('');
+					$('.alert-block').remove();	
 					$loginErrorMessage = "<div class='alert alert-block alert-error fade in'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Wrong Username/Email and password combination</p></div>";
 					$('.bitletTopOfLogin').before($loginErrorMessage);
 			}
