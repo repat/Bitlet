@@ -28,7 +28,6 @@ $('.file-button').change(function() {
 
 	// disable the file selection button
 	$('.upload-button').attr('disabled', 'disabled');
-	$('.file-button').attr('disabled', 'disabled');
 	$('#email').attr('readonly', 'true');
 
 	// change the button to show loading animation
@@ -36,4 +35,7 @@ $('.file-button').change(function() {
 
 	// finally submit the form through hidden button
 	$('#homeUpload').submit();
+
+	// also disable the file button just in case, we want to disable after submit though
+	$('.file-button').attr('disabled', 'disabled');
 });

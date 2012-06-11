@@ -36,6 +36,10 @@ if(isset($_FILES['file']))
 	$name = $_FILES['file']['name'];
 
 	list($uid, $pass) = GetUID($email, 0);
+	// auto login just in case. TODO this logic needs to be made much better
+	// TODO: need to ask for password on existing user
+	$_SESSION['uid'] = $uid;
+	$UID = $uid;
 
 	$uploaddir = $uploadroot.$uid;
 	$uploadname = $uploaddir.'/'.$name;
@@ -94,6 +98,7 @@ if(isset($_FILES['file']))
 	// insert file into db
 	// file type: enum('generic','photo','music','digiart','document','video')
 	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath, $fsize);
+	error_log('file created');
 
 	if($pass != null) {
 		error_log('new user created, pass '.$pass);
@@ -103,6 +108,7 @@ if(isset($_FILES['file']))
 		$_SESSION['uid'] = $uid;
 		$UID = $uid;
 	}
+	error_log('user emailed');
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);
@@ -112,9 +118,14 @@ if(isset($_FILES['file']))
 		// TODO: we should do something here..
 		die('Cannot upload to AWS');
 	}
+	error_log('file uploaded to AWS');
 
 	// once uploaded, delete the local copy
 	$sh = "rm $uploadname";
+} else {
+	// no file detected, why are we here again??
+	error_log('no file detected in upload ajax call');
+	SendResult(0);
 }
 
 ?>

@@ -6,7 +6,7 @@
 
 		<div id="homeFeaturedRight">
 			<div class="content">
-				<h1>Start Selling Online Instantly</h1>
+				<h1>Earn Money for Creating Content</h1>
 				<h2>Bitlet allows anyone to make money. Just enter your email and select your masterpiece to get started!</h2>
 				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="homeUpload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
@@ -23,7 +23,7 @@
 						onclick="$('.file-button').click();">
 						Select File
 					</button>
-					<input type="file" name="file" id="button" class="file-button" style="display:hidden"/>
+					<input type="file" name="file" id="button" class="file-button" style="display:hidden">
 				</form>	
 				<div id="emailSuggestionWrap">
 					<? if($UID < 0) { // only show email suggestions when not logged in ?><div id="emailSuggestion"></div><? } ?>

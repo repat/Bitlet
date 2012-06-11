@@ -25,6 +25,15 @@ function GetUID($email, $fbid)
 	return array(mysql_result($result, 0), $pass);
 }
 
+// set the user password - used to change password
+function SetUserPassword($uid, $pass)
+{
+	$salt = substr(md5(rand()), 0, 8); 
+	$hashed_pass = sha1($pass.$salt);
+	mysql_query("UPDATE users SET password='$hashed_pass', salt='$salt' WHERE id='$uid'") 
+		or die('Cannot set password, uid='.$uid);
+}
+
 function ResetPassword($uid)
 {
 	//generate random password		
@@ -48,15 +57,6 @@ function GetUserName($uid)
 	$result = mysql_query("SELECT name FROM users WHERE id='$uid'") 
 		or die('Cannot get user name, uid='.$uid);
 	return mysql_result($result, 0);
-}
-
-// set the user password - used to change password
-function SetUserPassword($uid, $pass)
-{
-	$salt = substr(md5(rand()), 0, 8); 
-	$hashed_pass = sha1($pass.$salt);
-	mysql_query("UPDATE users SET password='$hashed_pass', salt='$salt' 
-		WHERE id='$uid'") or die('Cannot set password, uid='.$uid);
 }
 
 // get user email
