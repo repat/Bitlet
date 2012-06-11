@@ -23,13 +23,7 @@
 						onclick="$('.file-button').click();">
 						Select File
 					</button>
-					<input type="file" name="file" id="button" class="file-button" style="display:hidden"
-						 onchange="
-							$('#homeUpload').submit();
-							// disable the file selection button
-							$('.upload-button').attr('disabled', 'disabled'); 
-							$('.file-button').attr('disabled', 'disabled');"
-					/>
+					<input type="file" name="file" id="button" class="file-button" style="display:hidden"/>
 				</form>	
 				<div id="emailSuggestionWrap">
 					<? if($UID < 0) { // only show email suggestions when not logged in ?><div id="emailSuggestion"></div><? } ?>
@@ -83,6 +77,3 @@
 <? // Hidden Upload iFrame for Async Uploading ?>
 <iframe name="upload_iframe" id="homeUploadIframe">
 </iframe>
-
-<? include 'upload.php'; ?>
-

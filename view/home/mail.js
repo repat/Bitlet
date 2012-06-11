@@ -32,5 +32,5 @@ $('.upload-button').attr('disabled', 'disabled');
 $('.file-button').attr('disabled', 'disabled'); 
 
 $('#email').keyup(CheckEmail);
-setInterval(CheckEmail.bind($('#email')), 250);
+var mailCheckRun = setInterval(CheckEmail.bind($('#email')), 250);
 		

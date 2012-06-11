@@ -21,6 +21,7 @@ function ViewPage($url, $args)
 
 	// we define a macro for shortness sake
 	$UID = $_SESSION['uid'];
+	error_log('args: '.$args[1]);
 
 	switch($url) {
 		case '':

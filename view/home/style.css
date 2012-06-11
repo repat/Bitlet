@@ -121,6 +121,11 @@ Inputs */
 	margin-right: -5px !important;
 }
 
+/* loading gif */
+.upload-button img {
+	margin-top: -4px;
+}
+
 /* email suggestion */
 #emailSuggestion{
 	color: #34619C;
