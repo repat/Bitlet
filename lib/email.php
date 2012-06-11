@@ -39,7 +39,7 @@ function EmailNewCreatedAccount($email, $pass, $name)
 		'Hi '.$name.','."\r\n\r\n".
 		'Welcome to Bitlet, the easiest way to sell your digital content.'."\r\n\r\n".
 		'Your password is: '.$pass."\r\n\r\n".
-		'Thanks for using us and let us know how Ewe can help you be awesome (seriously.. anything)'."\r\n".
+		'Thanks for using Bitlet and let us know how we can help you be awesome (seriously.. anything)'."\r\n".
 		'Team Bitlet'
 		;
 	EmailUser($email, $message, $subject);
@@ -50,12 +50,13 @@ function EmailPasswordReset($email, $pass, $name)
 {
 	$subject = 'New Bitlet.co Password!';
 	$message = 
-		'Hi '.$name.','."\r\n\r\n".
+		'Dear '.$name.','."\r\n\r\n".
+		'We have great news! Explorer Bitlet has just returned from his journey to find your long-lost password. He climbed to the peaks of the highest mountains, dove to the deepest depths of the oceans, and fought off several dragons, but he made it back. Success!'."\r\n". 
 		'Your temporary password is: '.$pass."\r\n\r\n".
-		'Please use your email and temporary password to login and be sure to reset your password.'."\r\n\r\n".
-		'Next time try not forget your password! We have to send Explorer Bitlet out to find you a new one everytime!'."\r\n\r\n".
-		'Happy hunting,'."\r\n".
-		'Team Bitlet'
+		'You can change your password after loging in to something else, and make sure to store your password safely. Luckily Explorer Bitlet is a hardy little fellow, so if you lose it again, he’ll be happy to go on another adventure to find it.'."\r\n\r\n".
+		'Let me know if there’s anything else I can do to make your day better!'."\r\n\r\n".
+		'Cheers,'."\r\n".
+		'Lisa Bitlet'
 		;
 	EmailUser($email, $message, $subject);
 }

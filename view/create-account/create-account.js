@@ -171,18 +171,18 @@ $(document).ready(function(){
 			
 				name = $("#name").val();
 				email = $("#email").val();
-				pass1 = $("#password1").val(); 
+				var password = $("#password1").val(); 
 
 				// Send the data using post and put the results in a div
-				$.post("/ajax/createAccount", {name:name, email:email, password:pass1},
+				$.post("/ajax/createAccount", {name:name, email:email, password:password},
 					function(data) {
 						//console.log('reset status: '+data.success);
-						$("#resetPassSubBtn").button('reset');
+						$("#createAccountSubmit").button('reset');
 						if(data.success == true) {
 							window.location = "/dashboard";		
 						} else {
 							console.log('fuck there was an error');
-							window.location = "/404
+							window.location = "/404";
 						}
 					}, "json");
 			
@@ -191,8 +191,8 @@ $(document).ready(function(){
 			}
 
 
-		// clear password input form
-		$('#emailToReset').val('');
+		// clear form
+		$('').val('');
 	});
 
 
