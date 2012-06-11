@@ -31,6 +31,9 @@ switch($url[1])
 case 'ajax':
 	ViewAjax($url[2], $args);
 	break;
+case 'buy':
+	ViewBuy($url[2], $args);
+	break;
 default:
 	ViewPage($url[1], $args);
 	break;
