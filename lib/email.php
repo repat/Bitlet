@@ -51,7 +51,7 @@ function EmailPasswordReset($email, $pass, $name)
 	$subject = 'New Bitlet.co Password!';
 	$message = 
 		'Dear '.$name.','."\r\n\r\n".
-		'We have great news! Explorer Bitlet has just returned from his journey to find your long-lost password. He climbed to the peaks of the highest mountains, dove to the deepest depths of the oceans, and fought off several dragons, but he made it back. Success!'."\r\n". 
+		'We have great news! Explorer Bitlet has just returned from his journey to find your long-lost password. He climbed to the peaks of the highest mountains, dove to the deepest depths of the oceans, and fought off several dragons, but he made it back. Success!'."\r\n\r\n". 
 		'Your temporary password is: '.$pass."\r\n\r\n".
 		'You can change your password after loging in to something else, and make sure to store your password safely. Luckily Explorer Bitlet is a hardy little fellow, so if you lose it again, he’ll be happy to go on another adventure to find it.'."\r\n\r\n".
 		'Let me know if there’s anything else I can do to make your day better!'."\r\n\r\n".
