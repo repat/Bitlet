@@ -13,8 +13,8 @@ function SendResult($result)
 
 $MAX_SIZE = 5000000000;		// limit is 5 GB
 
-// only do something if it's an actual file upload
-if(isset($_FILES['file']))
+// only do something if it's an actual file upload, and the user is logged in
+if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
 {
 	/*** RECEIVE FILE ***/
 	$uploadroot = 'temp/';
@@ -35,11 +35,15 @@ if(isset($_FILES['file']))
 	$tmp_name = $_FILES['file']['tmp_name'];
 	$name = $_FILES['file']['name'];
 
-	list($uid, $pass) = GetUID($email, 0);
-	// auto login just in case. TODO this logic needs to be made much better
-	// TODO: need to ask for password on existing user
-	$_SESSION['uid'] = $uid;
-	$UID = $uid;
+	$uid = GetUID($email);
+	if($uid == false) {
+		// create a new user
+		list($uid, $pass) = NewUser($email);
+		$_SESSION['uid'] = $uid;
+		$UID = $uid;
+	} else {
+		// we should report back asking for password // TODO
+	}
 
 	$uploaddir = $uploadroot.$uid;
 	$uploadname = $uploaddir.'/'.$name;
