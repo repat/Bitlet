@@ -7,16 +7,14 @@ function ExpandRight() {
 	var w = 550;
 	$('.rightSideContainer').animate({width: w}, rightAnimationSpeed);
 	$('.rightSideFrame').animate({width: w}, rightAnimationSpeed);
-	$('#topBar').animate({width: w}, rightAnimationSpeed);
-	$('#topDiv').animate({width: 860-2-w}, rightAnimationSpeed);
+	$('.rightSideContainer').css({'borderLeftWidth': 1});
 }
 
 function ContractRight() {
 	var w = 0;
 	$('.rightSideContainer').animate({width: w}, rightAnimationSpeed);
 	$('.rightSideFrame').animate({width: w}, rightAnimationSpeed);
-	$('#topBar').animate({width: w}, rightAnimationSpeed);
-	$('#topDiv').animate({width: 860-2-w}, rightAnimationSpeed);
+	$('.rightSideContainer').css({'borderLeftWidth': 0});
 }
 
 /*** FUNCTION DECLARATIONS ***/
@@ -133,6 +131,8 @@ $(document).click(function(e) {
 	// if the click is not on the right side container, contract
 	if(!$('.rightSideContainer').is(':hover')) {
 		ContractRight();
+		// disselect any currently selected items
+		$('.selected').removeClass('selected');
 	}
 });
 

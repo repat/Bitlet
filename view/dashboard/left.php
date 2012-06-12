@@ -1,7 +1,7 @@
 <div class="leftSideContainer">
 	<div class="leftSideMenu sticky-div">
 		<ul>
-			<li id="topCorner"></li>
+			<li id="first"></li>
 			<hr>
 			<li><a href="#"><img src="/img/upload.png"/>New Item</a></li>
 			<hr>
