@@ -1,4 +1,10 @@
+/*Clases Use Multi times*/
+.settingTitle {
+	margin-left:15px; 
+	clear:both; 
+}
 
+/*Profile Styles*/
 #profilePic {
 	border: 3px solid white; 
 	box-shadow:2px 2px 1px #888; 
@@ -8,12 +14,8 @@
 	margin-right: 30px;
 }
 
-.prof {
-	margin-left:15px; 
-	clear:both; 
-}
-
 #textCount{
+	/*area below the bio box*/
 	width:25px; 	
 	margin-right:5px; 
 }

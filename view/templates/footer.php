@@ -35,17 +35,17 @@
 	<div class="modal-body">
 
 		<div class="input-prepend bitletTopOfLogin">
-			<span class="add-on loginAddOn">
+			<span class="add-on loginAddOn inputHeightLarge">
 				<i class="icon-user loginIcon"></i>
 			</span>
-		<input type="text" size="10" autocomplete="on" class="bitletLogin loginEmail" placeholder="Bit@bitlet.co"/>
+		<input type="text" size="10" autocomplete="on" class="bitletLogin loginEmail inputHeightLarge" placeholder="Bit@bitlet.co"/>
         </div>
 	
 		<div class="input-prepend">
-			<span class="add-on loginAddOn">
+			<span class="add-on loginAddOn inputHeightLarge">
 				<i class="icon-lock loginIcon"></i>
 			</span>
-			<input type="password" size="10" autocomplete="off" class="bitletLogin loginPassword" placeholder="Password"/>
+			<input type="password" size="10" autocomplete="off" class="bitletLogin loginPassword inputHeightLarge" placeholder="Password"/>
         </div>
 
 		<label class="checkbox loginRememberMe">

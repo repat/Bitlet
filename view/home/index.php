@@ -13,9 +13,9 @@
 					<div class="input-prepend">
 						<span class="add-on" id="emaila"><i id="email-icon" class="icon-envelope icon-white"></i></span>
 						<? if($UID >= 0) { // if logged in ?>
-							<input class="input-medium" id="email" type="text" name="email" value="<? echo GetUserEmail($UID); ?>" readonly="true" onkeypress="return event.keyCode!=13">
+							<input class="input-medium inputHeightLarge" id="email" type="text" name="email" value="<? echo GetUserEmail($UID); ?>" readonly="true" onkeypress="return event.keyCode!=13">
 						<? } else { ?>
-							<input class="input-medium" id="email" type="text" name="email" placeholder="Email" onkeypress="return event.keyCode!=13">
+							<input class="input-medium inputHeightLarge" id="email" type="text" name="email" placeholder="Email" onkeypress="return event.keyCode!=13">
 						<? } ?>
 					</div><? // end of input-prepend ?>
 
