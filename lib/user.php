@@ -1,28 +1,32 @@
 <?
 
 // get the uid of user based on his email, also links up facebook id
-function GetUID($email, $fbid)
+function GetUID($email)
 {
-	// default password return as null if user already exist
-	$pass = null;
-
 	$email = mysql_real_escape_string($email);
-	$fbid = mysql_real_escape_string($fbid);
 
 	//Query the user database and see if the user already has an account
 	$result = mysql_query("SELECT id FROM users WHERE email = '$email'") 
 		or die('Cannot execute find email '.$email);
 	if(mysql_num_rows($result) == 0) {
-		//create new user
-		$salt = substr(md5(rand()), 0, 8); 
-		$pass = substr(md5(rand()), 0, 8); 
-		$hashed_pass = sha1($pass.$salt);
-		mysql_query("INSERT INTO users (email, name, fbid, password, salt, credits)
-			VALUES ('$email', '$email', '$fbid', '$hashed_pass', '$salt', '0')") 
-			or die('Cannot make new user with email '.$email);
-		return array(mysql_insert_id(), $pass);
+		// if no email found, return false
+		return false;
 	}
-	return array(mysql_result($result, 0), $pass);
+	// return first row
+	return mysql_result($result, 0);
+}
+
+function NewUser($email)
+{
+	//create new user
+	$salt = substr(md5(rand()), 0, 8); 
+	$pass = substr(md5(rand()), 0, 8); 
+	$hashed_pass = sha1($pass.$salt);
+	mysql_query("INSERT INTO users (email, name, password, salt, credits)
+		VALUES ('$email', '$email', '$hashed_pass', '$salt', '0')") 
+		or die('Cannot make new user with email '.$email);
+	// return id and password
+	return array(mysql_insert_id(), $pass);
 }
 
 // set the user password - used to change password
