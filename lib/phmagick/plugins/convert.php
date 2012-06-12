@@ -31,7 +31,7 @@ class phMagick_convert{
 
 	function convert(phmagick $p){
 		$cmd = $p->getBinary('convert');
-        $cmd .= ' -quality ' . $p->getImageQuality();
+        $cmd .= '-flatten -quality ' . $p->getImageQuality();
         $cmd .= ' "' . $p->getSource() .'"  "'. $p->getDestination().'"';
 
         $p->execute($cmd);
