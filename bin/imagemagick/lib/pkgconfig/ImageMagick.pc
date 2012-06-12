@@ -1,0 +1,10 @@
+prefix=/Users/david/Desktop/ImageMagick-6.7.7-7
+exec_prefix=/Users/david/Desktop/ImageMagick-6.7.7-7
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/ImageMagick
+
+Name: ImageMagick
+Description: ImageMagick - Convert, Edit, and Compose Images
+Version: 6.7.7
+Libs: -L${libdir} -lMagickCore
+Cflags: -I${includedir} -fopenmp

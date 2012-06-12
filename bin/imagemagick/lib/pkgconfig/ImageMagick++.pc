@@ -1,0 +1,12 @@
+prefix=/Users/david/Desktop/ImageMagick-6.7.7-7
+exec_prefix=/Users/david/Desktop/ImageMagick-6.7.7-7
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/ImageMagick
+
+
+Name: ImageMagick++
+Version: 6.7.7
+Description: Magick++ - C++ API for ImageMagick
+Requires: ImageMagick
+Libs: -L${libdir} -lMagick++
+Cflags: -I${includedir}

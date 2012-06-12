@@ -3,7 +3,7 @@
 		<ul>
 			<li id="topCorner"></li>
 			<hr>
-			<li><a href="#"><img src="/img/upload.png"/>Upload</a></li>
+			<li><a href="#"><img src="/img/upload.png"/>New Item</a></li>
 			<hr>
 			<li><a href="#products" id="productsBtn"><img src="/img/products.png"/>Products</a></li>
 			<hr>

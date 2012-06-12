@@ -11,6 +11,10 @@ foreach (glob("lib/*.php") as $filename) {
 	include_once $filename;
 }
 
+// setup enviromental variable for imagemagick
+putenv("MAGICK_HOME=$BASE/bin/imagemagick");
+putenv("DYLD_LIBRARY_PATH=$BASE/bin/imagemagick/lib");
+
 session_start();
 
 if(!isset($_SESSION['uid'])) {

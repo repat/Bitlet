@@ -4,7 +4,7 @@ function BuildProductRow($fid, $name, $filename, $earned, $views, $downloads, $t
 {
 	return <<<HTML
 	<li title="$fid">
-		<div id="imgTd"><img id="tableThumb" src="$thumb"/></div>
+		<div id="imgTd"><img id="tableThumb" src="/$thumb"/></div>
 		<div class="nameTd">
 			<p id="big">$name</p>
 			<p id="small">$filename</p>
@@ -30,7 +30,7 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 {
 	return <<<HTML
 	<li title="$fid">
-		<div id="imgTd"><img id="tableThumb" src="$thumb"/></div>
+		<div id="imgTd"><img id="tableThumb" src="/$thumb"/></div>
 		<div class="nameTd">
 			<p id="big">$name</p>
 			<p id="small">$filename</p>
@@ -127,7 +127,7 @@ function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $
 		<h2>$$price</h2>
 	</div>
 
-	<div class="imgDiv"><img src="$image"/></div>
+	<div class="imgDiv"><img src="/$image"/></div>
 
 	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
 		<p id="productDescr"><b>About this file: </b>$descr 
