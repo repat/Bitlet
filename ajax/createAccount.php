@@ -3,16 +3,18 @@
 	$email = $_POST['email'];
 	$password = $_POST['password'];	
 
-	list($uid, $dummyPass) = GetUID($email);	
-	SetUserName($uid, $name);
-	SetUserPassword($uid, $password);
-	
-	if($uid == null) {
+	// first check if the email already exists
+	if(GetUID($email) != false) {
 		echo json_encode(array("success"=>false));
-	} else{
-		$_SESSION['uid'] = $uid;
-		$UID = $uid;
-		EmailNewCreatedAccount($email, $password, $name);	
-		echo json_encode(array("success"=>true));
+		return;
 	}
+
+	// create new user
+	list($uid, $dummyPass) = NewUser($email, $name, $pass);	
+	
+	$_SESSION['uid'] = $uid;
+	$UID = $uid;
+	EmailNewCreatedAccount($email, $password, $name);	
+	echo json_encode(array("success"=>true));
+	return;
 ?>

@@ -16,14 +16,19 @@ function GetUID($email)
 	return mysql_result($result, 0);
 }
 
-function NewUser($email)
+function NewUser($email, $name='', $pass='')
 {
 	//create new user
 	$salt = substr(md5(rand()), 0, 8); 
-	$pass = substr(md5(rand()), 0, 8); 
+
+	// if no password passed in, generate a new one
+	if($pass == '') {
+		$pass = substr(md5(rand()), 0, 8); 
+	}
+
 	$hashed_pass = sha1($pass.$salt);
 	mysql_query("INSERT INTO users (email, name, password, salt, credits)
-		VALUES ('$email', '$email', '$hashed_pass', '$salt', '0')") 
+		VALUES ('$email', '$name', '$hashed_pass', '$salt', '0')") 
 		or die('Cannot make new user with email '.$email);
 	// return id and password
 	return array(mysql_insert_id(), $pass);
