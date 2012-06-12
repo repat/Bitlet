@@ -55,5 +55,18 @@ class phMagick_info{
        $info =  getimagesize  ($file);
        return $info["mime"];
 	}
+
+	function getLayers(phmagick $p, $file=''){
+		if ($file == '') $file = $p->getSource();
+
+		$cmd = $p->getBinary('identify');
+        $cmd .= '-flatten -quality ' . $p->getImageQuality();
+        $cmd .= ' "' . $p->getSource() .'"  "'. $p->getDestination().'"';
+
+        $p->execute($cmd);
+        $p->setSource($p->getDestination());
+        $p->setHistory($p->getDestination());
+        return  $p ;
+	}
 }
 ?>

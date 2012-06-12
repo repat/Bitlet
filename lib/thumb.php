@@ -16,7 +16,7 @@ function GenerateImageThumbnail($imgpath)
 	$magic->setImageMagickPath('/opt/local/bin');
 	$magic->resizeExactly(250, 250);
 
-	$magicsmall = new phmagick($BASE.'/'.$imgpath.THUMB_END, $BASE.'/'.$imgpath.THUMB_SMALL_END);
+	$magic->setDestination($BASE.'/'.$imgpath.THUMB_SMALL_END);
 	$magicsmall->setImageMagickPath('/opt/local/bin');
 	$magicsmall->resizeExactly(60, 60);
 

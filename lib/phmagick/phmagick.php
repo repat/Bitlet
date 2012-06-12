@@ -195,7 +195,8 @@ class phmagick{
             ,'output' => $out
         );
 
-        return $ret ;
+		// return the output of the program
+        return $out;
     }
 
     public function __call($method, $args){
