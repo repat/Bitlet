@@ -1,5 +1,4 @@
 .bitletLogin{
-	height:26px;
 	font-size:18px;
 	width:193px;
 }
@@ -20,7 +19,6 @@
 	border: none;
 }
 .loginAddOn{
-	height:26px !important;
 	margin-top:-8px;
 	margin-right:-5px !important;
 }

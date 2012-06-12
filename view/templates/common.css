@@ -17,6 +17,7 @@
 	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
 
+/*Inner shadow for text*/
 .bitletInnerShadow{
 	-moz-box-shadow:    inset 0px 1px 5px rgba(0,0,0,0.5);
 	-ms-box-shadow:    inset 0px 1px 5px rgba(0,0,0,0.5);
@@ -24,10 +25,16 @@
 	box-shadow:         inset 0px 1px 5px rgba(0,0,0,0.5);
 }
 
+/*modal x */
 .close{
 	padding: 0;
 	cursor: pointer;
 	background: transparent;
 	border: 0;
 	-webkit-appearance: none;
+}
+
+/*Larger height for text input boxes*/
+.inputHeightLarge{
+	height: 26px !important;
 }
