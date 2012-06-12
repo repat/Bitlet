@@ -12,7 +12,7 @@ function ExpandRight() {
 }
 
 function ContractRight() {
-	var w = 10;
+	var w = 0;
 	$('.rightSideContainer').animate({width: w}, rightAnimationSpeed);
 	$('.rightSideFrame').animate({width: w}, rightAnimationSpeed);
 	$('#topBar').animate({width: w}, rightAnimationSpeed);

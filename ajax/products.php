@@ -14,6 +14,7 @@ foreach($fids as $f) {
 }
 
 // return via AJAX
-echo $ret;
+// duplicate x4 for now, TODO: fix
+echo $ret.$ret.$ret.$ret;
 
 ?>

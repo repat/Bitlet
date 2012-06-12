@@ -49,6 +49,15 @@
 .rightSideFrame {
 	width: 300px;
 	overflow: hidden;
+
+	/* rounded corners */
+	border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .topLeft {
@@ -109,9 +118,12 @@
 }
 
 .productHead #right {
-	float: right;
-	margin-left: 270px;
-	display: inline-block;
+	margin-left: 240px;
+}
+
+.productHead img {
+	margin-left: 10px;
+	float: left;
 }
 
 .productHead h3 {
@@ -119,6 +131,10 @@
 	line-height: 14px;
 	font-weight: 300;
 	margin-left: 60px;
+}
+
+.productHead .input-prepend input {
+	margin-left: -4px;
 }
 
 .productHead .add-on {
@@ -141,17 +157,18 @@
 	width: 50px;
 }
 
-.tableDiv {
-	text-align: center;
-}
-
 .productInfo { 
 	background: #FFF;
 	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 5px 0;
-	width: 280px;
+	margin-left: 10px;
+	padding: 10px 0;
+	width: 530px;
+}
+
+.productInfo #left {
+	width: 260px;
+	margin-left: 10px;
+	float: left;
 }
 
 .productInfo hr {
@@ -166,12 +183,6 @@
 	width: 240px;
 	height: 110px;
 	resize: none;
-}
-
-#productDescr {
-	padding: 0 10px;
-	text-align: center;
-	font-size: 12px;
 }
 
 .left {

@@ -84,6 +84,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	// return the final built HTML
 	return <<<HTML
 	<div class="productHead bitletRoundedCorners bitletDropShadow">
+		<img src="/$image"/>
 		<div id="right">
 			<span class="columnLabel">Name</span>
 			<input type="text" class="columnInput" value="$name"></input>
@@ -94,16 +95,17 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 			</div>
 			<h3>$filename | $size bytes</h3>
 		</div>
-		<img src="/$image"/>
+		<br style="clear: left;"/>
 	</div>
 
-	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
-		<p id="productDescr"><b>About this file</b></p>
-		<select id="categoryInput" onchange="EditCategory()">$select</select>
-		<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
-		<hr>
+	<div class="productInfo bitletRoundedCorners bitletDropShadow">
+		<div id="left">
+			<select id="categoryInput" onchange="EditCategory()">$select</select>
+			<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
+		</div>
 		<table class="detailsTable"></table>
-	</div></div>
+		<br style="clear: left;"/>
+	</div>
 
 	<div class="shareInfo bitletRoundedCorners bitletDropShadow">
 		<h3>Share this product and earn credits!</h3>
