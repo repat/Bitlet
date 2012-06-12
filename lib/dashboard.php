@@ -83,8 +83,6 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 
 	// return the final built HTML
 	return <<<HTML
-	<div id="topBar"></div>
-
 	<div class="productHead bitletRoundedCorners bitletDropShadow">
 		<span class="columnLabel">Name</span>
 		<input type="text" class="columnInput" value="$name"></input>
@@ -118,7 +116,6 @@ function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $
 {
 	// return the final built HTML
 	return <<<HTML
-	<div id="topBar"></div>
 	<div class="topLeft">
 		<h2>$name</h2>
 		<h3>$filename | $size bytes</h3>
