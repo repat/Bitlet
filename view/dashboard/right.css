@@ -4,11 +4,17 @@
 	z-index: 18;
 	top: 0px; 
 	right: 0px; 
-	width: 300px; 
+	width: 10px; 
 	height: 100%; 
 	background: url(/img/bg/bg-grey.png);
 	border-left: 1px solid #777;
 
+	/* left shadow*/
+	-webkit-box-shadow: -1px 0 0px #CCC;
+	-moz-box-shadow: -1px 0 0px #CCC;
+	box-shadow: -1px 0 0px #CCC;
+
+	/* rounded corners */
 	border-top-right-radius: 5px;
 	-moz-border-radius-topright: 5px;
 	-webkit-border-top-right-radius: 5px;
@@ -21,7 +27,6 @@
 #topBar {
 	height: 30px;
 	margin-bottom: 5px;
-	width: 300px;
 
 	border-left: 1px solid #28306B;
 	border-bottom: 1px solid #28306B;	
@@ -39,6 +44,11 @@
 
 .rightSideMenu {
 	width: 300px; 
+}
+
+.rightSideFrame {
+	width: 300px;
+	overflow: hidden;
 }
 
 .topLeft {
@@ -93,10 +103,15 @@
 
 .productHead {
 	background: #FFF;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 10px;
 	padding: 10px 0px;
-	width: 280px;
+	width: 530px;
+}
+
+.productHead #right {
+	float: right;
+	margin-left: 270px;
+	display: inline-block;
 }
 
 .productHead h3 {

@@ -61,10 +61,10 @@ if($UID >= 0) {
 
 		<!-- right side -->
 		<div class="rightSideContainer">
-			<div class="rightSideMenu sticky-div">
+			<div class="rightSideFrame sticky-div"><div class="rightSideMenu">
 				<div id="topBar"></div>
 				<div id="rightContent"></div>
 			</div>	<!-- end of sticky div -->
-		</div>
+		</div></div>
 </div>
 	

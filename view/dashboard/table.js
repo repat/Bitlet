@@ -4,15 +4,19 @@ var fid;
 var rightAnimationSpeed = 300;
 
 function ExpandRight() {
-	$('.rightSideContainer').animate({width: 550}, rightAnimationSpeed);
-	$('#topBar').animate({width: 550}, rightAnimationSpeed);
-	$('#topDiv').animate({width: 308}, rightAnimationSpeed);
+	var w = 550;
+	$('.rightSideContainer').animate({width: w}, rightAnimationSpeed);
+	$('.rightSideFrame').animate({width: w}, rightAnimationSpeed);
+	$('#topBar').animate({width: w}, rightAnimationSpeed);
+	$('#topDiv').animate({width: 860-2-w}, rightAnimationSpeed);
 }
 
 function ContractRight() {
-	$('.rightSideContainer').animate({width: 300}, rightAnimationSpeed);
-	$('#topBar').animate({width: 300}, rightAnimationSpeed);
-	$('#topDiv').animate({width: 558}, rightAnimationSpeed);
+	var w = 10;
+	$('.rightSideContainer').animate({width: w}, rightAnimationSpeed);
+	$('.rightSideFrame').animate({width: w}, rightAnimationSpeed);
+	$('#topBar').animate({width: w}, rightAnimationSpeed);
+	$('#topDiv').animate({width: 860-2-w}, rightAnimationSpeed);
 }
 
 /*** FUNCTION DECLARATIONS ***/
@@ -87,6 +91,9 @@ $('#purchasesBtn').click(DisplayPurchases);
 // we want to display products by default
 // TODO: should make this a bit more intelligent
 DisplayProducts();
+
+// right is contracted by default
+ContractRight();
 
 /*** table right column functions ***/
 $('.dashTable li').live('click', function (e) {

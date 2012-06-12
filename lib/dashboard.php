@@ -84,13 +84,17 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	// return the final built HTML
 	return <<<HTML
 	<div class="productHead bitletRoundedCorners bitletDropShadow">
-		<span class="columnLabel">Name</span>
-		<input type="text" class="columnInput" value="$name"></input>
-		<span class="columnLabel">Price</span>
-		<div class="input-prepend">
-			<span class="add-on">$</span><input type="text" id="price" class="columnInput" value="$price"></input>
+		<div id="right">
+			<span class="columnLabel">Name</span>
+			<input type="text" class="columnInput" value="$name"></input>
+			<span class="columnLabel">Price</span>
+			<div class="input-prepend">
+				<span class="add-on">$</span>
+				<input type="text" id="price" class="columnInput" value="$price"></input>
+			</div>
+			<h3>$filename | $size bytes</h3>
 		</div>
-		<h3>$filename | $size bytes</h3>
+		<img src="/$image"/>
 	</div>
 
 	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
