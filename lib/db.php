@@ -4,16 +4,26 @@ include 'host.php';
 
 function Connect()
 {
-	if(CheckLocal()) {
-		$db_host = "localhost";
-		$db_dbname = "bitlet";
-		$db_username ="root";
-		$db_password ="root";
-	} else {
-		$db_host = "mysql.simply.io";
-		$db_dbname = "bitlet_simplyio";
-		$db_username ="dzz0615";
-		$db_password ="zhang1234";
+	switch (CheckLocal())
+	{
+	case 'local':
+		$db_host = 'localhost';
+		$db_dbname = 'bitlet';
+		$db_username ='root';
+		$db_password ='root';
+		break;
+	case 'beta':
+		$db_host='mysql.afdadsfdasdfdd.com';
+		$db_dbname = 'betabitlet';
+		$db_username = 'dzz0616';
+		$db_password = 'zhang1234';
+		break;
+	case 'server':
+		$db_host = 'mysql.simply.io';
+		$db_dbname = 'bitlet_simplyio';
+		$db_username ='dzz0615';
+		$db_password ='zhang1234';
+		break;
 	}
 
 	$db_con = mysql_connect($db_host, $db_username, $db_password) 
