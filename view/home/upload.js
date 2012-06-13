@@ -10,8 +10,7 @@ function UploadDone(result) {
 		window.location.replace("/dashboard/first");
 	} else {
 		console.error("upload error!");
-		
-		//TODO: Redirect to error page
+		window.location.href = '/error';	
 	}
 }
 
