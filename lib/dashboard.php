@@ -93,11 +93,11 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	<div class="shareInfo">
 		<div id="left">
 			<span class="columnLabel">Name</span>
-			<input type="text" class="columnInput" value="$name"></input>
+			<input type="text" value="$name"></input>
 			<span class="columnLabel">Price</span>
 			<div class="input-prepend">
 				<span class="add-on">$</span>
-				<input type="text" id="price" class="columnInput" value="$price"></input>
+				<input type="text" id="price" value="$price"></input>
 			</div>
 			<h3>$filename | $size bytes</h3>
 		</div>
@@ -115,7 +115,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<table class="detailsTable"></table>
 		<br style="clear: left;"/>
 	</div>
-
+	<hr>
 	<button class="btn btn-danger" id="edit" onclick="ExecuteDelete()">Delete</button>
 HTML;
 }

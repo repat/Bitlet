@@ -22,7 +22,7 @@
 
 .dashTable li:hover {
 	padding: 10px 10px 10px 12px;
-	border-left: 8px solid #59A9BC;
+	border-left: 8px solid #42C3E9;
 
 	/* gradient */
 	background: #CBD7ED; /*for non-css3 browsers*/
@@ -33,7 +33,7 @@
 
 .dashTable .selected {
 	padding: 10px 10px 10px 12px;
-	border-left: 8px solid #CF7800 !important;
+	border-left: 8px solid #F28D00 !important;
 	background: #CBD7ED !important;
 }
 
