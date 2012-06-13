@@ -94,6 +94,19 @@ function EditCategory() {
 			this.select();
 		});
 
+		// get rid of textarea default text on click
+		var defaultText = 'Describe this file in 3 sentences here...';
+		$('.rightSideMenu textarea').focus(function() {
+			if($(this).val() == defaultText) {
+				$(this).val('');
+			} 
+		}).blur(function() {
+			if($(this).val() == '') {
+				$(this).val(defaultText);
+			}
+		});
+
+
 	});
 }
 
