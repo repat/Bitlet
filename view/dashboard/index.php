@@ -17,8 +17,8 @@ if($UID >= 0) {
 <div id="mainShebang" class="bitletRoundedCorners bitletDropShadow">
 		<div id="topDiv">
 			<div class="creditsDiv bitletInnerShadow">
-				<p id="overviewNum">3000</p>
-				<p id="overviewDescr">Dollars</p>
+				<span id="dollar">$</span>	
+				<span id="overviewNum"><? printf('%.2f', $user['credits']); ?></span>
 			</div>
 			<button class="cashOut">
 				<!--<img src="/img/claim.png"/>-->
