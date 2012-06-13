@@ -1,5 +1,7 @@
 <?
 
+$BUY_LINK_PREAMBLE = $_SERVER['HTTP_HOST'].'/f/';
+
 function ViewBuy($url, $args)
 {
 	// check for autologin cookie
@@ -23,7 +25,8 @@ function ViewBuy($url, $args)
 	$UID = $_SESSION['uid'];
 	$dir = 'view/buy';
 
-	error_log('file link: '.$args[1]);
+	$fid = GetFidFromLink($args[1]);
+	error_log('file fid: '.$fid);
 
 	// Build the HTML page
 	echo '<!DOCTYPE html>';
