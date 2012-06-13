@@ -1,8 +1,7 @@
-/*Clases Use Multi times*/
-.settingTitle {
-	margin-left:15px; 
-	clear:both; 
-}
+/* Styles that set the general page layout in common.css because it is used in several views.
+ * 
+ * Clases Used Multi times*/
+
 
 /*Profile Styles*/
 #profilePic {
@@ -26,96 +25,6 @@
 	margin-left:113px; 
 }
 
-.rightSide {
-	clear:both; 
-}
-
-#line {
-	clear:both; 
-}
-
-#toolbox{
-	height: 200px; 
-	margin-top:30px;
-	margin-bottom:35px; 
-	float:left; 
-}
-
 #bioBox textarea{
 	width:300px !important; 
 }
-
-#bio {
-	height:0px; 
-}
-
-
-#check1 {
-	margin-left:10px;
-	margin-right:10px;
-}
-
-#check2 {
-	margin-left:10px;
-	margin-right:10px;
-}
-
-.pref {
-	padding-left:10px; 
-}
-
-#changePw {
-	margin-left:10px; 
-	margin-top:20px; 
-	margin-bottom:20px;
-}
-
-
-.pwField {
-	margin-left:2px; 
-}
-
-#new {
-	margin-left:19px; 
-}
-
-#old {
-	margin-left: 23px;
-}
-
-/*Starting FAQ section*/
-.faq h1 {
-	margin: 0px 0 0 px;
-	font-size:30px;
-	font-weight: 300;
-}
-.faq h2,
-.faq h3 {
-	font-weight: normal;
-}
-.faq h2 {
-	font-size: 16px;
-}
-.faq p {
-	text-align: left;
-	margin-right: 12px;
-	font-size: 12px; 
-}
-
-.container .faq {
-	width: 531;
-}
-
-#FAQModal {
-	width: 970px; 
-	left: 36%;
-}
-
- a {
- 	color:#0055CC;
- }
-
-.about-nav .nav-list .nav-header a {
-	color:#F05911; 
-}
-
