@@ -64,12 +64,12 @@ class phMagick_resize{
 
     	list($w,$h) = $p->getInfo($p->getSource());
 
-    	if($w > $h){
-		    $h = $height;
-		    $w = 0;
-		}else{
-		    $h = 0;
-		    $w = $width;
+		if($w/$h > $width/$height) {
+			$h = $height;
+			$w = 0;
+		} else {
+			$h = 0;
+			$w = $width;
 		}
 
 		$p->resize($w, $h)->crop($width, $height);

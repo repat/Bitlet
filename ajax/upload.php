@@ -13,8 +13,8 @@ function SendResult($result)
 
 $MAX_SIZE = 5000000000;		// limit is 5 GB
 
-// only do something if it's an actual file upload, and the user is logged in
-if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
+// only do something if it's an actual file upload
+if(isset($_FILES['file']))
 {
 	/*** RECEIVE FILE ***/
 	$uploadroot = 'temp/';
@@ -61,11 +61,11 @@ if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
 
 	$uploaddir = $uploadroot.$uid;
 	$uploadname = $uploaddir.'/'.$name;
-	$sh = "mkdir $uploaddir";
+	$sh = 'mkdir "'.$uploaddir.'"';
 	`$sh`;
 
 	if(move_uploaded_file($tmp_name, $uploadname)) {
-		$sh ="chmod 777 $uploadname";
+		$sh ='chmod 777 "'.$uploadname.'"';
 		`$sh`;
 	} else {
 		error_log('File storage error');
@@ -130,7 +130,8 @@ if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
 	error_log('file uploaded to AWS');
 
 	// once uploaded, delete the local copy
-	$sh = "rm $uploadname";
+	$sh = 'rm "'.$uploadname.'"';
+	`$sh`;
 } else {
 	// no file detected, why are we here again??
 	error_log('no file detected in upload ajax call');

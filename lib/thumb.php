@@ -16,22 +16,22 @@ function GenerateImageThumbnail($imgpath)
 	$magic->resizeExactly(550, 290);
 
 	// set new destination for smaller thumb
-	$magic->setDestination($BASE.'/'.$imgpath);
+	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$imgpath.THUMB_SMALL_END);
 	$magic->resizeExactly(60, 60);
 
 	// generate the thumbnails 
 	$path = 'data/'.end(explode('/', dirname($imgpath), 2));
 
 	// store in local storage
-	$cmd = "mkdir -p $path";
+	$cmd = 'mkdir -p "'.$path.'"';
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 	
-	$cmd = 'mv '.$imgpath.THUMB_END.' '.$path;
+	$cmd = 'mv "'.$imgpath.THUMB_END.'" '.$path;
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 
-	$cmd = 'mv '.$imgpath.THUMB_SMALL_END.' '.$path;
+	$cmd = 'mv "'.$imgpath.THUMB_SMALL_END.'" '.$path;
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 
