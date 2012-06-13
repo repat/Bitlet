@@ -89,23 +89,33 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	return <<<HTML
 	<div class="productHead">
 		<img src="/$image"/>
+		<button class="btn btn-mini">New Thumbnail</button>
+		<h3>$filename | $size bytes</h3>
 	</div>
 	<div class="shareInfo">
 		<div id="left">
-			<span class="columnLabel">Name</span>
-			<input type="text" class="columnInput" value="$name"></input>
-			<span class="columnLabel">Price</span>
-			<div class="input-prepend">
-				<span class="add-on">$</span>
-				<input type="text" id="price" class="columnInput" value="$price"></input>
+			<div class="inputPrepend">
+				<span class="addOn columnLabel">Name</span>
+				<input type="text" value="$name"></input>
 			</div>
-			<h3>$filename | $size bytes</h3>
+			<div class="inputPrepend">
+				<span class="addOn columnLabel">Price</span>
+				<input type="text" id="price" value="$price"></input>
+				<span class="addOn columnLabel" id="dollars">Dollars</span>
+			</div>
 		</div>
-
-		<h3>Share this product and earn credits!</h3>
-		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
-		<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+		<div id="right">
+			<div class="inputPrepend">
+				<span class="addOn columnLabel">Share</span>
+				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
+			</div>
+			<div id="shareIcons">
+				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
+				<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+			</div>
+			<p>Share this to your followers and earn money!</p>
+		</div>
+		<br>
 	</div>
 	<div class="productInfo">
 		<div id="left">
@@ -115,7 +125,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<table class="detailsTable"></table>
 		<br style="clear: left;"/>
 	</div>
-
+	<hr>
 	<button class="btn btn-danger" id="edit" onclick="ExecuteDelete()">Delete</button>
 HTML;
 }

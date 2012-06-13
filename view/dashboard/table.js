@@ -74,7 +74,7 @@ function EditCategory() {
 		$('.detailsTable').html(data);
 
 		// select and copy share link on input box click
-		$('#productURL').tooltip({placement:'bottom'});
+		$('#productURL').tooltip({placement:'top'});
 		$('#productURL').click(function() {
 			this.select();
 		});

@@ -13,10 +13,10 @@ function GenerateImageThumbnail($imgpath)
 	global $BASE;
 
 	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$imgpath.THUMB_END);
-	$magic->resizeExactly(250, 250);
+	$magic->resizeExactly(550, 290);
 
 	// set new destination for smaller thumb
-	$magic->setDestination($BASE.'/'.$imgpath.THUMB_SMALL_END);
+	$magic->setDestination($BASE.'/'.$imgpath);
 	$magic->resizeExactly(60, 60);
 
 	// generate the thumbnails 
