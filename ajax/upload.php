@@ -13,8 +13,8 @@ function SendResult($result)
 
 $MAX_SIZE = 5000000000;		// limit is 5 GB
 
-// only do something if it's an actual file upload, and the user is logged in
-if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
+// only do something if it's an actual file upload
+if(isset($_FILES['file']))
 {
 	/*** RECEIVE FILE ***/
 	$uploadroot = 'temp/';

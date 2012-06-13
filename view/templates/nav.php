@@ -2,7 +2,11 @@
 
 if($UID >= 0)
 {
-	list($name, ) = explode('@', GetUserName($UID));
+	$name = GetUserName($UID);
+	// if no name, explode the email
+	if($name == null) {
+		list($name, ) = explode('@', GetUserEmail($UID));
+	}
 }
 
 ?>
