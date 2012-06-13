@@ -89,23 +89,30 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	return <<<HTML
 	<div class="productHead">
 		<img src="/$image"/>
+		<button class="btn">New Thumbnail</button>
 	</div>
 	<div class="shareInfo">
 		<div id="left">
-			<span class="columnLabel">Name</span>
-			<input type="text" value="$name"></input>
-			<span class="columnLabel">Price</span>
 			<div class="input-prepend">
-				<span class="add-on">$</span>
-				<input type="text" id="price" value="$price"></input>
+				<span class="add-on columnLabel">Name</span>
+				<input type="text" value="$name"></input>
 			</div>
-			<h3>$filename | $size bytes</h3>
+			<div class="input-prepend input-append">
+				<span class="add-on columnLabel">Price</span>
+				<input type="text" id="price" value="$price"></input>
+				<span class="add-on columnLabel" id="dollars">Dollars</span>
+			</div>
+			<p>$filename | $size bytes</p>
 		</div>
-
-		<h3>Share this product and earn credits!</h3>
-		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
-		<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+		<div id="right">
+			<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
+			<br>
+			<div id="shareIcons">
+				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
+				<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+			</div>
+			<p>Share this and earn money!</p>
+		</div>
 	</div>
 	<div class="productInfo">
 		<div id="left">
