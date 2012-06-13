@@ -10,9 +10,9 @@
 	border-left: 1px solid #777;
 
 	/* left shadow*/
-	-webkit-box-shadow: -1px 0 0px #CCC;
-	-moz-box-shadow: -1px 0 0px #CCC;
-	box-shadow: -1px 0 0px #CCC;
+	-webkit-box-shadow: -1px 0 0px #FFF;
+	-moz-box-shadow: -1px 0 0px #FFF;
+	box-shadow: -1px 0 0px #FFF;
 
 	/* rounded corners */
 	border-top-right-radius: 5px;
