@@ -6,7 +6,7 @@ DROP TABLE if exists users, files, purchases;
 -- http://www.phpmyadmin.net
 --
 -- Host: mysql.afdadsfdasdfdd.com
--- Generation Time: Jun 13, 2012 at 12:24 AM
+-- Generation Time: Jun 13, 2012 at 12:35 AM
 -- Server version: 5.1.39
 -- PHP Version: 5.3.13
 
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email_settings` text NOT NULL COMMENT 'email settings, stored in parse_str format',
   `profile_img` text NOT NULL COMMENT 'URL to profile thumb, should be square image',
   `bio` text NOT NULL COMMENT 'bio of user',
-  `settings` text NOT NULL COMMENT 'Settings in JSON',
+  `website` text NOT NULL COMMENT 'user website',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
