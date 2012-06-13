@@ -38,3 +38,19 @@
 .inputHeightLarge{
 	height: 26px !important;
 }
+
+/*CSS Styles for the settings pages, general layout only*/
+.settingsLeftContent{
+	width:620px;
+	float:left;
+	-webkit-box-shadow:1px 0px 1px -1px #CCD;
+	-moz-box-shadow: 1px 0px 1px -1px #CCD;
+	box-shadow:1px 0px 1px -1px #CCD; 
+}
+
+.settingsRightMenu{
+	width:300px;
+	float:left;
+	margin: 7px 0 0 19px;
+
+}

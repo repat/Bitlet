@@ -1,29 +1,28 @@
 <div class=" container well profile bitletDropShadow roundedCorners" id="leftCol"> 
-	<h2 class="prof" >Profile</h2>
-		<img id="profilePic" src="/img/team/david.png">
-		<div class="span4">
-			<h4 id="name">Name:</h4> <input class="input-small focused" id="focusedInput" type="text" value="David Zhang">
-			<h4 id="location">Location:</h4><input class="input-small focused" id="focusedInput" type="text" value="Princeton, NJ">
-			<h4 id="website">Website: </h4> <input class="input-xlarge focused" id="focusedInput" type="text" value="www.davidzhang.com">
-			<h4 id="email">Email:</h4> <input class="input-xlarge focused" id="focusedInput" type="text" value="david@ilovecats.com">
-	<h4 id="bio">Bio:</h4><form id="bioBox" name=myform action="http://www.netevolution.co.uk"><br>
-			<textarea name=message wrap=physical cols=28 rows=4 onKeyDown="textCounter(this.form.message,this.form.remLen,125);" onKeyUp="textCounter(this.form.message,this.form.remLen,125);">
+	<div class="settingsLeftContent">	
+		<h2 class="prof" >Profile</h2>
+		<div>
+			<img id="profilePic" src="/img/team/david.png">
+			<button class="btn btn-primary inputHeightLarge"><i class="icon-align-left icon-white"></i> Facebook<button>	
+		</div>		
+		<div class="span4">	
+			<h3 id="name">Name:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" value="David Zhang">
+			<h3 id="phone">Phone:</h3><input class="span4 focused inputHeightLarge" id="focusedInput" type="text" value="123-1234-1234">
+			<h3 id="website">Website: </h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" value="www.davidzhang.com">
+			<h3 id="email">Email:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" value="david@ilovecats.com">
+	<h3 id="bio">Bio:</h3>
+			<textarea class="span4" name=message wrap=physical cols=28 rows=4 onKeyDown="textCounter(this.form.message,this.form.remLen,125);" onKeyUp="textCounter(this.form.message,this.form.remLen,125);">
 			</textarea>
 			<br>
 			<input readonly type=text name=remLen id="textCount" size=3 maxlength=3 value="125">characters left</font>
-			</form>
-		</div>
-		<br>
-		<hr id="line">
-		<h2 class="prof">Preferences</h2>
-		<img id="toolbox" src="/img/drawings/backend.png">
-		<div class="span6">
-			<p class="pref" ><input type="checkbox" id="check1" >Email me when someone purchases my products!</p>
-					<p class="pref"><input type="checkbox" id="check2">Email me a weekly summary of my sales</p>
-					<h4 id="changePw">Change Password</h4>
-						<p class="pwField" id="old">Old Password:<input class="input focused" id="focusedInput-old" type="password" value=""></p>
-						<p class="pwField" id ="new">New Password:<input class="input focused" id="focusedInput" type="password" value=""></p>
-						<p class="pwField">Confirm Password:<input class="input focused" id="focusedInput" type="password" value=""></p>
-							<button class="btn btn-primary btn-large" id="save">Save</button>
-		</div>
+			<button class="btn btn-primary btn-large" style="width:100%;" >Save</button>
+		</div>	
+	</div>
+	<div class="settingsRightMenu">
+		<ul class="nav nav-pills nav-stacked" style="color:#FF9340">
+			<li class="active"><a href="/settings"><h3>Profile</h3></a></li>
+			<li class=""><a href="/settings/change-password"><h3>Change Password</h3></a></li>
+			<li class=""><a href="/settings/payment-info"><h3>Payment Information</h3></a></li>
+		</ul>
+	</div>
 </div>
