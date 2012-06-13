@@ -9,6 +9,10 @@ function SendResult($result)
 	<script language="javascript" type="text/javascript">
 		   window.top.window.UploadDone('.$result.');
 	</script>';
+	// kill the script on error result
+	if($result <= 0) {
+		die();
+	}
 }
 
 $MAX_SIZE = 5000000000;		// limit is 5 GB
@@ -54,9 +58,11 @@ if(isset($_FILES['file']))
 			// we should report back asking for password // TODO
 			SendResult(0);
 		}
-	} else {
+	} else if($UID >= 0) {
 		// no email field means we go by UID cookie
 		$uid = $UID;
+	} else {
+		SendResult(0);
 	}
 
 	$uploaddir = $uploadroot.$uid;
