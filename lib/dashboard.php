@@ -83,9 +83,11 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 
 	// return the final built HTML
 	return <<<HTML
-	<div class="productHead bitletRoundedCorners bitletDropShadow">
+	<div class="productHead">
 		<img src="/$image"/>
-		<div id="right">
+	</div>
+	<div class="shareInfo">
+		<div id="left">
 			<span class="columnLabel">Name</span>
 			<input type="text" class="columnInput" value="$name"></input>
 			<span class="columnLabel">Price</span>
@@ -95,10 +97,13 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 			</div>
 			<h3>$filename | $size bytes</h3>
 		</div>
-		<br style="clear: left;"/>
-	</div>
 
-	<div class="productInfo bitletRoundedCorners bitletDropShadow">
+		<h3>Share this product and earn credits!</h3>
+		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
+		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
+		<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+	</div>
+	<div class="productInfo">
 		<div id="left">
 			<select id="categoryInput" onchange="EditCategory()">$select</select>
 			<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
@@ -107,13 +112,6 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<br style="clear: left;"/>
 	</div>
 
-	<div class="shareInfo bitletRoundedCorners bitletDropShadow">
-		<h3>Share this product and earn credits!</h3>
-		<hr>
-		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
-		<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
-	</div>
 	<button class="btn btn-danger" id="edit" onclick="ExecuteDelete()">Delete</button>
 HTML;
 }
