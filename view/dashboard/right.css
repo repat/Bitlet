@@ -108,7 +108,7 @@
 
 .productHead button {
 	position: absolute;
-	left: 440px;
+	left: 449px;
 	top: 260px;
 }
 
@@ -211,16 +211,10 @@ input#dright {
 	border-bottom: 1px solid #49A4B6;
 }
 
-.shareInfo #left {
-	float: left;
-	width: 250px;
-	padding-right: 10px;
-	text-align: right;
+.shareInfo #top {
 }
 
-.shareInfo #right {
-	margin-left: 270px;
-	padding-left: 10px;
+.shareInfo #bottom {
 }
 
 .shareInfo .inputPrepend input {
@@ -245,30 +239,15 @@ input#dright {
 	text-shadow: 0 1px 0 #777;
 }
 
-.shareInfo #dollars {
-	position: relative;
-	margin-left: -65px;
-	background-color: transparent;
-	color: #49A4B6;
-	font-size: 16px;
-	border: none;
-	text-shadow: none;
-	text-align: left;
-	padding-bottom: 11px;
-}
-
 .shareInfo input {
 	height: 23px;
-	border: 1px solid #49A4B6;
 	font-size: 20px;
+	border: none;
+	border-bottom: 1px solid #6ECDE9;
 	color: #FFF;
 	background-color: #6ECDE9;
 	width: 174px;
 	text-shadow: 0 1px 0 #777;
-
-	border-top: none;
-	border-right: none;
-	border-left: none;
 
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
@@ -287,6 +266,7 @@ input#dright {
 .shareInfo input:hover {
 	color: #000;
 	background-color: #FFF;
+	border-bottom: 1px solid #49A4B6;
 	text-shadow: 0 1px 0 #777;
 
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -297,6 +277,41 @@ input#dright {
 	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
 	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
 	transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.shareInfo #name {
+	width: 300px;
+	height: 30px;
+	font-size: 25px;
+	border-left: 1px solid #49A4B6;
+	vertical-align: bottom;
+}
+
+.shareInfo #price {
+	width: 60px;
+	padding-right: 70px;
+	border-right: 1px solid #49A4B6;
+	text-align: right;
+	vertical-align: bottom;
+}
+
+.shareInfo #right {
+	display: inline-block;
+	text-align: right;
+}
+
+.shareInfo #dollars {
+	position: relative;
+	width: 70px;
+	left: -70px;
+	background-color: transparent;
+	color: #49A4B6;
+	font-size: 16px;
+	border: none;
+	text-shadow: none;
+	text-align: left;
+	padding-bottom: 18px;
+	padding-right: 5px;
 }
 
 .shareInfo .inputPrepend {
@@ -336,11 +351,11 @@ input#dright {
 	box-shadow: none;
 }
 
-#edit {
+#deleteBtn {
 	font-size: 18px;
 	line-height: 25px;
 	width: 280px;
-	margin-left: 10px;
-	margin-top: 15px;
+	margin-left: 135px;
+	margin-top: 10px;
 }
 

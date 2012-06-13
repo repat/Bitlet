@@ -93,22 +93,18 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<h3>$filename | $size bytes</h3>
 	</div>
 	<div class="shareInfo">
-		<div id="left">
-			<div class="inputPrepend">
-				<span class="addOn columnLabel">Name</span>
-				<input type="text" value="$name"></input>
-			</div>
-			<div class="inputPrepend">
-				<span class="addOn columnLabel">Price</span>
+		<div id="top">
+			<input type="text" id="name" value="$name"></input>
+			<div id="right">
 				<input type="text" id="price" value="$price"></input>
 				<span class="addOn columnLabel" id="dollars">Dollars</span>
 			</div>
 		</div>
-		<div id="right">
-			<div class="inputPrepend">
+		<div id="bottom">
+			<span class="inputPrepend">
 				<span class="addOn columnLabel">Share</span>
 				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-			</div>
+			</span>
 			<div id="shareIcons">
 				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
 				<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
@@ -126,7 +122,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<br style="clear: left;"/>
 	</div>
 	<hr>
-	<button class="btn btn-danger" id="edit" onclick="ExecuteDelete()">Delete</button>
+	<button class="btn btn-danger" id="deleteBtn" onclick="ExecuteDelete()">Delete</button>
 HTML;
 }
 
