@@ -87,9 +87,13 @@ function EditCategory() {
 
 		// select and copy share link on input box click
 		$('#productURL').tooltip({placement:'top'});
-		$('#productURL').click(function() {
+
+		// autoselect all the input boxes in the right side menu on click
+		$('.rightSideMenu input').click(function() {
+			console.log('input selected');
 			this.select();
 		});
+
 	});
 }
 
