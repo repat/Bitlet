@@ -1,5 +1,8 @@
 <?
 
+// import global var
+global $BUY_LINK_PREAMBLE;
+
 // grab the fid from javascript
 $fid = $_POST['fid'];
 $finfo = GetFileInfo($fid);

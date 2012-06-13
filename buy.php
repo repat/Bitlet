@@ -1,7 +1,5 @@
 <?
 
-$BUY_LINK_PREAMBLE = $_SERVER['HTTP_HOST'].'/f/';
-
 function ViewBuy($url, $args)
 {
 	// check for autologin cookie
