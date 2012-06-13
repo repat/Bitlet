@@ -1,7 +1,6 @@
 <?
 
 $fid = $args;
-
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
 $price = $finfo['price'];
