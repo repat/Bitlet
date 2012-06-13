@@ -18,7 +18,7 @@ function ContractRight() {
 }
 
 /*** FUNCTION DECLARATIONS ***/
-function DisplayProducts() {
+function DisplayProducts(preselect) {
 	// toggle button states
 	$('#purchasesBtn').removeClass('active');
 	$('#productsBtn').addClass('active');
@@ -34,13 +34,19 @@ function DisplayProducts() {
 	ContractRight();
 
 	// run AJAX query
-	$('.dashTable').load('/ajax/products');
+	$.post('/ajax/products', function(data) {
+		$('.dashTable').html(data);
+		if(preselect) {
+			// select the table row
+			$('.dashTable [title='+preselect+']').addClass('selected');
+		}
+	});
 
 	// set state
 	tableSelected = 0;
 }
 
-function DisplayPurchases() {
+function DisplayPurchases(preselect) {
 	// toggle button states
 	$('#purchasesBtn').addClass('active');
 	$('#productsBtn').removeClass('active');
@@ -56,7 +62,13 @@ function DisplayPurchases() {
 	ContractRight();
 
 	// run AJAX query
-	$('.dashTable').load('/ajax/purchases');
+	$.post('/ajax/purchases', function(data) {
+		$('.dashTable').html(data);
+		if(preselect) {
+			// select the table row
+			$('.dashTable [title='+preselect+']').addClass('selected');
+		}
+	});
 
 	// set state
 	tableSelected = 1;

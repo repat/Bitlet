@@ -8,17 +8,17 @@ function UploadDone(result) {
 
 		// change the button to show loading animation
 		$('#uploadButton').html('<img src="/img/upload.png"/>New Item');
+		console.log("file uploaded, fid="+result);
 
 		// if currently viewing products table, reload the table
 		if(tableSelected == 0) {
-			DisplayProducts();
+			DisplayProducts(result);
 
 			// start sizing the right side container
 			ExpandRight();
-			$('.dashTable li[title="'+result+'"]').addClass('selected');
 
 			// AJAX the page with fid as argument
-			$.post('/ajax/productcolumn', {fid: fid}, function(data) {
+			$.post('/ajax/productcolumn', {fid: result}, function(data) {
 				$('#rightContent').html(data);
 
 				// run category function
