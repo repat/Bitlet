@@ -65,12 +65,11 @@ $("#logoutBtn").click(function(event) {
 			// reload the window on logout
 			window.location.href ='/';	
 		}, "json");
+	return false;
 });
-
 
 // attach a click handler to the logout button
 $("#bitletLoginNewAccount").click(function(event) {
 			window.location.href ='/signup';	
 });
-
 
