@@ -26,13 +26,10 @@
 
 .rightSideFrame {
 	width: 310px;
+	margin-top: 80px;
 	overflow: hidden;
 
 	/* rounded corners */
-	border-top-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-webkit-border-top-right-radius: 5px;
-
 	-webkit-border-bottom-right-radius: 5px;
 	-moz-border-radius-bottomright: 5px;
 	border-bottom-right-radius: 5px;
