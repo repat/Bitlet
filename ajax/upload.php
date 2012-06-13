@@ -18,7 +18,6 @@ if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
 {
 	/*** RECEIVE FILE ***/
 	$uploadroot = 'temp/';
-	$email = $_POST['email'];
 
 	// check size
 	if($_FILES['file']['size'] > $MAX_SIZE) {	
@@ -35,14 +34,29 @@ if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
 	$tmp_name = $_FILES['file']['tmp_name'];
 	$name = $_FILES['file']['name'];
 
-	$uid = GetUID($email);
-	if($uid == false) {
-		// create a new user
-		list($uid, $pass) = NewUser($email);
-		$_SESSION['uid'] = $uid;
-		$UID = $uid;
+	// if email is set, then the user isn't logged in
+	if(isset($_POST['email'])) {
+		$email = $_POST['email'];
+		$uid = GetUID($email);
+		if($uid == false) {
+			// create a new user
+			list($uid, $pass) = NewUser($email);
+			$_SESSION['uid'] = $uid;
+			$UID = $uid;
+
+			error_log('new user created, pass '.$pass);
+			EmailNewUser($email, $pass);
+
+			// auto login 
+			$_SESSION['uid'] = $uid;
+			$UID = $uid;
+		} else {
+			// we should report back asking for password // TODO
+			SendResult(0);
+		}
 	} else {
-		// we should report back asking for password // TODO
+		// no email field means we go by UID cookie
+		$uid = $UID;
 	}
 
 	$uploaddir = $uploadroot.$uid;
@@ -104,15 +118,6 @@ if(isset($_FILES['file']) && $_SESSION['uid'] >= 0)
 	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath, $fsize);
 	error_log('file created');
 
-	if($pass != null) {
-		error_log('new user created, pass '.$pass);
-		EmailNewUser($email, $pass);
-
-		// auto login 
-		$_SESSION['uid'] = $uid;
-		$UID = $uid;
-	}
-	error_log('user emailed');
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);

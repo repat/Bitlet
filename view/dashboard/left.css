@@ -78,3 +78,21 @@
 .leftSideMenu .active {
 	background: #5055A0;
 }
+
+/* we want to hide the actual upload button off screen*/
+#homeUpload input[type="file"], .file-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+}
+
+/* upload iframe */
+#homeUploadIframe {
+	display: none;
+}
+
+#homeUpload {
+	margin: 0;
+}
