@@ -178,10 +178,10 @@ $(document).ready(function(){
 						//console.log('reset status: '+data.success);
 						$("#createAccountSubmit").button('reset');
 						if(data.success == true) {
-							window.location = "/dashboard";		
+							window.location.href = "/dashboard";		
 						} else {
 							console.log('fuck there was an error');
-							window.location = "/404";
+							window.location.href = "/404";
 						}
 					}, "json");
 			
