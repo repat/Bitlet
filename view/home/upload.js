@@ -28,5 +28,5 @@ $('.file-button').change(function() {
 	$('.upload-button').html('<img src="/img/loading.gif"/> Uploading..');
 
 	// finally submit the form through hidden button
-	//$('#homeUpload').submit();
+	$('#homeUpload').submit();
 });
