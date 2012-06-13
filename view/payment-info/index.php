@@ -17,21 +17,14 @@
 			</textarea>
 			<br>
 			<input readonly type=text name=remLen id="textCount" size=3 maxlength=3 value="125">characters left</font>
-		<label class="checkbox">
-                <input type="checkbox" name="optionsCheckboxList1" value="option1">
-                Option one is this and that—be sure to include why it's great
-              </label>	
-			<p class="pref" ><input type="checkbox" id="check1" >Email me when someone purchases my products!</p>
-			<p class="pref"><input type="checkbox" id="check2">Email me a weekly summary of my sales</p>
-
 			<button class="btn btn-primary btn-large" style="width:100%;" >Save</button>
 		</div>	
 	</div>
 	<div class="settingsRightMenu">
 		<ul class="nav nav-pills nav-stacked" style="color:#FF9340">
-			<li class="active"><a href="/settings"><h3>Profile</h3></a></li>
-			<li ><a href="/settings/change-password"><h3>Change Password</h3></a></li>
-			<li ><a href="/settings/payment-info"><h3>Payment Information</h3></a></li>
+			<li ><a href="/settings"><h3>Profile</h3></a></li>
+			<li><a href="/settings/change-password"><h3>Change Password</h3></a></li>
+			<li class="active"><a href="/settings/payment-info"><h3>Payment Information</h3></a></li>
 		</ul>
 	</div>
 </div>

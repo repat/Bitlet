@@ -1,0 +1,33 @@
+/* Styles that set the general page layout in common.css because it is used in several views.
+ * 
+ * Clases Used Multi times*/
+
+
+/*Profile Styles*/
+#profilePic {
+	border: 3px solid white; 
+	box-shadow:2px 2px 1px #888; 
+	float: left;
+	margin:7px 0 10px 0;
+}
+
+.socialButtons{
+	margin:5px 0 5px 0;
+	width:100%;
+}
+
+#textCount{
+	/*area below the bio box*/
+	width:25px; 	
+	margin-right:5px; 
+}
+
+#save {
+	width: 220px; 
+	font-size:16px; 
+	margin-left:113px; 
+}
+
+#bioBox textarea{
+	width:300px !important; 
+}
