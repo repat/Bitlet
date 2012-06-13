@@ -39,13 +39,13 @@ class phMagick_crop{
      */
     function crop(phmagick $p, $width, $height, $top = 0, $left = 0, $gravity = 'center'){
         $cmd  = $p->getBinary('convert');
-        $cmd .= ' ' . $p->getSource() ;
+        $cmd .= ' "' . $p->getSource() .'"' ;
 
         if (($gravity != '')|| ($gravity != phMagickGravity::None) )  $cmd .= ' -gravity ' . $gravity ;
 
         $cmd .= ' -crop ' . (int)$width . 'x'.(int)$height ;
         $cmd .= '+' . $left.'+'.$top;
-        $cmd .= ' ' . $p->getDestination() ;
+        $cmd .= ' "' . $p->getDestination() . '"' ;
 
         $p->execute($cmd);
         $p->setSource($p->getDestination());

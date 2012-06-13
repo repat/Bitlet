@@ -61,11 +61,11 @@ if(isset($_FILES['file']))
 
 	$uploaddir = $uploadroot.$uid;
 	$uploadname = $uploaddir.'/'.$name;
-	$sh = "mkdir $uploaddir";
+	$sh = 'mkdir "'.$uploaddir.'"';
 	`$sh`;
 
 	if(move_uploaded_file($tmp_name, $uploadname)) {
-		$sh ="chmod 777 $uploadname";
+		$sh ='chmod 777 "'.$uploadname.'"';
 		`$sh`;
 	} else {
 		error_log('File storage error');
@@ -130,7 +130,8 @@ if(isset($_FILES['file']))
 	error_log('file uploaded to AWS');
 
 	// once uploaded, delete the local copy
-	$sh = "rm $uploadname";
+	$sh = 'rm "'.$uploadname.'"';
+	`$sh`;
 } else {
 	// no file detected, why are we here again??
 	error_log('no file detected in upload ajax call');

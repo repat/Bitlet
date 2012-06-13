@@ -65,7 +65,7 @@ class phmagick{
 
     //-----------------
      function setSource ($path){
-        $this->source = str_replace(' ','\ ',$path) ;
+        $this->source = $path;
         return $this ;
     }
 
@@ -75,7 +75,6 @@ class phmagick{
 
     //-----------------
      function setDestination ($path){
-        $path = str_replace(' ','\ ',$path) ;
         $this->destination = $path ;
         return $this;
     }
@@ -184,7 +183,7 @@ class phmagick{
             $cmd= str_replace    (')','\)',$cmd);
         }
         exec( $cmd .' 2>&1', $out, $ret);
-		error_log("phmagick out: $out[0], ret: $ret");
+		error_log("phmagick exec: $cmd | out: $out[0], ret: $ret");
 
         if($ret != 0)
             if($this->debug) trigger_error (new phMagickException ('Error executing "'. $cmd.'" <br>return code: '. $ret .' <br>command output :"'. implode("<br>", $out).'"' ), E_USER_NOTICE );
