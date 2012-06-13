@@ -39,6 +39,12 @@ function ViewPage($url, $args)
 		case 'settings':
 			$dir = 'view/settings';
 			break;
+		case 'settings/change-password':
+			$dir = 'view/change-password';
+			break;
+		case 'settings/payment-infomation':
+			$dir = 'view/payment-info';
+			break;
 		case 'legal':
 			$dir = 'view/legal';
 			break;

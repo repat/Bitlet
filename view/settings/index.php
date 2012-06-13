@@ -1,9 +1,11 @@
 <div class=" container well profile bitletDropShadow roundedCorners" id="leftCol"> 
 	<div class="settingsLeftContent">	
 		<h2 class="prof" >Profile</h2>
-		<div>
-			<img id="profilePic" src="/img/team/david.png">
-			<button class="btn btn-primary inputHeightLarge"><i class="icon-align-left icon-white"></i> Facebook<button>	
+		<div style="width:156px;float:left;">
+			<img id="profilePic" src="/img/team/david.png"/>
+			<h3>Import From:</h3>	
+			<button class="btn btn-primary btn-large socialButtons"><i class="icon-align-left icon-white"></i> Facebook</button>
+			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button>	
 		</div>		
 		<div class="span4">	
 			<h3 id="name">Name:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" value="David Zhang">
