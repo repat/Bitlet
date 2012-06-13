@@ -26,13 +26,10 @@
 
 .rightSideFrame {
 	width: 310px;
+	margin-top: 80px;
 	overflow: hidden;
 
 	/* rounded corners */
-	border-top-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-webkit-border-top-right-radius: 5px;
-
 	-webkit-border-bottom-right-radius: 5px;
 	-moz-border-radius-bottomright: 5px;
 	border-bottom-right-radius: 5px;
@@ -107,22 +104,9 @@
 }
 
 .productHead button {
-	position: absolute;
-	left: 449px;
-	top: 260px;
-}
-
-.productHead h3 {
-	position: absolute;
-	left: 15px;
-	top: 265px;
-	font-size: 12px;
-	line-height: 15px;
-	font-weight: normal;
-	color: #FFF;
-	text-shadow: 0 1px 0 #777;
-	margin-right: auto;
-	margin-left: auto;
+	position: relative;
+	left: 450px;
+	top: -290px;
 }
 
 .productInfo { 
@@ -134,7 +118,6 @@
 
 .productInfo #left {
 	width: 260px;
-	margin-left: 10px;
 	float: left;
 }
 
@@ -360,8 +343,8 @@ input#dright {
 #deleteBtn {
 	font-size: 18px;
 	line-height: 25px;
-	width: 280px;
-	margin-left: 135px;
+	width: 150px;
+	margin-left: 10px;
 	margin-top: 10px;
 }
 

@@ -92,7 +92,6 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	<div class="productHead">
 		<img src="/$image"/>
 		<button class="btn btn-mini">New Thumbnail</button>
-		<h3>$filename | $size bytes</h3>
 	</div>
 	<div class="shareInfo">
 		<div id="top">

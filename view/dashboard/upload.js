@@ -4,10 +4,15 @@ function UploadDone(result) {
 
 		// enable upload button
 		$('.file-button').removeAttr("disabled");
-		$('.upload-button').removeAttr("disabled");
+		$('#uploadBbutton').removeAttr("disabled");
 
-		// redirect the user to the dashboard
-		window.location.replace("/dashboard/first");
+		// change the button to show loading animation
+		$('#uploadButton').html('<img src="/img/upload.png"/>New Item');
+
+		// if currently viewing products table, reload the table
+		if(tableSelected == 0) {
+			DisplayProducts();
+		}
 	} else {
 		console.error("upload error!");
 		
@@ -17,15 +22,11 @@ function UploadDone(result) {
 
 // file upload handler
 $('.file-button').change(function() {
-	// disable mail check interval or it'll cause the buttons to be enabled
-	clearInterval(mailCheckRun);
-
 	// disable the file selection button
-	$('.upload-button').attr('disabled', 'disabled');
-	$('#email').attr('readonly', 'true');
+	$('#uploadButton').attr('disabled', 'disabled');
 
 	// change the button to show loading animation
-	$('.upload-button').html('<img src="/img/loading.gif"/> Uploading..');
+	$('#uploadButton').html('<img src="/img/loading.gif"/>Uploading..');
 
 	// finally submit the form through hidden button
 	$('#homeUpload').submit();
