@@ -108,8 +108,21 @@
 
 .productHead button {
 	position: absolute;
-	left: 425px;
-	top: 250px;
+	left: 440px;
+	top: 260px;
+}
+
+.productHead h3 {
+	position: absolute;
+	left: 15px;
+	top: 265px;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	color: #FFF;
+	text-shadow: 0 1px 0 #777;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .productInfo { 
@@ -191,8 +204,8 @@ input#dright {
 
 .shareInfo {
 	background: #6ECDE9;
-	width: 550px;
-	height: 95px;
+	width: 530px;
+	height: 85px;
 	padding: 10px;
 	border-top: 1px solid #A9F4FF;
 	border-bottom: 1px solid #49A4B6;
@@ -200,69 +213,102 @@ input#dright {
 
 .shareInfo #left {
 	float: left;
-	width: 290px;
-	height: 93px;
-	border-right: 1px solid #49A4B6;
+	width: 250px;
 	padding-right: 10px;
 	text-align: right;
 }
 
 .shareInfo #right {
-	margin-left: 300px;
+	margin-left: 270px;
 	padding-left: 10px;
 }
 
-.shareInfo .input-prepend input {
+.shareInfo .inputPrepend input {
 	margin-left: -4px;
-	height: 23px;
 }
 
-.shareInfo .add-on {
-	border: 1px solid #49A4B6;
-	height: 23px;
-	margin-top: -9px;
-	background-color: #49A4B6;
-}
-
-.shareInfo #dollars {
-	margin-left: -5px;
-	background-color: #FFF;
-	color: #AAA;
-	font-size: 16px;
-	border-left: none;
-	text-shadow: none;
-	text-align: left;
-}
-
-.shareInfo input {
-	border: 1px solid #49A4B6;
-	font-size: 20px;
-	color: #000;
-	width: 194px;
-}
-
-.shareInfo #price {
-	width: 114px;
-}
-
-.shareInfo .input-prepend {
-	margin-bottom: 0px;
+.shareInfo .addOn {
+	display: inline-block;
+	padding: 4px 5px 3px 5px;
+	vertical-align: middle;
+	border-bottom: 7px solid #49A4B6;
+	margin-top: -4px;
 }
 
 .shareInfo .columnLabel {
 	text-align: right;
-	width: 70px;
-	font-size: 18px;
+	width: 50px;
+	font-size: 13px;
 	font-weight: bold;
-	line-height: 20px;
+	line-height: 13px;
 	color: #FFF;
-	text-shadow: 0 1px 0 #000;
+	text-shadow: 0 1px 0 #777;
+}
+
+.shareInfo #dollars {
+	position: relative;
+	margin-left: -65px;
+	background-color: transparent;
+	color: #49A4B6;
+	font-size: 16px;
+	border: none;
+	text-shadow: none;
+	text-align: left;
+	padding-bottom: 11px;
+}
+
+.shareInfo input {
+	height: 23px;
+	border: 1px solid #49A4B6;
+	font-size: 20px;
+	color: #FFF;
+	background-color: #6ECDE9;
+	width: 174px;
+	text-shadow: 0 1px 0 #777;
+
+	border-top: none;
+	border-right: none;
+	border-left: none;
+
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+.shareInfo input:hover {
+	color: #000;
+	background-color: #FFF;
+	text-shadow: 0 1px 0 #777;
+
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.shareInfo .inputPrepend {
+	margin-bottom: 0px;
 }
 
 .shareInfo p {
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 11px;
+	line-height: 13px;
 	font-weight: normal;
+	color: #D9FFFF;
+	text-shadow: 0 1px 0 #777;
 }
 
 #productURL {
@@ -272,6 +318,8 @@ input#dright {
 
 #shareIcons {
 	margin-bottom: 7px;
+	margin-right: 10px;
+	float: left;
 }
 
 #twitter {

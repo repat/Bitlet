@@ -89,30 +89,33 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	return <<<HTML
 	<div class="productHead">
 		<img src="/$image"/>
-		<button class="btn">New Thumbnail</button>
+		<button class="btn btn-mini">New Thumbnail</button>
+		<h3>$filename | $size bytes</h3>
 	</div>
 	<div class="shareInfo">
 		<div id="left">
-			<div class="input-prepend">
-				<span class="add-on columnLabel">Name</span>
+			<div class="inputPrepend">
+				<span class="addOn columnLabel">Name</span>
 				<input type="text" value="$name"></input>
 			</div>
-			<div class="input-prepend input-append">
-				<span class="add-on columnLabel">Price</span>
+			<div class="inputPrepend">
+				<span class="addOn columnLabel">Price</span>
 				<input type="text" id="price" value="$price"></input>
-				<span class="add-on columnLabel" id="dollars">Dollars</span>
+				<span class="addOn columnLabel" id="dollars">Dollars</span>
 			</div>
-			<p>$filename | $size bytes</p>
 		</div>
 		<div id="right">
-			<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-			<br>
+			<div class="inputPrepend">
+				<span class="addOn columnLabel">Share</span>
+				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
+			</div>
 			<div id="shareIcons">
 				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
 				<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
 			</div>
-			<p>Share this and earn money!</p>
+			<p>Share this to your followers and earn money!</p>
 		</div>
+		<br>
 	</div>
 	<div class="productInfo">
 		<div id="left">
