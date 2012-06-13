@@ -6,7 +6,7 @@ DROP TABLE if exists users, files, purchases;
 -- http://www.phpmyadmin.net
 --
 -- Host: mysql.afdadsfdasdfdd.com
--- Generation Time: Jun 13, 2012 at 12:20 AM
+-- Generation Time: Jun 13, 2012 at 12:24 AM
 -- Server version: 5.1.39
 -- PHP Version: 5.3.13
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `new_user` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'every user is new by default',
   `is_affiliate` tinyint(1) NOT NULL DEFAULT '0',
   `phone` tinytext NOT NULL COMMENT 'phone number',
-  `email_settings` enum('none','daily','weekly') NOT NULL COMMENT 'how often we should email them',
+  `email_settings` text NOT NULL COMMENT 'email settings, stored in parse_str format',
   `profile_img` text NOT NULL COMMENT 'URL to profile thumb, should be square image',
   `bio` text NOT NULL COMMENT 'bio of user',
   `settings` text NOT NULL COMMENT 'Settings in JSON',
