@@ -1,0 +1,63 @@
+.bitletBuyMain{
+	margin:100px 0 0 0;
+	width:550px;	
+	min-height:395px;
+	padding:10px;
+}
+#priceTag{
+	height:125px;
+	width:250px;
+	background:yellow;
+}
+#rightSide{
+	margin-top:100px;
+	margin-left:50px;
+	width:250px;	
+}
+#thumbnail{
+	height:290px;
+	width:550px;
+	background-color:purple;
+}
+
+#payment{
+	margin-top: 20px; 
+	min-height: 250px;
+	padding:10px;
+}
+
+.buyPageInput{
+	width:220px;	
+	
+}
+/* Payment details */
+#paymentDetails{
+	width:237px;
+	margin-left: -10px;
+	padding: 5px 0 5px 13px;
+	background:lightgrey;
+}
+#cvCode{
+	float:left;
+	width:157px;
+}
+#expireDate{
+	float:left;
+}
+#cvCodeInput{
+	width:32px;
+}
+
+#month{
+	width:22px;
+
+}
+
+#year{
+	width:22px;
+
+}
+
+
+
+

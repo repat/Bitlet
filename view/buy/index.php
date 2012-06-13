@@ -13,31 +13,44 @@ $user = $uinfo['email'];
 
 ?>
 
-<div class="container"><div class="row">
-	<div class="span7"><div class="well paymentwell">
-		<h1>Pay With Credit Card</h1>
-		<h3>Price: $ <? echo $price; ?></br></h3>
-		<br>
+<div class="container">
+	<div class="well bitletDropShadow bitletBuyMain span7">
+		<div id="thumbnail">
+		</div>
+		<div id="itemDetails">
+			<h1>The Item Title</h1>	
+			<p> information about the item etc.... </p>	
+		</div>
+	</div>
+	<div id="rightSide" class="span4">
+		<div id="priceTag">
+			<h1>$<? echo $price; ?></h1>
+		</div>
+		<div id="priceTagConnector">
+		</div>
+		<div id="payment" class=" bitletDropShadow well">
+			<form action="" method="POST" id="payment-form">
+				<input type="text" class="buyPageInput inputHeightLarge" id="BuyerEmail" placeholder="Email Address">	
+				<h3 id="paymentDetails">Payment Details:</h3>
+				<p>Card Number</p>
+				<input type="text" autocomplete="off" class="buyPageInput inputHeightLarge card-number" id="CreditCardNumber" placeholder="4242 4242 4242 4242">	
+				<div id="cvCode">
+					<p>CV Code</p>	
+					<input type="text" autocomplete="off" class="inputHeightLarge card-cvc" id="cvCodeInput" placeholder="123">
+				</div>		
+				<div id="expireDate">
+					<p>Expiry Date</p>	
+					<input type="text" class="inputHeightLarge card-expiry-month" id="month" placeholder="MM">/	
+					<input type="text" class="inputHeightLarge card-expiry-year" id="year" placeholder="YY">	
+				</div>
+				<button class="btn btn-success btn-large" style="width:100%;" href="#">Purchase</button>
+			</form>
+			<p class="payment-errors"></p>
+		</div>	
+	</div>
+	<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
+</div>
 
-		<form action="" method="POST" id="payment-form">
-			<div class="row"><div class="span5">
-				<label id="cardnuml">Card Number</label>
-				<input type="text" size="20" autocomplete="off" class="span3 card-number" placeholder=""/>
-				<input type="text" size="4" autocomplete="off" class="span1 card-cvc" placeholder="CVC"/>
-			</div></div>
-
-			<div class="row"><div class="span5">
-				<label id="cardexl">Expiration Date (MM/YYYY)</label>
-				<input type="text" size="2" class="span1 card-expiry-month" placeholder="MM"/>
-				<span id="exs"> / </span>
-				<input type="text" size="4" class="span2 card-expiry-year" placeholder="YYYY"/>
-			</div></div>
-
-			<div class="row"><div class="span5">
-				<button type="submit" class="submit-button btn btn-success">Submit Payment</button>
-			</div></div>
-		</form>
-		<p class="payment-errors"></p>
 
 		<!-- Hidden input to POST id on submission -->
 		<div class="post-pay" style="display:none">
@@ -48,21 +61,6 @@ $user = $uinfo['email'];
 			<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
 			<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 		</form>
-	</div></div>
-
-	<div class="span5"><div class="well paymentwell">
-		<h2>What you're getting:</h2>
-		<br>
-
-		<img src="/img/buttons/file.png"/>
-		<hr/>
-		<p class="">
-			<b>Sold By:</b> <? echo $user; ?></br>
-			<b>Name:</b> <? echo $name; ?></br>
-			<b>Downloads:</b> <? echo $downloads; ?></br>
-		</p>
-	</div></div>
-</div></div>
 
 <!-- Official Stripe JS file -->
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
