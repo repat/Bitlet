@@ -35,7 +35,4 @@ $('.file-button').change(function() {
 
 	// finally submit the form through hidden button
 	$('#homeUpload').submit();
-
-	// also disable the file button just in case, we want to disable after submit though
-	$('.file-button').attr('disabled', 'disabled');
 });
