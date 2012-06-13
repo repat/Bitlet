@@ -1,6 +1,6 @@
 <?
 
-function BuildProductRow($fid, $name, $filename, $earned, $views, $downloads, $thumb)
+function BuildProductRow($fid, $name, $filename, $earned, $views, $shares, $downloads, $thumb)
 {
 	return <<<HTML
 	<li title="$fid">
@@ -19,8 +19,12 @@ function BuildProductRow($fid, $name, $filename, $earned, $views, $downloads, $t
 			<p id="small">Views</p>
 		</div>
 		<div class="infoTd">
+			<p id="big">$shares</p>	
+			<p id="small">Shares</p>
+		</div>
+		<div class="infoTd">
 			<p id="big">$downloads</p>	
-			<p id="small">Downloads</p>
+			<p id="small">Purchases</p>
 		</div>
 	</li>
 HTML;

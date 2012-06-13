@@ -10,7 +10,7 @@ foreach($fids as $f) {
 
 	// build product row with file and add to return array
 	$ret .= BuildProductRow($f, $finfo['name'], $finfo['file_name'], $finfo['earned'], $finfo['views'],
-							$finfo['downloads'], $thumb);
+							$finfo['shares'], $finfo['downloads'], $thumb);
 }
 
 // return via AJAX
