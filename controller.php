@@ -1,6 +1,7 @@
 <?
 
 include_once 'page.php';
+include_once 'buy.php';
 include_once 'async.php';
 
 // set base global var

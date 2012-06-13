@@ -85,6 +85,8 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		$select .= '<option>Generic</option>';
 	}
 
+	$price = sprintf('%.2f', $price);
+
 	// return the final built HTML
 	return <<<HTML
 	<div class="productHead">
@@ -97,19 +99,18 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 			<input type="text" id="name" value="$name"></input>
 			<div id="right">
 				<input type="text" id="price" value="$price"></input>
-				<span class="addOn columnLabel" id="dollars">Dollars</span>
+				<span id="dollars">Dollars</span>
 			</div>
 		</div>
 		<div id="bottom">
-			<span class="inputPrepend">
-				<span class="addOn columnLabel">Share</span>
-				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-			</span>
+			<div id="shareLink" class="inputPrepend">
+				<span class="addOn">Share</span>
+				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="https://bitlet.co/l/4AE3C$sharelink"/>
+			</div>
 			<div id="shareIcons">
 				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
 				<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
 			</div>
-			<p>Share this to your followers and earn money!</p>
 		</div>
 		<br>
 	</div>
