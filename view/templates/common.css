@@ -37,6 +37,7 @@
 /*Larger height for text input boxes*/
 .inputHeightLarge{
 	height: 26px !important;
+	font-size:18px !important;
 }
 
 /*CSS Styles for the settings pages, general layout only*/
