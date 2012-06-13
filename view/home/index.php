@@ -23,7 +23,7 @@
 						onclick="$('.file-button').click();">
 						Select File
 					</button>
-					<input type="file" name="file" id="button" class="file-button" style="display:hidden">
+					<input type="file" name="file" id="button" class="file-button">
 				</form>	
 				<div id="emailSuggestionWrap">
 					<? if($UID < 0) { // only show email suggestions when not logged in ?><div id="emailSuggestion"></div><? } ?>
