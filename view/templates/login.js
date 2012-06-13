@@ -43,7 +43,7 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 			if(data.success) {
 				// hide the dialog box
 				$("#LoginModal").modal('hide');
-				window.location = '/dashboard';
+				window.location.href = '/dashboard';
 			} else {
 					$('.loginPassword').val('');
 					$('.loginEmail').val('');
@@ -63,14 +63,14 @@ $("#logoutBtn").click(function(event) {
 		function(data) {
 			console.log('logout successful');
 			// reload the window on logout
-			window.location ='/';	
+			window.location.href ='/';	
 		}, "json");
 });
 
 
 // attach a click handler to the logout button
 $("#bitletLoginNewAccount").click(function(event) {
-			window.location ='/signup';	
+			window.location.href ='/signup';	
 });
 
 
