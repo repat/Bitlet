@@ -12,6 +12,18 @@ function UploadDone(result) {
 		// if currently viewing products table, reload the table
 		if(tableSelected == 0) {
 			DisplayProducts();
+
+			// start sizing the right side container
+			ExpandRight();
+			$('.dashTable li[title="'+result+'"]').addClass('selected');
+
+			// AJAX the page with fid as argument
+			$.post('/ajax/productcolumn', {fid: fid}, function(data) {
+				$('#rightContent').html(data);
+
+				// run category function
+				EditCategory();
+			});	
 		}
 	} else {
 		console.error("upload error!");
