@@ -56,19 +56,14 @@ if($UID >= 0) {
 		
 		<!-- center -->
 		<div class= "centerDiv">
-			<div class="tabbable">
-				<div class="tab-content">
-					<ul class="dashTable">
-					</ul>
-				</div>
-			</div>
+			<ul class="dashTable"></ul>
 		</div>
-		<div id="divShadow"></div>
 
 		<!-- right side -->
 		<div class="rightSideContainer">
-			<div class="rightSideMenu sticky-div">
-			</div>	<!-- end of sticky div -->
+			<div class="rightSideFrame sticky-div"><div class="rightSideMenu">
+				<div id="rightContent"></div>
+			</div></div>
 		</div>
 </div>
 	

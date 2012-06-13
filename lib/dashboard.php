@@ -1,6 +1,6 @@
 <?
 
-function BuildProductRow($fid, $name, $filename, $earned, $views, $downloads, $thumb)
+function BuildProductRow($fid, $name, $filename, $earned, $views, $shares, $downloads, $thumb)
 {
 	return <<<HTML
 	<li title="$fid">
@@ -19,8 +19,12 @@ function BuildProductRow($fid, $name, $filename, $earned, $views, $downloads, $t
 			<p id="small">Views</p>
 		</div>
 		<div class="infoTd">
+			<p id="big">$shares</p>	
+			<p id="small">Shares</p>
+		</div>
+		<div class="infoTd">
 			<p id="big">$downloads</p>	
-			<p id="small">Downloads</p>
+			<p id="small">Purchases</p>
 		</div>
 	</li>
 HTML;
@@ -83,33 +87,35 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 
 	// return the final built HTML
 	return <<<HTML
-	<div id="topBar"></div>
-
-	<div class="productHead bitletRoundedCorners bitletDropShadow">
-		<span class="columnLabel">Name</span>
-		<input type="text" class="columnInput" value="$name"></input>
-		<span class="columnLabel">Price</span>
-		<div class="input-prepend">
-			<span class="add-on">$</span><input type="text" id="price" class="columnInput" value="$price"></input>
-		</div>
-		<h3>$filename | $size bytes</h3>
+	<div class="productHead">
+		<img src="/$image"/>
 	</div>
+	<div class="shareInfo">
+		<div id="left">
+			<span class="columnLabel">Name</span>
+			<input type="text" class="columnInput" value="$name"></input>
+			<span class="columnLabel">Price</span>
+			<div class="input-prepend">
+				<span class="add-on">$</span>
+				<input type="text" id="price" class="columnInput" value="$price"></input>
+			</div>
+			<h3>$filename | $size bytes</h3>
+		</div>
 
-	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
-		<p id="productDescr"><b>About this file</b></p>
-		<select id="categoryInput" onchange="EditCategory()">$select</select>
-		<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
-		<hr>
-		<table class="detailsTable"></table>
-	</div></div>
-
-	<div class="shareInfo bitletRoundedCorners bitletDropShadow">
 		<h3>Share this product and earn credits!</h3>
-		<hr>
 		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
 		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
 		<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
 	</div>
+	<div class="productInfo">
+		<div id="left">
+			<select id="categoryInput" onchange="EditCategory()">$select</select>
+			<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
+		</div>
+		<table class="detailsTable"></table>
+		<br style="clear: left;"/>
+	</div>
+
 	<button class="btn btn-danger" id="edit" onclick="ExecuteDelete()">Delete</button>
 HTML;
 }
@@ -118,7 +124,6 @@ function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $
 {
 	// return the final built HTML
 	return <<<HTML
-	<div id="topBar"></div>
 	<div class="topLeft">
 		<h2>$name</h2>
 		<h3>$filename | $size bytes</h3>
