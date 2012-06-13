@@ -1,22 +1,42 @@
-<div class=" container well profile bitletDropShadow roundedCorners" id="leftCol"> 
+<?
+	$uInfo = GetUserInfo($UID);
+	
+	$email = $uInfo['email'];
+	$name = $uInfo['name']; 
+	$phone = $uInfo['phone']; 
+	$bio = $uInfo['bio']; 
+	$emailSettings  = $uInfo['email_settings'];     
+	$profilePic = $uInfo['profile_img']; 
+	$website =  $uInfo['website']; 
+
+	//checks to see if the profile_img returned null or blank and then gives us temp thumbnail
+	if($profilePic === null or $profilePic ===''){
+		$profilePic = '/img/bitlet-silhouette.png'; 	
+	}else{
+		//these we're the droids you were looking for
+	}
+?>
+
+
+<div class="container well profile bitletDropShadow roundedCorners" id="leftCol"> 
 	<div class="settingsLeftContent">	
 		<h2 class="prof" >Profile</h2>
 		<div style="width:156px;float:left;">
-			<img id="profilePic" src="/img/team/david.png"/>
+		<img id="profilePic" src="<? echo $profilePic ?>" alt="<? echo $name ?>"/>
 			<h3>Import From:</h3>	
 			<button class="btn btn-primary btn-large socialButtons"><i class="icon-align-left icon-white"></i> Facebook</button>
 			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button>	
 		</div>		
-		<div class="span4">	
-			<h3 id="name">Name:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="Lisa Bitlet">
-			<h3 id="phone">Phone:</h3><input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="814-441-2968">
-			<h3 id="website">Website: </h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="www.Bitlet.co">
-			<h3 id="email">Email:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="Lisa@Bitlet.co">
+		<div class="span4 settingsMoveRight">	
+		<h3 id="name">Name:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="Lisa Bitlet" value="<? echo $name?>">
+		<h3 id="email">Email:</h3> 
+		<input class="span4 disabled inputHeightLarge" id="disabledInput" type="text" placeholder="<? echo $email ?>" disabled="">
+		<h3 id="phone">Phone:</h3><input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="814-441-2968" value="<? echo $phone ?>">
+		<h3 id="website">Website: </h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="www.Bitlet.co" value="<? echo $website ?>">
 	<h3 id="bio">Bio:</h3>
-			<textarea class="span4" name=message wrap=physical cols=28 rows=4 onKeyDown="textCounter(this.form.message,this.form.remLen,125);" onKeyUp="textCounter(this.form.message,this.form.remLen,125);">
-			</textarea>
+			<textarea class="input-xlarge span4" id="textarea" rows="3"></textarea>
 			<br>
-			<input readonly type=text name=remLen id="textCount" size=3 maxlength=3 value="125">characters left</font>
+			<span class="uneditable-input" id="textCount">125</span>	
 			<label class="checkbox">
                 <input type="checkbox" name="optionsCheckboxList1" value="emailOnPurchase">
 				Email me when someone purchases my products!
@@ -28,7 +48,7 @@
 		</div>	
 	</div>
 	<div class="settingsRightMenu">
-		<ul class="nav nav-pills nav-stacked" style="color:#FF9340">
+		<ul class="nav nav-pills nav-stacked settingsNavSideBar"> 
 			<li class="active"><a href="/settings"><h3>Profile</h3></a></li>
 			<li ><a href="/change-password"><h3>Change Password</h3></a></li>
 			<li ><a href="/payment-info"><h3>Payment Information</h3></a></li>

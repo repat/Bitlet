@@ -31,3 +31,7 @@
 #bioBox textarea{
 	width:300px !important; 
 }
+
+.settingsMoveRight{
+	margin-left:40px;
+}

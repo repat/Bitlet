@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	//Variables used to validate the form	
 	var name = $("#name");
