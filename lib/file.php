@@ -33,7 +33,7 @@ function SetFileDetails($fid, $opt)
 	$query = 'UPDATE files SET ';
 	foreach(array('name', 'price', 'description', 'type', 'param') as $p) {
 		if(isset($opt[$p])) {
-			$query .= $p'="'.mysql_real_escape_string($opt[$p]).'",';
+			$query .= $p.'="'.mysql_real_escape_string($opt[$p]).'",';
 		}
 	}
 	$query .= 'WHERE id="'.$fid.'"';
