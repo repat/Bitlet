@@ -29,7 +29,7 @@ $db = Connect();
 
 $url = explode('/', $_SERVER['REQUEST_URI']);
 $args = array_slice($url, 1);
-error_log('url: '.$url[1]);
+error_log('----- url: '.$url[1]);
 
 // see if request is for iframe, ajax, or just normal page
 switch($url[1])

@@ -42,7 +42,7 @@ function SetFileDetails($fid, $opt)
 
 	// run the actual query	
 	mysql_query($query) or die('error updating file details');
-	error_log('Updated file details, query: '.$query);
+	//error_log('Updated file details, query: '.$query);
 }
 
 // increment number sold and also add to the user's credits
