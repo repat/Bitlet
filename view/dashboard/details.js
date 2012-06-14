@@ -47,7 +47,7 @@ function AttachDetails()
 		UpdateDetails("name");
 		// update the name field in the middle row also
 		$(".selected .nameTd #big").text($("#name").val());
-	}).change(function() {
+	}).keydown(function() {
 		nameChanged = true;
 	});
 
