@@ -1,3 +1,6 @@
+#buyPageOverall{
+	width:980px;
+}
 .bitletBuyMain{
 	margin:100px 0 0 0;
 	width:550px;	
@@ -58,7 +61,11 @@
 #thumbnail{
 	height:290px;
 	width:550px;
-	background-color:purple;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	background-image: url(/img/penn-state-football1.jpeg);
+	border: 1px solid #CCC;
 }
 
 #payment{
@@ -69,7 +76,7 @@
 
 .buyPageInput{
 	width:220px;	
-	
+
 }
 /* Payment details */
 #paymentDetails{
@@ -108,7 +115,102 @@
 	width:26px;
 
 }
+#itemDetails{
+	padding-top:70px;
+}
 
+/* ribbon style */
 
+.ribbon-wrapper {
+	position: absolute;
+	top:400px;
+}
+.ribbon-front {
+	background-color: #6ECDE9;	height: 60px;
+	width: 585px;
+	position: relative;
+	left:-7px;
+	z-index: 2;
+}
+.ribbon-front h1{
+	text-shadow:3px 2px 0px rgba(0, 0, 0, 0.2);
+	color:white;
+	padding-left:11px;
+	padding-top:12px;
+}
+.ribbon-front,
+.ribbon-back-left,
+.ribbon-back-right
+{
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+}
 
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright {
+}
+
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+	top: 60px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-bottomleft {
+	left: -7px;
+	border-color: transparent #49A4B6 transparent transparent;
+}
+
+.ribbon-edge-topleft {
+	top: -7px;
+	border-width: 7px 7px 0 0;
+}
+.ribbon-edge-bottomleft {
+	border-width: 0 7px 0px 0;
+}
+
+.ribbon-edge-topright,
+.ribbon-edge-bottomright {
+	left: 571px;
+	border-color: transparent transparent transparent #49A4B6;
+}
+
+.ribbon-edge-topright {
+	top: -7px;
+	border-width: 7px 0 0 7px;
+}
+.ribbon-edge-bottomright {
+	border-width: 0 0 0px 7px;
+}
+
+.ribbon-back-left {
+	position: absolute;
+	top: -7px;
+	left: 0px;
+	width: 0px;
+	height: 60px;
+	z-index: 0;
+}
+
+.ribbon-back-right {
+	position: absolute;
+	top: -7px;
+	right: 0px;
+	width: 0px;
+	height: 60px;
+	z-index: 0;
+}
 

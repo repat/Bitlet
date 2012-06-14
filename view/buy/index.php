@@ -2,6 +2,7 @@
 
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
+$description = basename($finfo['description']);
 $price = $finfo['price'];
 $downloads = $finfo['downloads'];
 $uid = $finfo['uid'];
@@ -11,15 +12,27 @@ $user = $uinfo['email'];
 
 ?>
 
-<div class="container">
+<div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
 		<div id="thumbnail">
+			
 		</div>
+
 		<div id="itemDetails">
-			<h1>The Item Title</h1>	
-			<p> information about the item etc.... </p>	
+			<p><? echo $description ?></p> 
 		</div>
 	</div>
+	<div class="ribbon-wrapper">
+		<div class="ribbon-front">
+		<h1><? echo $name; ?></h1>	
+		</div>
+		<div class="ribbon-edge-topleft"></div>
+		<div class="ribbon-edge-topright"></div>
+		<div class="ribbon-edge-bottomleft"></div>
+		<div class="ribbon-edge-bottomright"></div>
+		<div class="ribbon-back-left"></div>
+		<div class="ribbon-back-right"></div>
+	</div>	
 	<div id="rightSide" class="span4">
 		<div id="priceTag">
 			<div id="circle">
