@@ -15,7 +15,7 @@ $user = $uinfo['email'];
 
 <div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
-	<div id="thumbnail" style="background-image: url(<? echo $thumbnail ?>);">
+	<div id="thumbnail" style="background-image: url(<? echo $thumbnail; ?>);">
 			
 		</div>
 
