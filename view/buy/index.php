@@ -1,6 +1,5 @@
 <?
 
-$fid = $args;
 $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
 $price = $finfo['price'];
@@ -23,6 +22,9 @@ $user = $uinfo['email'];
 	</div>
 	<div id="rightSide" class="span4">
 		<div id="priceTag">
+			<div id="circle">
+				<div id="circle-tiny"></div>
+			</div>	
 			<h1>$<? echo $price; ?></h1>
 		</div>
 		<div id="priceTagConnector">
@@ -39,12 +41,12 @@ $user = $uinfo['email'];
 				</div>		
 				<div id="expireDate">
 					<p>Expiry Date</p>	
-					<input type="text" class="inputHeightLarge card-expiry-month" id="month" placeholder="MM">/	
+					<input type="text" class="inputHeightLarge card-expiry-month" id="month" placeholder="MM">	
 					<input type="text" class="inputHeightLarge card-expiry-year" id="year" placeholder="YY">	
 				</div>
 				<button class="btn btn-success btn-large" style="width:100%;" href="#">Purchase</button>
 			</form>
-			<p class="payment-errors"></p>
+			<p class="payment-errors hide"></p>
 		</div>	
 	</div>
 	<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
