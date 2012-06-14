@@ -36,7 +36,7 @@ function SetFileDetails($fid, $opt)
 			$query .= $p.'="'.mysql_real_escape_string($opt[$p]).'",';
 		}
 	}
-	$query .= 'WHERE id="'.$fid.'"';
+	$query .= ' WHERE id="'.$fid.'"';
 
 	// run the actual query	
 	//mysql_query($query) or die('error updating file details');

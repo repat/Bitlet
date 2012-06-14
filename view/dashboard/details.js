@@ -33,26 +33,27 @@ function UpdateDetails(input)
 
 	$.post('/ajax/updatecolumn', args,
 		function(data) {
-			$('#rightContent').html(data);
-
-			// run category function
-			EditCategory();
-		});	
+			console.log("server updated with new "+input);
+		}, "json");	
 }
 
-$("#name").blur(function() {
-	UpdateDetails("name");
-});
+// attach details hander to inputs
+function AttachDetails() 
+{
+	$("#name").blur(function() {
+		UpdateDetails("name");
+	});
 
-$("#price").blur(function() {
-	UpdateDetails("price");
-});
+	$("#price").blur(function() {
+		UpdateDetails("price");
+	});
 
-$("#descrInput").blur(function() {
-	UpdateDetails("descr");
-});
+	$("#descrInput").blur(function() {
+		UpdateDetails("descr");
+	});
 
-$("#categoryInput").blur(function() {
-	UpdateDetails("type");
-});
+	$("#categoryInput").blur(function() {
+		UpdateDetails("type");
+	});
+}
 
