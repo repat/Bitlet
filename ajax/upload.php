@@ -60,8 +60,10 @@ if(isset($_FILES['file']))
 		}
 	} else if($UID >= 0) {
 		// no email field means we go by UID cookie
+		error_log('logging in as uid '.$uid);
 		$uid = $UID;
 	} else {
+		error_log('no email and not logged in stupid');
 		SendResult(0);
 	}
 
