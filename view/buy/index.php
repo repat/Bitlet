@@ -4,6 +4,7 @@ $finfo = GetFileInfo($fid);
 $name = basename($finfo['name']);
 $description = basename($finfo['description']);
 $price = $finfo['price'];
+$price = sprintf('%.2f', $price);
 $downloads = $finfo['downloads'];
 $thumbnail = $finfo['thumb_url'].THUMB_END;
 
