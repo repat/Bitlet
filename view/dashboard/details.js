@@ -1,4 +1,7 @@
 
+// input change flags
+var nameChanged = false;
+
 // grab details from all the input fields and submit AJAX call
 // argument specifies an input field to update
 function UpdateDetails(input)
@@ -23,7 +26,7 @@ function UpdateDetails(input)
 		$.extend(args, {description: descr});
 		break;
 	case "type":
-		var descr = $("#categoryInput").val().toLowerCase();
+		var type = $("#categoryInput").val().toLowerCase();
 		$.extend(args, {type: type});
 		break;
 	case "param":
@@ -44,6 +47,8 @@ function AttachDetails()
 		UpdateDetails("name");
 		// update the name field in the middle row also
 		$(".selected .nameTd #big").text($("#name").val());
+	}).change(function() {
+		nameChanged = true;
 	});
 
 	$("#price").blur(function() {
@@ -54,8 +59,18 @@ function AttachDetails()
 		UpdateDetails("descr");
 	});
 
-	$("#categoryInput").blur(function() {
+	$("#categoryInput").change(function() {
 		UpdateDetails("type");
 	});
 }
+
+// attach name changed interval
+setInterval(function() {
+	if(nameChanged == true) {
+		nameChanged = false;
+		UpdateDetails("name");
+		// update the name field in the middle row also
+		$(".selected .nameTd #big").text($("#name").val());
+	}
+}, 500);
 
