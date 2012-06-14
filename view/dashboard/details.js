@@ -3,6 +3,7 @@
 var nameChanged = false;
 var priceChanged = false;
 var descrChanged = false;
+var paramChanged = false;
 
 // grab details from all the input fields and submit AJAX call
 // argument specifies an input field to update
@@ -68,6 +69,11 @@ function AttachDetails()
 	$("#categoryInput").change(function() {
 		UpdateDetails("type");
 	});
+}
+
+// compile all the parameters into a nice JSON string
+function CompileParam()
+{
 }
 
 // attach name changed interval
