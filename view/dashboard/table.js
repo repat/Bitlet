@@ -84,29 +84,6 @@ function EditCategory() {
 	$.post('/ajax/productdetails', {fid: fid, selected: selected}, function(data) {
 		// file the details table
 		$('.detailsTable').html(data);
-
-		// select and copy share link on input box click
-		$('#productURL').tooltip({placement:'top'});
-
-		// autoselect all the input boxes in the right side menu on click
-		$('.rightSideMenu input').click(function() {
-			console.log('input selected');
-			this.select();
-		});
-
-		// get rid of textarea default text on click
-		var defaultText = 'Describe this file in 3 sentences here...';
-		$('.rightSideMenu textarea').focus(function() {
-			if($(this).val() == defaultText) {
-				$(this).val('');
-			} 
-		}).blur(function() {
-			if($(this).val() == '') {
-				$(this).val(defaultText);
-			}
-		});
-
-
 	});
 }
 
@@ -142,6 +119,29 @@ $('.dashTable li').live('click', function (e) {
 		// AJAX the page with fid as argument
 		$.post('/ajax/productcolumn', {fid: fid}, function(data) {
 			$('#rightContent').html(data);
+
+			// attach details event handlers for AJAX updating
+			AttachDetails();
+
+			// select and copy share link on input box click
+			$('#productURL').tooltip({placement:'top'});
+
+			// autoselect all the input boxes in the right side menu on click
+			$('.rightSideMenu input').click(function() {
+				this.select();
+			});
+
+			// get rid of textarea default text on click
+			var defaultText = 'Describe this file in 3 sentences here...';
+			$('.rightSideMenu textarea').focus(function() {
+				if($(this).val() == defaultText) {
+					$(this).val('');
+				} 
+			}).blur(function() {
+				if($(this).val() == '') {
+					$(this).val(defaultText);
+				}
+			});
 
 			// run category function
 			EditCategory();

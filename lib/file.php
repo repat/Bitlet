@@ -25,20 +25,24 @@ function SetPrice($fid, $price)
 		WHERE id='$fid'") or die();
 }
 
-// set price for a file
-function SetDisplayName($fid, $name)
+// update file settings, will only update the settings specified
+// we want the name, price, description, type, and param
+function SetFileDetails($fid, $opt)
 {
-	$name = mysql_real_escape_string($name);
-	mysql_query("UPDATE files SET name='$name'
-		WHERE id='$fid'") or die();
-}
+	// build the query
+	$query = 'UPDATE files SET ';
+	foreach(array('name', 'price', 'description', 'type', 'param') as $p) {
+		if(isset($opt[$p])) {
+			$query .= $p.'="'.mysql_real_escape_string($opt[$p]).'",';
+		}
+	}
+	// trim last uncessary comma
+	$query = substr($query, 0, -1);
+	$query .= ' WHERE id="'.$fid.'"';
 
-// set price for a file
-function SetURL($fid, $url)
-{
-	$url = mysql_real_escape_string($url);
-	mysql_query("UPDATE files SET url='$url'
-		WHERE id='$fid'") or die();
+	// run the actual query	
+	mysql_query($query) or die('error updating file details');
+	//error_log('Updated file details, query: '.$query);
 }
 
 // increment number sold and also add to the user's credits
