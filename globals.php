@@ -4,4 +4,3 @@
 $BUY_LINK_PREAMBLE = 'http://'.$_SERVER['HTTP_HOST'].'/f/';
 
 ?>
-
