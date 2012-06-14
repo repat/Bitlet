@@ -36,10 +36,12 @@ function SetFileDetails($fid, $opt)
 			$query .= $p.'="'.mysql_real_escape_string($opt[$p]).'",';
 		}
 	}
+	// trim last uncessary comma
+	$query = substr($query, 0, -1);
 	$query .= ' WHERE id="'.$fid.'"';
 
 	// run the actual query	
-	//mysql_query($query) or die('error updating file details');
+	mysql_query($query) or die('error updating file details');
 	error_log('Updated file details, query: '.$query);
 }
 
