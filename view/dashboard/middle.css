@@ -50,6 +50,7 @@
 	height:60px; 
 	width:60px; 
 	border: 1px solid white;
+	background: #FFF;
 
 	/* drop shadow */
 	box-shadow: 1px 1px 1px 0px #999;
