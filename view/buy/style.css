@@ -3,7 +3,7 @@
 }
 .bitletBuyMain{
 	margin:100px 0 0 0;
-	width:550px;	
+	width:660px;	
 	min-height:395px;
 	padding:10px;
 }
@@ -60,8 +60,8 @@
 	width:250px;	
 }
 #thumbnail{
-	height:290px;
-	width:550px;
+	height:348px;
+	width:660px;
 	-moz-border-radius: 4px 4px 0 0;
 	-webkit-border-radius: 4px 4px 0 0;
 	border-radius: 4px 4px 0 0;
@@ -118,7 +118,6 @@
 #itemDetails{
 	margin-top:70px;
 }
-
 /* ribbon style */
 
 .ribbon-wrapper {
@@ -127,10 +126,11 @@
 }
 .ribbon-front {
 	background-color: #6ECDE9;	height: 60px;
-	width: 585px;
+	width: 695px;
 	position: relative;
 	left:-7px;
 	z-index: 2;
+	overflow:hidden;
 }
 .ribbon-front h1{
 	text-shadow:3px 2px 0px rgba(0, 0, 0, 0.2);
@@ -184,7 +184,7 @@
 
 .ribbon-edge-topright,
 .ribbon-edge-bottomright {
-	left: 571px;
+	left: 681px;
 	border-color: transparent transparent transparent #49A4B6;
 }
 

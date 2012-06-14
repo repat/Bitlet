@@ -64,7 +64,6 @@ $user = $uinfo['email'];
 			<p class="payment-errors hide"></p>
 		</div>	
 	</div>
-	<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
 </div>
 
 
