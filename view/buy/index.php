@@ -5,8 +5,9 @@ $name = basename($finfo['name']);
 $description = basename($finfo['description']);
 $price = $finfo['price'];
 $downloads = $finfo['downloads'];
-$uid = $finfo['uid'];
+$thumbnail = $basename($finfo['thumb_url']);
 
+$uid = $finfo['uid'];
 $uinfo = GetUserInfo($uid);
 $user = $uinfo['email'];
 
@@ -14,7 +15,7 @@ $user = $uinfo['email'];
 
 <div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
-		<div id="thumbnail">
+	<div id="thumbnail" style="background-image: url(<? echo $thumbnail ?>);">
 			
 		</div>
 
