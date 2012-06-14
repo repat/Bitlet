@@ -9,7 +9,7 @@
 			<a href="/support" class="footer-text">Support</a>
 			<a href="http://affiliates.bitlet.co/" class="footer-text">Affiliates</a>
 
-			<p class="copyright-text">&copy;2012 Bitlet, Inc</p>
+			<a href="/" class="copyright-text">&copy;2012 Bitlet, Inc</a>
 		</div>
 	</div> <!-- end #inner-footer -->	
 </footer>
