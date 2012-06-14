@@ -1,6 +1,8 @@
 
 // input change flags
 var nameChanged = false;
+var priceChanged = false;
+var descrChanged = false;
 
 // grab details from all the input fields and submit AJAX call
 // argument specifies an input field to update
@@ -53,10 +55,14 @@ function AttachDetails()
 
 	$("#price").blur(function() {
 		UpdateDetails("price");
+	}).keydown(function() {
+		priceChanged = true;
 	});
 
 	$("#descrInput").blur(function() {
 		UpdateDetails("descr");
+	}).keydown(function() {
+		descrChanged = true;
 	});
 
 	$("#categoryInput").change(function() {
@@ -71,6 +77,14 @@ setInterval(function() {
 		UpdateDetails("name");
 		// update the name field in the middle row also
 		$(".selected .nameTd #big").text($("#name").val());
+	}
+	if(priceChanged == true) {
+		priceChanged = false;
+		UpdateDetails("price");
+	}
+	if(descrChanged == true) {
+		descrChanged = false;
+		UpdateDetails("descr");
 	}
 }, 500);
 
