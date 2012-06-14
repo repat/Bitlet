@@ -80,14 +80,6 @@ function GetFileInfo($fid)
 	return mysql_fetch_assoc($result);
 }
 
-// returns fid from input url
-function GetFidFromUrl($url)
-{
-	$url = mysql_real_escape_string($url);
-	$result = mysql_query("SELECT id FROM files WHERE url='$url'") or die();
-	return mysql_result($result, 0);
-}
-
 // get the filename of specifided file
 function GetFileFromId($fid)
 {
@@ -97,6 +89,25 @@ function GetFileFromId($fid)
 		die('File does not exist');
 	}
 	return mysql_result($result, 0);
+}
+
+// returns fid from input custom url
+function GetFidFromUrl($url)
+{
+	$url = mysql_real_escape_string($url);
+	$result = mysql_query("SELECT id FROM files WHERE url='$url'") or die();
+	return mysql_result($result, 0);
+}
+
+// file link conversion functions
+function GetFidFromLink($link)
+{
+	return base_convert($link, 36, 10);
+}
+
+function GetLinkFromFid($fid)
+{
+	return base_convert($fid, 10, 36);
 }
 
 ?>

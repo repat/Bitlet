@@ -23,7 +23,8 @@ function ViewBuy($url, $args)
 	$UID = $_SESSION['uid'];
 	$dir = 'view/buy';
 
-	error_log('file link: '.$args[1]);
+	$fid = GetFidFromLink($args[1]);
+	error_log('file fid: '.$fid);
 
 	// Build the HTML page
 	echo '<!DOCTYPE html>';

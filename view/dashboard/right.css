@@ -10,9 +10,9 @@
 	border-left: 1px solid #777;
 
 	/* left shadow*/
-	-webkit-box-shadow: -1px 0 0px #CCC;
-	-moz-box-shadow: -1px 0 0px #CCC;
-	box-shadow: -1px 0 0px #CCC;
+	-webkit-box-shadow: -1px 0 0px #FFF;
+	-moz-box-shadow: -1px 0 0px #FFF;
+	box-shadow: -1px 0 0px #FFF;
 
 	/* rounded corners */
 	border-top-right-radius: 5px;
@@ -40,7 +40,7 @@
 }
 
 .rightSideMenu hr {
-	margin: 5px 0;
+	margin: 0;
 	border-top: 1px solid #BBB;
 	border-bottom: 1px solid #FFF;
 }
@@ -93,7 +93,7 @@
 
 /********* PRODUCTS ********/
 .productHead {
-	background: #222;
+	background: #FFF;
 	width: 550px;
 	height: 290px;
 	overflow: hidden;
@@ -110,15 +110,20 @@
 }
 
 .productInfo { 
-	background: #DDD;
+	background: #F0F0F0;
 	width: 550px;
 	border-top: 1px solid #FFF;
-	padding: 10px;
 }
 
 .productInfo #left {
-	width: 260px;
+	padding: 10px;
+	width: 251px;
 	float: left;
+	background: #EEE;
+	border-right: 1px solid #AAA;
+	box-shadow: 1px 0 0 #FFF;
+	-webkit-box-shadow: 1px 0 0 #FFF;
+	-moz-box-shadow: 1px 0 0 #FFF;
 }
 
 .productInfo select {
@@ -131,7 +136,7 @@
 	resize: none;
 }
 
-.left {
+.detailsTable .left {
 	text-align: right; 
 	vertical-align: text-top;
 	width: 100px;
@@ -143,6 +148,11 @@
 	text-align: left; 
 	vertical-align: text-top;
 	width: 160px;
+}
+
+.detailsTable {
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
 .detailsTable input {
@@ -330,14 +340,12 @@ input#dright {
 	height: 30px; 
 	width: 30px; 
 	border: none;
-	box-shadow: none; 
 }
 
 #facebook {
 	height: 30px; 
 	width: 30px; 
 	border: none; 
-	box-shadow: none;
 }
 
 #deleteBtn {

@@ -1,5 +1,7 @@
 <?
 
+include_once 'globals.php';
+
 function ViewAjax($url, $args)
 {
 	// we define a macro for shortness sake

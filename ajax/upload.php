@@ -9,6 +9,10 @@ function SendResult($result)
 	<script language="javascript" type="text/javascript">
 		   window.top.window.UploadDone('.$result.');
 	</script>';
+	// kill the script on error result
+	if($result <= 0) {
+		die();
+	}
 }
 
 $MAX_SIZE = 5000000000;		// limit is 5 GB
@@ -37,29 +41,29 @@ if(isset($_FILES['file']))
 	// if email is set, then the user isn't logged in
 	if(isset($_POST['email'])) {
 		$email = $_POST['email'];
-		$uid = GetUID($email);
-		if($uid == false) {
+		$UID = GetUID($email);
+		if($UID == false) {
 			// create a new user
-			list($uid, $pass) = NewUser($email);
-			$_SESSION['uid'] = $uid;
-			$UID = $uid;
+			list($UID, $pass) = NewUser($email);
 
 			error_log('new user created, pass '.$pass);
 			EmailNewUser($email, $pass);
 
 			// auto login 
-			$_SESSION['uid'] = $uid;
-			$UID = $uid;
+			$_SESSION['uid'] = $UID;
 		} else {
 			// we should report back asking for password // TODO
 			SendResult(0);
 		}
-	} else {
+	} else if($UID >= 0) {
 		// no email field means we go by UID cookie
-		$uid = $UID;
+		error_log('logging in as uid '.$UID);
+	} else {
+		error_log('no email and not logged in stupid');
+		SendResult(0);
 	}
 
-	$uploaddir = $uploadroot.$uid;
+	$uploaddir = $uploadroot.$UID;
 	$uploadname = $uploaddir.'/'.$name;
 	$sh = 'mkdir "'.$uploaddir.'"';
 	`$sh`;
@@ -115,7 +119,7 @@ if(isset($_FILES['file']))
 
 	// insert file into db
 	// file type: enum('generic','photo','music','digiart','document','video')
-	$fid = NewFile($uid, basename($uploadname), $ftype_str, $thumbpath, $fsize);
+	$fid = NewFile($UID, basename($uploadname), $ftype_str, $thumbpath, $fsize);
 	error_log('file created');
 
 

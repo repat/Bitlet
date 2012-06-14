@@ -3,6 +3,7 @@
 include_once 'page.php';
 include_once 'buy.php';
 include_once 'async.php';
+include_once 'globals.php';
 
 // set base global var
 $BASE = dirname(__FILE__);

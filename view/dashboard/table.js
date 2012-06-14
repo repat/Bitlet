@@ -87,9 +87,26 @@ function EditCategory() {
 
 		// select and copy share link on input box click
 		$('#productURL').tooltip({placement:'top'});
-		$('#productURL').click(function() {
+
+		// autoselect all the input boxes in the right side menu on click
+		$('.rightSideMenu input').click(function() {
+			console.log('input selected');
 			this.select();
 		});
+
+		// get rid of textarea default text on click
+		var defaultText = 'Describe this file in 3 sentences here...';
+		$('.rightSideMenu textarea').focus(function() {
+			if($(this).val() == defaultText) {
+				$(this).val('');
+			} 
+		}).blur(function() {
+			if($(this).val() == '') {
+				$(this).val(defaultText);
+			}
+		});
+
+
 	});
 }
 

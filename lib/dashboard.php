@@ -104,7 +104,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<div id="bottom">
 			<div id="shareLink" class="inputPrepend">
 				<span class="addOn">Share</span>
-				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="https://bitlet.co/l/4AE3C$sharelink"/>
+				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
 			</div>
 			<div id="shareIcons">
 				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
