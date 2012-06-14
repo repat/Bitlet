@@ -5,7 +5,7 @@ $name = basename($finfo['name']);
 $description = basename($finfo['description']);
 $price = $finfo['price'];
 $downloads = $finfo['downloads'];
-$thumbnail = $basename($finfo['thumb_url']);
+$thumbnail = $finfo['thumb_url'];
 
 $uid = $finfo['uid'];
 $uinfo = GetUserInfo($uid);
