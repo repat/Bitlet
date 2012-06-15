@@ -21,7 +21,7 @@ IncrementViews($fid);
 	<div class="well bitletDropShadow bitletBuyMain span7">
 		<div id="thumbnail" style="background: url('/<? echo $thumbnail; ?>');"></div>
 
-		<div id="itemDetails">
+		<div id="itemDetails" class="theDetails">
 			<? echo $description; ?>
 		</div>
 	</div>

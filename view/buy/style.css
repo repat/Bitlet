@@ -51,9 +51,6 @@
 	font-size:50px;
 }
 
-
-
-
 #rightSide{
 	margin-top:100px;
 	margin-left:50px;
@@ -118,6 +115,14 @@
 #itemDetails{
 	margin-top:10px;
 }
+
+/* details formatting needs to match those in the dashboard */
+.theDetails hr {
+	margin: 0;
+	border-top: 1px solid #BBB;
+	border-bottom: 1px solid white;
+}
+
 /* ribbon style */
 
 .ribbon-wrapper {
