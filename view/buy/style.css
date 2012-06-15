@@ -113,7 +113,7 @@
 
 }
 #itemDetails{
-	margin-top:10px;
+	margin-top:70px;
 }
 
 /* details formatting needs to match those in the dashboard */
@@ -127,7 +127,7 @@
 
 .ribbon-wrapper {
 	position: absolute;
-	top:400px;
+	top:460px;
 }
 .ribbon-front {
 	background-color: #6ECDE9;	height: 60px;
