@@ -113,35 +113,13 @@
 	background: #F0F0F0;
 	width: 550px;
 	border-top: 1px solid #FFF;
-}
-
-.productInfo #left {
 	padding: 10px;
-	width: 251px;
-	float: left;
-	background: #EEE;
-	border-right: 1px solid #AAA;
-	box-shadow: 1px 0 0 #FFF;
-	-webkit-box-shadow: 1px 0 0 #FFF;
-	-moz-box-shadow: 1px 0 0 #FFF;
-}
-
-.productInfo select {
-	width: 250px;
 }
 
 .productInfo textarea {
-	width: 240px;
+	width: 530px;
 	height: 110px;
 	resize: none;
-}
-
-.detailsTable .left {
-	text-align: right; 
-	vertical-align: text-top;
-	width: 100px;
-	color: #555;
-	padding-right: 5px;
 }
 
 .right {
@@ -348,7 +326,7 @@ input#dright {
 	border: none; 
 }
 
-#deleteBtn {
+.bottomBtn {
 	font-size: 18px;
 	line-height: 25px;
 	width: 150px;

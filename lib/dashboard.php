@@ -49,42 +49,6 @@ HTML;
 
 function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $category, $sharelink)
 {
-	// default textarea code
-	$textarea = $descr == '' ? 'Describe this file in 3 sentences here...' : $descr;
-
-	// generate the correct default catagory selection box code
-	$select = '';
-	if($category == 'photo') {
-		$select .= '<option selected="selected">Image</option>';
-	} else {
-		$select .= '<option>Image</option>';
-	}
-	if($category == 'art') {
-		$select .= '<option selected="selected">Art</option>';
-	} else {
-		$select .= '<option>Art</option>';
-	}
-	if($category == 'music') {
-		$select .= '<option selected="selected">Music</option>';
-	} else {
-		$select .= '<option>Music</option>';
-	}
-	if($category == 'document') {
-		$select .= '<option selected="selected">Document</option>';
-	} else {
-		$select .= '<option>Document</option>';
-	}
-	if($category == 'video') {
-		$select .= '<option selected="selected">Video</option>';
-	} else {
-		$select .= '<option>Video</option>';
-	}
-	if($category == 'generic') {
-		$select .= '<option selected="selected">Generic</option>';
-	} else {
-		$select .= '<option>Generic</option>';
-	}
-
 	$price = sprintf('%.2f', $price);
 
 	// return the final built HTML
@@ -114,15 +78,11 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<br>
 	</div>
 	<div class="productInfo">
-		<div id="left">
-			<select id="categoryInput" onchange="EditCategory()">$select</select>
-			<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
-		</div>
-		<table class="detailsTable"></table>
-		<br style="clear: left;"/>
+		<textarea type="text" class="input-large" id="descrInput">$descr</textarea>
 	</div>
 	<hr>
-	<button class="btn btn-danger" id="deleteBtn" onclick="ExecuteDelete()">Delete</button>
+	<button class="btn btn-danger bottomBtn" onclick="ExecuteDelete()">Delete</button>
+	<a class="btn btn-info bottomBtn" href="$sharelink">View Buy Page</a>
 HTML;
 }
 

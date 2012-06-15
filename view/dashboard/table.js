@@ -131,9 +131,12 @@ $('.dashTable li').live('click', function (e) {
 				this.select();
 			});
 
+			// setup rich text editor
+			new nicEditor({iconsPath : '/img/nicEditorIcons.gif'}).panelInstance('descrInput');
+
 			// get rid of textarea default text on click
 			var defaultText = 'Describe this file in 3 sentences here...';
-			$('.rightSideMenu textarea').focus(function() {
+			$('#descrInput').focus(function() {
 				if($(this).val() == defaultText) {
 					$(this).val('');
 				} 
@@ -142,9 +145,6 @@ $('.dashTable li').live('click', function (e) {
 					$(this).val(defaultText);
 				}
 			});
-
-			// run category function
-			EditCategory();
 		});	
 	} else {
 		// AJAX the page with fid as argument
