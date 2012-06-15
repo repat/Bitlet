@@ -92,6 +92,11 @@ function AttachDetails()
 	});
 }
 
+function ExecuteDelete()
+{
+	console.log("deleting file fid "+fid);
+}
+
 // attach name changed interval
 setInterval(function() {
 	if(nameChanged == true) {
