@@ -8,7 +8,7 @@
 	$emailSettings = $uInfo['email_settings'];	
 	parse_str($emailSettings, $esettings);
 	
-	if($esettings[0] === 'true'){
+	if($esettings['EmailOnPurchase'] === 'true'){
 		error_log("YAY");
 	}
 	else{
