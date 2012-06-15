@@ -1,16 +1,19 @@
 <?
 
 $finfo = GetFileInfo($fid);
+
 $name = basename($finfo['name']);
 $description = basename($finfo['description']);
 $price = $finfo['price'];
 $price = sprintf('%.2f', $price);
+
 $downloads = $finfo['downloads'];
 $thumbnail = $finfo['thumb_url'].THUMB_END;
 
-$uid = $finfo['uid'];
-$uinfo = GetUserInfo($uid);
+$uinfo = GetUserInfo($UID);
 $user = $uinfo['email'];
+
+IncrementViews($fid);
 
 ?>
 
@@ -67,15 +70,15 @@ $user = $uinfo['email'];
 </div>
 
 
-		<!-- Hidden input to POST id on submission -->
-		<div class="post-pay" style="display:none">
-			<p>Download should start automatically, Or:</p>
-			<hr>
-		</div>
-		<form action="/ajax/download" method="POST" id="go-download">
-			<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
-			<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
-		</form>
+<!-- Hidden input to POST id on submission -->
+<div class="post-pay" style="display:none">
+	<p>Download should start automatically, Or:</p>
+	<hr>
+</div>
+<form action="/ajax/download" method="POST" id="go-download">
+	<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
+	<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
+</form>
 
 <!-- Official Stripe JS file -->
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
