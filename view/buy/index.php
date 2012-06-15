@@ -3,7 +3,7 @@
 $finfo = GetFileInfo($fid);
 
 $name = basename($finfo['name']);
-$description = basename($finfo['description']);
+$description = $finfo['description'];
 $price = $finfo['price'];
 $price = sprintf('%.2f', $price);
 
