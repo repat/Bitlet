@@ -12,7 +12,7 @@
 		"EmailOnWeekly" => "$emailWeekly",
 	);
 	$emailSettings = ReverseParseStr($emailSettingsArray);
-	$uid = CheckUserEmail($email);
+	$uid = $UID;
 
 	
 	//check if the persons email validated then update account 
