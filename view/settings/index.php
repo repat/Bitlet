@@ -34,7 +34,7 @@
 		<h3>Phone:</h3><input class="span4 focused inputHeightLarge" id="phone" type="text" placeholder="814-441-2968" value="<? echo $phone ?>">
 		<h3 >Website: </h3> <input class="span4 focused inputHeightLarge" id="website" type="text" placeholder="www.Bitlet.co" value="<? echo $website ?>">
 	<h3>Bio:</h3>
-	<textarea class="input-xlarge span4" id="bioBox" rows="3" placeholder="Tell us about you!" value="<? echo $bio ?>" ></textarea>
+	<textarea class="input-xlarge span4" id="bioBox" rows="3" placeholder="Tell us about you!"><? echo $bio ?></textarea>
 			<br>
 			<span class="uneditable-input" id="textCount">125</span>	
 			<label class="checkbox">
