@@ -7,8 +7,8 @@
 	$bio = $uInfo['bio']; 
 	$emailSettings = $uInfo['email_settings'];	
 	parse_str($emailSettings, $esettings);
-	
-	if($esettings[0] === 'true'){
+	error_log(print_r($esettings));	
+	if($esettings['EmailOnPurchase'] === 'true'){
 		error_log("YAY");
 	}
 	else{
