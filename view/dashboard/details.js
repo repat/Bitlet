@@ -74,13 +74,13 @@ function AttachDetails()
 		descrChanged = true;
 	}).addEvent('focus', function() {
 		// make the thumbnail smaller so we'll have more room for editor
-		$('.productHead').animate({heignt: 100}, rightAnimationSpeed);
-		$('.productInfo').animate({heignt: 370}, rightAnimationSpeed);
+		$('.productHead').animate({height:100}, rightAnimationSpeed);
+		$('.productInfo').animate({height:370}, rightAnimationSpeed);
 	}).addEvent('blur', function() {
 		UpdateDetails("descr");
 		// make the thumbnail big again
-		$('.productHead').animate({heignt: 290}, rightAnimationSpeed);
-		$('.productInfo').animate({heignt: 165}, rightAnimationSpeed);
+		$('.productHead').animate({height:290}, rightAnimationSpeed);
+		$('.productInfo').animate({height:180}, rightAnimationSpeed);
 	});
 
 	$(".nicEdit-main").keypress(function() {
