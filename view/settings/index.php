@@ -7,14 +7,18 @@
 	$bio = $uInfo['bio']; 
 	$emailSettings = $uInfo['email_settings'];	
 	parse_str($emailSettings, $esettings);
-	error_log(print_r($esettings));	
 	if($esettings['EmailOnPurchase'] === 'true'){
-		error_log("YAY");
+		$EmailOnPurchase = 'checked';	
 	}
 	else{
-		error_log("SAD FACE");
+		$EmailOnPurchase = '';	
 	}
-	
+	if($esettings['EmailOnWeekly'] === 'true'){
+		$EmailOnWeekly = 'checked';	
+	}
+	else{
+		$EmailOnWeekly = '';	
+	}
 	$profilePic = $uInfo['profile_img']; 
 	$website =  $uInfo['website']; 
 
@@ -47,11 +51,11 @@
 			<br>
 			<span class="uneditable-input" id="textCount">125</span>	
 			<label class="checkbox">
-			<input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase" >
+			<input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase" <? echo $EmailOnPurchase ?>>
 				Email me when someone purchases my products!
             </label>	
 			<label class="checkbox">
-                <input type="checkbox" id="optionsCheckboxList2" value="EmailWeekly">Email me a weekly summary of my sales
+                <input type="checkbox" id="optionsCheckboxList2" value="EmailWeekly" <? echo $EmailOnWeekly ?>>Email me a weekly summary of my sales
             </label>	
 			<button class="btn btn-primary btn-large" id="saveButton" >Save</button>
 		</div>	
