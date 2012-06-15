@@ -102,6 +102,11 @@ ContractRight();
 /*** table right column functions ***/
 $('.dashTable li').live('click', function (e) {
 	e.stopPropagation();
+
+	// clear right content
+	// TODO: loading animation needs to go here
+	$('#rightContent').html('');
+		
 	// start sizing the right side container
 	ExpandRight();
 
@@ -116,6 +121,7 @@ $('.dashTable li').live('click', function (e) {
 
 	// products selected
 	if(tableSelected == 0) {
+
 		// AJAX the page with fid as argument
 		$.post('/ajax/productcolumn', {fid: fid}, function(data) {
 			$('#rightContent').html(data);
