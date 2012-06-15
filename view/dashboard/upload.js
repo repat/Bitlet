@@ -14,15 +14,16 @@ function UploadDone(result) {
 		if(tableSelected == 0) {
 			DisplayProducts(result);
 
+			// clear right content
+			// TODO: loading animation needs to go here
+			$('#rightContent').html('');
+
 			// start sizing the right side container
 			ExpandRight();
 
 			// AJAX the page with fid as argument
 			$.post('/ajax/productcolumn', {fid: result}, function(data) {
 				$('#rightContent').html(data);
-
-				// run category function
-				EditCategory();
 			});	
 		}
 	} else {
