@@ -81,8 +81,8 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 		<textarea type="text" class="input-large" id="descrInput">$descr</textarea>
 	</div>
 	<hr>
-	<button class="btn btn-danger bottomBtn" onclick="ExecuteDelete()">Delete</button>
 	<a class="btn btn-info bottomBtn" href="$sharelink">View Buy Page</a>
+	<button class="btn btn-danger bottomBtn" onclick="ExecuteDelete()">Delete</button>
 HTML;
 }
 

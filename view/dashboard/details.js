@@ -5,6 +5,13 @@ var priceChanged = false;
 var descrChanged = false;
 var paramChanged = false;
 
+// nic text editor instance
+var editor;
+
+var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 155,
+	buttonList: ['bold', 'italic', 'underline', 'left', 'right', 'justify', 'ol', 'ul', 
+				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'image', 'fontFormat']}
+
 // grab details from all the input fields and submit AJAX call
 // argument specifies an input field to update
 function UpdateDetails(input)
@@ -25,7 +32,7 @@ function UpdateDetails(input)
 		$.extend(args, {price: price});
 		break;
 	case "descr":
-		var descr = $("#descrInput").val();
+		var descr = editor.instanceById('descrInput').getContent();
 		$.extend(args, {description: descr});
 		break;
 	case "type":
@@ -60,20 +67,21 @@ function AttachDetails()
 		priceChanged = true;
 	});
 
-	$("#descrInput").blur(function() {
+	// setup rich text editor
+	editor = new nicEditor(editorConfig).panelInstance('descrInput');
+
+	editor.addEvent('blur', function() {
 		UpdateDetails("descr");
-	}).keydown(function() {
+	}).addEvent('key', function() {
+		descrChanged = true;
+	});
+	$(".nicEdit-main").keypress(function() {
 		descrChanged = true;
 	});
 
 	$("#categoryInput").change(function() {
 		UpdateDetails("type");
 	});
-}
-
-// compile all the parameters into a nice JSON string
-function CompileParam()
-{
 }
 
 // attach name changed interval
