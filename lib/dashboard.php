@@ -49,9 +49,6 @@ HTML;
 
 function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $category, $sharelink)
 {
-	// default textarea code
-	$textarea = $descr == '' ? 'Describe this file in 3 sentences here...' : $descr;
-
 	// generate the correct default catagory selection box code
 	$select = '';
 	if($category == 'photo') {
@@ -116,7 +113,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 	<div class="productInfo">
 		<div id="left">
 			<select id="categoryInput" onchange="EditCategory()">$select</select>
-			<textarea type="text" class="input-large" id="descrInput">$textarea</textarea>
+			<textarea type="text" class="input-large" id="descrInput">$descr</textarea>
 		</div>
 		<table class="detailsTable"></table>
 		<br style="clear: left;"/>
