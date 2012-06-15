@@ -13,7 +13,6 @@
 	overflow: hidden;
 }
 
-
 #topDiv {
 	position: relative;
 	width:980px;
@@ -148,5 +147,9 @@
 
 	/* letter press effect */
 	text-shadow:#FFF 0px 1px 0, #999 0 -1px 0;
+}
+
+.nicEdit-main {
+	outline: none;
 }
 

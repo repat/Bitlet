@@ -3,7 +3,7 @@
 $finfo = GetFileInfo($fid);
 
 $name = basename($finfo['name']);
-$description = basename($finfo['description']);
+$description = $finfo['description'];
 $price = $finfo['price'];
 $price = sprintf('%.2f', $price);
 
@@ -19,12 +19,10 @@ IncrementViews($fid);
 
 <div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
-	<div id="thumbnail" style="background: url('/<? echo $thumbnail; ?>');">
-			
-		</div>
+		<div id="thumbnail" style="background: url('/<? echo $thumbnail; ?>');"></div>
 
 		<div id="itemDetails">
-			<p><? echo $description ?></p> 
+			<? echo $description; ?>
 		</div>
 	</div>
 	<div class="ribbon-wrapper">
