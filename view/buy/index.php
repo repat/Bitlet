@@ -69,7 +69,6 @@ IncrementViews($fid);
 	</div>
 </div>
 
-
 <!-- Hidden input to POST id on submission -->
 <div class="post-pay" style="display:none">
 	<p>Download should start automatically, Or:</p>
