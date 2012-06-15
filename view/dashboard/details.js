@@ -8,7 +8,7 @@ var paramChanged = false;
 // nic text editor instance
 var editor;
 
-var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 345,
+var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 365,
 	buttonList: ['bold', 'italic', 'underline', 'left', 'right', 'justify', 'ol', 'ul', 
 				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'image', 'fontFormat']}
 
@@ -75,12 +75,12 @@ function AttachDetails()
 	}).addEvent('focus', function() {
 		// make the thumbnail smaller so we'll have more room for editor
 		$('.productHead').animate({height:100}, rightAnimationSpeed);
-		$('.productInfo').animate({height:370}, rightAnimationSpeed);
+		$('.productInfo').animate({height:390}, rightAnimationSpeed);
 	}).addEvent('blur', function() {
 		UpdateDetails("descr");
 		// make the thumbnail big again
 		$('.productHead').animate({height:290}, rightAnimationSpeed);
-		$('.productInfo').animate({height:180}, rightAnimationSpeed);
+		$('.productInfo').animate({height:200}, rightAnimationSpeed);
 	});
 
 	$(".nicEdit-main").keypress(function() {
