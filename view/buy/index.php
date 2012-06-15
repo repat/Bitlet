@@ -24,7 +24,7 @@ IncrementViews($fid);
 		</div>
 
 		<div id="itemDetails">
-			<p><? echo $description ?></p> 
+			<? echo $description ?>
 		</div>
 	</div>
 	<div class="ribbon-wrapper">
