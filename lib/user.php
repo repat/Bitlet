@@ -42,6 +42,27 @@ function SetUserPassword($uid, $pass)
 	mysql_query("UPDATE users SET password='$hashed_pass', salt='$salt' WHERE id='$uid'") 
 		or die('Cannot set password, uid='.$uid);
 }
+//check the users password to see if it's correct
+function validatePassword($uid, $pass){
+	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die();
+	// check if correct result found
+	if(mysql_num_rows($result) < 1) {
+		error_log('No result found for email');
+		return false;
+	} else {
+		$res = mysql_fetch_assoc($result);
+		$hash_pass = $res['password'];
+		$salt = $res['salt'];
+
+		// hash password and check validity 
+		if(sha1($pass.$salt) == $hash_pass) {
+			return true;
+		} else {
+			error_log('Password incorrect');
+			return false;
+		}
+	}
+}
 
 function ResetPassword($uid)
 {
