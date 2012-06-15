@@ -115,7 +115,7 @@ function UpdateUserSettings($uid, $email, $name, $phone, $website, $bio, $emailS
 	$bio = mysql_real_escape_string($bio);
 	$emailSettings = mysql_real_escape_string($emailSettings);
 	error_log("in the mysql function");	
-	mysql_query("UPDATE users SET name='$name', SET phone='$phone', SET website='$website', SET bio='$bio', SET email_settings='$emailSettings'
+	mysql_query("UPDATE users SET name='$name', phone='$phone', website='$website', bio='$bio', email_settings='$emailSettings'
 		WHERE id='$uid'") or die('Cannot update User, uid='.$uid);
 	error_log("in the mysql function");	
 	

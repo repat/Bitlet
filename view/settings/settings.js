@@ -18,9 +18,16 @@ $("#saveButton").button();
 			//console.log('reset status: '+data.success);
 			$("#saveButton").button('reset');
 			if(data.success == true) {
-				console.log('we fucking did it');		
+				//console.log('we fucking did it');		
+				$('.alert').remove();	
+				var resetMessage = "<div class='alert fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Thank you for updating you settings.</p></div>";
+				$('#saveButton').after(resetMessage);
+			
 			} else {
-				console.log('we fucked up');		
+				//console.log('we fucked up');		
+				$('.alert').remove();	
+				var resetMessage = "<div class='alert alert-block alert-error fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>There was an error in saving your settings, please try again.<p></div>";
+				$('#saveButton').after(resetMessage);
 			}
 		}, "json");
 });
