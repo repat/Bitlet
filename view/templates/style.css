@@ -123,6 +123,9 @@ footer[role="contentinfo"]{
 	padding-bottom:20px;
 	margin-bottom:-50px;
 }
+#footer a:hover {
+	text-decoration:none; 
+}
 #footer-box{
 	height:50px;
 }
