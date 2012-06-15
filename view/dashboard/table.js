@@ -24,7 +24,7 @@ function DisplayProducts(preselect) {
 	$('#productsBtn').addClass('active');
 
 	// scroll to top
-	$("html, body").animate({ scrollTop: 0 }, 200);
+	$("html, body").animate({scrollTop: 0}, 200);
 
 	// clear the table
 	// TODO: Add loading animation
@@ -52,7 +52,7 @@ function DisplayPurchases(preselect) {
 	$('#productsBtn').removeClass('active');
 
 	// scroll to top
-	$("html, body").animate({ scrollTop: 0 }, 200);
+	$("html, body").animate({scrollTop: 0}, 200);
 
 	// clear the table
 	// TODO: Add loading animation
