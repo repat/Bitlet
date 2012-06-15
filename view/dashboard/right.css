@@ -112,6 +112,8 @@
 .productInfo { 
 	background: #F0F0F0;
 	width: 550px;
+	height: 165px;
+	overflow: hidden;
 	border-top: 1px solid #FFF;
 	padding: 10px;
 }

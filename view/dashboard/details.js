@@ -8,7 +8,7 @@ var paramChanged = false;
 // nic text editor instance
 var editor;
 
-var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 155,
+var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 345,
 	buttonList: ['bold', 'italic', 'underline', 'left', 'right', 'justify', 'ol', 'ul', 
 				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'image', 'fontFormat']}
 
@@ -70,11 +70,19 @@ function AttachDetails()
 	// setup rich text editor
 	editor = new nicEditor(editorConfig).panelInstance('descrInput');
 
-	editor.addEvent('blur', function() {
-		UpdateDetails("descr");
-	}).addEvent('key', function() {
+	editor.addEvent('key', function() {
 		descrChanged = true;
+	}).addEvent('focus', function() {
+		// make the thumbnail smaller so we'll have more room for editor
+		$('.productHead').animate({heignt: 100}, rightAnimationSpeed);
+		$('.productInfo').animate({heignt: 370}, rightAnimationSpeed);
+	}).addEvent('blur', function() {
+		UpdateDetails("descr");
+		// make the thumbnail big again
+		$('.productHead').animate({heignt: 290}, rightAnimationSpeed);
+		$('.productInfo').animate({heignt: 165}, rightAnimationSpeed);
 	});
+
 	$(".nicEdit-main").keypress(function() {
 		descrChanged = true;
 	});
