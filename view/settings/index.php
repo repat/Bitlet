@@ -5,7 +5,14 @@
 	$name = $uInfo['name']; 
 	$phone = $uInfo['phone']; 
 	$bio = $uInfo['bio']; 
-	$emailSettings  = $uInfo['email_settings'];     
+	parse_str($uInfo['email_settings']);
+	if($EmailOnPurchase){
+		$EmailOnPurchase = "checked";
+	}
+	else{
+		$EmailOnPurchase = "";
+	}
+	
 	$profilePic = $uInfo['profile_img']; 
 	$website =  $uInfo['website']; 
 
@@ -38,7 +45,7 @@
 			<br>
 			<span class="uneditable-input" id="textCount">125</span>	
 			<label class="checkbox">
-                <input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase">
+			<input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase" <? echo $EmailOnPurchase ?>>
 				Email me when someone purchases my products!
             </label>	
 			<label class="checkbox">
