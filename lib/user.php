@@ -104,4 +104,19 @@ function GetCredits($uid)
 	return mysql_result($result, 0);
 }
 
+// update the users settings
+function UpdateUserSettings($uid, $email, $name, $phone, $website, $bio, $emailSettings){
+	
+	
+	$email = mysql_real_escape_string($email);
+	$name = mysql_real_escape_string($name);
+	$phone = mysql_real_escape_string($phone);
+	$website = mysql_real_escape_string($website);
+	$bio = mysql_real_escape_string($bio);
+	$emailSettings = mysql_real_escape_string($emailSettings);
+	
+	mysql_query("UPDATE users SET name='$name', SET phone='$phone', SET website='$website', SET bio='$bio', SET email_settings='$emailSettings'
+		WHERE id='$uid'") or die('Cannot update User, uid='.$uid);
+	
+}
 ?>

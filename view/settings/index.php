@@ -28,21 +28,21 @@
 			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button>	
 		</div>		
 		<div class="span4 settingsMoveRight">	
-		<h3 id="name">Name:</h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="Lisa Bitlet" value="<? echo $name?>">
-		<h3 id="email">Email:</h3> 
-		<input class="span4 disabled inputHeightLarge" id="disabledInput" type="text" placeholder="<? echo $email ?>" disabled="">
-		<h3 id="phone">Phone:</h3><input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="814-441-2968" value="<? echo $phone ?>">
-		<h3 id="website">Website: </h3> <input class="span4 focused inputHeightLarge" id="focusedInput" type="text" placeholder="www.Bitlet.co" value="<? echo $website ?>">
-	<h3 id="bio">Bio:</h3>
-			<textarea class="input-xlarge span4" id="textarea" rows="3"></textarea>
+		<h3>Name:</h3> <input class="span4 focused inputHeightLarge" id="name" type="text" placeholder="Lisa Bitlet" value="<? echo $name?>">
+		<h3>Email:</h3> 
+		<input class="span4 disabled inputHeightLarge" id="disabledInput email" type="text" placeholder="<? echo $email ?>" disabled="">
+		<h3>Phone:</h3><input class="span4 focused inputHeightLarge" id="phone" type="text" placeholder="814-441-2968" value="<? echo $phone ?>">
+		<h3 >Website: </h3> <input class="span4 focused inputHeightLarge" id="website" type="text" placeholder="www.Bitlet.co" value="<? echo $website ?>">
+	<h3>Bio:</h3>
+			<textarea class="input-xlarge span4" id="bioBox" rows="3"></textarea>
 			<br>
 			<span class="uneditable-input" id="textCount">125</span>	
 			<label class="checkbox">
-                <input type="checkbox" name="optionsCheckboxList1" value="emailOnPurchase">
+                <input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase">
 				Email me when someone purchases my products!
             </label>	
 			<label class="checkbox">
-                <input type="checkbox" name="optionsCheckboxList2" value="EmailWeekly">Email me a weekly summary of my sales
+                <input type="checkbox" id="optionsCheckboxList2" value="EmailWeekly">Email me a weekly summary of my sales
             </label>	
 			<button class="btn btn-primary btn-large" id="saveButton" >Save</button>
 		</div>	

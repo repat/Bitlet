@@ -1,26 +1,26 @@
 // enable submit button loading state
-$("#createAccountSubmit").button();
+$("#saveButton").button();
 
 // Attach the submit button to the create account functions 
- $("#createAccountSubmit").click(function(event) {
+ $("#saveButton").click(function(event) {
 
-			name = $("#name").val();
-			email = $("#email").val();
-			var password = $("#password1").val(); 
-
-			// Send the data using post and put the results in a div
-			$.post("/ajax/createAccount", {name:name, email:email, password:password},
-				function(data) {
-					//console.log('reset status: '+data.success);
-					$("#createAccountSubmit").button('reset');
-					if(data.success == true) {
-						window.location.href = "/dashboard";		
-					} else {
-						console.log('fuck there was an error');
-						window.location.href = "/404";
-					}
-				}, "json");
-		
-	// clear form
-	$('').val('');
+	var	email = $("#email").val();
+	var	name = $("#name").val();
+	var phone = $("#phone").val();
+	var website = $("#website").val();
+	var bio = $("#bioBox").val();
+	var emailPurchase = $("#optionsCheckboxList1").is(':checked'); 
+	var emailWeekly = $("#optionsCheckboxList2").is(':checked');  
+	console.log(name+' '+phone+' '+website+' '+bio+' '+emailPurchase+' '+emailWeekly);	
+	// Send the data using post and put the results in a div
+	$.post("/ajax/settings", {email:email, name:name, phone:phone, website:website, bio:bio, emailPurchase:emailPurchase, emailWeekly:emailWeekly},
+		function(data) {
+			//console.log('reset status: '+data.success);
+			$("#saveButton").button('reset');
+			if(data.success == true) {
+				console.log('we fucking did it');		
+			} else {
+				console.log('we fucked up');		
+			}
+		}, "json");
 });
