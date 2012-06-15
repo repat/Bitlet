@@ -45,7 +45,7 @@
 			<br>
 			<span class="uneditable-input" id="textCount">125</span>	
 			<label class="checkbox">
-			<input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase" checked="<? echo $EmailOnPurchase ?>">
+			<input type="checkbox" id="optionsCheckboxList1" value="emailOnPurchase" <? echo $EmailOnPurchase ?>>
 				Email me when someone purchases my products!
             </label>	
 			<label class="checkbox">
