@@ -8,7 +8,7 @@
 	$emailSettings = $uInfo['email_settings'];	
 	parse_str($emailSettings, $esettings);
 	
-	if($esettings[0] === false){
+	if($esettings[0] === 'true'){
 		error_log("YAY");
 	}
 	else{
