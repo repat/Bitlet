@@ -13,7 +13,7 @@ $(document).ready(function(){
 	function validateOldPass(){
 		
 		var oldPassIsAOk = $("#passTipOld .isaok");
-		var oldPassInvalid = $("#passTopOld .invalid"); 
+		var oldPassInvalid = $("#passTipOld .invalid"); 
 		console.log("made it this far");	
 		//ajax call to valdate against DB
 		if(oldPass.val().length > 0){
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			var checkpass = oldPass.val();	
 			$.post("/ajax/validatePassword", {checkpass:checkpass},
 			function(data) {
-				if(data.success == true){
+				if(data.success == false){
 					oldPassInvalid.addClass("hide");
 		console.log("made it this far");	
 					oldPassIsAOk.removeClass("hide");
