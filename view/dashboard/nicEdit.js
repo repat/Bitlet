@@ -296,7 +296,7 @@ var nicEditors = {
 		var editors = nicEditors.editors;
 		for(var i=0;i<editors.length;i++) {
 			if(editors[i].instanceById(e)) {
-				return editors[i].instanceById(e);
+				return editors[i]; // r is an instance of nicEditorInstance therefore it does not have removeInstance or removePanel methods
 			}
 		}
 	}
@@ -477,8 +477,9 @@ var nicEditorInstance = bkClass.extend({
 	
 	getRng : function() {
 		var s = this.getSel();
-		if(!s || s.rangeCount === 0) { return; }
-		return (s.rangeCount > 0) ? s.getRangeAt(0) : s.createRange();
+		if(!s) { return null; }
+		return (s.rangeCount > 0) ? s.getRangeAt(0) : 
+		s.createRange && s.createRange() || document.createRange();
 	},
 	
 	selRng : function(rng,s) {
@@ -492,7 +493,6 @@ var nicEditorInstance = bkClass.extend({
 	
 	selElm : function() {
 		var r = this.getRng();
-		if(!r) { return; }
 		if(r.startContainer) {
 			var contain = r.startContainer;
 			if(r.cloneContents().childNodes.length == 1) {
@@ -529,7 +529,7 @@ var nicEditorInstance = bkClass.extend({
 	},
 	
 	selected : function(e,t) {
-		if(!t && !(t = this.selElm)) { t = this.selElm(); }
+		if(!t) {t = this.selElm()}
 		if(!e.ctrlKey) {
 			var selInstance = this.ne.selectedInstance;
 			if(selInstance != this) {
@@ -1210,13 +1210,22 @@ var nicLinkButton = nicEditorAdvancedButton.extend({
 			var tmp = 'javascript:nicTemp();';
 			this.ne.nicCommand("createlink",tmp);
 			this.ln = this.findElm('A','href',tmp);
+			// set the link text to the title or the url if there is no text selected
+			if (this.ln.innerHTML == tmp) {
+				this.ln.innerHTML = this.inputs['title'].value || url;
+			};
 		}
 		if(this.ln) {
+			var oldTitle = this.ln.title;
 			this.ln.setAttributes({
 				href : this.inputs['href'].value,
 				title : this.inputs['title'].value,
 				target : this.inputs['target'].options[this.inputs['target'].selectedIndex].value
 			});
+			// set the link text to the title or the url if the old text was the old title
+			if (this.ln.innerHTML == oldTitle) {
+				this.ln.innerHTML = this.inputs['title'].value || this.inputs['href'].value;
+			};
 		}
 	}
 });
@@ -1366,101 +1375,352 @@ var nicUploadOptions = {
 /* END CONFIG */
 
 var nicUploadButton = nicEditorAdvancedButton.extend({	
-	nicURI : 'http://api.imgur.com/2/upload.json',
-  errorText : 'Failed to upload image',
+	nicURI : 'http://files.nicedit.com/',
 
 	addPane : function() {
-    if(typeof window.FormData === "undefined") {
-      return this.onError("Image uploads are not supported in this browser, use Chrome, Firefox, or Safari instead.");
-    }
-    this.im = this.ne.selectedInstance.selElm().parentTag('IMG');
+		this.im = this.ne.selectedInstance.selElm().parentTag('IMG');
+		this.myID = Math.round(Math.random()*Math.pow(10,15));
+		this.requestInterval = 1000;
+		this.uri = this.ne.options.uploadURI || this.nicURI;
+		nicUploadButton.lastPlugin = this;
+					
+		this.myFrame = new bkElement('iframe').setAttributes({ width : '100%', height : '100px', frameBorder : 0, scrolling : 'no' }).setStyle({border : 0}).appendTo(this.pane.pane);
+		this.progressWrapper = new bkElement('div').setStyle({display: 'none', width: '100%', height: '20px', border : '1px solid #ccc'}).appendTo(this.pane.pane);
+		this.progress = new bkElement('div').setStyle({width: '0%', height: '20px', backgroundColor : '#ccc'}).setContent('&nbsp').appendTo(this.progressWrapper);
 
-    var container = new bkElement('div')
-      .setStyle({ padding: '10px' })
-      .appendTo(this.pane.pane);
-
-		new bkElement('div')
-      .setStyle({ fontSize: '14px', fontWeight : 'bold', paddingBottom: '5px' })
-      .setContent('Insert an Image')
-      .appendTo(container);
-
-    this.fileInput = new bkElement('input')
-      .setAttributes({ 'type' : 'file' })
-      .appendTo(container);
-
-    this.progress = new bkElement('progress')
-      .setStyle({ width : '100%', display: 'none' })
-      .setAttributes('max', 100)
-      .appendTo(container);
-
-    this.fileInput.onchange = this.uploadFile.closure(this);
+		setTimeout(this.addForm.closure(this),50);
 	},
 
-  onError : function(msg) {
-    this.removePane();
-    alert(msg || "Failed to upload image");
-  },
+	addForm : function() {
+		var myDoc = this.myDoc = this.myFrame.contentWindow.document;
+		myDoc.open();
+		myDoc.write("<html><body>");
+		myDoc.write('<form method="post" action="'+this.uri+'?id='+this.myID+'" enctype="multipart/form-data">');
+		myDoc.write('<input type="hidden" name="APC_UPLOAD_PROGRESS" value="'+this.myID+'" />');
+		if(this.uri == this.nicURI) {
+			myDoc.write('<div style="position: absolute; margin-left: 160px;"><img src="http://imageshack.us/img/imageshack.png" width="30" style="float: left;" /><div style="float: left; margin-left: 5px; font-size: 10px;">Hosted by<br /><a href="http://www.imageshack.us/" target="_blank">ImageShack</a></div></div>');
+		}
+		myDoc.write('<div style="font-size: 14px; font-weight: bold; padding-top: 5px;">Insert an Image</div>');
+		myDoc.write('<input name="nicImage" type="file" style="margin-top: 10px;" />');
+		myDoc.write('</form>');
+		myDoc.write("</body></html>");
+		myDoc.close();
 
-  uploadFile : function() {
-    var file = this.fileInput.files[0];
-    if (!file || !file.type.match(/image.*/)) {
-      this.onError("Only image files can be uploaded");
-      return;
-    }
-    this.fileInput.setStyle({ display: 'none' });
-    this.setProgress(0);
+		this.myBody = myDoc.body;
 
-    var fd = new FormData(); // https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
-    fd.append("image", file);
-    fd.append("key", "b7ea18a4ecbda8e92203fa4968d10660");
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", this.ne.options.uploadURI || this.nicURI);
+		this.myForm = $BK(this.myBody.getElementsByTagName('form')[0]);
+		this.myInput = $BK(this.myBody.getElementsByTagName('input')[1]).addEvent('change', this.startUpload.closure(this));
+		this.myStatus = new bkElement('div',this.myDoc).setStyle({textAlign : 'center', fontSize : '14px'}).appendTo(this.myBody);
+	},
 
-    xhr.onload = function() {
-      try {
-        var res = JSON.parse(xhr.responseText);
-      } catch(e) {
-        return this.onError();
-      }
-      this.onUploaded(res.upload);
-    }.closure(this);
-    xhr.onerror = this.onError.closure(this);
-    xhr.upload.onprogress = function(e) {
-      this.setProgress(e.loaded / e.total);
-    }.closure(this);
-    xhr.send(fd);
-  },
+	startUpload : function() {
+		this.myForm.setStyle({display : 'none'});
+		this.myStatus.setContent('<img src="http://files.nicedit.com/ajax-loader.gif" style="float: right; margin-right: 40px;" /><strong>Uploading...</strong><br />Please wait');
+		this.myForm.submit();
+		setTimeout(this.makeRequest.closure(this),this.requestInterval);
+	},
 
-  setProgress : function(percent) {
-    this.progress.setStyle({ display: 'block' });
-    if(percent < .98) {
-      this.progress.value = percent;
-    } else {
-      this.progress.removeAttribute('value');
-    }
-  },
+	makeRequest : function() {
+		if(this.pane && this.pane.pane) {
+			nicUploadButton.lastPlugin = this;
+			var s = new bkElement('script').setAttributes({ type : 'text/javascript', src : this.uri+'?check='+this.myID+'&rand='+Math.round(Math.random()*Math.pow(10,15))}).addEvent('load', function() {
+				s.parentNode.removeChild(s);
+			}).appendTo(document.getElementsByTagName('head')[0]);
+			if(this.requestInterval) {
+				setTimeout(this.makeRequest.closure(this), this.requestInterval);
+			}
+		}
+	},
 
-  onUploaded : function(options) {
-    this.removePane();
-    var src = options.links.original;
-    if(!this.im) {
-      this.ne.selectedInstance.restoreRng();
-      var tmp = 'javascript:nicImTemp();';
-      this.ne.nicCommand("insertImage", src);
-      this.im = this.findElm('IMG','src', src);
-    }
-    var w = parseInt(this.ne.selectedInstance.elm.getStyle('width'));
-    if(this.im) {
-      this.im.setAttributes({
-        src : src,
-        width : (w && options.image.width) ? Math.min(w, options.image.width) : ''
-      });
-    }
-  }
+	setProgress : function(percent) {
+		this.progressWrapper.setStyle({display: 'block'});
+		this.progress.setStyle({width : percent+'%'});
+	},
+
+	update : function(o) {
+		if(o == false) {
+			this.progressWrapper.setStyle({display : 'none'});
+		} else if(o.url) {
+			this.setProgress(100);
+			this.requestInterval = false;
+
+			if(!this.im) {
+				this.ne.selectedInstance.restoreRng();
+				var tmp = 'javascript:nicImTemp();';
+				this.ne.nicCommand("insertImage",tmp);
+				this.im = this.findElm('IMG','src',tmp);
+			}
+			var w = parseInt(this.ne.selectedInstance.elm.getStyle('width'));
+			if(this.im) {
+				this.im.setAttributes({
+					src : o.url,
+					width : (w && o.width) ? Math.min(w,o.width) : ''
+				});
+			}
+
+			this.removePane();
+		} else if(o.error) {
+			this.requestInterval = false;
+			this.setProgress(100);
+			alert("There was an error uploading your image ("+o.error+").");
+			this.removePane();
+		} else if(o.noprogress) {
+			this.progressWrapper.setStyle({display : 'none'});
+			if(this.uri.indexOf('http:') == -1 || this.uri.indexOf(window.location.host) != -1) {
+				this.requestInterval = false;
+			}
+		} else {
+			this.setProgress( Math.round( (o.current/o.total) * 75) );
+			if(o.interval) {
+				this.requestInterval = o.interval;
+			}
+		}
+	}
+
 });
+
+nicUploadButton.statusCb = function(o) {
+	nicUploadButton.lastPlugin.update(o);
+}
 
 nicEditors.registerPlugin(nicPlugin,nicUploadOptions);
 
+
+
+var nicXHTML = bkClass.extend({
+	stripAttributes : ['_moz_dirty','_moz_resizing','_extended'],
+	noShort : ['style','title','script','textarea','a'],
+	cssReplace : {'font-weight:bold;' : 'strong', 'font-style:italic;' : 'em'},
+	sizes : {1 : 'xx-small', 2 : 'x-small', 3 : 'small', 4 : 'medium', 5 : 'large', 6 : 'x-large'},
+	
+	construct : function(nicEditor) {
+		this.ne = nicEditor;
+		if(this.ne.options.xhtml) {
+			nicEditor.addEvent('get',this.cleanup.closure(this));
+		}
+	},
+	
+	cleanup : function(ni) {
+		var node = ni.getElm();
+		var xhtml = this.toXHTML(node);
+		ni.content = xhtml;
+	},
+	
+	toXHTML : function(n,r,d) {
+		var txt = '';
+		var attrTxt = '';
+		var cssTxt = '';
+		var nType = n.nodeType;
+		var nName = n.nodeName.toLowerCase();
+		var nChild = n.hasChildNodes && n.hasChildNodes();
+		var extraNodes = new Array();
+		
+		switch(nType) {
+			case 1:
+				var nAttributes = n.attributes;
+				
+				switch(nName) {
+					case 'b':
+						nName = 'strong';
+						break;
+					case 'i':
+						nName = 'em';
+						break;
+					case 'font':
+						nName = 'span';
+						break;
+				}
+				
+				if(r) {
+					for(var i=0;i<nAttributes.length;i++) {
+						var attr = nAttributes[i];
+						
+						var attributeName = attr.nodeName.toLowerCase();
+						var attributeValue = attr.nodeValue;
+						
+						if(!attr.specified || !attributeValue || bkLib.inArray(this.stripAttributes,attributeName) || typeof(attributeValue) == "function") {
+							continue;
+						}
+						
+						switch(attributeName) {
+							case 'style':
+								var css = attributeValue.replace(/ /g,"");
+								for(itm in this.cssReplace) {
+									if(css.indexOf(itm) != -1) {
+										extraNodes.push(this.cssReplace[itm]);
+										css = css.replace(itm,'');
+									}
+								}
+								cssTxt += css;
+								attributeValue = "";
+							break;
+							case 'class':
+								attributeValue = attributeValue.replace("Apple-style-span","");
+							break;
+							case 'size':
+								cssTxt += "font-size:"+this.sizes[attributeValue]+';';
+								attributeValue = "";
+							break;
+						}
+						
+						if(attributeValue) {
+							attrTxt += ' '+attributeName+'="'+attributeValue+'"';
+						}
+					}
+
+					if(cssTxt) {
+						attrTxt += ' style="'+cssTxt+'"';
+					}
+
+					for(var i=0;i<extraNodes.length;i++) {
+						txt += '<'+extraNodes[i]+'>';
+					}
+				
+					if(attrTxt == "" && nName == "span") {
+						r = false;
+					}
+					if(r) {
+						txt += '<'+nName;
+						if(nName != 'br') {
+							txt += attrTxt;
+						}
+					}
+				}
+				
+
+				
+				if(!nChild && !bkLib.inArray(this.noShort,attributeName)) {
+					if(r) {
+						txt += ' />';
+					}
+				} else {
+					if(r) {
+						txt += '>';
+					}
+					
+					for(var i=0;i<n.childNodes.length;i++) {
+						var results = this.toXHTML(n.childNodes[i],true,true);
+						if(results) {
+							txt += results;
+						}
+					}
+				}
+					
+				if(r && nChild) {
+					txt += '</'+nName+'>';
+				}
+				
+				for(var i=0;i<extraNodes.length;i++) {
+					txt += '</'+extraNodes[i]+'>';
+				}
+
+				break;
+			case 3:
+				//if(n.nodeValue != '\n') {
+					txt += n.nodeValue;
+				//}
+				break;
+		}
+		
+		return txt;
+	}
+});
+nicEditors.registerPlugin(nicXHTML);
+
+
+
+var nicBBCode = bkClass.extend({
+	construct : function(nicEditor) {
+		this.ne = nicEditor;
+		if(this.ne.options.bbCode) {
+			nicEditor.addEvent('get',this.bbGet.closure(this));
+			nicEditor.addEvent('set',this.bbSet.closure(this));
+			
+			var loadedPlugins = this.ne.loadedPlugins;
+			for(itm in loadedPlugins) {
+				if(loadedPlugins[itm].toXHTML) {
+					this.xhtml = loadedPlugins[itm];
+				}
+			}
+		}
+	},
+	
+	bbGet : function(ni) {
+		var xhtml = this.xhtml.toXHTML(ni.getElm());
+		ni.content = this.toBBCode(xhtml);
+	},
+	
+	bbSet : function(ni) {
+		ni.content = this.fromBBCode(ni.content);
+	},
+	
+	toBBCode : function(xhtml) {
+		function rp(r,m) {
+			xhtml = xhtml.replace(r,m);
+		}
+		
+		rp(/\n/gi,"");
+		rp(/<strong>(.*?)<\/strong>/gi,"[b]$1[/b]");
+		rp(/<em>(.*?)<\/em>/gi,"[i]$1[/i]");
+		rp(/<span.*?style="text-decoration:underline;">(.*?)<\/span>/gi,"[u]$1[/u]");
+		rp(/<ul>(.*?)<\/ul>/gi,"[list]$1[/list]");
+		rp(/<li>(.*?)<\/li>/gi,"[*]$1[/*]");
+		rp(/<ol>(.*?)<\/ol>/gi,"[list=1]$1[/list]");
+		rp(/<img.*?src="(.*?)".*?>/gi,"[img]$1[/img]");
+		rp(/<a.*?href="(.*?)".*?>(.*?)<\/a>/gi,"[url=$1]$2[/url]");
+		rp(/<br.*?>/gi,"\n");
+		rp(/<.*?>.*?<\/.*?>/gi,"");
+		
+		return xhtml;
+	},
+	
+	fromBBCode : function(bbCode) {
+		function rp(r,m) {
+			bbCode = bbCode.replace(r,m);
+		}		
+		
+		rp(/\[b\](.*?)\[\/b\]/gi,"<strong>$1</strong>");
+		rp(/\[i\](.*?)\[\/i\]/gi,"<em>$1</em>");
+		rp(/\[u\](.*?)\[\/u\]/gi,"<span style=\"text-decoration:underline;\">$1</span>");
+		rp(/\[list\](.*?)\[\/list\]/gi,"<ul>$1</ul>");
+		rp(/\[list=1\](.*?)\[\/list\]/gi,"<ol>$1</ol>");
+		rp(/\[\*\](.*?)\[\/\*\]/gi,"<li>$1</li>");
+		rp(/\[img\](.*?)\[\/img\]/gi,"<img src=\"$1\" />");
+		rp(/\[url=(.*?)\](.*?)\[\/url\]/gi,"<a href=\"$1\">$2</a>");
+		rp(/\n/gi,"<br />");
+		//rp(/\[.*?\](.*?)\[\/.*?\]/gi,"$1");
+		
+		return bbCode;
+	}
+
+	
+});
+nicEditors.registerPlugin(nicBBCode);
+
+
+
+nicEditor = nicEditor.extend({
+        floatingPanel : function() {
+                this.floating = new bkElement('DIV').setStyle({position: 'absolute', top : '-1000px'}).appendTo(document.body);
+                this.addEvent('focus', this.reposition.closure(this)).addEvent('blur', this.hide.closure(this));
+                this.setPanel(this.floating);
+        },
+        
+        reposition : function() {
+                var e = this.selectedInstance.e;
+                this.floating.setStyle({ width : (parseInt(e.getStyle('width')) || e.clientWidth)+'px' });
+                var top = e.offsetTop-this.floating.offsetHeight;
+                if(top < 0) {
+                        top = e.offsetTop+e.offsetHeight;
+                }
+                
+                this.floating.setStyle({ top : top+'px', left : e.offsetLeft+'px', display : 'block' });
+        },
+        
+        hide : function() {
+                this.floating.setStyle({ top : '-1000px'});
+        }
+});
 
 
 
