@@ -145,9 +145,6 @@ $('.dashTable li').live('click', function (e) {
 					$(this).val(defaultText);
 				}
 			});
-
-			// run category function
-			EditCategory();
 		});	
 	} else {
 		// AJAX the page with fid as argument
