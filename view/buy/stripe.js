@@ -10,6 +10,8 @@ $(document).ready(function() {
 		// disable the submit button to prevent repeated clicks
 		$('.submit-button').attr("disabled", "disabled");
 
+		// TODO: post the email to the server and disable the input field
+
 		Stripe.createToken({
 			number: $('.card-number').val(),
 			cvc: $('.card-cvc').val(),
@@ -58,7 +60,6 @@ function stripeResponseHandler(status, response) {
 		$("#ddl").show(anim_time);
 
 		// AJAX in to save purchase
-		$.post("/ajax/newpurchase");
+		$.post("/ajax/newpurchase", {email: $("#BuyerEmail").val()});
     }
 }
-

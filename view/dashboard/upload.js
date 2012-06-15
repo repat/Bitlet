@@ -28,7 +28,8 @@ function UploadDone(result) {
 	} else {
 		console.error("upload error!");
 		
-		//TODO: Redirect to error page
+		// Redirect to error page
+		window.location.href = "/error";
 	}
 }
 
