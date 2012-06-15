@@ -21,7 +21,7 @@ $(document).ready(function(){
 			var checkpass = oldPass.val();	
 			$.post("/ajax/validatePassword", {checkpass:checkpass},
 			function(data) {
-				if(data.success == false){
+				if(data.success == true){
 					oldPassInvalid.addClass("hide");
 		console.log("made it this far");	
 					oldPassIsAOk.removeClass("hide");

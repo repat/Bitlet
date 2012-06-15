@@ -43,11 +43,11 @@ function SetUserPassword($uid, $pass)
 		or die('Cannot set password, uid='.$uid);
 }
 //check the users password to see if it's correct
-function validatePassword($uid, $pass){
+function ValidatePassword($uid, $pass){
 	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die();
 	// check if correct result found
 	if(mysql_num_rows($result) < 1) {
-		error_log('No result found for email');
+		error_log('No result found for uid'.$uid);
 		return false;
 	} else {
 		$res = mysql_fetch_assoc($result);
