@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var pass1 = $("#newPass1");
 	var pass2 = $("#newPass2");
 	var subBtn = $("#savePassword");	
-
+	var oldPassVal = false;
 	//On blur
 	oldPass.blur(validateOldPass);
 	pass1.blur(validatePass1);
@@ -25,6 +25,7 @@ $(document).ready(function(){
 					oldPassInvalid.addClass("hide");
 		console.log("made it this far");	
 					oldPassIsAOk.removeClass("hide");
+					oldPassVal = true;	
 				} else {
 					oldPassInvalid.removeClass("hide");
 		console.log("madefail it this far");	
@@ -117,7 +118,7 @@ $(document).ready(function(){
 	// Attach the submit button to the create account functions 
 	 $("#savePassword").click(function(event) {
 
-			if(validateOldPass() && validatePass1() && validatePass2()){
+			if(oldPassVal == true && validatePass1() && validatePass2()){
 			
 				var password = $("#password1").val(); 
 
