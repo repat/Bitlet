@@ -1,7 +1,6 @@
 <?
 	$uid = $UID;
-	$pass = $_POST('password');
-	
+	$pass = $_POST['password'];
 	error_log('the uid is '.$uid);
 
 	if($uid == null) {

@@ -120,10 +120,10 @@ $(document).ready(function(){
 
 			if(oldPassVal == true && validatePass1() && validatePass2()){
 			
-				var password = $("#password1").val(); 
+				var newPassword = $("#password1").val(); 
 
 				// Send the data using post and put the results in a div
-				$.post("/ajax/changePassword", {password:password},
+				$.post("/ajax/changePassword", {newPassword:newPassword},
 					function(data) {
 						//console.log('reset status: '+data.success);
 						$("#createAccountSubmit").button('reset');
