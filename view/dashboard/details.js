@@ -83,10 +83,6 @@ function AttachDetails()
 		$('.productInfo').animate({height:200}, rightAnimationSpeed);
 	});
 
-	$(".nicEdit-main").keypress(function() {
-		descrChanged = true;
-	});
-
 	$("#categoryInput").change(function() {
 		UpdateDetails("type");
 	});
