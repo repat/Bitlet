@@ -136,18 +136,6 @@ $('.dashTable li').live('click', function (e) {
 			$('.rightSideMenu input').click(function() {
 				this.select();
 			});
-
-			// get rid of textarea default text on click
-			var defaultText = 'Describe this file in 3 sentences here...';
-			$('#descrInput').focus(function() {
-				if($(this).val() == defaultText) {
-					$(this).val('');
-				} 
-			}).blur(function() {
-				if($(this).val() == '') {
-					$(this).val(defaultText);
-				}
-			});
 		});	
 	} else {
 		// AJAX the page with fid as argument

@@ -14,6 +14,10 @@ function UploadDone(result) {
 		if(tableSelected == 0) {
 			DisplayProducts(result);
 
+			// clear right content
+			// TODO: loading animation needs to go here
+			$('#rightContent').html('');
+
 			// start sizing the right side container
 			ExpandRight();
 
@@ -21,8 +25,16 @@ function UploadDone(result) {
 			$.post('/ajax/productcolumn', {fid: result}, function(data) {
 				$('#rightContent').html(data);
 
-				// run category function
-				EditCategory();
+				// attach details event handlers for AJAX updating
+				AttachDetails();
+
+				// select and copy share link on input box click
+				$('#productURL').tooltip({placement:'top'});
+
+				// autoselect all the input boxes in the right side menu on click
+				$('.rightSideMenu input').click(function() {
+					this.select();
+				});
 			});	
 		}
 	} else {
