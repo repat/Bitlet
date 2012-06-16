@@ -70,9 +70,7 @@ function AttachDetails()
 	// setup rich text editor
 	editor = new nicEditor(editorConfig).panelInstance('descrInput');
 
-	editor.addEvent('key', function() {
-		descrChanged = true;
-	}).addEvent('focus', function() {
+	editor.addEvent('focus', function() {
 		// make the thumbnail smaller so we'll have more room for editor
 		$('.productHead').animate({height:100}, rightAnimationSpeed);
 		$('.productInfo').animate({height:390}, rightAnimationSpeed);
@@ -81,6 +79,10 @@ function AttachDetails()
 		// make the thumbnail big again
 		$('.productHead').animate({height:290}, rightAnimationSpeed);
 		$('.productInfo').animate({height:200}, rightAnimationSpeed);
+	});
+
+	$(".nicEdit-main").keypress(function() {
+		descrChanged = true;
 	});
 
 	$("#categoryInput").change(function() {
