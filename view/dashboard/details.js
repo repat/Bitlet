@@ -6,11 +6,11 @@ var descrChanged = false;
 var paramChanged = false;
 
 // nic text editor instance
-var editor;
+var editor = null;
 
 var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 365,
 	buttonList: ['bold', 'italic', 'underline', 'left', 'right', 'justify', 'ol', 'ul', 
-				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'image', 'fontFormat']}
+				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'image', 'fontFormat']};
 
 // grab details from all the input fields and submit AJAX call
 // argument specifies an input field to update
@@ -53,7 +53,7 @@ function UpdateDetails(input)
 // attach details hander to inputs
 function AttachDetails() 
 {
-	$("#name").blur(function() {
+	$("#name").change(function() {
 		UpdateDetails("name");
 		// update the name field in the middle row also
 		$(".selected .nameTd #big").text($("#name").val());
@@ -61,7 +61,7 @@ function AttachDetails()
 		nameChanged = true;
 	});
 
-	$("#price").blur(function() {
+	$("#price").change(function() {
 		UpdateDetails("price");
 	}).keydown(function() {
 		priceChanged = true;
@@ -74,15 +74,17 @@ function AttachDetails()
 		// make the thumbnail smaller so we'll have more room for editor
 		$('.productHead').animate({height:100}, rightAnimationSpeed);
 		$('.productInfo').animate({height:390}, rightAnimationSpeed);
-	}).addEvent('blur', function() {
-		UpdateDetails("descr");
-		// make the thumbnail big again
-		$('.productHead').animate({height:290}, rightAnimationSpeed);
-		$('.productInfo').animate({height:200}, rightAnimationSpeed);
+	}).addEvent('key', function() {
+		descrChanged = true;
 	});
 
 	$(".nicEdit-main").keypress(function() {
 		descrChanged = true;
+	}).blur(function() {
+		UpdateDetails("descr");
+		// make the thumbnail big again
+		$('.productHead').animate({height:290}, rightAnimationSpeed);
+		$('.productInfo').animate({height:200}, rightAnimationSpeed);
 	});
 
 	$("#categoryInput").change(function() {
