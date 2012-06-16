@@ -24,6 +24,17 @@ function UploadDone(result) {
 			// AJAX the page with fid as argument
 			$.post('/ajax/productcolumn', {fid: result}, function(data) {
 				$('#rightContent').html(data);
+
+				// attach details event handlers for AJAX updating
+				AttachDetails();
+
+				// select and copy share link on input box click
+				$('#productURL').tooltip({placement:'top'});
+
+				// autoselect all the input boxes in the right side menu on click
+				$('.rightSideMenu input').click(function() {
+					this.select();
+				});
 			});	
 		}
 	} else {
