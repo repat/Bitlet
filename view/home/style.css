@@ -33,7 +33,11 @@
 #heroImg {
 	width: 520px;
 	height: 312px;
-	margin-top: -12px;
+	margin-top: -30px;
+	margin-right: -20px;
+	margin-left: 20px;
+	position: relative;
+	z-index: 100;
 }
 
 /* Hero Content */
