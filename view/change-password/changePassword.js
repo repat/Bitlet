@@ -120,7 +120,7 @@ $(document).ready(function(){
 
 			if(oldPassVal == true && validatePass1() && validatePass2()){
 			
-				var newPassword = $("#password1").val(); 
+				var newPassword = $("#newPass2").val(); 
 
 				// Send the data using post and put the results in a div
 				$.post("/ajax/changePassword", {newPassword:newPassword},
@@ -128,9 +128,19 @@ $(document).ready(function(){
 						//console.log('reset status: '+data.success);
 						$("#createAccountSubmit").button('reset');
 						if(data.success == true) {
+						
 						//do something to let them know it worked		
+						$('oldPassword').val('');
+						$('newPass1').val('');
+						$('newPass2').val('');
+						$('.alert').remove();	
+						var resetMessage = "<div class='alert fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Your password has been changed</p></div>";
+						$('#savePassword').after(resetMessage);
 						} else {
-						//do something to let them know it failed	
+						//do something to let them know it failed!		
+						$('.alert').remove();	
+						var resetMessage = "<div class='alert alert-block alert-error fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't reset your password, please try again<p></div>";
+						$('#savePassword').after(resetMessage);
 						}
 					}, "json");
 			

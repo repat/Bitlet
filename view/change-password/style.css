@@ -28,6 +28,22 @@
 	margin-left:113px; 
 }
 
-#bioBox textarea{
-	width:300px !important; 
+.sideTip{
+	float:left;
+	margin: 4px 0 0 10px;
+}
+.floatLeftChnPass{
+	float:left;
+}
+
+#savePassword{
+	width:220px;
+}
+
+.span8{
+	margin-left:0px !important;
+}
+#settingsLeftContent h2{
+	padding-bottom:10px;
+
 }
