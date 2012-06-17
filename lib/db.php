@@ -13,16 +13,16 @@ function Connect()
 		$db_password ='root';
 		break;
 	case 'beta':
-		$db_host='mysql.afdadsfdasdfdd.com';
-		$db_dbname = 'betabitlet';
-		$db_username = 'dzz0616';
-		$db_password = 'zhang1234';
+		$db_host='internal-db.s150773.gridserver.com';
+		$db_dbname = 'db150773_betabitlet';
+		$db_username = 'db150773';
+		$db_password = 'zhang1243';
 		break;
 	case 'server':
-		$db_host = 'mysql.simply.io';
-		$db_dbname = 'bitlet_simplyio';
-		$db_username ='dzz0615';
-		$db_password ='zhang1234';
+		$db_host = 'internal-db.s150773.gridserver.com';
+		$db_dbname = 'db150773_bitlet_production';
+		$db_username ='db150773';
+		$db_password ='zhang1243';
 		break;
 	}
 
