@@ -106,44 +106,51 @@ $('.dashTable li').live('click', function (e) {
 	// clear right content
 	// TODO: loading animation needs to go here
 	$('#rightContent').html('');
-		
-	// start sizing the right side container
-	ExpandRight();
 
-	// figure out which table was selected
-	fid = $(this).attr('title');
+	// see if the right side is expanded, if it is, contract right
+	if($('.selected').length > 0 && $('.selected')[0] == this) {
+		ContractRight();
+		// disselect any currently selected items
+		$('.selected').removeClass('selected');
+	} else {	// else, expand right side
+		// start sizing the right side container
+		ExpandRight();
 
-	// mark the table as selected
-	$('.dashTable li').each(function() {
-		$(this).removeClass('selected');
-	});
-	$(this).addClass('selected');
+		// figure out which table was selected
+		fid = $(this).attr('title');
 
-	// products selected
-	if(tableSelected == 0) {
+		// mark the table as selected
+		$('.dashTable li').each(function() {
+			$(this).removeClass('selected');
+		});
+		$(this).addClass('selected');
 
-		// AJAX the page with fid as argument
-		$.post('/ajax/productcolumn', {fid: fid}, function(data) {
-			$('#rightContent').html(data);
+		// products selected
+		if(tableSelected == 0) {
 
-			// attach details event handlers for AJAX updating
-			AttachDetails();
+			// AJAX the page with fid as argument
+			$.post('/ajax/productcolumn', {fid: fid}, function(data) {
+				$('#rightContent').html(data);
 
-			// select and copy share link on input box click
-			$('#productURL').tooltip({placement:'top'});
+				// attach details event handlers for AJAX updating
+				AttachDetails();
 
-			// autoselect all the input boxes in the right side menu on click
-			$('.rightSideMenu input').click(function() {
-				this.select();
-			});
-		});	
-	} else {
-		// AJAX the page with fid as argument
-		$.post('/ajax/purchasecolumn', {fid: fid}, function(data) {
-			$('#rightContent').html(data);
-		});	
+				// select and copy share link on input box click
+				$('#productURL').tooltip({placement:'top'});
+
+				// autoselect all the input boxes in the right side menu on click
+				$('.rightSideMenu input').click(function() {
+					this.select();
+				});
+			});	
+		} else {
+			// AJAX the page with fid as argument
+			$.post('/ajax/purchasecolumn', {fid: fid}, function(data) {
+				$('#rightContent').html(data);
+			});	
+		}
+		return false;	// also for stopping propagation
 	}
-	return false;	// also for stopping propagation
 });
 
 // when you click anywhere in the document, the right menu will contract

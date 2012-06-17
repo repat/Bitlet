@@ -6,7 +6,7 @@
 
 		<div id="homeFeaturedRight">
 			<div class="content">
-				<h1>Earn Money for Creating Content</h1>
+				<h1>Share Knowledge, Earn Money</h1>
 				<h2>Bitlet allows anyone to make money. Just enter your email and select your masterpiece to get started!</h2>
 				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="homeUpload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
