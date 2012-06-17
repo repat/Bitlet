@@ -10,7 +10,7 @@ var editor = null;
 
 var editorConfig = {iconsPath: '/img/nicEditorIcons.gif', maxHeight: 365,
 	buttonList: ['bold', 'italic', 'underline', 'left', 'right', 'justify', 'ol', 'ul', 
-				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'image', 'fontFormat']};
+				'subscript', 'superscript', 'indent', 'outdent', 'hr', 'h1', 'h2', 'p']};
 
 // grab details from all the input fields and submit AJAX call
 // argument specifies an input field to update
@@ -78,6 +78,7 @@ function AttachDetails()
 		descrChanged = true;
 	});
 
+	// we need to catch events from the main div because the event listener for niceditor sucks
 	$(".nicEdit-main").keypress(function() {
 		descrChanged = true;
 	}).blur(function() {
