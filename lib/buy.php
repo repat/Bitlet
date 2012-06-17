@@ -21,4 +21,17 @@ function IncrementViews($fid)
 	mysql_query("UPDATE files SET views = views + 1 WHERE id='$fid'") or die();
 }
 
+function PurchaseFile($email, $fid)
+{
+	// get the price of the file
+	
+	// get the user id
+	$uid = CheckUserEmail($email);
+	if($uid === false) {
+		// TODO: no uid exists, make a new user
+	}
+	mysql_query("INSERT INTO purchases (fid, uid, amount_paid)
+		VALUES('$fid', '$uid', '$amount_paid')") or die('cannot add new purchases');
+}
+
 ?>

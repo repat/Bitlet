@@ -42,6 +42,7 @@ function SetUserPassword($uid, $pass)
 	mysql_query("UPDATE users SET password='$hashed_pass', salt='$salt' WHERE id='$uid'") 
 		or die('Cannot set password, uid='.$uid);
 }
+
 //check the users password to see if it's correct
 function ValidatePassword($uid, $pass){
 	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die();
