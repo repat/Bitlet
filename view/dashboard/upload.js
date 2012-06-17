@@ -7,6 +7,7 @@ function UploadDone(result) {
 		$('#uploadBbutton').removeAttr("disabled");
 
 		// change the button to show loading animation
+		$('#uploadButton').removeClass('hovered');
 		$('#uploadButton').html('<img src="/img/upload.png"/>New Item');
 		console.log("file uploaded, fid="+result);
 
@@ -51,7 +52,8 @@ $('.file-button').change(function() {
 	$('#uploadButton').attr('disabled', 'disabled');
 
 	// change the button to show loading animation
-	$('#uploadButton').html('<img src="/img/loading.gif"/>Uploading..');
+	$('#uploadButton').addClass('hovered');
+	$('#uploadButton').html('<img src="/img/loader/dash-upload.gif"/>Uploading..');
 
 	// finally submit the form through hidden button
 	$('#homeUpload').submit();

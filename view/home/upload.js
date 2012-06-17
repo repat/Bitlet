@@ -24,7 +24,7 @@ $('.file-button').change(function() {
 	$('#email').attr('readonly', 'true');
 
 	// change the button to show loading animation
-	$('.upload-button').html('<img src="/img/loading.gif"/> Uploading..');
+	$('.upload-button').html('<img src="/img/loader/home-upload.gif"/> Uploading..');
 
 	// finally submit the form through hidden button
 	$('#homeUpload').submit();

@@ -127,6 +127,7 @@ Inputs */
 /* loading gif */
 .upload-button img {
 	margin-top: -4px;
+	height: 16px;
 }
 
 /* email suggestion */
