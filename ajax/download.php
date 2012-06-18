@@ -1,5 +1,6 @@
 <? 
 	$fid = $_POST['fid'];
+	error_log('downloading file with fid '.$fid);
 
 	$name = GetFileFromId($fid);
 	list($url, $size) = AwsGetUrl($fid);
@@ -20,5 +21,4 @@
 	flush();
 	readfile($url);
 	exit;
-
 ?>

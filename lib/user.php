@@ -45,7 +45,7 @@ function SetUserPassword($uid, $pass)
 
 //check the users password to see if it's correct
 function ValidatePassword($uid, $pass){
-	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die();
+	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die('error validating pass');
 	// check if correct result found
 	if(mysql_num_rows($result) < 1) {
 		error_log('No result found for uid'.$uid);
