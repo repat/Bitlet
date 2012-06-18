@@ -118,7 +118,7 @@ $(document).ready(function(){
 	// Attach the submit button to the create account functions 
 	 $("#savePassword").click(function(event) {
 
-			if(oldPassVal == true && validatePass1() && validatePass2()){
+			if(oldPassVal == false && validatePass1() && validatePass2()){
 			
 				var newPassword = $("#newPass2").val(); 
 
@@ -134,12 +134,12 @@ $(document).ready(function(){
 						$('newPass1').val('');
 						$('newPass2').val('');
 						$('.alert').remove();	
-						var resetMessage = "<div class='alert fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Your password has been changed</p></div>";
+						var resetMessage = "<div class='alert fade in changePasswordAlert span5'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Your password has been changed</p></div>";
 						$('#savePassword').after(resetMessage);
 						} else {
 						//do something to let them know it failed!		
 						$('.alert').remove();	
-						var resetMessage = "<div class='alert alert-block alert-error fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't reset your password, please try again<p></div>";
+						var resetMessage = "<div class='alert alert-block alert-error fade in changePasswordAlert span5'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>We couldn't reset your password, please try again<p></div>";
 						$('#savePassword').after(resetMessage);
 						}
 					}, "json");

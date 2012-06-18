@@ -26,7 +26,7 @@
 	if($profilePic === null or $profilePic ===''){
 		$profilePic = '/img/bitlet-silhouette.png'; 	
 	}else{
-		//these we're the droids you were looking for
+		//they have a photo
 	}
 ?>
 
@@ -35,7 +35,7 @@
 	<div class="settingsLeftContent">	
 		<h2 class="prof" >Profile</h2>
 		<div style="width:156px;float:left;">
-		<img id="profilePic" src="<? echo $profilePic ?>" alt="<? echo $name ?>"/>
+			<img id="profilePic" src="<? echo $profilePic ?>" alt="<? echo $name ?>"/>
 			<h3>Import From:</h3>	
 			<button class="btn btn-primary btn-large socialButtons"><img src="/img/facebook-white.png" alt="Twitter"/> Facebook</button>
 			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button>	
