@@ -45,26 +45,26 @@ IncrementViews($fid);
 		</div>
 		<div id="priceTagConnector">
 		</div>
-		<div id="payment" class=" bitletDropShadow well">
+		<div id="payment" class="bitletDropShadow well">
 			<form action="" method="POST" id="payment-form">
 				<input type="text" class="buyPageInput inputHeightLarge" id="BuyerEmail" placeholder="Email Address">	
 				<h3 id="paymentDetails">Payment Details:</h3>
-				<p>Card Number</p>
+				<p id="NumLabel">Card Number</p>
 				<input type="text" autocomplete="off" class="buyPageInput inputHeightLarge card-number" id="CreditCardNumber" placeholder="4242 4242 4242 4242">	
 				<div id="cvCode">
-					<p>CV Code</p>	
+					<p id="CvLabel">CV Code</p>	
 					<input type="text" autocomplete="off" class="inputHeightLarge card-cvc" id="cvCodeInput" placeholder="123">
 				</div>		
 				<div id="expireDate">
-					<p>Expiry Date</p>	
+					<p id="ExpLabel">Expiry Date</p>	
 					<input type="text" class="inputHeightLarge card-expiry-month" id="month" placeholder="MM">	
 					<input type="text" class="inputHeightLarge card-expiry-year" id="year" placeholder="YY">	
 				</div>
-				<button class="btn btn-success btn-large" style="width:100%;" href="#">Purchase</button>
+				<button class="btn btn-success btn-large" id="purchaseButton" href="#">Purchase</button>
 			</form>
 
 			<form action="/ajax/download" method="POST" id="go-download">
-				<div class="post-pay" style="display:none">
+				<div id="post-pay" style="display:none">
 					<p>Download should start automatically, Or:</p>
 					<hr>
 				</div>
