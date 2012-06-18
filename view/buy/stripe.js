@@ -60,6 +60,6 @@ function stripeResponseHandler(status, response) {
 					// Unhide download form
 					$('.post-pay').show(anim_time);
 					$('#ddl').show(anim_time);
-				});
+				}, 'json');
     }
 }

@@ -40,7 +40,7 @@ function DisplayProducts(preselect) {
 			// select the table row
 			$('.dashTable [title='+preselect+']').addClass('selected');
 		}
-	});
+	}, 'html');
 
 	// set state
 	tableSelected = 0;
@@ -68,7 +68,7 @@ function DisplayPurchases(preselect) {
 			// select the table row
 			$('.dashTable [title='+preselect+']').addClass('selected');
 		}
-	});
+	}, 'html');
 
 	// set state
 	tableSelected = 1;
@@ -84,7 +84,7 @@ function EditCategory() {
 	$.post('/ajax/productdetails', {fid: fid, selected: selected}, function(data) {
 		// file the details table
 		$('.detailsTable').html(data);
-	});
+	}, 'html');
 }
 
 /*** EXECUTE ***/
@@ -142,12 +142,12 @@ $('.dashTable li').live('click', function (e) {
 				$('.rightSideMenu input').click(function() {
 					this.select();
 				});
-			});	
+			}, 'html');	
 		} else {
 			// AJAX the page with fid as argument
 			$.post('/ajax/purchasecolumn', {fid: fid}, function(data) {
 				$('#rightContent').html(data);
-			});	
+			}, 'html');	
 		}
 		return false;	// also for stopping propagation
 	}
