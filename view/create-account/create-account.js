@@ -54,7 +54,7 @@ $(document).ready(function(){
 		else if(emailVal.length > 4 && aix != -1 && dix != -1 && aix < dix) {
 			//check the database if the email exists
 			//console.log("email val: " + emailVal);
-			$.post("/ajax/validateCreateAccount", {email:emailVal},
+			$.post("/ajax/validateEmail", {email:emailVal},
 				function(data) {
 					//console.log('reset status: '+data.success);
 					if(data.success == true) {
