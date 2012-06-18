@@ -64,6 +64,11 @@ IncrementViews($fid);
 			</form>
 
 			<form action="/ajax/download" method="POST" id="go-download">
+				<div class="post-pay" style="display:none">
+					<p>Download should start automatically, Or:</p>
+					<hr>
+				</div>
+				<? // Hidden input to POST id on submission ?>
 				<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
 				<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 			</form>
@@ -71,12 +76,6 @@ IncrementViews($fid);
 			<p class="payment-errors hide"></p>
 		</div>	
 	</div>
-</div>
-
-<!-- Hidden input to POST id on submission -->
-<div class="post-pay" style="display:none">
-	<p>Download should start automatically, Or:</p>
-	<hr>
 </div>
 
 <!-- Official Stripe JS file -->

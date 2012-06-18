@@ -113,6 +113,10 @@
 	margin-top:70px;
 }
 
+#go-download {
+	margin: 0;
+}
+
 /* details formatting needs to match those in the dashboard */
 .theDetails hr {
 	margin: 0;
