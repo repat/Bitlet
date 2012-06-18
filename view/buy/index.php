@@ -62,6 +62,12 @@ IncrementViews($fid);
 				</div>
 				<button class="btn btn-success btn-large" style="width:100%;" href="#">Purchase</button>
 			</form>
+
+			<form action="/ajax/download" method="POST" id="go-download">
+				<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
+				<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
+			</form>
+
 			<p class="payment-errors hide"></p>
 		</div>	
 	</div>
@@ -72,10 +78,6 @@ IncrementViews($fid);
 	<p>Download should start automatically, Or:</p>
 	<hr>
 </div>
-<form action="/ajax/download" method="POST" id="go-download">
-	<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
-	<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
-</form>
 
 <!-- Official Stripe JS file -->
 <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
