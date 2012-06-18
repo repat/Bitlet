@@ -4,10 +4,7 @@ function CheckEmail() {
 	var email = $('#email').val();
 	//console.log("email val: " + email);
 
-	// emails should be at least 5 characters, and contain a '@' and a '.'
-	var aix = email.indexOf('@');
-	var dix = email.indexOf('.');
-	if(email.length > 4 && aix != -1 && dix != -1 && aix < dix) {
+	if(EmailValid(email)) {
 		$('.upload-button').removeAttr('disabled');
 		$('.file-button').removeAttr('disabled');
 	} else {
