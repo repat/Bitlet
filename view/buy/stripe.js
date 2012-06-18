@@ -41,9 +41,6 @@ function stripeResponseHandler(status, response) {
         // and submit
         form.get(0).submit();
 
-		// POST to download link
-		$("#go-download").get(0).submit();
-
 		// hide payment stuff
 		$("#cardnuml").hide(anim_time);
 		$("#cardexl").hide(anim_time);
@@ -55,11 +52,15 @@ function stripeResponseHandler(status, response) {
 		$(".card-expiry-year").hide(anim_time);
 		$(".submit-button").hide(anim_time);
 
-		// Unhide download form
-		$(".post-pay").show(anim_time);
-		$("#ddl").show(anim_time);
-
 		// AJAX in to save purchase
-		$.post("/ajax/newpurchase", {email: $("#BuyerEmail").val()});
+		$.post("/ajax/newpurchase", {email: $("#BuyerEmail").val(), fid: $("#dfid").val()},
+				function(data) {
+					// after the purchase is done
+					$("#go-download").get(0).submit();
+
+					// Unhide download form
+					$(".post-pay").show(anim_time);
+					$("#ddl").show(anim_time);
+				});
     }
 }

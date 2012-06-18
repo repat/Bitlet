@@ -24,14 +24,20 @@ function IncrementViews($fid)
 function PurchaseFile($email, $fid)
 {
 	// get the price of the file
+	$price = GetFilePrice($fid);
+	if($price === false) {
+		return false;
+	}
 	
 	// get the user id
 	$uid = CheckUserEmail($email);
 	if($uid === false) {
-		// TODO: no uid exists, make a new user
+		// create a new user and email them their password
+		list($uid, $pass) = NewUser($email);	
+		EmailNewUser($email, $pass);
 	}
-	mysql_query("INSERT INTO purchases (fid, uid, amount_paid)
-		VALUES('$fid', '$uid', '$amount_paid')") or die('cannot add new purchases');
+	return mysql_query("INSERT INTO purchases (fid, uid, amount_paid)
+		VALUES('$fid', '$uid', '$price')") or die('cannot add new purchases');
 }
 
 ?>
