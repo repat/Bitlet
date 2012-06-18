@@ -118,7 +118,7 @@ $(document).ready(function(){
 	// Attach the submit button to the create account functions 
 	 $("#savePassword").click(function(event) {
 
-			if(oldPassVal == false && validatePass1() && validatePass2()){
+			if(oldPassVal == true && validatePass1() && validatePass2()){
 			
 				var newPassword = $("#newPass2").val(); 
 
