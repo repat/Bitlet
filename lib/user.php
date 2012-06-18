@@ -101,8 +101,10 @@ function GetUserEmail($uid)
 //Check if email exists
 function CheckUserEmail($email)
 {
+	$email = mysql_real_escape_string($email);
+
 	$result = mysql_query("SELECT id FROM users WHERE email='$email'")
-		or die('Cannot find account in our Database, email='.$email);
+		or die('Cannot check email, email='.$email);
 	if(mysql_num_rows($result) < 1) {
 		error_log('No result found for email= '.$email);
 		return false;	

@@ -77,3 +77,16 @@
 <? // Hidden Upload iFrame for Async Uploading ?>
 <iframe name="upload_iframe" id="homeUploadIframe">
 </iframe>
+
+<div id="passwordModal" class="modal hide fade">
+	<div id="passwordModalHeader" class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+    	<h3>Password</h3>
+	</div>
+    <!-- dialog contents -->
+	<div class="modal-body">
+		<div id="passwordError"></div>
+		<input type="password" id="passwordModalInput" size="10" autocomplete="off" class="bitletLogin inputHeightLarge" placeholder="password"/>
+		<button type="submit" id="passwordSubmit" autocomplete="off" data-loading-text="Logging you in..." class="btn-large btn btn-primary">Login</button>
+	</div>
+</div>

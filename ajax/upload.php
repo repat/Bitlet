@@ -17,8 +17,8 @@ function SendResult($result)
 
 $MAX_SIZE = 5000000000;		// limit is 5 GB
 
-// only do something if it's an actual file upload
-if(isset($_FILES['file']))
+// only do something if it's an actual file upload and if they're logged in
+if(isset($_FILES['file']) && $UID >= 0)
 {
 	/*** RECEIVE FILE ***/
 	$uploadroot = 'temp/';
@@ -37,31 +37,6 @@ if(isset($_FILES['file']))
 
 	$tmp_name = $_FILES['file']['tmp_name'];
 	$name = $_FILES['file']['name'];
-
-	// if email is set, then the user isn't logged in
-	if(isset($_POST['email'])) {
-		$email = $_POST['email'];
-		$UID = GetUID($email);
-		if($UID == false) {
-			// create a new user
-			list($UID, $pass) = NewUser($email);
-
-			error_log('new user created, pass '.$pass);
-			EmailNewUser($email, $pass);
-
-			// auto login 
-			$_SESSION['uid'] = $UID;
-		} else {
-			// we should report back asking for password // TODO
-			SendResult(0);
-		}
-	} else if($UID >= 0) {
-		// no email field means we go by UID cookie
-		error_log('logging in as uid '.$UID);
-	} else {
-		error_log('no email and not logged in stupid');
-		SendResult(0);
-	}
 
 	$uploaddir = $uploadroot.$UID;
 	$uploadname = $uploaddir.'/'.$name;
