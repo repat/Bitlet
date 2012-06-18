@@ -71,8 +71,8 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 				<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
 			</div>
 			<div id="shareIcons">
-				<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
-				<a href="http://facebook.com"><img src="/img/Facebook.png" id="facebook"/></a>
+				<a class="btn btn-info btn-small" href="http://twitter.com"><img src="/img/twitter-white.png" id="twitter"/>Share on Twitter</a>
+				<a class="btn btn-primary btn-small" href="http://facebook.com"><img src="/img/facebook-white.png" id="facebook"/>Share on Facebook</a>
 			</div>
 		</div>
 		<br>

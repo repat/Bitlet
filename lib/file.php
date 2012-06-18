@@ -69,7 +69,17 @@ function GetFileFromId($fid)
 	//Query the user database and see if the user already has an account
 	$result = mysql_query("SELECT file_name FROM files WHERE id = '$fid'") or die();
 	if(mysql_num_rows($result) == 0) {
-		die('File does not exist');
+		return false;
+	}
+	return mysql_result($result, 0);
+}
+
+// get the price of the file
+function GetFilePrice($fid)
+{
+	$result = mysql_query("SELECT price FROM files WHERE id='$fid'") or die('cannot get price');	
+	if(mysql_num_rows($result) == 0) {
+		return false;
 	}
 	return mysql_result($result, 0);
 }

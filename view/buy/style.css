@@ -94,22 +94,20 @@
 }
 #cvCode{
 	float:left;
-	width:147px;
 }
 #expireDate{
-	float:left;
+	float:right;
 }
 #cvCodeInput{
-	width:32px;
+	width:34px;
 }
 
 #month{
-	width:33px;
-
+	width:34px;
 }
 
 #year{
-	width:26px;
+	width:34px;
 
 }
 #itemDetails{

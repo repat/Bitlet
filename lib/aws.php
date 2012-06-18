@@ -2,8 +2,8 @@
 
 require_once 'aws_lib/sdk.class.php';
 
-const BUCKET = 'bitlet_files';
-const BETA_BUCKET = 'bitlet_files_beta';
+define('BUCKET', 'bitlet_files');
+define('BETA_BUCKET', 'bitlet_files_beta');
 
 // upload a file with fid currently stored in $location
 function AwsUpload($fid, $location)

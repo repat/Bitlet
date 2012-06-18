@@ -10,13 +10,11 @@ $(document).ready(function() {
 		// disable the submit button to prevent repeated clicks
 		$('.submit-button').attr("disabled", "disabled");
 
-		// TODO: post the email to the server and disable the input field
-
 		Stripe.createToken({
 			number: $('.card-number').val(),
 			cvc: $('.card-cvc').val(),
 			exp_month: $('.card-expiry-month').val(),
-			exp_year: $('.card-expiry-year').val()
+			exp_year: '20' + $('.card-expiry-year').val()
 		}, stripeResponseHandler);
 
 		// prevent the form from submitting with the default action
@@ -41,9 +39,6 @@ function stripeResponseHandler(status, response) {
         // and submit
         form.get(0).submit();
 
-		// POST to download link
-		$("#go-download").get(0).submit();
-
 		// hide payment stuff
 		$("#cardnuml").hide(anim_time);
 		$("#cardexl").hide(anim_time);
@@ -55,11 +50,16 @@ function stripeResponseHandler(status, response) {
 		$(".card-expiry-year").hide(anim_time);
 		$(".submit-button").hide(anim_time);
 
-		// Unhide download form
-		$(".post-pay").show(anim_time);
-		$("#ddl").show(anim_time);
-
 		// AJAX in to save purchase
-		$.post("/ajax/newpurchase", {email: $("#BuyerEmail").val()});
+		$.post('/ajax/newpurchase', {email: $('#BuyerEmail').val(), fid: $('#dfid').val()},
+				function(data) {
+					// after the purchase is done
+					console.log('new purchase added');
+					$('#go-download').get(0).submit();
+
+					// Unhide download form
+					$('.post-pay').show(anim_time);
+					$('#ddl').show(anim_time);
+				});
     }
 }
