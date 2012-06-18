@@ -1,12 +1,10 @@
 <? 
 	$fid = $_POST['fid'];
-	error_log('downloading file with fid '.$fid);
 
 	$name = GetFileFromId($fid);
 	list($url, $size) = AwsGetUrl($fid);
 
-	error_log('Filename: '.$name);
-	error_log('AWS URL: '.$url);
+	error_log('AWS URL: '.$url.' size: '.$size);
 	IncrementDownloads($fid);
 
 	header('Content-Description: File Transfer');
