@@ -190,8 +190,6 @@ $(document).ready(function(){
 			}
 
 
-		// clear form
-		$('').val('');
 	});
 
 
