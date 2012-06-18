@@ -25,7 +25,8 @@ function AwsUpload($fid, $location)
 	// Prepare to upload the file to our new S3 bucket. Add this
 	// request to a queue that we won't execute quite yet.
 	$file_upload_response = $s3->create_object($bucket, $name, array(	// we use the fid as file name
-		'fileUpload' => $location
+		'fileUpload' => $location,
+		'headers' => array('Content-Type' => 'application/octet-stream', 'Content-Disposition' => 'attachment; filename='.basename($location))
 	));
 
 	// make sure response comes back OK
