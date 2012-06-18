@@ -10,6 +10,9 @@ $(document).ready(function() {
 		// disable the submit button to prevent repeated clicks
 		$('.submit-button').attr("disabled", "disabled");
 
+		// disable buyer email so it won't be accidentally changed
+		$('#BuyerEmail').attr("readonly", "true");
+
 		Stripe.createToken({
 			number: $('.card-number').val(),
 			cvc: $('.card-cvc').val(),
@@ -29,15 +32,11 @@ function stripeResponseHandler(status, response) {
         $(".payment-errors").text(response.error.message);
 		// enable button to allow submissions again
 		$(".submit-button").removeAttr("disabled");
+		$('#BuyerEmail').removeAttr("readonly");
     } else {
 		console.log("payment processing successful");
-        var form = $("#payment-form");
         // token contains id, last4, and card type
         var token = response['id'];
-        // insert the token into the form so it gets submitted to the server
-        form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
-        // and submit
-        form.get(0).submit();
 
 		// hide payment stuff
 		$("#cardnuml").hide(anim_time);
@@ -51,7 +50,7 @@ function stripeResponseHandler(status, response) {
 		$(".submit-button").hide(anim_time);
 
 		// AJAX in to save purchase
-		$.post('/ajax/newpurchase', {email: $('#BuyerEmail').val(), fid: $('#dfid').val()},
+		$.post('/ajax/newpurchase', {email: $('#BuyerEmail').val(), fid: $('#dfid').val(), token: token},
 				function(data) {
 					// after the purchase is done
 					console.log('new purchase added');

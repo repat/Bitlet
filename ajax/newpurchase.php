@@ -5,6 +5,7 @@
 
 $email = $_POST['email'];
 $fid = $_POST['fid'];
+$token = $_POST['token'];	// stripe token
 
 error_log('purchasing '.$fid.' with '.$email);
 // process the buy
