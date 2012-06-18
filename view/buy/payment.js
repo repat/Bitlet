@@ -6,13 +6,22 @@ Stripe.setPublishableKey(test_key);
 
 $(document).ready(function() {
 	$("#payment-form").submit(function(event) {
-
+		// clear the payment errors text
+		$(".payment-errors").text("");
 		// disable the submit button to prevent repeated clicks
 		$('.submit-button').attr("disabled", "disabled");
 
+		// check email
+		var email = $('#BuyerEmail').val();
+		if(!EmailValid(email)) {
+			// TODO: Style the payment errors better
+			$(".payment-errors").text("Please enter a valid email address");
+			return false;
+		}
+
 		// disable buyer email so it won't be accidentally changed
 		$('#BuyerEmail').attr("readonly", "true");
-
+		
 		Stripe.createToken({
 			number: $('.card-number').val(),
 			cvc: $('.card-cvc').val(),

@@ -73,7 +73,7 @@ IncrementViews($fid);
 				<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 			</form>
 
-			<p class="payment-errors hide"></p>
+			<p class="payment-errors"></p>
 		</div>	
 	</div>
 </div>
