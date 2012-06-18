@@ -41,8 +41,6 @@ $(document).ready(function(){
 		//console.log("email val: " + emailVal);
 
 		// emails should be at least 5 characters, and contain a '@' and a '.'
-		var aix = emailVal.indexOf('@');
-		var dix = emailVal.indexOf('.');
 		if(emailVal.length == 0){
 			$('#emailTip .invalid').addClass('hide'); 
 			$('#emailTip .tip').removeClass('hide'); 
@@ -51,7 +49,7 @@ $(document).ready(function(){
 			goodEmail = false;	
 			return;	
 		}
-		else if(emailVal.length > 4 && aix != -1 && dix != -1 && aix < dix) {
+		else if(emailVal.length > 4 && EmailValid(email)) {
 			//check the database if the email exists
 			//console.log("email val: " + emailVal);
 			$.post("/ajax/validateCreateAccount", {email:emailVal},
