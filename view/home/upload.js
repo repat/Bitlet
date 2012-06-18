@@ -26,6 +26,13 @@ $('.file-button').change(function() {
 	// change the button to show loading animation
 	$('.upload-button').html('<img src="/img/loader/home-upload.gif"/> Uploading..');
 
-	// finally submit the form through hidden button
-	$('#homeUpload').submit();
+	// first validate the email
+	$.post('/ajax/validateEmail', {email: $('#email').val()}, function(res) {
+		if(res.success) {
+			// finally submit the form through hidden button
+			$('#homeUpload').submit();
+		} else {
+			// prompt for password first
+		}
+	}, 'json');
 });
