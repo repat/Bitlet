@@ -20,7 +20,7 @@
 			<a href="http://twitter.com/#!/AriannaSimpson"><img class="teamPics" id="ari" rel="tooltip" 
 				title="Arianna Simpson" data-content="Arianna grew up in Italy, speaks a bunch of languages, and is a travel ninja. She also falls down a lot." src="/img/team/arianna.png"/></a>
 			<img class="teamPics" id="lisa" rel="tooltip" 
-				title="Lisa Bitlet" data-content="Lisa is always happy to lend a hand, and she'll take care of all your questions. She loves getting emails! " src=""/>
+				title="Lisa Bitlet" data-content="Lisa Bitlet is our cheerful customer service representative. She is always always on time, and she always gets the job done. Shoot her an email at lisa@bitlet.co and she'll be happy to answer your questions!" src="/img/bitlet-silhouette.png"/>
 		</div>
 	</div>
 </div>
