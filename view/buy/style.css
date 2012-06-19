@@ -14,8 +14,9 @@
 
 #rightSide{
 	margin-top:100px;
-	margin-left:50px;
+	margin-left:730px;
 	width:250px;	
+	position:fixed;
 }
 #thumbnail{
 	height:348px;
@@ -25,6 +26,9 @@
 	border-radius: 4px 4px 0 0;
 	border: 1px solid #CCC;
 	overflow:hidden;
+	-moz-box-shadow: 0 0 4px 2px darkgrey;
+	-webkit-box-shadow: 0 0 4px 2px darkgrey;
+	box-shadow: 0 0 4px 2px darkgrey;
 }
 #thumbnail img{
 	width:660px;

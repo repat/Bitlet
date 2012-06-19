@@ -43,6 +43,7 @@ function SetUserPassword($uid, $pass)
 		or die('Cannot set password, uid='.$uid);
 }
 
+
 //check the users password to see if it's correct
 function ValidatePassword($uid, $pass){
 	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die('error validating pass');
@@ -90,6 +91,14 @@ function GetUserName($uid)
 	return mysql_result($result, 0);
 }
 
+//Get the users profile picture or gravatar
+function GetGravatar($email, $d='/img/bitlet-silhouette.png', $s = 150, $r = 'g', $img = false, $atts = array()) {
+	
+	$url = 'http://www.gravatar.com/avatar/';
+	$url .= md5( strtolower( trim( $email ) ) );
+	$url .= "?s=$s&d=$d&r=$r";
+	return $url;	
+}
 // get user email
 function GetUserEmail($uid)
 {

@@ -10,6 +10,8 @@ $token = $_POST['token'];	// stripe token
 error_log('purchasing '.$fid.' with '.$email);
 // process the buy
 $ret = PurchaseFile($email, $fid);
+
+
 echo json_encode(array('success'=>$ret));
 
 ?>

@@ -3,6 +3,8 @@
 	
 	$email = $uInfo['email'];
 	$name = $uInfo['name']; 
+	$website =  $uInfo['website']; 
+	$profilePic = $uInfo['profile_img'];
 	$phone = $uInfo['phone']; 
 	$bio = $uInfo['bio']; 
 	$emailSettings = $uInfo['email_settings'];	
@@ -19,15 +21,12 @@
 	else{
 		$EmailOnWeekly = '';	
 	}
-	$profilePic = $uInfo['profile_img']; 
-	$website =  $uInfo['website']; 
 
 	//checks to see if the profile_img returned null or blank and then gives us temp thumbnail
-	if($profilePic === null or $profilePic ===''){
-		$profilePic = '/img/bitlet-silhouette.png'; 	
-	}else{
-		//they have a photo
+	if($profilePic == '' or $profilePic == null){
+		$profilePic = GetGravatar($email);
 	}
+
 ?>
 
 
@@ -36,9 +35,9 @@
 		<h2 class="prof" >Profile</h2>
 		<div style="width:156px;float:left;">
 			<img id="profilePic" src="<? echo $profilePic ?>" alt="<? echo $name ?>"/>
-			<h3>Connect:</h3>	
+		<!--	<h3>Connect:</h3>	
 			<button class="btn btn-primary btn-large socialButtons"><img src="/img/facebook-white.png" alt="Twitter"/> Facebook</button>
-			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button>	
+			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button> --!>	
 		</div>		
 		<div class="span4 settingsMoveRight">	
 		<h3>Name:</h3> <input class="span4 focused inputHeightLarge" id="name" type="text" placeholder="Lisa Bitlet" value="<? echo $name?>">

@@ -73,7 +73,6 @@ function GetFileFromId($fid)
 	}
 	return mysql_result($result, 0);
 }
-
 // get the price of the file
 function GetFilePrice($fid)
 {
