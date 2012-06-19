@@ -101,6 +101,7 @@ function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $
 	<div class="productInfo" id="purchased">
 		<p id="descrInput">$descr</p>
 	</div>
+	<hr>
 	<button class="btn bottomBtn">Download</button>
 HTML;
 }
