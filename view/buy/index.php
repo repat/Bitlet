@@ -26,6 +26,9 @@
 		$lockEmail = 'disabled';	
 		error_log($lockEmail);	
 	}
+
+	$purchasedBefore = IfPurchased($UID, $fid); 
+
 ?>
 
 <div class="container" id="buyPageOverall">
@@ -58,6 +61,7 @@
 			<div ></div>	
 			<h4 class="bioInline">Bio: </h4><p class="bioInline" ><? echo $AuthBio?></p>
 		</div>
+		<? if($purchasedBefore == false){ ?>
 		<div id="priceWell" class="bitletDropShadow well">
 			<div id="priceSection">
 				<h1>$<? echo $price; ?></h1>
@@ -92,7 +96,8 @@
 					<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
 					<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 				</form>
-
+			<? }else { ?>
+			<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button> <? } //end of php if else statement ?>
 			</div><!-- end of the payment div -->		
 		</div><!-- end of the priceWell div -->
 	</div>

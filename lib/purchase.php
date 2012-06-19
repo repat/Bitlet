@@ -16,6 +16,12 @@ function GetPurchases($uid)
 // returns true if purchased, and false if not
 function IfPurchased($uid, $fid)
 {
+	$result = mysql_query("SELECT * FROM purchases WHERE uid='$uid' and fid='$fid'") or die('can not find any purchases');
+	if(mysql_num_rows($result) == 0) {	
+		return false;	
+	} else {
+		return true;
+	}
 }
 
 ?>
