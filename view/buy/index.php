@@ -1,7 +1,5 @@
 <?
-
 	$finfo = GetFileInfo($fid);
-
 	$name = basename($finfo['name']);
 	$description = $finfo['description'];
 	$price = $finfo['price'];
@@ -10,19 +8,19 @@
 	$thumbnail = $finfo['thumb_url'].THUMB_END;
 	$AuthInfo = GetUserInfo($finfo['uid']); 
 	$AuthName = $AuthInfo['name'];
+	$AuthEmail = $AuthInfo['email'];
 	$AuthBio = $AuthInfo['bio'];
 	$AuthPofilePic = $AuthInfo['profile_img'];	
-
+	
 	$uinfo = GetUserInfo($UID);
 	$user = $uinfo['email'];
-
+	
 	IncrementViews($fid);
-
-	if($AuthProfilePic === null or $AuthProfilePic ===''){
-		$AuthProfilePic = '/img/bitlet-silhouette.png'; 	
-	}else{
-		//they have a photo
+	//checks to see if the profile_img returned null or blank and then gives us temp thumbnail
+	if($AuthProfilePic == '' or $AuthProfilePic == null){
+		$AuthProfilePic = GetGravatar($AuthEmail);
 	}
+
 ?>
 
 <div class="container" id="buyPageOverall">
@@ -64,7 +62,7 @@
 			</div><!-- end of the getFileBox div --> 
 			<div id="payment" class="hide">
 				<form action="" method="POST" id="payment-form">
-					<input type="text" class="buyPageInput inputHeightLarge" id="BuyerEmail" placeholder="Email Address">
+				<input type="text" class="buyPageInput inputHeightLarge" id="BuyerEmail" placeholder="Email Address" value="<? echo $user ?>">
 					<h3 id="paymentDetails">Payment Details:</h3>
 					<p id="NumLabel">Card Number</p>
 					<input type="text" autocomplete="off" class="buyPageInput inputHeightLarge card-number" id="CreditCardNumber" placeholder="4242 4242 4242 4242">	
