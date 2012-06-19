@@ -16,7 +16,9 @@
 	width:100%;
 }
 
-
+#bioBox{
+	max-width:290px;		
+}
 
 #textCount{
 	/*area below the bio box*/
@@ -26,9 +28,6 @@
 
 #saveButton {
 	width: 100%; 
-}
-
-#bioBox {
 }
 
 .settingsMoveRight{

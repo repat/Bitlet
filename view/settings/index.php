@@ -36,7 +36,7 @@
 		<h2 class="prof" >Profile</h2>
 		<div style="width:156px;float:left;">
 			<img id="profilePic" src="<? echo $profilePic ?>" alt="<? echo $name ?>"/>
-			<h3>Import From:</h3>	
+			<h3>Connect:</h3>	
 			<button class="btn btn-primary btn-large socialButtons"><img src="/img/facebook-white.png" alt="Twitter"/> Facebook</button>
 			<button class="btn btn-large socialButtons"><img src="/img/twitter.png" alt="Twitter"/> Twitter</button>	
 		</div>		
