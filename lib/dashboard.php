@@ -86,32 +86,22 @@ HTML;
 
 function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $sharelink)
 {
+	$price = sprintf('%.2f', $price);
+
 	// return the final built HTML
 	return <<<HTML
-	<div class="topLeft">
-		<h2>$name</h2>
-		<h3>$filename | $size bytes</h3>
+	<div class="productHead">
+		<img src="/$image"/>
 	</div>
-	<div class="topRight">
-		<h2>$$price</h2>
+	<div class="shareInfo" id="purchased">
+		<div id="top">
+			<h1>$name</h1>
+		</div>
 	</div>
-
-	<div class="imgDiv"><img src="/$image"/></div>
-
-	<div class="tableDiv"><div class="productInfo bitletRoundedCorners bitletDropShadow">
-		<p id="productDescr"><b>About this file: </b>$descr 
-			<button class="btn btn-mini" data-toggle="collapse" data-target="#dataTable">more <span class="caret"></span></button></p>
-		<div id="dataTable" class="collapse in"><hr><table class="detailsTable"></table></div>
-	</div></div>
-
-	<div class="shareInfo bitletDropShadow bitletRoundedCorners">
-		<h3>Share this product and earn credits!</h3>
-		<hr>
-		<input id="productURL" rel="tooltip" data-original-title="Click to copy the link to your clipboard!" type="text" readonly="readonly" name="FirstName" value="$sharelink"/>
-		<a href="http://twitter.com"><img src="/img/twitter.png" id="twitter"/></a>
-		<a href="http://facebook.com"><img onload="CollapseRight()" src="/img/Facebook.png" id="facebook"/></a>
+	<div class="productInfo" id="purchased">
+		<p id="descrInput">$descr</p>
 	</div>
-	<button class="btn btn-info" id="edit">Download</button>
+	<button class="btn bottomBtn">Download</button>
 HTML;
 }
 
