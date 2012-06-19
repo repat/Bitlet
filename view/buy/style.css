@@ -30,7 +30,17 @@
 	overflow:hidden;
 
 }
-
+#authorInfo{}
+#authorPic{
+	border: 3px solid white;
+	box-shadow: 2px 2px 1px #888;
+	margin: 7px 0 10px 0;
+	width: 150px;
+	margin-left:25px;
+}
+.bioInline{
+	display: inline;
+}
 #priceSection{
 	margin:-10px -10px;	
 	padding: 10px;
