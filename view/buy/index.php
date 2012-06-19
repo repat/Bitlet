@@ -1,26 +1,35 @@
 <?
 
-$finfo = GetFileInfo($fid);
+	$finfo = GetFileInfo($fid);
 
-$name = basename($finfo['name']);
-$description = $finfo['description'];
-$price = $finfo['price'];
-$price = sprintf('%.2f', $price);
+	$name = basename($finfo['name']);
+	$description = $finfo['description'];
+	$price = $finfo['price'];
+	$price = sprintf('%.2f', $price);
+	$downloads = $finfo['downloads'];
+	$thumbnail = $finfo['thumb_url'].THUMB_END;
+	$AuthInfo = GetUserInfo($finfo['uid']); 
+	$AuthName = $AuthInfo['name'];
+	$AuthBio = $AuthInfo['bio'];
+	$AuthPofilePic = $AuthInfo['profile_img'];	
 
-$downloads = $finfo['downloads'];
-$thumbnail = $finfo['thumb_url'].THUMB_END;
+	$uinfo = GetUserInfo($UID);
+	$user = $uinfo['email'];
 
-$uinfo = GetUserInfo($UID);
-$user = $uinfo['email'];
+	IncrementViews($fid);
 
-IncrementViews($fid);
-
+	if($AuthProfilePic === null or $AuthProfilePic ===''){
+		$AuthProfilePic = '/img/bitlet-silhouette.png'; 	
+	}else{
+		//they have a photo
+	}
 ?>
 
 <div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
-		<div id="thumbnail" style="background: url('/<? echo $thumbnail; ?>');"></div>
-
+		<div id="thumbnail" >
+			<img src="/<? echo $thumbnail; ?>" alt="<? echo $name ?>" />
+		</div>
 		<div id="itemDetails" class="theDetails">
 			<? echo $description; ?>
 		</div>
@@ -37,6 +46,15 @@ IncrementViews($fid);
 		<div class="ribbon-back-right"></div>
 	</div>	
 	<div id="rightSide" class="span4">
+		<div id="authorInfo" class="bitletDropShadow well">
+			<div id="authorPic">
+				<img src="<? echo $AuthProfilePic ?>" alt="<? echo $AuthName ?>" />
+			</div>
+			<div ></div>	
+			<h4 class="bioInline">Author: </h4><p class="bioInline"><? echo $AuthName ?></p> 
+			<div ></div>	
+			<h4 class="bioInline">Bio: </h4><p class="bioInline" ><? echo $AuthBio?></p>
+		</div>
 		<div id="priceWell" class="bitletDropShadow well">
 			<div id="priceSection">
 				<h1>$<? echo $price; ?></h1>
