@@ -40,9 +40,7 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 			<p id="small">$filename</p>
 		</div>
 		<div class="divider"><div></div></div>
-		<div class="infoTd">
-			<a class="btn btn-large">Download</a>
-		</div>
+		<a class="btn btn-large" id="dlBtn">Download</a>
 	</li>
 HTML;
 }
