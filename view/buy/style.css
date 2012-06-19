@@ -7,45 +7,6 @@
 	min-height:395px;
 	padding:10px;
 }
-#priceTag{
-	width:218px;
-	height:58px;
-	padding: 31px 10px;
-	background: #FF9100;
-	color: #5178B5;
-	font-size: 45px;
-	line-height: 1.3em;
-	border: 2px dashed #423B2D;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-box-shadow: 0 0 0 4px #FF9100, 2px 1px 4px 4px rgba(10, 10, 0, .5);
-	-webkit-box-shadow: 0 0 0 4px #FF9100, 2px 1px 4px 4px rgba(10, 10, 0, .5);
-	box-shadow: 0 0 0 4px #FF9100, 2px 1px 6px 4px rgba(10, 10, 0, .5);
-	margin:4px 0 0 4px;
-}
-#circle { 
-	width: 30px;
-	height: 30px;
-	background: #FF9100; 
-	-moz-border-radius: 70px; 
-	-webkit-border-radius: 70px; 
-	border-radius: 70px;
-	border: 2px dashed #423B2D;
-	box-shadow: inset 0 0 0 4px #FF9100;
-	float:left;
-	margin-top:13px;
-}
-
-#circle-tiny { 
-	width: 22px;
-	height: 22px;
-	background: url(/img/bg/bg-pattern.png); 
-	-moz-border-radius: 70px; 
-	-webkit-border-radius: 70px; 
-	border-radius: 70px;
-	margin:4px;
-}
 #priceTag h1{
 	padding: 10px 0 0 65px;
 	font-size:50px;
@@ -64,12 +25,36 @@
 	border-radius: 4px 4px 0 0;
 	border: 1px solid #CCC;
 }
-
-#payment{
-	margin-top: 20px; 
+#priceWell{
 	padding:10px;
+	overflow:hidden;
+
 }
 
+#priceSection{
+	margin:-10px -10px;	
+	padding: 10px;
+	background: #6ECDE9;
+	border-bottom: 1px solid #40BDE2;
+	box-shadow: 0px 1px 0px white;
+	-moz-box-shadow: 0px 1px 0px white;
+	-webkit-box-shadow: 0px 1px 0px white;
+}
+#priceSection h1{
+	color: white;
+	text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
+}
+#payment{
+	margin-top: 20px; 
+}
+
+#getFileBox{
+	margin-top:20px;
+}
+
+#getFile{
+	width:100%;
+}
 .buyPageInput{
 	width:220px;	
 
@@ -120,19 +105,25 @@
 #purchaseButton, #ddl {
 	width: 100%;
 }
+.alert{
+	margin:10px 0 0 0;
 
+}
 /* details formatting needs to match those in the dashboard */
 .theDetails hr {
 	margin: 0;
 	border-top: 1px solid #BBB;
 	border-bottom: 1px solid white;
 }
-
+.payment-errors{
+	margin: 5px 0 0 0;
+	text-align: center;
+}
 /* ribbon style */
 
 .ribbon-wrapper {
 	position: absolute;
-	top:460px;
+	top:459px;
 }
 .ribbon-front {
 	background-color: #6ECDE9;	height: 60px;

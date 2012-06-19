@@ -3,11 +3,17 @@ var anim_time = 200;		// animation time in ms
 var test_key = 'pk_DUnHd0SiqSyqP0zf1Ehps7gdDjS7r';
 var live_key = 'pk_HsbDXewHwzHrCV0WHZUsnBmdidAiM';
 Stripe.setPublishableKey(test_key);
+var getIt = $("#getFile");
+getIt.click(showBuyDetails);
+
+//Functio that shows the but details
+function showBuyDetails(){
+	getIt.remove();
+	$('#payment').show(anim_time);
+}
 
 $(document).ready(function() {
 	$("#payment-form").submit(function(event) {
-		// clear the payment errors text
-		$(".payment-errors").text("");
 		// disable the submit button to prevent repeated clicks
 		$('.submit-button').attr("disabled", "disabled");
 
@@ -15,7 +21,10 @@ $(document).ready(function() {
 		var email = $('#BuyerEmail').val();
 		if(!EmailValid(email)) {
 			// TODO: Style the payment errors better
-			$(".payment-errors").text("Please enter a valid email address");
+			$('.alert').remove();	
+			var resetMessage = "<div class='alert alert-block alert-error fade in changePasswordAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Please enter a valid email address<p></div>";
+			$('#payment-form').after(resetMessage);
+			
 			return false;
 		}
 
@@ -38,7 +47,10 @@ function stripeResponseHandler(status, response) {
     if (response.error) {
 		console.log("payment processing error");
         // show the errors on the form
-        $(".payment-errors").text(response.error.message);
+		$('.alert').remove();	
+		var resetMessage = "<div class='alert alert-block alert-error fade in changePasswordAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>There was an error processing your credit card. Please try again.<p></div>";
+		$('#payment-form').after(resetMessage);
+		
 		// enable button to allow submissions again
 		$(".submit-button").removeAttr("disabled");
 		$('#BuyerEmail').removeAttr("readonly");
@@ -52,7 +64,7 @@ function stripeResponseHandler(status, response) {
 		$("#NumLabel").hide(anim_time);
 		$("#ExpLabel").hide(anim_time);
 		$("#CvLabel").hide(anim_time);
-		$(".payment-errors").hide(anim_time);
+		$(".alert").hide(anim_time);
 		$(".card-number").hide(anim_time);
 		$(".card-cvc").hide(anim_time);
 		$(".card-expiry-month").hide(anim_time);
