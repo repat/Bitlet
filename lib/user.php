@@ -92,7 +92,7 @@ function GetUserName($uid)
 }
 
 //Get the users profile picture or gravatar
-function GetGravatar($email, $d='/img/bitlet-silhouette.png', $s = 150, $r = 'g', $img = false, $atts = array()) {
+function GetGravatar($email, $d='http://beta.bitlet.co/img/bitlet-silhouette.png', $s = 150, $r = 'g', $img = false, $atts = array()) {
 	
 	$url = 'http://www.gravatar.com/avatar/';
 	$url .= md5( strtolower( trim( $email ) ) );
