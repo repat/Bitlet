@@ -17,8 +17,8 @@
 	
 	IncrementViews($fid);
 	//checks to see if the profile_img returned null or blank and then gives us temp thumbnail
-	if($profilePic == '' or $profilePic == null){
-		$profilePic = GetGravatar($AuthEmail);
+	if($AuthProfilePic == '' or $AuthProfilePic == null){
+		$AuthProfilePic = GetGravatar($AuthEmail);
 	}
 
 ?>
