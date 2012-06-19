@@ -28,7 +28,7 @@
 <div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
 		<div id="thumbnail" >
-			<img src="<? echo $thumbnail; ?>" alt="<? echo $name ?>" />
+			<img src="/<? echo $thumbnail; ?>" alt="<? echo $name ?>" />
 		</div>
 		<div id="itemDetails" class="theDetails">
 			<? echo $description; ?>
