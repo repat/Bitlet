@@ -2,10 +2,6 @@ function showLogin() {
 	// wire up the buttons to dismiss the modal when shown
 	$("#LoginModal").bind("show", function() {
 		$("#LoginModal a.btn").click(function(e) {
-			// do something based on which button was clicked
-			// we just log the contents of the link element for demo purposes
-			console.log("button pressed: "+$(this).html());
-	
 			// hide the dialog box
 			$("#LoginModal").modal('hide');
 		});
@@ -25,11 +21,10 @@ function showLogin() {
 	});
 };
 
-// enable submit button loading state
-$("#bitletLoginSubmitbtn").button();
-
 // attach a submit handler to the login button
 $("#bitletLoginSubmitbtn").click(function(event) {
+	// enable submit button loading state
+	$("#bitletLoginSubmitbtn").button('loading');
 
 	// get some values from elements on the page:
 	var email = $(".loginEmail").val();
@@ -45,6 +40,7 @@ $("#bitletLoginSubmitbtn").click(function(event) {
 				$("#LoginModal").modal('hide');
 				window.location.href = '/dashboard';
 			} else {
+					$("#bitletLoginSubmitbtn").button('reset');
 					$('.loginPassword').val('');
 					$('.loginEmail').val('');
 					$('.alert-block').remove();	

@@ -26,14 +26,13 @@
 <? if($UID >= 0) { // already logged in ?>
 	<!-- Silence is golden -->
 <? } else { // not logged in ?>
-	<div id="LoginModal" class="modal hide fade">
+<div id="LoginModal" class="modal hide fade">
 	<div id="loginModalHeader" class="modal-header">
 		<button type="button" class="close" data-dismiss="modal">x</button>
     	<h3>Login</h3>
 	</div>
     <!-- dialog contents -->
 	<div class="modal-body">
-
 		<div class="input-prepend bitletTopOfLogin">
 			<span class="add-on loginAddOn inputHeightLarge">
 				<i class="icon-user loginIcon"></i>

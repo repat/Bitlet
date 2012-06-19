@@ -49,13 +49,17 @@ $(document).ready(function(){
 			goodEmail = false;	
 			return;	
 		}
+<<<<<<< HEAD
 		else if(emailVal.length > 4 && EmailValid(email)) {
+=======
+		else if(EmailValid(emailVal)) {
+>>>>>>> 5a4706e946eca80509482e8046669c0a9d911623
 			//check the database if the email exists
-			//console.log("email val: " + emailVal);
 			$.post("/ajax/validateEmail", {email:emailVal},
 				function(data) {
-					//console.log('reset status: '+data.success);
-					if(data.success == true) {
+					//If email does exists offer to send to login or recover page
+					//If it does not exist then say it looks good
+					if(data.success == false) {
 						$('#emailTip .invalid').addClass('hide'); 
 						$('#emailTip .tip').addClass('hide'); 
 						$('#emailTip .isaok').removeClass('hide'); 
@@ -69,8 +73,6 @@ $(document).ready(function(){
 						goodEmail = false;
 					}
 				}, "json");
-			//If email does exists offer to send to login or recover page
-			//If it does not exist then say it looks good
 			return;	
 		
 		} else {
@@ -158,11 +160,10 @@ $(document).ready(function(){
 	}
 
 
-	// enable submit button loading state
-	$("#createAccountSubmit").button();
-
 	// Attach the submit button to the create account functions 
 	 $("#createAccountSubmit").click(function(event) {
+			// enable submit button loading state
+			$("#createAccountSubmit").button('loading');
 
 			if(validateName() && (goodEmail == true) && validatePass1() && validatePass2()){
 			
@@ -179,7 +180,7 @@ $(document).ready(function(){
 							window.location.href = "/dashboard";		
 						} else {
 							console.log('fuck there was an error');
-							window.location.href = "/404";
+							window.location.href = "/error";
 						}
 					}, "json");
 			

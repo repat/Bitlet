@@ -203,3 +203,17 @@ Inputs */
 #homeUploadIframe {
 	display: none;
 }
+
+#passwordModal {
+	width:300px !important;
+	left: 60%;
+}
+
+#passwordModalInput {
+	width: 260px;
+}
+
+#passwordSubmit {
+	width: 270px;
+}
+
