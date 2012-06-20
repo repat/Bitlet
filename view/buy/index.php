@@ -21,6 +21,10 @@
 		$AuthProfilePic = GetGravatar($AuthEmail);
 	}
 
+	//check to see if someone has bought the item already
+	$itemsPurchases  = GetPurchasesUIDs($fid);	
+	$showDownloadOnLoad = false;
+		
 ?>
 
 <div class="container" id="buyPageOverall">

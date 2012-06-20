@@ -11,4 +11,15 @@ function GetPurchases($uid)
 	return $rows;
 }
 
+function GetPurchasesUIDs($fid)
+{
+	$result = mysql_query("SELECT id FROM purchases WHERE fid='$fid' ORDER BY  `id` ASC") 
+		or die('cant get purchases');
+	$rows = array();
+	while($row = mysql_fetch_row($result)) {
+		$rows[] = $row[0];
+	}
+	return $rows;
+}
+
 ?>
