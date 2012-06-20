@@ -29,6 +29,10 @@
 
 	$purchasedBefore = IfPurchased($UID, $fid); 
 
+	//check to see if someone has bought the item already
+	$itemsPurchases  = GetPurchasesUIDs($fid);	
+	$showDownloadOnLoad = false;
+		
 ?>
 
 <div class="container" id="buyPageOverall">
@@ -97,7 +101,11 @@
 					<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 				</form>
 			<? }else { ?>
-			<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button> 
+			<form action="/ajax/download" method="POST" id="go-download">	
+				<? // Hidden input to POST id on submission ?>
+				<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
+				<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button>
+			</form>	 
 			<? } //end of php if else statement ?>
 			</div><!-- end of the payment div -->		
 		</div><!-- end of the priceWell div -->
