@@ -61,4 +61,32 @@ function EmailPasswordReset($email, $pass, $name)
 	EmailUser($email, $message, $subject);
 }
 
+function EmailItemPurchase($email, $productName)
+{
+	$subject = 'Thanks for buying '.$productName;
+	$message = 
+		'Dear Friend,'."\r\n\r\n".
+		'Thank you for purchasing '.$productName."\r\n\r\n". 
+		'To view a list of all of your purchases please go to <a href="http://bitlet.co/">Bitlet.co</a>.'."\r\n\r\n".
+		'If you have any issues or need help please contact us at Lisa@bitlet.co '."\r\n\r\n".
+		'Cheers,'."\r\n".
+		'Lisa Bitlet'
+		;
+	EmailUser($email, $message, $subject);
+}
+
+function EmailItemPurchaseAndNewUser($email, $productName)
+{
+	$subject = 'Thanks for buying '.$productName;
+	$message = 
+		'Dear Friend,'."\r\n\r\n".
+		'Thank you for purchasing '.$productName."\r\n\r\n". 
+		'To view a list of all of your purchases please go to <a href="http://bitlet.co/">Bitlet.co</a>.'."\r\n\r\n".
+		'If you have any issues or need help please contact us at Lisa@bitlet.co '."\r\n\r\n".
+		'Cheers,'."\r\n".
+		'Lisa Bitlet'
+		;
+	EmailUser($email, $message, $subject);
+}
+
 ?>
