@@ -97,7 +97,9 @@
 					<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 				</form>
 			<? }else { ?>
-			<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button> <? } //end of php if else statement ?>
+			<form action="" method="POST" id="">	
+				<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button>
+			</form>	 <? } //end of php if else statement ?>
 			</div><!-- end of the payment div -->		
 		</div><!-- end of the priceWell div -->
 	</div>
