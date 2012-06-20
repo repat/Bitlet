@@ -20,6 +20,14 @@
 	if($AuthProfilePic == '' or $AuthProfilePic == null){
 		$AuthProfilePic = GetGravatar($AuthEmail);
 	}
+	
+	$lockEmail = '';
+	if($user != '' or $user != null){
+		$lockEmail = 'disabled';	
+		error_log($lockEmail);	
+	}
+
+	$purchasedBefore = IfPurchased($UID, $fid); 
 
 	//check to see if someone has bought the item already
 	$itemsPurchases  = GetPurchasesUIDs($fid);	
@@ -30,7 +38,7 @@
 <div class="container" id="buyPageOverall">
 	<div class="well bitletDropShadow bitletBuyMain span7">
 		<div id="thumbnail" >
-			<img src="/<? echo $thumbnail; ?>" alt="<? echo $name ?>" />
+			<img src="/<? echo $thumbnail; ?>" alt="<? echo $name; ?>" />
 		</div>
 		<div id="itemDetails" class="theDetails">
 			<? echo $description; ?>
@@ -50,13 +58,14 @@
 	<div id="rightSide" class="span4">
 		<div id="authorInfo" class="bitletDropShadow well">
 			<div id="authorPic">
-				<img src="<? echo $AuthProfilePic ?>" alt="<? echo $AuthName ?>" />
+				<img src="<? echo $AuthProfilePic; ?>" alt="<? echo $AuthName; ?>" />
 			</div>
 			<div ></div>	
 			<h4 class="bioInline">Author: </h4><p class="bioInline"><? echo $AuthName ?></p> 
 			<div ></div>	
 			<h4 class="bioInline">Bio: </h4><p class="bioInline" ><? echo $AuthBio?></p>
 		</div>
+		<? if($purchasedBefore == false){ ?>
 		<div id="priceWell" class="bitletDropShadow well">
 			<div id="priceSection">
 				<h1>$<? echo $price; ?></h1>
@@ -66,7 +75,7 @@
 			</div><!-- end of the getFileBox div --> 
 			<div id="payment" class="hide">
 				<form action="" method="POST" id="payment-form">
-				<input type="text" class="buyPageInput inputHeightLarge" id="BuyerEmail" placeholder="Email Address" value="<? echo $user ?>">
+				<input type="text" class="buyPageInput inputHeightLarge <? echo $lockEmail;?>" id="BuyerEmail" placeholder="Email Address" value="<? echo $user; ?>" <? echo $lockEmail;?> >
 					<h3 id="paymentDetails">Payment Details:</h3>
 					<p id="NumLabel">Card Number</p>
 					<input type="text" autocomplete="off" class="buyPageInput inputHeightLarge card-number" id="CreditCardNumber" placeholder="4242 4242 4242 4242">	
@@ -91,7 +100,10 @@
 					<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
 					<button type="submit" id="ddl" class="btn btn-large" name="download" style="display:none">Manual Download</button>
 				</form>
-
+			<? }else { ?>
+			<form action="" method="POST" id="">	
+				<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button>
+			</form>	 <? } //end of php if else statement ?>
 			</div><!-- end of the payment div -->		
 		</div><!-- end of the priceWell div -->
 	</div>

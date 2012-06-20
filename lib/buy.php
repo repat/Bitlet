@@ -31,11 +31,17 @@ function PurchaseFile($email, $fid)
 	
 	// get the user id
 	$uid = CheckUserEmail($email);
+	$fInfo = GetFileInfo($fid);
+	$productName = $fInfo['name'];
+		
 	if($uid === false) {
 		// create a new user and email them their password
 		list($uid, $pass) = NewUser($email);	
-		EmailNewUser($email, $pass);
+		EmailItemPurchaseAndNewUser($email, $pass, $productName);
+	} else {	
+		EmailItemPurchase($email, $productName);
 	}
+
 	return mysql_query("INSERT INTO purchases (fid, uid, amount_paid)
 		VALUES('$fid', '$uid', '$price')") or die('cannot add new purchases');
 }

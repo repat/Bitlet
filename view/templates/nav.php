@@ -13,8 +13,7 @@ if($UID >= 0)
 
 <div id="navbar-bitlet">
 	<div class="container">
-		<a class="brand" href="/"><h1>Bitlet</h1/img/logoSmall.png"></a>
-
+		<a class="brand" href="<? if($UID >= 0) { echo '/dashboard';} else { echo '/';} ?>"><h1>Bitlet</h1/img/logoSmall.png"></a>
 		<div class="menu-navbar-bitlet">
 			<? if($UID >= 0) { // already logged in ?>
 				<div class="dropdown bitletRoundedCorners">

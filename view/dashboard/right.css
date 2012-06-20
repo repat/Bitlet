@@ -47,49 +47,6 @@
 
 /******** PURCHASED ********/
 
-.topLeft {
-	margin-left: 15px;
-	float: left;
-	text-align: left;
-}
-
-.topRight {
-	margin-right: 15px;
-	text-align: right;
-}
-
-.topLeft h2 {
-	font-size: 18px; 
-	line-height: 30px;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.43);
-}
-
-.topLeft h3 {
-	font-size: 12px; 
-	line-height: 16px;
-	font-weight: 300;
-	color: #555;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.43);
-}
-
-.topRight h2 {
-	font-size: 30px; 
-	line-height: 50px;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.43);
-}
-
-.topRight h3 {
-	font-size: 14px; 
-	line-height: 16px;
-	font-weight: 300;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.43);
-}
-
-.imgDiv {
-	background: #222;
-	text-align: center; 
-	margin-top: 10px;
-}
 
 /********* PRODUCTS ********/
 .productHead {
@@ -116,6 +73,10 @@
 	overflow: hidden;
 	border-top: 1px solid #FFF;
 	padding: 0 10px;
+}
+
+#purchased.productInfo {
+	height: 245px;
 }
 
 .productInfo div {
@@ -190,6 +151,17 @@ input#dright {
 	padding: 10px;
 	border-top: 1px solid #A9F4FF;
 	border-bottom: 1px solid #49A4B6;
+	overflow: hidden;
+}
+
+#purchased.shareInfo {
+	height: 35px;
+}
+
+.shareInfo h1 {
+	color: #FFF;
+	text-shadow: 0 1px 0 #777;
+	border: 0 !important;
 }
 
 .shareInfo .inputPrepend input {
