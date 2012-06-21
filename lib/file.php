@@ -119,8 +119,11 @@ function GetLinkFromFid($fid)
 
 // catagorize files into:
 // photo, digiart, video, document, music, and generic;w
-function CatagorizeFile($ftype)
+function CatagorizeFile($name)
 {
+	// parse filetype
+	$ftype = strtolower(end(explode('.', $name)));
+
 	switch($ftype) {
 	case 'png':
 	case 'jpg':

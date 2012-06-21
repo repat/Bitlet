@@ -1,7 +1,5 @@
 <?
 
-require_once 'lib/aws.php';
-
 // send results
 function SendResult($result)
 {
@@ -52,7 +50,7 @@ if(isset($_FILES['file']) && $UID >= 0)
 	}
 
 	// figure out filetype
-	$ftype = CatagorizeFile(strtolower(end(explode('.', $name))));
+	$ftype = CatagorizeFile($name);
 
 	// get file size
 	$fsize = filesize($uploadname);
@@ -62,7 +60,7 @@ if(isset($_FILES['file']) && $UID >= 0)
 	$fid = NewFile($UID, basename($uploadname), $ftype, $fsize);
 
 	// generate thumbnails TODO
-	switch(ftype) {
+	switch($ftype) {
 	case 'photo':
 	case 'digiart':
 		$thumb = GenerateImageThumbnail($fid, $uploadname);
