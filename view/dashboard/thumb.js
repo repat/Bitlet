@@ -49,7 +49,8 @@ function ThumbUploadDone(result) {
 }
 
 // file upload handler
-$('.thumb-button').change(function() {
+function ThumbChange() 
+{
 	// disable the file selection button
 	$('#newthumb').attr('disabled', 'disabled');
 
@@ -58,4 +59,4 @@ $('.thumb-button').change(function() {
 
 	// finally submit the form through hidden button
 	$('#thumbUpload').submit();
-});
+}

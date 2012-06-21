@@ -53,6 +53,9 @@ function UpdateDetails(input)
 // attach details hander to inputs
 function AttachDetails() 
 {
+	// attach thumbnail uploader
+	$('.thumb-button').change(ThumbChange);
+
 	$("#name").change(function() {
 		UpdateDetails("name");
 		// update the name field in the middle row also
