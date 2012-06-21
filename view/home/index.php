@@ -1,3 +1,16 @@
+<?
+
+// redirect to dashboard if already logged in
+if($UID >= 0) {
+	echo <<<
+	<script type="text/javascript">
+		window.location.replace("/dashboard");
+	</script>
+HTML;
+}
+
+?>
+
 <div id="bitletHero">
 	<div id="heroContainer">
 		<div id="homeFeaturedLeft">
