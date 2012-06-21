@@ -52,7 +52,7 @@ function BuildProductColumn($fid, $name, $filename, $size, $price, $image, $desc
 	return <<<HTML
 	<div class="productHead">
 		<img src="/$image"/>
-		<button class="btn btn-mini">New Thumbnail</button>
+		<button class="btn btn-mini" id="newthumb">New Thumbnail</button>
 	</div>
 	<div class="shareInfo">
 		<div id="top">
@@ -80,6 +80,13 @@ function BuildProductColumn($fid, $name, $filename, $size, $price, $image, $desc
 	<hr>
 	<a class="btn btn-info bottomBtn" target="_blank" href="$sharelink">View Buy Page</a>
 	<button class="btn btn-danger bottomBtn" onclick="ExecuteDelete()">Delete</button>
+	<form target="upload_iframe" class="uploadIframe" id="thumbUpload" 
+		action="/ajax/newthumb" method="post" enctype="multipart/form-data">
+		<? // Hidden file upload button ?>
+		<input type="text" name="fid" value="$fid" stype="display:hidden">
+		<input type="file" name="file" id="button" class="thumb-button" style="display:hidden">
+	</form>
+
 HTML;
 }
 

@@ -61,6 +61,9 @@ if(isset($_FILES['file']) && $UID >= 0)
 	// process the image into thumbnail size and set
 	$thumb = GenerateImageThumbnail($fid, $uploadname);
 	SetThumbnail($fid, $thumb);
+
+	// send the fid back on success
+	SendResult($fid);
 }
 else
 {

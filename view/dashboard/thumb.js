@@ -1,14 +1,12 @@
-function UploadDone(result) {
+function ThumbUploadDone(result) {
 	if(result) {
-		console.log("upload done!");
+		console.log("Thumb upload done!");
 
-		// enable upload button
-		$('.file-button').removeAttr("disabled");
-		$('#uploadButton').removeAttr("disabled");
+		// enable thumb upload button
+		$('.thumb-button').removeAttr("disabled");
+		$('#newthumb').removeAttr("disabled");
 
-		// change the button to show loading animation
-		$('#uploadButton').removeClass('hovered');
-		$('#uploadButton').html('<img src="/img/upload.png"/>New Item');
+		$('#newthumb').html('New Thumbnail');
 		console.log("file uploaded, fid="+result);
 
 		// if currently viewing products table
@@ -51,14 +49,13 @@ function UploadDone(result) {
 }
 
 // file upload handler
-$('.file-button').change(function() {
+$('.thumb-button').change(function() {
 	// disable the file selection button
-	$('#uploadButton').attr('disabled', 'disabled');
+	$('#newthumb').attr('disabled', 'disabled');
 
 	// change the button to show loading animation
-	$('#uploadButton').addClass('hovered');
-	$('#uploadButton').html('<img src="/img/loader/dash-upload.gif"/>Uploading..');
+	$('#newthumb').html('Uploading..');
 
 	// finally submit the form through hidden button
-	$('#homeUpload').submit();
+	$('#thumbUpload').submit();
 });
