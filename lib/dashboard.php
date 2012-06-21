@@ -1,5 +1,6 @@
 <?
 
+// TODO: These functions needs to be modified to only take in fid, the rest can be derived from fid
 function BuildProductRow($fid, $name, $filename, $earned, $views, $shares, $downloads, $thumb)
 {
 	return <<<HTML
@@ -39,13 +40,11 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 			<p id="big">$name</p>
 			<p id="small">$filename</p>
 		</div>
-		<div class="divider"><div></div></div>
-		<a class="btn btn-large" id="dlBtn">Download</a>
 	</li>
 HTML;
 }
 
-function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $category, $sharelink)
+function BuildProductColumn($fid, $name, $filename, $size, $price, $image, $descr, $category, $sharelink)
 {
 	$price = sprintf('%.2f', $price);
 
@@ -84,7 +83,7 @@ function BuildProductColumn($name, $filename, $size, $price, $image, $descr, $ca
 HTML;
 }
 
-function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $sharelink)
+function BuildPurchasedColumn($fid, $name, $filename, $size, $price, $image, $descr, $sharelink)
 {
 	$price = sprintf('%.2f', $price);
 
@@ -102,7 +101,11 @@ function BuildPurchasedColumn($name, $filename, $size, $price, $image, $descr, $
 		<p id="descrInput">$descr</p>
 	</div>
 	<hr>
-	<button class="btn bottomBtn">Download</button>
+	<form action="/ajax/download" method="POST">
+		<? // Hidden input to POST id on submission ?>
+		<input type="text" id="dfid" name="fid" value="$fid" style="display:none">
+		<button class="btn bottomBtn">Download</button>
+	</form>
 HTML;
 }
 

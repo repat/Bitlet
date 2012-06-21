@@ -10,7 +10,7 @@
 	$AuthName = $AuthInfo['name'];
 	$AuthEmail = $AuthInfo['email'];
 	$AuthBio = $AuthInfo['bio'];
-	$AuthPofilePic = $AuthInfo['profile_img'];	
+	$AuthProfilePic = $AuthInfo['profile_img'];	
 	
 	$uinfo = GetUserInfo($UID);
 	$user = $uinfo['email'];

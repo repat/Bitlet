@@ -1,10 +1,10 @@
 <? 
 	$fid = $_POST['fid'];
 
+	//TODO: add security layer to make sure the user actually have the file
+
 	$name = GetFileFromId($fid);
 	list($url, $size) = AwsGetUrl($fid);
-
-	error_log('AWS URL: '.$url.' size: '.$size);
 	IncrementDownloads($fid);
 	
 	header('Location: '.$url);	

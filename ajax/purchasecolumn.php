@@ -10,7 +10,7 @@ $finfo = GetFileInfo($fid);
 $thumb = $finfo['thumb_url'].THUMB_END;
 
 // display name, file name, size (bytes), price, image, description, catagory, sharelink, param
-$ret = BuildPurchasedColumn($finfo['name'], $finfo['file_name'], $finfo['size'], $finfo['price'], 
+$ret = BuildPurchasedColumn($fid, $finfo['name'], $finfo['file_name'], $finfo['size'], $finfo['price'], 
 	$thumb, $finfo['description'], GetLinkFromFid($fid));
 
 // return AJAX
