@@ -3,7 +3,7 @@
 // check for valid email/pass, return true on successful authentication
 // add a new file under input user uid
 // file type: enum('generic','photo','music','digiart','document','video')
-function NewFile($uid, $filename, $type='generic', $thumb='', $fsize=0)
+function NewFile($uid, $filename, $type='generic', $fsize=0)
 {
 	$filename = mysql_real_escape_string($filename);
 	// generate a display name from filename
@@ -11,9 +11,17 @@ function NewFile($uid, $filename, $type='generic', $thumb='', $fsize=0)
 	$name = str_replace('_', ' ', $name);	// replace underscores with spaces to look better
 
 	// Insert file into files table
-	mysql_query("INSERT INTO files (uid, name, file_name, type, thumb_url, size)
-		VALUES('$uid', '$name', '$filename', '$type', '$thumb', '$fsize')") or die();
+	mysql_query("INSERT INTO files (uid, name, file_name, type, size)
+		VALUES('$uid', '$name', '$filename', '$type', '$fsize')") or die();
 	return mysql_insert_id();
+}
+
+// set the thumbnail path for a file
+function SetThumbnail($fid, $thumb)
+{
+	$thumb = mysql_real_escape_string($thumb);
+	mysql_query("UPDATE files SET thumb_url='$thumb'
+		WHERE id='$fid'") or die();
 }
 
 // delete the file with the given fid
@@ -107,6 +115,38 @@ function GetFidFromLink($link)
 function GetLinkFromFid($fid)
 {
 	return base_convert($fid, 10, 36);
+}
+
+// catagorize files into:
+// photo, digiart, video, document, music, and generic;w
+function CatagorizeFile($ftype)
+{
+	switch($ftype) {
+	case 'png':
+	case 'jpg':
+	case 'gif':
+	case 'tif':
+	case 'tiff':
+		return 'photo';
+	case 'psd':
+		return 'digiart';
+	case 'mov':
+	case 'avi':
+	case 'wmv':
+	case 'mkv':
+		return 'video';
+	case 'pdf':
+	case 'doc':
+	case 'docx':
+	case 'rtf':
+	case 'txt':
+		return 'document';
+	case 'wma':
+	case 'mp3':
+		return 'music';
+	default:
+		return 'generic';
+	}
 }
 
 ?>

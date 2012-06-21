@@ -52,51 +52,31 @@ if(isset($_FILES['file']) && $UID >= 0)
 	}
 
 	// figure out filetype
-	$ftype = strtolower(end(explode('.', $name)));
-	$ftype_str = '';
-	switch($ftype) {
-	case 'png':
-	case 'jpg':
-	case 'gif':
-	case 'tif':
-	case 'tiff':
-		$ftype_str = 'photo';
-		$thumbpath = GenerateImageThumbnail($uploadname, $fid);
-		break;
-	case 'psd':
-		$ftype_str = 'digiart';
-		break;
-	case 'mov':
-	case 'avi':
-	case 'wmv':
-	case 'mkv':
-		$ftype_str = 'video';
-		break;
-	case 'pdf':
-	case 'doc':
-	case 'docx':
-	case 'rtf':
-	case 'txt':
-		$ftype_str = 'document';
-		break;
-	case 'wma':
-	case 'mp3':
-		$ftype_str = 'music';
-		break;
-	default:
-		$ftype_str = 'generic';
-		break;
-	}
+	$ftype = CatagorizeFile(strtolower(end(explode('.', $name))));
 
 	// get file size
 	$fsize = filesize($uploadname);
-	error_log('file size: '.$fsize);
 
 	// insert file into db
 	// file type: enum('generic','photo','music','digiart','document','video')
-	$fid = NewFile($UID, basename($uploadname), $ftype_str, $thumbpath, $fsize);
-	error_log('file created');
+	$fid = NewFile($UID, basename($uploadname), $ftype, $fsize);
 
+	// generate thumbnails TODO
+	switch(ftype) {
+	case 'photo':
+	case 'digiart':
+		$thumb = GenerateImageThumbnail($fid, $uploadname);
+		break;
+	case 'video':
+		break;
+	case 'document':
+		break;
+	case 'music':
+		break;
+	case 'generic':
+		break;
+	}
+	SetThumbnail($fid, $thumb);
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);
@@ -106,11 +86,12 @@ if(isset($_FILES['file']) && $UID >= 0)
 		// TODO: we should do something here..
 		die('Cannot upload to AWS');
 	}
-	error_log('file uploaded to AWS');
 
 	// once uploaded, delete the local copy
 	$sh = 'rm "'.$uploadname.'"';
 	`$sh`;
+
+	error_log('file created, fid: '.$fid.', size: '.$fsize);
 } else {
 	// no file detected, why are we here again??
 	error_log('no file detected in upload ajax call');
