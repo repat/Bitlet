@@ -16,6 +16,13 @@ function NewFile($uid, $filename, $type='generic', $thumb='', $fsize=0)
 	return mysql_insert_id();
 }
 
+// delete the file with the given fid
+function DeleteFile($fid)
+{
+	mysql_query("DELETE FROM files
+		WHERE id='$fid'") or die('error deleting file');
+}
+
 // set price for a file
 function SetPrice($fid, $price)
 {
