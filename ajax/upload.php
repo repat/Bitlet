@@ -74,7 +74,14 @@ if(isset($_FILES['file']) && $UID >= 0)
 	case 'generic':
 		break;
 	}
-	SetThumbnail($fid, $thumb);
+
+	// check thumb
+	if($thumb) {
+		// set thumb in database
+		SetThumbnail($fid, $thumb);
+	} else {
+		SendResult(0);
+	}
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);

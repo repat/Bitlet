@@ -53,6 +53,9 @@ if(isset($_FILES['file']) && $UID >= 0)
 	// make sure the file is an actual image file
 	if(CatagorizeFile($name) != 'photo') {
 		error_log('wrong file type!');
+		// remove the file
+		$sh = 'rm "'.$uploadname.'"';
+		`$sh`;
 		SendResult(0);
 	}
 
@@ -60,7 +63,11 @@ if(isset($_FILES['file']) && $UID >= 0)
 
 	// process the image into thumbnail size and set
 	$thumb = GenerateImageThumbnail($fid, $uploadname);
-	SetThumbnail($fid, $thumb);
+	if($thumb) {
+		SetThumbnail($fid, $thumb);
+	} else {
+		SendResult(0);
+	}
 
 	// send the fid back on success
 	SendResult($fid);

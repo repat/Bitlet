@@ -9,31 +9,36 @@ const THUMB_SMALL_END = 's.png';
 // returns: array of path of thumbnail image
 function GenerateImageThumbnail($fid, $imgpath)
 {
-	// import base path
-	global $BASE;
-	$path = 'data/'.end(explode('/', dirname($imgpath), 2));
+	try {
+		// import base path
+		global $BASE;
+		$path = 'data/'.end(explode('/', dirname($imgpath), 2));
 
-	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_END);
-	$magic->resizeExactly(660, 348);
+		$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_END);
+		$magic->resizeExactly(660, 348);
 
-	// set new destination for smaller thumb
-	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_SMALL_END);
-	$magic->resizeExactly(60, 60);
+		// set new destination for smaller thumb
+		$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_SMALL_END);
+		$magic->resizeExactly(60, 60);
 
-	// store in local storage
-	$cmd = 'mkdir -p "'.$path.'"';
-	`$cmd`;
-	error_log('cmd: '.$cmd);
-	
-	$cmd = 'mv "'.$fid.THUMB_END.'" '.$path;
-	`$cmd`;
-	error_log('cmd: '.$cmd);
+		// store in local storage
+		$cmd = 'mkdir -p "'.$path.'"';
+		`$cmd`;
+		error_log('cmd: '.$cmd);
+		
+		$cmd = 'mv "'.$fid.THUMB_END.'" '.$path;
+		`$cmd`;
+		error_log('cmd: '.$cmd);
 
-	$cmd = 'mv "'.$fid.THUMB_SMALL_END.'" '.$path;
-	`$cmd`;
-	error_log('cmd: '.$cmd);
+		$cmd = 'mv "'.$fid.THUMB_SMALL_END.'" '.$path;
+		`$cmd`;
+		error_log('cmd: '.$cmd);
 
-	return $path.'/'.basename($fid);
+		return $path.'/'.basename($fid);
+	} catch (Exception $e) {
+		error_log('Caught exception: ',  $e->getMessage());
+		return false;
+	}
 }
 
 ?>
