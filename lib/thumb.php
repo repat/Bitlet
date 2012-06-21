@@ -36,7 +36,7 @@ function GenerateImageThumbnail($fid, $imgpath)
 
 		return $path.'/'.basename($fid);
 	} catch (Exception $e) {
-		error_log('Caught exception: ',  $e->getMessage());
+		error_log('Caught exception: '.$e->getMessage());
 		return false;
 	}
 }
