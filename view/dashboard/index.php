@@ -40,7 +40,7 @@ if($UID >= 0) {
 			</div></div>
 		</div>
 </div>
-	
+
 <form target="upload_iframe" class="uploadIframe" id="homeUpload" 
 	action="/ajax/upload" method="post" enctype="multipart/form-data">
 	<? // Hidden file upload button ?>
