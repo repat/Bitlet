@@ -11,8 +11,12 @@ function UploadDone(result) {
 		$('#uploadButton').html('<img src="/img/upload.png"/>New Item');
 		console.log("file uploaded, fid="+result);
 
-		// if currently viewing products table, reload the table
+		// if currently viewing products table
 		if(tableSelected == 0) {
+			// set the global current fid as the new fid for updating details
+			fid = result;
+
+			// reload the products table
 			DisplayProducts(result);
 
 			// clear right content
