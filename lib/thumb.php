@@ -11,31 +11,29 @@ function GenerateImageThumbnail($imgpath, $fid)
 {
 	// import base path
 	global $BASE;
+	$path = 'data/'.end(explode('/', dirname($imgpath), 2));
 
-	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$imgpath.THUMB_END);
+	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_END);
 	$magic->resizeExactly(660, 348);
 
 	// set new destination for smaller thumb
-	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$imgpath.THUMB_SMALL_END);
+	$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_SMALL_END);
 	$magic->resizeExactly(60, 60);
-
-	// generate the thumbnails 
-	$path = 'data/'.end(explode('/', dirname($imgpath), 2));
 
 	// store in local storage
 	$cmd = 'mkdir -p "'.$path.'"';
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 	
-	$cmd = 'mv "'.$imgpath.THUMB_END.'" '.$path;
+	$cmd = 'mv "'.$fid.THUMB_END.'" '.$path;
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 
-	$cmd = 'mv "'.$imgpath.THUMB_SMALL_END.'" '.$path;
+	$cmd = 'mv "'.$fid.THUMB_SMALL_END.'" '.$path;
 	`$cmd`;
 	error_log('cmd: '.$cmd);
 
-	return $path.'/'.basename($imgpath);
+	return $path.'/'.basename($fid);
 }
 
 ?>
