@@ -7,7 +7,7 @@ const THUMB_SMALL_END = 's.png';
 
 // generate the required thumbnails for images
 // returns: array of path of thumbnail image
-function GenerateImageThumbnail($imgpath)
+function GenerateImageThumbnail($imgpath, $fid)
 {
 	// import base path
 	global $BASE;

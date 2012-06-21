@@ -61,7 +61,7 @@ if(isset($_FILES['file']) && $UID >= 0)
 	case 'tif':
 	case 'tiff':
 		$ftype_str = 'photo';
-		$thumbpath = GenerateImageThumbnail($uploadname);
+		$thumbpath = GenerateImageThumbnail($uploadname, $fid);
 		break;
 	case 'psd':
 		$ftype_str = 'digiart';
