@@ -52,7 +52,7 @@ function BuildProductColumn($fid, $name, $filename, $size, $price, $image, $desc
 	return <<<HTML
 	<div class="productHead">
 		<img src="/$image"/>
-		<button class="btn btn-mini" id="newthumb">New Thumbnail</button>
+		<button class="btn btn-mini" id="newthumb" onclick="$('thumb-button').click()">New Thumbnail</button>
 	</div>
 	<div class="shareInfo">
 		<div id="top">
