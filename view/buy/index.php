@@ -104,7 +104,7 @@
 			<form action="/ajax/download" method="POST" id="go-download">	
 				<? // Hidden input to POST id on submission ?>
 				<input type="text" id="dfid" name="fid" value="<? echo $fid ?>" style="display:none">
-				<button type="submit" id="ddl" class="btn btn-large" name="download">Manual Download</button>
+				<button type="submit" id="ddl" class="btn btn-large" name="download">Download</button>
 			</form>	 
 			<? } //end of php if else statement ?>
 			</div><!-- end of the payment div -->		
