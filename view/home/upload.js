@@ -20,6 +20,11 @@ function Login(email) {
 		$("#passwordModal a.btn").click(function(e) {
 			// hide the dialog box
 			$("#passwordModal").modal('hide');
+
+			// enable upload button
+			$('.file-button').removeAttr("disabled");
+			$('.upload-button').removeAttr("disabled");
+			$('.upload-button').html('Select File');
 		});
 	});
 	

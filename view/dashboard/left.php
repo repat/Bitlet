@@ -14,12 +14,3 @@
 	</div>
 </div>
 
-<form target="upload_iframe" id="homeUpload" 
-	action="/ajax/upload" method="post" enctype="multipart/form-data">
-	<? // Hidden file upload button ?>
-	<input type="file" name="file" id="button" class="file-button" style="display:hidden">
-</form>
-
-<? // Hidden Upload iFrame for Async Uploading ?>
-<iframe name="upload_iframe" id="homeUploadIframe">
-</iframe>

@@ -150,3 +150,17 @@
 	outline: none;
 }
 
+/* we want to hide the actual upload button off screen*/
+.uploadIframe input[type="file"], .file-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+}
+
+.uploadIframe {
+	display: none;
+	margin: 0;
+}
+
