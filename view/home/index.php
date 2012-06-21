@@ -2,7 +2,7 @@
 
 // redirect to dashboard if already logged in
 if($UID >= 0) {
-	echo <<<
+	echo <<<HTML
 	<script type="text/javascript">
 		window.location.replace("/dashboard");
 	</script>
