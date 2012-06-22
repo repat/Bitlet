@@ -3,6 +3,11 @@
 // TODO: These functions needs to be modified to only take in fid, the rest can be derived from fid
 function BuildProductRow($fid, $name, $filename, $earned, $views, $shares, $downloads, $thumb)
 {
+	// default thumb
+	if($thumb == null || $thumb == '') {
+		$thumb = '/img/default_thumb.png';
+	}
+
 	return <<<HTML
 	<li title="$fid">
 		<div id="imgTd"><img id="tableThumb" src="/$thumb"/></div>
@@ -33,6 +38,11 @@ HTML;
 
 function BuildPurchaseRow($fid, $name, $filename, $thumb)
 {
+	// default thumb
+	if($thumb == null || $thumb == '') {
+		$thumb = '/img/default_thumb.png';
+	}
+
 	return <<<HTML
 	<li title="$fid">
 		<div id="imgTd"><img id="tableThumb" src="/$thumb"/></div>
@@ -47,6 +57,10 @@ HTML;
 function BuildProductColumn($fid, $name, $filename, $size, $price, $image, $descr, $category, $sharelink)
 {
 	$price = sprintf('%.2f', $price);
+	// set default image
+	if($image == null || $image == '') {
+		$image = '/img/default_cover.png';
+	}
 
 	// return the final built HTML
 	return <<<HTML
@@ -93,6 +107,10 @@ HTML;
 function BuildPurchasedColumn($fid, $name, $filename, $size, $price, $image, $descr, $sharelink)
 {
 	$price = sprintf('%.2f', $price);
+	// set default image
+	if($image == null || $image == '') {
+		$image = '/img/default_cover.png';
+	}
 
 	// return the final built HTML
 	return <<<HTML
