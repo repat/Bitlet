@@ -15,7 +15,7 @@ function GenerateImageThumbnail($fid, $imgpath)
 		$path = 'data/'.end(explode('/', dirname($imgpath), 2));
 
 		$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_END);
-		$magic->resizeExactly(660, 348);
+		$magic->resizeExactly(660, 350);
 
 		// set new destination for smaller thumb
 		$magic = new phmagick($BASE.'/'.$imgpath, $BASE.'/'.$fid.THUMB_SMALL_END);

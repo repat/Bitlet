@@ -5,7 +5,7 @@ $fids = GetFids($UID);
 $ret = '';	// return variable, start with empty string
 foreach($fids as $f) {
 	$finfo = GetFileInfo($f);
-	$thumb = $finfo['thumb_url'].THUMB_SMALL_END;
+	$thumb = $finfo['thumb_url'] === '' ? '' : $finfo['thumb_url'].THUMB_SMALL_END;
 	error_log($thumb);
 
 	// build product row with file and add to return array
