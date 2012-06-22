@@ -2,18 +2,25 @@ USE bitlet;
 DROP TABLE if exists users, files, purchases;
 
 -- phpMyAdmin SQL Dump
--- version 3.3.10.4
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: mysql.afdadsfdasdfdd.com
--- Generation Time: Jun 13, 2012 at 12:35 AM
--- Server version: 5.1.39
+-- Host: internal-db.s150773.gridserver.com
+-- Generation Time: Jun 22, 2012 at 11:16 AM
+-- Server version: 5.1.61-rel13.2
 -- PHP Version: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `betabitlet`
+-- Database: `db150773_bitlet_production`
 --
 
 -- --------------------------------------------------------
@@ -25,6 +32,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE IF NOT EXISTS `files` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `uid` int(11) unsigned NOT NULL,
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `name` tinytext NOT NULL COMMENT 'display name',
   `description` text NOT NULL COMMENT 'file description limited to 500 chars',
   `type` enum('generic','photo','music','digiart','document','video') NOT NULL,
@@ -39,12 +47,14 @@ CREATE TABLE IF NOT EXISTS `files` (
   `url` tinytext NOT NULL,
   `thumb_url` tinytext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `files`
 --
 
+INSERT INTO `files` (`id`, `uid`, `deleted`, `name`, `description`, `type`, `param`, `size`, `price`, `earned`, `views`, `shares`, `downloads`, `file_name`, `url`, `thumb_url`) VALUES
+(1, 1, 0, 'AlbumArt {C17F1693-6843-44DE-BDAB-BBD35142CEBD} Large', '<br>', 'photo', '', 33203, 2, 0, 1, 0, 0, 'AlbumArt_{C17F1693-6843-44DE-BDAB-BBD35142CEBD}_Large.jpg', '', 'data/1/1');
 
 -- --------------------------------------------------------
 
@@ -60,11 +70,6 @@ CREATE TABLE IF NOT EXISTS `purchases` (
   `time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `purchases`
---
-
 
 -- --------------------------------------------------------
 
@@ -89,9 +94,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `bio` text NOT NULL COMMENT 'bio of user',
   `website` text NOT NULL COMMENT 'user website',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `users`
---
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

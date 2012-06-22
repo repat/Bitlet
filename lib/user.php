@@ -138,9 +138,8 @@ function GetCredits($uid)
 }
 
 // update the users settings
-function UpdateUserSettings($uid, $email, $name, $phone, $website, $bio, $emailSettings){
-	
-	
+function UpdateUserSettings($uid, $email, $name, $phone, $website, $bio, $emailSettings)
+{
 	$email = mysql_real_escape_string($email);
 	$name = mysql_real_escape_string($name);
 	$phone = mysql_real_escape_string($phone);
@@ -151,6 +150,6 @@ function UpdateUserSettings($uid, $email, $name, $phone, $website, $bio, $emailS
 	mysql_query("UPDATE users SET name='$name', phone='$phone', website='$website', bio='$bio', email_settings='$emailSettings'
 		WHERE id='$uid'") or die('Cannot update User, uid='.$uid);
 	error_log("in the mysql function");	
-	
 }
+
 ?>
