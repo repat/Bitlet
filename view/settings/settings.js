@@ -41,7 +41,7 @@ $(document).ready(function() {
 					if(data.success == true) {
 						//console.log('we fucking did it');		
 						$('.alert').remove();	
-						var resetMessage = "<div class='alert fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Thank you for updating you settings.</p></div>";
+						var resetMessage = "<div class='alert alert-success fade in resetDetailsAlert'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Thank you for updating you settings.</p></div>";
 						$('#saveButton').after(resetMessage);
 					} else {
 						//console.log('we fucked up');		

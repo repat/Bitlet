@@ -134,7 +134,7 @@ $(document).ready(function(){
 							$('#newPass1').val('');
 							$('#newPass2').val('');
 							$('.alert').remove();	
-							var resetMessage = "<div class='alert fade in changePasswordAlert span5'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Your password has been changed</p></div>";
+							var resetMessage = "<div class='alert alert-success fade in changePasswordAlert span5'><button type='button' class='close' data-dismiss='alert'>x</button><p class='alert-heading'>Your password has been changed</p></div>";
 							$('#savePassword').after(resetMessage);
 						} else {
 							//do something to let them know it failed!		
