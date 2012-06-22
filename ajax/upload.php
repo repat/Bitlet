@@ -60,6 +60,7 @@ if(isset($_FILES['file']) && $UID >= 0)
 	$fid = NewFile($UID, basename($uploadname), $ftype, $fsize);
 
 	// generate thumbnails TODO
+	$thumb = '';
 	switch($ftype) {
 	case 'photo':
 	case 'digiart':
@@ -76,12 +77,12 @@ if(isset($_FILES['file']) && $UID >= 0)
 	}
 
 	// check thumb
-	if($thumb) {
-		// set thumb in database
-		SetThumbnail($fid, $thumb);
-	} else {
+	if($thumb === false) {
 		SendResult(0);
 	}
+
+	// set thumb in database
+	SetThumbnail($fid, $thumb);
 
 	/*** AJAX BACK TO USER ***/
 	SendResult($fid);

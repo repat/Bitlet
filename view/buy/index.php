@@ -5,7 +5,7 @@
 	$price = $finfo['price'];
 	$price = sprintf('%.2f', $price);
 	$downloads = $finfo['downloads'];
-	$thumbnail = $finfo['thumb_url'].THUMB_END;
+	$thumbnail = $finfo['thumb_url'] === '' ? 'img/default_cover.png' : $finfo['thumb_url'].THUMB_END;
 	$AuthInfo = GetUserInfo($finfo['uid']); 
 	$AuthName = $AuthInfo['name'];
 	$AuthEmail = $AuthInfo['email'];

@@ -5,7 +5,7 @@ function BuildProductRow($fid, $name, $filename, $earned, $views, $shares, $down
 {
 	// default thumb
 	if($thumb == null || $thumb == '') {
-		$thumb = '/img/default_thumb.png';
+		$thumb = 'img/default_thumb.png';
 	}
 
 	return <<<HTML
@@ -40,7 +40,7 @@ function BuildPurchaseRow($fid, $name, $filename, $thumb)
 {
 	// default thumb
 	if($thumb == null || $thumb == '') {
-		$thumb = '/img/default_thumb.png';
+		$thumb = 'img/default_thumb.png';
 	}
 
 	return <<<HTML
@@ -59,7 +59,7 @@ function BuildProductColumn($fid, $name, $filename, $size, $price, $image, $desc
 	$price = sprintf('%.2f', $price);
 	// set default image
 	if($image == null || $image == '') {
-		$image = '/img/default_cover.png';
+		$image = 'img/default_cover.png';
 	}
 
 	// return the final built HTML
@@ -109,7 +109,7 @@ function BuildPurchasedColumn($fid, $name, $filename, $size, $price, $image, $de
 	$price = sprintf('%.2f', $price);
 	// set default image
 	if($image == null || $image == '') {
-		$image = '/img/default_cover.png';
+		$image = 'img/default_cover.png';
 	}
 
 	// return the final built HTML
