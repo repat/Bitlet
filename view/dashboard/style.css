@@ -160,3 +160,7 @@
 	margin: 0;
 }
 
+#homeUploadIframe {
+	display: none;
+}
+
