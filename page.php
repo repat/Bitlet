@@ -33,6 +33,9 @@ function ViewPage($url, $args)
 		case 'faq':
 			$dir = 'view/faq';
 			break;
+		case 'claim':
+			$dir = 'view/claim';
+			break;
 		case 'about':
 			$dir = 'view/about';
 			break;

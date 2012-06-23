@@ -141,9 +141,14 @@
 	font-size: 25px;
 	line-height: 40px;
 	color: #FFF;
+	margin-left: 10px;
 
 	/* letter press effect */
 	text-shadow:#FFF 0px 1px 0, #999 0 -1px 0;
+}
+
+.cashOut:hover {
+	text-decoration: none;
 }
 
 .nicEdit-main {

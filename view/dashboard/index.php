@@ -20,10 +20,10 @@ if($UID >= 0) {
 				<span id="dollar">$</span>	
 				<span id="overviewNum"><? printf('%.2f', $user['credits']); ?></span>
 			</div>
-			<button class="cashOut">
+			<a href="/claim" class="cashOut">
 				<!--<img src="/img/claim.png"/>-->
 				<p>Claim</p>
-			</button>
+			</a>
 		</div>
 	
 		<? require_once 'left.php'; ?>
