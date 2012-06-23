@@ -34,6 +34,14 @@ function NewUser($email, $name='', $pass='')
 	return array(mysql_insert_id(), $pass);
 }
 
+// get user credits
+function GetUserCredits($uid)
+{
+	$result = mysql_query("SELECT credits FROM users WHERE id='$uid'") 
+		or die('Cannot get credits, uid='.$uid);
+	return mysql_result($result, 0);
+}
+
 // set the user password - used to change password
 function SetUserPassword($uid, $pass)
 {
@@ -43,9 +51,9 @@ function SetUserPassword($uid, $pass)
 		or die('Cannot set password, uid='.$uid);
 }
 
-
 //check the users password to see if it's correct
-function ValidatePassword($uid, $pass){
+function ValidatePassword($uid, $pass)
+{
 	$result = mysql_query("SELECT salt, password FROM users WHERE id = '$uid'") or die('error validating pass');
 	// check if correct result found
 	if(mysql_num_rows($result) < 1) {
@@ -99,6 +107,7 @@ function GetGravatar($email, $d='http://beta.bitlet.co/img/bitlet-silhouette.png
 	$url .= "?s=$s&d=$d&r=$r";
 	return $url;	
 }
+
 // get user email
 function GetUserEmail($uid)
 {
