@@ -27,7 +27,7 @@ function SetThumbnail($fid, $thumb)
 // delete the file with the given fid
 function DeleteFile($fid)
 {
-	mysql_query("UPDATE files SET deleted='true'
+	mysql_query("UPDATE files SET deleted=true
 		WHERE id='$fid'") or die('error deleting file');
 }
 
@@ -63,7 +63,7 @@ function SetFileDetails($fid, $opt)
 // returns an array of not deleted fid from user
 function GetFids($uid)
 {
-	$result = mysql_query("SELECT id FROM files WHERE uid='$uid' AND deleted='false' ORDER BY  `id` ASC") or die('cant get fids');
+	$result = mysql_query("SELECT id FROM files WHERE uid='$uid' AND deleted=false ORDER BY  `id` ASC") or die('cant get fids');
 	$rows = array();
 	while($row = mysql_fetch_row($result)) {
 		$rows[] = $row[0];

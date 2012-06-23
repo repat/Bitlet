@@ -99,6 +99,16 @@ function AttachDetails()
 function ExecuteDelete()
 {
 	console.log("deleting file fid "+fid);
+	$.post('/ajax/deletefile', {fid:fid},
+		function(ret) {
+			if(ret.success) {
+				ContractRight();
+				// if products currently selected, reload product rows
+				if(tableSelected == 0) {
+					DisplayProducts();
+				}
+			}
+		}, "json");	
 }
 
 // attach name changed interval
