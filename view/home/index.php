@@ -20,7 +20,7 @@ HTML;
 		<div id="homeFeaturedRight">
 			<div class="content">
 				<h1>Share Knowledge, Earn Money</h1>
-				<h2>Bitlet allows anyone to make money. Just enter your email and select your masterpiece to get started!</h2>
+				<h2>Just enter your email and select your creation to get started!</h2>
 				<form  style="text-align:center;" class="form-inline" target="upload_iframe" id="homeUpload" 
 					action="/ajax/upload" method="post" enctype="multipart/form-data">
 					<div class="input-prepend">
@@ -28,7 +28,7 @@ HTML;
 						<? if($UID >= 0) { // if logged in ?>
 							<input class="input-medium inputHeightLarge" id="email" type="text" name="email" value="<? echo GetUserEmail($UID); ?>" readonly="true" onkeypress="return event.keyCode!=13">
 						<? } else { ?>
-							<input class="input-medium inputHeightLarge" id="email" type="text" name="email" placeholder="Email" onkeypress="return event.keyCode!=13">
+							<input class="input-medium inputHeightLarge" id="email" type="text" name="email" placeholder="Enter your email" onkeypress="return event.keyCode!=13">
 						<? } ?>
 					</div><? // end of input-prepend ?>
 
@@ -66,7 +66,7 @@ HTML;
 	<br>
 	<div class="row">
 		<div class="span8">
-			<h2>Your personal sales force</h2>
+			<h2>Your personal sales force (Coming Soon!)</h2>
 			<p>Our network of professional marketers takes care of the selling for you, so you can focus on what you do best - making awesome products.</p>
 			<p>The moment a product is uploaded to Bitlet, it is accessible by professional marketers with influence over millions of potiential customers. You just sit back and relax, we'll take care of the rest.</p>
 		</div>
